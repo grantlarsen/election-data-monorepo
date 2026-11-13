@@ -8,3 +8,5 @@ from .core import (
     DataSource,
     ElectionResultSnapshot,
 )
+# Register geographic tables for metadata and integration tests.
+from .geography import GeographicReference, JurisdictionIdentifier, JurisdictionRelationship, GeographicResolution

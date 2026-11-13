@@ -22,22 +22,43 @@ def main(argv: list[str] | None = None) -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     run_parser = sub.add_parser("run")
     run_parser.add_argument("source", help="Adapter module name, e.g. medsl_presidential_county")
+    run_parser.add_argument("--vintage", type=int, help="Census geographic reference election-year vintage")
     run_parser.add_argument("--refresh", action="store_true", help="Re-download official original file")
     run_parser.add_argument("--validate-only", action="store_true", help="Validate only; do not access DB")
     run_parser.add_argument("--dry-run", action="store_true", help="Validate and preview against DB; no DB writes")
     run_parser.add_argument("--years", nargs="+", type=int, default=None, help="Subset of election years")
     run_parser.add_argument("--verbose", action="store_true")
     run_parser.add_argument("--state-totals-csv", type=Path, help="Optional independent state-year totals reference")
+    geo_parser = sub.add_parser("geo", help="Validate, resolve, or inspect geographic matches")
+    geo_parser.add_argument("operation", choices=["resolve", "validate", "unresolved", "anomalies", "changes"])
+    geo_parser.add_argument("--vintage", type=int, help="Election year for Census reference selection")
+    geo_parser.add_argument("--source", default="census_state_county_georef",
+                            help="Geographic source adapter to resolve against")
+    geo_parser.add_argument("--release-id", help="Explicit Census source_release UUID if a vintage has multiple hashes")
+    geo_parser.add_argument("--years", nargs="+", type=int)
+    geo_parser.add_argument("--dry-run", action="store_true")
+    geo_parser.add_argument("--output", type=Path, help="CSV review destination")
     args = parser.parse_args(argv)
+    if args.command == "geo":
+        from ingestion.geography.cli import geo_command
+        return geo_command(args)
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO,
                         format="%(asctime)s %(levelname)s %(name)s %(message)s")
     if not re.fullmatch(r"[a-z][a-z0-9_]*", args.source):
         parser.error("Invalid source adapter name")
     try:
         module = importlib.import_module(f"ingestion.adapters.{args.source}")
-        adapter = module.Job()
+        adapter = module.Job(args.vintage) if getattr(module.Job, "geographic_reference", False) else module.Job()
     except (ImportError, AttributeError) as exc:
         parser.error(f"Unknown or broken source adapter {args.source}: {exc}")
+    if getattr(adapter, "geographic_reference", False):
+        from ingestion.geography.cli import run_geographic_job
+        try:
+            return run_geographic_job(adapter, args)
+        except ValueError as exc:
+            parser.error(str(exc))
+    if args.vintage is not None:
+        parser.error("--vintage is only supported for geographic reference sources")
     years = set(args.years) if args.years else set(adapter.supported_years)
     if not years or not years.issubset(adapter.supported_years):
         parser.error(f"--years must be selected from {sorted(adapter.supported_years)}")

@@ -1,0 +1,40 @@
+{
+  "completed_at": "2026-11-13T22:17:13.212908+00:00",
+  "county_rows": 3143,
+  "distinct_states": 51,
+  "duration_ms": 2148,
+  "excluded_999_or_nonstate": 50,
+  "mode": "load",
+  "outside_50_states_dc": 0,
+  "raw_path": "data/ingestion/raw/census_state_county_georef/cbp-2012-2016/32b9a6844b006d08ea63191cbafc7c51d3bdaea25c9e9329ec546083a7ecff04.txt",
+  "records_already_present": 0,
+  "records_in_file": 3193,
+  "records_inserted": 3194,
+  "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+  "run_id": "fbd2fbe9-be7c-4029-a14b-9ec8cf2fe619",
+  "sha256": "32b9a6844b006d08ea63191cbafc7c51d3bdaea25c9e9329ec546083a7ecff04",
+  "source": "census_state_county_georef",
+  "source_metadata": {
+    "file": "georef12.txt",
+    "license": "U.S. government public-domain data; attribution requested",
+    "provider": "U.S. Census Bureau",
+    "series": "cbp",
+    "source_page": "https://www.census.gov/programs-surveys/cbp/technical-documentation/reference/state-county-geography-reference.html",
+    "vintage_end": 2016,
+    "vintage_semantics": "statistical product reference range; NOT legal effective dates",
+    "vintage_start": 2012
+  },
+  "source_release_version": "cbp-2012-2016",
+  "source_url": "https://www2.census.gov/programs-surveys/cbp/technical-documentation/reference/state-county-geography-reference/georef12.txt",
+  "started_at": "2026-11-13T22:17:11.064665+00:00",
+  "state_rows": 51,
+  "status": "SUCCEEDED",
+  "validation": {
+    "county_rows": 3143,
+    "distinct_states": 51,
+    "excluded_999_or_nonstate": 50,
+    "outside_50_states_dc": 0,
+    "records_in_file": 3193
+  },
+  "vintage": 2012
+}

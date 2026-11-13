@@ -296,7 +296,7 @@ def acquire(adapter: SourceAdapter, data_dir: Path, *, refresh: bool = False) ->
         if info.expected_size is not None and part.stat().st_size != info.expected_size:
             raise AcquisitionError(f"Original file size mismatch: expected {info.expected_size}, got {part.stat().st_size}")
         digest = sha256_file(part)
-        path = folder / f"{digest}.csv"
+        path = folder / f"{digest}{Path(info.filename).suffix or '.bin'}"
         if path.exists() and sha256_file(path) != digest:
             if not refresh:
                 raise AcquisitionError(f"Existing immutable file is corrupt: {path}")
