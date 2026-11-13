@@ -1,0 +1,745 @@
+{
+  "rejections": [
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35003",
+        "county_name": "CATRON",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "2354",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93141
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35003",
+        "county_name": "CATRON",
+        "mode": "EARLY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "2354",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93144
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35006",
+        "county_name": "CIBOLA",
+        "mode": "EARLY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "8977",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93180
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35006",
+        "county_name": "CIBOLA",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "8977",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93182
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35007",
+        "county_name": "COLFAX",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "5813",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93190
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35011",
+        "county_name": "DE BACA",
+        "mode": "EARLY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "867",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93218
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35011",
+        "county_name": "DE BACA",
+        "mode": "ELECTION DAY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "867",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93219
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35011",
+        "county_name": "DE BACA",
+        "mode": "TOTAL",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "867",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93228
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35011",
+        "county_name": "DE BACA",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "867",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93230
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35015",
+        "county_name": "EDDY",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "23472",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93251
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35019",
+        "county_name": "GUADALUPE",
+        "mode": "ELECTION DAY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "1928",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93283
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35019",
+        "county_name": "GUADALUPE",
+        "mode": "EARLY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "1928",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93288
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35019",
+        "county_name": "GUADALUPE",
+        "mode": "TOTAL",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "1928",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93289
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35019",
+        "county_name": "GUADALUPE",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "1928",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93295
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35021",
+        "county_name": "HARDING",
+        "mode": "TOTAL",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "425",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93298
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35021",
+        "county_name": "HARDING",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "425",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93303
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35021",
+        "county_name": "HARDING",
+        "mode": "EARLY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "425",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93309
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35021",
+        "county_name": "HARDING",
+        "mode": "ELECTION DAY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "425",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93310
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35023",
+        "county_name": "HIDALGO",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "1861",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93315
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35023",
+        "county_name": "HIDALGO",
+        "mode": "EARLY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "1861",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93317
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35023",
+        "county_name": "HIDALGO",
+        "mode": "ELECTION DAY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "1861",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93323
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35023",
+        "county_name": "HIDALGO",
+        "mode": "TOTAL",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "1861",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93328
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35025",
+        "county_name": "LEA",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "21209",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93342
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35029",
+        "county_name": "LUNA",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "8056",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93390
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35033",
+        "county_name": "MORA",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "2479",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93411
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35033",
+        "county_name": "MORA",
+        "mode": "EARLY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "2479",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93417
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35033",
+        "county_name": "MORA",
+        "mode": "ELECTION DAY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "2479",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93422
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35037",
+        "county_name": "QUAY",
+        "mode": "ELECTION DAY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "3700",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93443
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35037",
+        "county_name": "QUAY",
+        "mode": "EARLY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "3700",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93448
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35037",
+        "county_name": "QUAY",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "3700",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93455
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35041",
+        "county_name": "ROOSEVELT",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "6639",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93475
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35047",
+        "county_name": "SAN MIGUEL",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "11108",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93515
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35051",
+        "county_name": "SIERRA",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "5953",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93563
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35057",
+        "county_name": "TORRANCE",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "7179",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93612
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35059",
+        "county_name": "UNION",
+        "mode": "ABSENTEE",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "1663",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93620
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35059",
+        "county_name": "UNION",
+        "mode": "EARLY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "1663",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93627
+    },
+    {
+      "raw_json": {
+        "candidate": "CHASE OLIVER",
+        "candidatevotes": "NA",
+        "county_fips": "35059",
+        "county_name": "UNION",
+        "mode": "ELECTION DAY",
+        "office": "US PRESIDENT",
+        "party": "LIBERTARIAN",
+        "state": "NEW MEXICO",
+        "state_po": "NM",
+        "totalvotes": "1663",
+        "version": "20260225",
+        "year": "2024"
+      },
+      "reasons_json": [
+        "INVALID_CANDIDATE_VOTES"
+      ],
+      "source_row_number": 93630
+    }
+  ],
+  "run_id": "02e052a6-95c0-479e-9139-b6a54983540a"
+}

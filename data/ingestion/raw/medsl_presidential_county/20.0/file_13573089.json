@@ -1,0 +1,56 @@
+{
+  "download_url": "https://dataverse.harvard.edu/api/access/datafile/13573089?format=original",
+  "local_filename": "9299583148f5f8264baf50b5d929c260699c46d915909b13ea3c3850918946f8.csv",
+  "retrieved_at": "2026-11-13T19:03:48.053569+00:00",
+  "sha256": "9299583148f5f8264baf50b5d929c260699c46d915909b13ea3c3850918946f8",
+  "source_metadata": {
+    "citation": "MIT Election Data and Science Lab, Harvard Dataverse, V20.0, doi:10.7910/DVN/VOQCHQ",
+    "dataset_doi": "doi:10.7910/DVN/VOQCHQ",
+    "dataset_id": 3239428,
+    "dataset_publication_date": "2018-10-11",
+    "dataset_unf": "UNF:6:xvsJJxrfXMIvzAuDYlfvVw==",
+    "file": {
+      "dataFile": {
+        "UNF": "UNF:6:VKZJHPbIwGBnmWCslEFbtw==",
+        "checksum": {
+          "type": "MD5",
+          "value": "bd6661282936006b4ef4f5ee71418f3e"
+        },
+        "contentType": "text/tab-separated-values",
+        "creationDate": "2026-02-25",
+        "fileAccessRequest": false,
+        "filename": "countypres_2000-2024.tab",
+        "filesize": 9845506,
+        "friendlyType": "Tab-Delimited",
+        "id": 13573089,
+        "lastUpdateTime": "2026-02-25T19:00:32Z",
+        "md5": "bd6661282936006b4ef4f5ee71418f3e",
+        "originalFileFormat": "text/comma-separated-values",
+        "originalFileName": "countypres_2000-2024.csv",
+        "originalFileSize": 10222208,
+        "originalFormatLabel": "Comma Separated Values",
+        "persistentId": "",
+        "publicationDate": "2026-02-25",
+        "rootDataFileId": -1,
+        "storageIdentifier": "s3://dvn-cloud:19c962c2ae4-952f6b42f253",
+        "tabularData": true
+      },
+      "datasetVersionId": 719532,
+      "label": "countypres_2000-2024.tab",
+      "restricted": false,
+      "version": 3
+    },
+    "guestbook_id": 458,
+    "license": {
+      "iconUri": "https://licensebuttons.net/p/zero/1.0/88x31.png",
+      "languageCode": "en",
+      "name": "CC0 1.0",
+      "rightsIdentifier": "CC0-1.0",
+      "rightsIdentifierScheme": "SPDX",
+      "schemeUri": "https://spdx.org/licenses/",
+      "uri": "http://creativecommons.org/publicdomain/zero/1.0"
+    },
+    "release_time": "2026-02-25T19:00:32Z"
+  },
+  "version": "20.0"
+}
