@@ -4,7 +4,9 @@ from logging.config import fileConfig
 from alembic import context
 
 from app.database import Base, DATABASE_URL, engine
-import app.models  # Registers all database models
+import app.models  # Existing model imports; preserved for backward compatibility
+import app.models.core  # Ensure core tables are available to Alembic
+import app.models.ingestion  # Register Step 5 provenance and observation tables
 
 
 config = context.config

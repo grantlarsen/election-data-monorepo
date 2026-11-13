@@ -1,0 +1,19 @@
+{
+  "completed_at": "2026-11-13T05:32:02.059925+00:00",
+  "duration_ms": 297,
+  "error": "AcquisitionError: Upstream rejected https://dataverse.harvard.edu/api/access/datafile/13573089?format=original: HTTP Error 400: Bad Request",
+  "mode": "validate_only",
+  "run_id": "ff2f0329-3176-4b45-b706-67898ac28ee1",
+  "source": "medsl_presidential_county",
+  "started_at": "2026-11-13T05:32:01.762167+00:00",
+  "status": "FAILED",
+  "years": [
+    2000,
+    2004,
+    2008,
+    2012,
+    2016,
+    2020,
+    2024
+  ]
+}

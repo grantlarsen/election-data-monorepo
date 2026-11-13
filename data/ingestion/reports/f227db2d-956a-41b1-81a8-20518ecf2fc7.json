@@ -1,0 +1,150 @@
+{
+  "active_years_switched": 0,
+  "completed_at": "2026-11-13T20:16:02.033679+00:00",
+  "dataset_version": "20.0",
+  "download_url": "https://dataverse.harvard.edu/api/access/datafile/13573089?format=original",
+  "duration_ms": 54429,
+  "file_id": 13573089,
+  "issues": [
+    {
+      "code": "MISSING_VOTE_COMPONENT",
+      "count": 37,
+      "description": "Candidate vote count absent; retain NULL, never substitute zero",
+      "sample_rows": [
+        93141,
+        93144,
+        93180,
+        93182,
+        93190
+      ],
+      "severity": "WARNING"
+    },
+    {
+      "code": "FIPS_UNRESOLVED",
+      "count": 73,
+      "description": "Missing or malformed county FIPS; leave canonical jurisdiction unmatched",
+      "sample_rows": [
+        21804,
+        21805,
+        21806,
+        21807,
+        25288
+      ],
+      "severity": "WARNING"
+    },
+    {
+      "code": "FIPS_STATE_MISMATCH",
+      "count": 4,
+      "description": "County FIPS prefix does not match state postal code",
+      "sample_rows": [
+        9176,
+        9177,
+        9178,
+        9179
+      ],
+      "severity": "WARNING"
+    },
+    {
+      "code": "MISSING_PARTY",
+      "count": 501,
+      "description": "Party designation missing; no inference made",
+      "sample_rows": [
+        14831,
+        14859,
+        14887,
+        14915,
+        14943
+      ],
+      "severity": "WARNING"
+    },
+    {
+      "code": "DUPLICATE_LOGICAL_KEY",
+      "count": 461,
+      "description": "Multiple source rows share a logical identity; all are preserved separately",
+      "sample_rows": [
+        11299,
+        10753,
+        15322,
+        11247,
+        15548
+      ],
+      "severity": "WARNING"
+    },
+    {
+      "code": "CANDIDATE_SUM_EXCEEDS_TOTAL",
+      "count": 197,
+      "description": "Candidate components exceed reported total; may indicate double-counting or overlapping modes",
+      "sample_rows": [
+        20001,
+        2847,
+        14995,
+        15443,
+        15891
+      ],
+      "severity": "WARNING"
+    },
+    {
+      "code": "CANDIDATE_SUM_BELOW_TOTAL",
+      "count": 4377,
+      "description": "Candidate components do not explain all votes; do not fabricate residual votes",
+      "sample_rows": [
+        5045,
+        12728,
+        14452,
+        86399,
+        14360
+      ],
+      "severity": "WARNING"
+    },
+    {
+      "code": "COUNTY_CODE_CHANGED",
+      "count": 6,
+      "description": "County label maps to multiple FIPS identifiers; investigate boundaries or source errors",
+      "sample_rows": [
+        19467,
+        16292,
+        19215,
+        19083,
+        19191
+      ],
+      "severity": "WARNING"
+    },
+    {
+      "code": "COUNTY_LABEL_CHANGED",
+      "count": 72,
+      "description": "FIPS identifier maps to multiple labels; investigate renames, recodes or collisions",
+      "sample_rows": [
+        9368,
+        19171,
+        9372,
+        19547,
+        16292
+      ],
+      "severity": "WARNING"
+    }
+  ],
+  "mode": "load",
+  "published_at": "2026-02-25T19:00:32+00:00",
+  "raw_path": "data/ingestion/raw/medsl_presidential_county/20.0/9299583148f5f8264baf50b5d929c260699c46d915909b13ea3c3850918946f8.csv",
+  "records_already_present": 94340,
+  "records_in_file": 94151,
+  "records_inserted": -189,
+  "records_rejected": 0,
+  "records_selected": 94151,
+  "records_updated": 0,
+  "retrieved_at": "2026-11-13T19:03:48.053569+00:00",
+  "run_id": "f227db2d-956a-41b1-81a8-20518ecf2fc7",
+  "sha256": "9299583148f5f8264baf50b5d929c260699c46d915909b13ea3c3850918946f8",
+  "source": "medsl_presidential_county",
+  "started_at": "2026-11-13T20:15:07.603712+00:00",
+  "status": "SUCCEEDED",
+  "years": [
+    2000,
+    2004,
+    2008,
+    2012,
+    2016,
+    2020,
+    2024
+  ]
+}
