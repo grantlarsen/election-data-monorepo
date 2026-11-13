@@ -10,6 +10,7 @@ from uuid import UUID, uuid4
 
 import polars as pl
 from sqlalchemy import Engine, func, select, insert, update
+from sqlalchemy.engine import Connection
 from sqlalchemy.dialects.postgresql import insert as pg_insert
 
 from app.models.core import DataSource, PoliticalParty
@@ -117,6 +118,21 @@ def to_records(df: pl.DataFrame, release_id: UUID, party_ids: dict[str, UUID]) -
     return records
 
 
+def insert_observation_chunk(conn: Connection, rows: list[dict[str, Any]]) -> int:
+    """Insert a batch and count *actual* inserted rows, excluding conflicts.
+
+    DBAPI/SQLAlchemy rowcount can be -1 for PostgreSQL multi-VALUES INSERT;
+    RETURNING yields one row for each successful insertion instead.
+    """
+    statement = (
+        pg_insert(ElectionResultObservation.__table__)
+        .values(rows)
+        .on_conflict_do_nothing(index_elements=["release_id", "source_row_number"])
+        .returning(ElectionResultObservation.__table__.c.id)
+    )
+    return len(conn.execute(statement).all())
+
+
 def load(engine: Engine, source_id: UUID, run_id: UUID, asset: AcquiredFile, df: pl.DataFrame,
          years: set[int], warnings: list[dict], started_at: Any, completed_at: Any,
          duration_ms: int, *, records_read: int | None = None) -> LoadStats:
@@ -162,9 +178,7 @@ def load(engine: Engine, source_id: UUID, run_id: UUID, asset: AcquiredFile, df:
         inserted = 0
         for offset in range(0, df.height, 500):
             chunk = to_records(df.slice(offset, 500), release_id, party_ids)
-            stmt = pg_insert(ElectionResultObservation.__table__).values(chunk)
-            inserted += conn.execute(stmt.on_conflict_do_nothing(
-                index_elements=["release_id", "source_row_number"])).rowcount
+            inserted += insert_observation_chunk(conn, chunk)
         loaded_count = int(conn.scalar(select(func.count()).select_from(ElectionResultObservation).where(
             ElectionResultObservation.release_id == release_id,
             ElectionResultObservation.year.in_(sorted(years)))) or 0)
