@@ -2,6 +2,7 @@
 from datetime import date
 from hashlib import sha256
 import json
+from pathlib import Path
 from uuid import UUID
 
 from sqlalchemy import select
@@ -16,6 +17,19 @@ from ingestion.geography.rules import RULESET_VERSION, name_key
 def digest(manifest):
     return sha256(json.dumps(manifest, sort_keys=True, default=str,
                              separators=(',', ':')).encode()).hexdigest()
+
+
+def read_preview(path: Path) -> dict:
+    """Check an archived preview's recorded digest before trusting its inputs.
+
+    A digest detects corruption; it does not supply reviewer approval or prove
+    the origin of a deliberately rewritten file.
+    """
+    report = json.loads(path.read_text(encoding='utf-8'))
+    manifest = report.get('context_manifest')
+    if not isinstance(manifest, dict) or digest(manifest) != report.get('context_sha256'):
+        raise ValueError('Missing or corrupt archived geographic resolution context')
+    return manifest
 
 
 def capture(conn, release_id, years):

@@ -8,6 +8,7 @@
 # Generated delivery packages and audit evidence
 /artifacts/
 /data/data004/
+/data/geo001/
 
 # Python tooling and coverage output
 .ruff_cache/

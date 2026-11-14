@@ -56,7 +56,7 @@ def test_context_not_global_city_strip():
     assert county_equivalent_name_match("VA", "51760", "RICHMOND", "Richmond city", 2024)
     assert county_equivalent_name_match("VA", "51036", "CHARLES", "Charles City County", 2024) is None
     assert county_equivalent_name_match("NY", "36061", "NEW YORK", "New York city", 2024) is None
-    assert RULESET_VERSION == "step6.2.0"
+    assert RULESET_VERSION == "step6.2.1"
 
 
 def test_known_identifier_retirements_are_never_automatically_mapped():
