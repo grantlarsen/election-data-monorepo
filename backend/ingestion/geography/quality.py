@@ -32,6 +32,7 @@ def validate_loaded_reference(engine: Engine, release_id: UUID) -> dict:
             GeographicReference, JurisdictionRelationship.reference_id == GeographicReference.id
         ).where(GeographicReference.release_id == release_id)).all()
     state_ids = {r.state_fips: r.jurisdiction_id for r in refs if r.kind == "state"}
+    is_place_release = bool(refs) and all(r.kind == "place" for r in refs)
     errors = []
     codes = set()
     for r in refs:
@@ -40,9 +41,13 @@ def validate_loaded_reference(engine: Engine, release_id: UUID) -> dict:
         codes.add((r.kind, r.geoid))
         if r.kind == "state" and (len(r.geoid) != 2 or r.geoid != r.state_fips):
             errors.append({"code": "INVALID_STATE_FIPS", "geoid": r.geoid})
-        if r.kind == "county" and (len(r.geoid) != 5 or not r.geoid.isdecimal() or
-                                    r.geoid[:2] != r.state_fips or r.geoid[-3:] == "999"):
+        if r.kind == "county" and (len(r.geoid) != 5 or not r.geoid.isascii() or
+                                    not r.geoid.isdecimal() or r.geoid[:2] != r.state_fips or
+                                    r.geoid[-3:] in {"000", "999"}):
             errors.append({"code": "INVALID_COUNTY_GEOID", "geoid": r.geoid})
+        if r.kind == "place" and (len(r.geoid)!=7 or not r.geoid.isascii() or
+                                   not r.geoid.isdecimal() or r.geoid[:2]!=r.state_fips):
+            errors.append({"code":"INVALID_PLACE_GEOID","geoid":r.geoid})
         if r.kind == "county" and r.state_fips not in state_ids:
             errors.append({"code": "MISSING_PARENT_STATE", "geoid": r.geoid})
     ids = {i.reference_id: i for i in identifiers}
@@ -50,17 +55,31 @@ def validate_loaded_reference(engine: Engine, release_id: UUID) -> dict:
     for r in refs:
         i = ids.get(r.id)
         if (i is None or i.value != r.geoid or i.jurisdiction_id != r.jurisdiction_id or
-            i.scheme != ("FIPS_COUNTY" if r.kind == "county" else "FIPS_STATE")):
+            i.scheme != ({"county":"FIPS_COUNTY","state":"FIPS_STATE",
+                          "place":"CENSUS_PLACE_GEOID"}[r.kind])):
             errors.append({"code": "INVALID_IDENTIFIER", "geoid": r.geoid})
-        if r.kind == "county":
+        if r.kind in {"county", "place"}:
             rel = rels.get(r.id)
-            if (rel is None or rel.parent_id != state_ids.get(r.state_fips) or
+            from ingestion.geography.load import stable_jurisdiction_id
+            expected_parent = (stable_jurisdiction_id("state",r.state_fips, "")
+                               if is_place_release else state_ids.get(r.state_fips))
+            if (rel is None or rel.parent_id != expected_parent or
                 rel.child_id != r.jurisdiction_id or rel.parent_id == rel.child_id):
                 errors.append({"code": "INVALID_HIERARCHY", "geoid": r.geoid})
-    if len(state_ids) != 51:
+    if not is_place_release and len(state_ids) != 51:
         errors.append({"code": "INCOMPLETE_STATES", "actual": len(state_ids), "expected": 51})
+    coverage_gaps = []
+    if refs and not is_place_release and min(r.vintage_start for r in refs) <= 2000:
+        known={r.geoid for r in refs if r.kind=="county"}
+        for fips,why in [("11001","District of Columbia county-equivalent"),
+                         ("12086","Miami-Dade 2000 county")]:
+            if fips not in known:
+                coverage_gaps.append({"geoid":fips,"reason":why,
+                  "action":"Supplement from contemporaneous Census 2000 evidence; do not fabricate rows"})
     return {"release_id": str(release_id), "state_count": len(state_ids),
-            "county_count": len(refs) - len(state_ids), "identifier_count": len(identifiers),
+            "county_count": len([r for r in refs if r.kind=="county"]),
+            "place_count": len([r for r in refs if r.kind=="place"]),
+            "known_reference_coverage_gaps":coverage_gaps, "identifier_count": len(identifiers),
             "hierarchy_count": len(relations), "errors": errors, "ok": not errors,
             "limitations": ["Product ranges do not verify legal effective dates",
                             "No boundary geometry loaded",
@@ -70,12 +89,14 @@ def validate_loaded_reference(engine: Engine, release_id: UUID) -> dict:
 def unresolved_rows(engine: Engine, release_id: UUID) -> list[dict]:
     with engine.connect() as conn:
         r, o = GeographicResolution, ElectionResultObservation
+        child=r.__table__.alias("superseding")
         rows = conn.execute(select(
             o.source_row_number, o.year, o.state_code, o.county_raw, o.county_fips_raw,
             o.county_fips, r.status, r.method, r.reason, r.observation_id
         ).join(o, o.id == r.observation_id).where(
             r.reference_release_id == release_id,
-            ~r.status.in_(["RESOLVED", "RESOLVED_HISTORICAL"])
+            ~r.status.in_(["RESOLVED", "RESOLVED_HISTORICAL", "RESOLVED_ALIAS", "NON_COUNTY_CLASSIFIED"]),
+            ~select(child.c.id).where(child.c.supersedes_id==r.id).exists()
         ).order_by(o.year, o.state_code, o.source_row_number)).mappings().all()
     return [{k: str(v) if k == "observation_id" else v for k, v in row.items()}
             for row in rows]
@@ -164,3 +185,36 @@ def reference_changes(engine: Engine) -> dict:
             "name_geoid_change_groups": len(changed_code),
             "limitations": "These are comparison candidates, not confirmed legal successions.",
             "changes": changed_name + changed_code}
+
+
+
+def geographic_resolution_quality(engine: Engine, release_id: UUID) -> dict:
+    """Report current decision leaves only, separating valid non-county geography.
+
+    This does not assert that a classified unit has a verified canonical boundary.
+    """
+    r,o = GeographicResolution, ElectionResultObservation
+    child=r.__table__.alias("superseding")
+    with engine.connect() as conn:
+        rows=conn.execute(select(o.year,o.state_code,o.county_raw,o.county_fips,
+            o.candidate_votes,r.status,r.method,r.jurisdiction_id,r.observation_id).join(
+                o,o.id==r.observation_id).where(r.reference_release_id==release_id,
+                ~select(child.c.id).where(child.c.supersedes_id==r.id).exists())).mappings().all()
+    if not rows:
+        return {"release_id":str(release_id),"observations":0,"status_counts":{},
+                "coverage_by_year_state":[],"limitations":["No decisions published for this reference release"]}
+    frame=pl.DataFrame([{"year":x["year"],"state":x["state_code"],
+        "status":x["status"],"method":x["method"],
+        "unit_key":f"{x['county_raw']}:{x['county_fips']}",
+        "votes":x["candidate_votes"] or 0} for x in rows])
+    coverage=(frame.group_by(["year","state","status"]).agg(
+        pl.len().alias("observations"),
+        pl.col("unit_key").n_unique().alias("distinct_source_units"),
+        pl.col("votes").sum().alias("candidate_votes_total"))
+        .sort(["year","state","status"]).to_dicts())
+    counts=frame.group_by("status").agg(pl.len().alias("n")).to_dicts()
+    return {"release_id":str(release_id),"observations":len(rows),
+        "status_counts":{x["status"]:x["n"] for x in counts},
+        "coverage_by_year_state":coverage,
+        "limitations":["County resolution and non-county classification are distinct",
+          "An elected district does not acquire a Census county boundary by classification"]}

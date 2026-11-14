@@ -1,0 +1,3 @@
+old_geoid,new_geoid,old_name,new_name,effective_date,change_type,evidence_url,evidence_note
+46113,46102,Shannon County,Oglala Lakota County,2015-05-01,NAME_AND_CODE,https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.2010.html,"Official Census change; import as PROPOSED, then verify before activating"
+02270,02158,Wade Hampton Census Area,Kusilvak Census Area,2015-07-01,NAME_AND_CODE,https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.2010.html,"Official Census change; import as PROPOSED, then verify before activating"

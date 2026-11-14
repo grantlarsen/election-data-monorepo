@@ -12,14 +12,21 @@ from sqlalchemy.dialects.postgresql import insert as pg_insert
 from app.models.core import DataSource
 from app.models.geography import GeographicReference, GeographicResolution
 from app.models.ingestion import ElectionResultObservation, SourceActiveYear, SourceRelease
-from ingestion.adapters.census_state_county_georef import name_key
+from ingestion.geography.rules import (RULESET_VERSION, name_key, non_county_classification,
+                                       CENSUS_CT_CHANGE, CENSUS_2015_CHANGES,
+                                       county_equivalent_name_match, retired_identifier_evidence,
+                                       CENSUS_INDEPENDENT_CITIES)
 from ingestion.loader import _chunks
 from ingestion.medsl import STATE_FIPS
 
 
 def assess_observation(obs: dict, by_code: dict, by_name: dict,
                        latest: dict, release_id: UUID,
-                       vintage_start: int, vintage_end: int) -> dict:
+                       vintage_start: int, vintage_end: int, *, aliases: list[dict] | None = None,
+                       legacy_by_code: dict | None = None,
+                       verified_changes: list[dict] | None = None,
+                       cross_release_by_code: dict | None = None,
+                       supplemental_2000_by_code: dict | None = None) -> dict:
     """Pure decision function. Never resolve from name alone or a code/label conflict."""
     state_code = (obs.get("state_code") or "").upper()
     state_fips = obs.get("state_fips") or ""
@@ -48,6 +55,18 @@ def assess_observation(obs: dict, by_code: dict, by_name: dict,
             decision["evidence_json"]["census_geoid"] = ref["geoid"]
         return decision
 
+    # Validate the state independently. No reporting-unit category should conceal
+    # a source state mismatch, even if its label looks like a district.
+    if state_code not in STATE_FIPS or state_fips != STATE_FIPS[state_code]:
+        return outcome("INVALID", "MEDSL state abbreviation and state FIPS disagree")
+    # The namespace of the observation is established *before* interpreting any
+    # numeric field as Census FIPS. Alaska district 20 is NOT Anchorage (02020).
+    special = non_county_classification(obs)
+    if special is not None:
+        return outcome(special["status"], special["reason"], special["method"],
+                       geographic_kind=special["kind"],identifier_scheme=special["namespace"],
+                       reporting_unit_id=special["identifier"],evidence_url=special["evidence_url"],
+                       county_link_intentionally_null=True)
     if year < vintage_start or year > vintage_end:
         return outcome("OUT_OF_VINTAGE", "Election year outside this reference product range")
     if state_code not in STATE_FIPS or state_fips != STATE_FIPS[state_code]:
@@ -66,26 +85,104 @@ def assess_observation(obs: dict, by_code: dict, by_name: dict,
         return outcome("INVALID", "Stored normalized county FIPS conflicts with state")
     if fips[-3:] in {"999", "000"}:
         return outcome("UNRESOLVED", "Non-county aggregate or special reporting code", "SPECIAL_REPORTING_UNIT")
+    retired = retired_identifier_evidence(state_code, fips, year)
+    if retired:
+        # The retirement evidence itself has a "reason" key. Passing **retired
+        # would collide with outcome(status, reason, method, ...).
+        # Keep the documentary evidence intact as a nested payload.
+        return outcome(
+            "PENDING_REVIEW",
+            "Officially retired geographic identifier used in source election results; do not silently remap",
+            "RETIRED_OFFICIAL_GEOID",
+            retirement_evidence=retired,
+        )
     ref = by_code.get(fips)
     if ref is None:
+        # Exact 2000 Census snapshot is an independently versioned source.
+        # It may fill gaps in a statistical-series reference (e.g. DC/Miami-Dade),
+        # but never override a contradictory county entry in that reference.
+        if year == 2000 and supplemental_2000_by_code:
+            supplement = supplemental_2000_by_code.get(fips)
+            if supplement and county_equivalent_name_match(
+                state_code, fips, raw_label, supplement["name_raw"], year
+            ):
+                return outcome("RESOLVED_HISTORICAL", "Matched authoritative Census 2000 county Gazetteer missing from statistical-series reference",
+                               "CENSUS_2000_GAZETTEER_SUPPLEMENT", ref=supplement,
+                               supplemental_release_id=str(supplement["release_id"]),
+                               supplemental_vintage=2000,
+                               supplemental_source="census_2000_counties_gazetteer")
+        # Connecticut's 2024 election source still reports the legacy eight
+        # county areas. Do not equate them to the nine new planning regions.
+        if state_code == "CT" and year == 2024 and legacy_by_code:
+            old = legacy_by_code.get(fips)
+            if old is not None and label and label == name_key(old["name_raw"]):
+                return outcome("RESOLVED_HISTORICAL", "Election uses legacy Connecticut county reporting geography; not a current Census county equivalent",
+                               "CT_LEGACY_COUNTY", ref=old, geographic_kind="legacy_county_reporting_area",
+                               evidence_url=CENSUS_CT_CHANGE, reference_vintage=old.get("vintage_end"),
+                               legal_effective_dates_verified=False)
+        # Evidence-backed code change, only if an independently verified event
+        # and exact post-change label/code are both present.
+        for change in (verified_changes or []):
+            if fips == change["new_geoid"] and year >= change["effective_date"].year:
+                newer=(cross_release_by_code or {}).get(fips)
+                if newer and label == name_key(change["new_name"]) and label == name_key(newer["name_raw"]):
+                    return outcome("RESOLVED_HISTORICAL", "Authoritative dated recoding and later Census identifier agree",
+                                   "VERIFIED_CODE_CHANGE", ref=newer, geographic_kind="county",
+                                   evidence_url=change["evidence_url"], change_effective_date=str(change["effective_date"]),
+                                   reference_vintage=newer.get("vintage_end"))
+            if fips == change["old_geoid"] and year >= change["effective_date"].year:
+                return outcome("PENDING_REVIEW", "Retired FIPS appears after its official change date; check source reporting convention",
+                               "RETIRED_FIPS", suggested_new_fips=change["new_geoid"],
+                               evidence_url=change["evidence_url"])
         return outcome("UNRESOLVED", "FIPS does not occur in selected Census reference",
                        "FIPS_NOT_IN_REFERENCE")
     if not label:
         return outcome("AMBIGUOUS", "Source county label missing or unparseable", "LABEL_MISSING", ref=ref)
-    if label != ref["name_key"]:
+    # Re-normalize the *raw* reference name: persisted Step 6 name_key values
+    # used a buggy rule that removed CITY, and must not be trusted after upgrade.
+    name_match = county_equivalent_name_match(
+        state_code, fips, raw_label, ref["name_raw"], year
+    )
+    if name_match is None:
+        approved = [a for a in (aliases or []) if a["state_code"] == state_code
+                    and a["source_label_key"] == label
+                    and a["first_year"] <= year <= a["last_year"]]
+        targets = {a["target_geoid"] for a in approved}
+        if targets == {fips}:
+            # Aliases are evidence-backed and approved, never fuzzy matches.
+            return outcome("RESOLVED_ALIAS", "Reviewed source-specific alias agrees with Census FIPS",
+                           "APPROVED_SOURCE_ALIAS", ref=ref, geographic_kind="county",
+                           alias_ids=[str(a["id"]) for a in approved],
+                           alias_evidence_urls=[a["evidence_url"] for a in approved])
         return outcome("AMBIGUOUS", "FIPS and geographic label conflict; manual review required",
-                       "CODE_LABEL_CONFLICT", ref=ref)
+                       "CODE_LABEL_CONFLICT", ref=ref, conflicting_alias_targets=sorted(targets))
+    # County code already matched; a recognized Census independent-city suffix
+    # is an entity-typed match, not a general city/county string equivalence.
+    independent_city = name_match == "CENSUS_INDEPENDENT_CITY_SUFFIX"
+    # An exact code/name match can also be historically significant if a
+    # separately verified effective-date event establishes that this code was
+    # newly assigned before the election. Do not infer this from CBP ranges.
+    for change in (verified_changes or []):
+        if (fips == change["new_geoid"] and year >= change["effective_date"].year
+                and label == name_key(change["new_name"])):
+            return outcome("RESOLVED_HISTORICAL", "Exact county match with verified dated FIPS recoding",
+                           "VERIFIED_CODE_CHANGE", ref=ref,
+                           evidence_url=change["evidence_url"],
+                           change_effective_date=str(change["effective_date"]),
+                           legal_effective_dates_verified=True)
     # A historical flag is an evidence-based comparison with the newest ingested
     # reference, not an assertion of the legal date of a rename or code change.
     most_recent = latest.get(fips)
     is_historical = bool(most_recent and most_recent[0] > vintage_end and
-                         most_recent[1] != ref["name_key"])
+                         most_recent[1] != name_key(ref["name_raw"]))
     if latest and fips not in latest:
         is_historical = True
     # latest map contains only latest reference, therefore removed old code qualifies.
     return outcome("RESOLVED_HISTORICAL" if is_historical else "RESOLVED",
                    "Exact state, five-digit county GEOID, and normalized county name match",
-                   "CENSUS_FIPS_AND_NAME", ref=ref,
+                   "CENSUS_INDEPENDENT_CITY" if independent_city else "CENSUS_FIPS_AND_NAME", ref=ref,
+                   geographic_kind="independent_city_county_equivalent" if independent_city else "county",
+                   evidence_url=CENSUS_INDEPENDENT_CITIES if independent_city else None,
                    legal_effective_dates_verified=False,
                    historical_comparison=bool(is_historical))
 
@@ -121,100 +218,18 @@ def choose_release(conn, vintage: int, explicit_release_id: UUID | None = None,
 
 def resolve_medsl(engine: Engine, *, vintage: int, years: list[int] | None = None,
                   release_id: UUID | None = None, dry_run: bool = False,
-                  source_name: str = "census_state_county_georef") -> tuple[dict, list[dict]]:
-    """Save new decisions in one transaction. Old decisions and original observations are untouched."""
-    with engine.begin() as conn:
-        ref_release, begin, end = choose_release(conn, vintage, release_id, source_name=source_name)
-        # The years are MEDSL elections rather than all geographic products.
-        allowed = sorted(years if years is not None else
-                         [y for y in range(begin, end + 1) if 2000 <= y <= 2024 and (y - 2000) % 4 == 0])
-        if not allowed or any(y < 2000 or y > 2024 or (y - 2000) % 4 for y in allowed):
-            raise ValueError("--years must contain MEDSL presidential election years 2000..2024")
-        ref_rows = conn.execute(select(GeographicReference.id, GeographicReference.geoid,
-                                       GeographicReference.name_raw, GeographicReference.name_key,
-                                       GeographicReference.jurisdiction_id, GeographicReference.state_fips).where(
-            GeographicReference.release_id == ref_release,
-            GeographicReference.kind == "county")).mappings().all()
-        by_code = {r["geoid"]: dict(r) for r in ref_rows}
-        if len(by_code) != len(ref_rows) or not by_code:
-            raise ValueError("Missing or duplicate county reference identifiers")
-        by_name: dict[tuple[str, str], list] = defaultdict(list)
-        for r in by_code.values():
-            by_name[(r["state_fips"], r["name_key"])].append(r)
-        # Use the latest *different* loaded vintage as a comparison, not as proof of legal change date.
-        newest = conn.execute(select(func.max(GeographicReference.vintage_end)).where(
-            GeographicReference.kind == "county")).scalar_one_or_none()
-        latest = {}
-        if newest is not None and newest > end:
-            recent = conn.execute(select(GeographicReference.geoid, GeographicReference.name_key,
-                                         GeographicReference.vintage_end).where(
-                GeographicReference.kind == "county", GeographicReference.vintage_end == newest)).all()
-            latest = {code: (yr, name) for code, name, yr in recent}
-        o = ElectionResultObservation
-        observations = conn.execute(select(
-            o.id, o.source_row_number, o.year, o.state_code, o.state_fips,
-            o.county_raw, o.county_fips_raw, o.county_fips
-        ).join(SourceActiveYear, and_(o.release_id == SourceActiveYear.release_id,
-                                      o.year == SourceActiveYear.year))
-        .join(DataSource, DataSource.id == SourceActiveYear.source_id)
-        .where(DataSource.name == "medsl_presidential_county", o.year.in_(allowed))
-        .order_by(o.year, o.state_code, o.source_row_number)).mappings().all()
-        if not observations:
-            raise ValueError("No active MEDSL observations for requested election years")
-        previous = conn.execute(select(GeographicResolution.observation_id,
-                                       GeographicResolution.reference_id,
-                                       GeographicResolution.jurisdiction_id,
-                                       GeographicResolution.status,
-                                       GeographicResolution.method,
-                                       GeographicResolution.reason,
-                                       GeographicResolution.evidence_json).where(
-            GeographicResolution.reference_release_id == ref_release)).mappings().all()
-        previous_by_observation = {r["observation_id"]: dict(r) for r in previous}
-        mapped = []
-        review = []
-        decision_drift = 0
-        for obs in observations:
-            proposed = assess_observation(dict(obs), by_code, by_name, latest,
-                                          ref_release, begin, end)
-            saved = previous_by_observation.get(obs["id"])
-            if saved is not None:
-                if (saved["status"], saved["jurisdiction_id"], saved["reference_id"]) != (
-                    proposed["status"], proposed["jurisdiction_id"], proposed["reference_id"]):
-                    decision_drift += 1
-                # A replay reports the actual persisted decision, not a fresh verdict.
-                # Never silently rewrite previously audited matches.
-                decision = {k: saved[k] for k in ("reference_id", "jurisdiction_id", "status",
-                                                   "method", "reason", "evidence_json")}
-            else:
-                decision = proposed
-            entry = {"id": uuid4(), "observation_id": obs["id"],
-                     "reference_release_id": ref_release, **decision}
-            mapped.append(entry)
-            if not decision["status"].startswith("RESOLVED"):
-                review.append({"observation_id": str(obs["id"]), "source_row_number": obs["source_row_number"],
-                               "year": obs["year"], "state": obs["state_code"],
-                               "fips_raw": obs["county_fips_raw"], "fips_normalized": obs["county_fips"],
-                               "county_label": obs["county_raw"], "status": decision["status"],
-                               "method": decision["method"], "reason": decision["reason"]})
-        inserted = 0
-        if not dry_run:
-            for chunk in _chunks(mapped, 400):
-                stmt = (pg_insert(GeographicResolution.__table__).values(chunk)
-                        .on_conflict_do_nothing(index_elements=["observation_id", "reference_release_id"])
-                        .returning(GeographicResolution.id))
-                inserted += len(conn.execute(stmt).all())
-        counts = dict(Counter(r["status"] for r in mapped))
-        summary = pl.DataFrame([{"year": o["year"], "state": o["state_code"],
-                                 "status": d["status"]} for o, d in zip(observations, mapped)])
-        coverage = (summary.group_by(["year", "state", "status"])
-                    .agg(pl.len().alias("observations"))
-                    .sort(["year", "state", "status"]).to_dicts())
-        return {"reference_release_id": str(ref_release), "vintage": vintage,
-                "product_years": [begin, end], "election_years": allowed,
-                "records_examined": len(mapped), "records_inserted": inserted,
-                "records_already_present": len(mapped) - inserted if not dry_run else None,
-                "dry_run": dry_run, "status_counts": counts,
-                "coverage_by_year_state": coverage,
-                "review_count": len(review),
-                "previous_decisions_preserved": len(previous_by_observation),
-                "decision_drift_for_review": decision_drift}, review
+                  source_name: str = "census_state_county_georef",
+                  publish: bool = True, approve_changes: bool = False,
+                  actor: str | None = None,
+                  expected_proposal_sha256: str | None = None,
+                  allow_downgrades: bool = False,
+                  allow_jurisdiction_reassignment: bool = False) -> tuple[dict, list[dict]]:
+    """Compatible interface delegating to the reviewed Step 6.1 resolver."""
+    from ingestion.geography.resolution_v2 import resolve_medsl_v2
+    return resolve_medsl_v2(engine, vintage=vintage, years=years,
+                            release_id=release_id, dry_run=dry_run,
+                            source_name=source_name, publish=publish,
+                            approve_changes=approve_changes, actor=actor,
+                            expected_proposal_sha256=expected_proposal_sha256,
+                            allow_downgrades=allow_downgrades,
+                            allow_jurisdiction_reassignment=allow_jurisdiction_reassignment)

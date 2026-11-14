@@ -27,16 +27,7 @@ RELEASES = {
 }
 
 
-def name_key(value: str | None) -> str:
-    """Conservative exact-comparison key, not a fuzzy geographic crosswalk."""
-    import re
-    if not value:
-        return ""
-    value = value.split(",", 1)[0].upper().strip()
-    value = re.sub(r"\b(CITY AND BOROUGH|CENSUS AREA|INDEPENDENT CITY|COUNTY|PARISH|BOROUGH|MUNICIPALITY|CITY)\b$", "", value).strip()
-    # Punctuation-only normalization. Does not equate ST with SAINT or invented synonyms.
-    value = re.sub(r"[^A-Z0-9]+", " ", value)
-    return " ".join(value.split())
+from ingestion.geography.rules import name_key
 
 
 def parse_reference(path: Path) -> pl.DataFrame:
@@ -88,7 +79,7 @@ def validate_reference(frame: pl.DataFrame, *, require_complete: bool = True) ->
     if malformed.height:
         raise ValueError(f"Census reference has {malformed.height} malformed rows: {malformed.head(5).to_dicts()}")
     counties = frame.filter(pl.col("state_fips").is_in(list(state_codes)) &
-                            (pl.col("county_code") != "999"))
+                            (~pl.col("county_code").is_in(["000", "999"])))
     duplicates = counties.group_by("geoid").agg(pl.len().alias("n")).filter(pl.col("n") != 1)
     if duplicates.height:
         raise ValueError(f"Census reference has duplicate county GEOIDs: {duplicates.head(5).to_dicts()}")

@@ -4,7 +4,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 import os
 from pathlib import Path
-from uuid import uuid4
+from uuid import UUID, uuid4
 
 import pytest
 pl = pytest.importorskip("polars")
@@ -154,10 +154,10 @@ def test_geography_idempotence_and_medsl_resolution(geo_db):
                              datetime.now(timezone.utc), {})
     load(geo_db, medsl_id, medsl_run, medsl_asset(), df, {2000}, [],
          datetime.now(timezone.utc), datetime.now(timezone.utc), 0)
-    first, review = resolve_medsl(geo_db, vintage=2000)
+    first, review = resolve_medsl(geo_db, vintage=2000, actor='pytest')
     assert first["status_counts"] == {"RESOLVED": 6} and not review
     assert first["records_inserted"] == 6
-    again, _ = resolve_medsl(geo_db, vintage=2000)
+    again, _ = resolve_medsl(geo_db, vintage=2000, actor='pytest')
     assert again["records_inserted"] == 0
     with geo_db.connect() as conn:
         assert conn.scalar(select(func.count()).select_from(GeographicResolution)) == 6
@@ -189,3 +189,58 @@ def test_geography_rollback_does_not_partial_load(geo_db, monkeypatch):
     with geo_db.connect() as conn:
         assert conn.scalar(select(func.count()).select_from(Jurisdiction)) == 0
         assert conn.scalar(select(func.count()).select_from(GeographicReference)) == 0
+
+@pytest.mark.integration
+def test_step61_supersession_is_append_only_and_requires_approval(geo_db, monkeypatch):
+    """No original result changes; old decisions remain readable after publication."""
+    from ingestion.geography import resolve as resolution_module
+    from ingestion.geography.resolution_v2 import current_resolution_rows
+    from sqlalchemy import select
+    f=fixture_reference()
+    run=uuid4()
+    sid=register_run(geo_db,run,'census_state_county_georef',Job.source_url,datetime.now(timezone.utc),{})
+    load_reference(geo_db,sid,run,ref_asset(),f,validate_reference(f,require_complete=False))
+    df=normalize(parse_csv(str(FIXTURES/'medsl_small.csv'))).filter(pl.col('year_int')==2000)
+    run=uuid4()
+    sid=register_run(geo_db,run,'medsl_presidential_county','test',datetime.now(timezone.utc),{})
+    load(geo_db,sid,run,medsl_asset(),df,{2000},[],datetime.now(timezone.utc),datetime.now(timezone.utc),0)
+    first,_=resolve_medsl(geo_db,vintage=2000,actor='pytest')
+    assert first['records_inserted']==6
+    before=geo_db.connect()
+    with before:
+        votes=before.execute(select(ElectionResultObservation.id,ElectionResultObservation.candidate_votes,
+                                    ElectionResultObservation.county_raw)).all()
+    original=resolution_module.assess_observation
+    def altered(*args,**kwargs):
+        proposed=original(*args,**kwargs)
+        proposed['status']='AMBIGUOUS'
+        proposed['method']='SIMULATED_REVIEW'
+        proposed['jurisdiction_id']=None
+        proposed['reason']='Simulated for rollback/supersession test'
+        return proposed
+    monkeypatch.setattr(resolution_module,'assess_observation',altered)
+    with pytest.raises(ValueError,match='--approve-changes'):
+        resolve_medsl(geo_db,vintage=2000,actor='pytest')
+    with geo_db.connect() as conn:
+        assert conn.scalar(select(func.count()).select_from(GeographicResolution))==6
+    preview,_=resolve_medsl(geo_db,vintage=2000,dry_run=True,publish=False)
+    with pytest.raises(ValueError,match='expected-proposal-sha256'):
+        resolve_medsl(geo_db,vintage=2000,approve_changes=True,actor='pytest')
+    with pytest.raises(ValueError,match='allow-downgrades'):
+        resolve_medsl(geo_db,vintage=2000,approve_changes=True,actor='pytest',
+            expected_proposal_sha256=preview['proposal_sha256'])
+    second,_=resolve_medsl(geo_db,vintage=2000,approve_changes=True,actor='pytest',
+        expected_proposal_sha256=preview['proposal_sha256'],allow_downgrades=True)
+    assert second['records_inserted']==6
+    assert second['changed_decisions']==6
+    again,_=resolve_medsl(geo_db,vintage=2000,approve_changes=True,actor='pytest')
+    assert again['records_inserted']==0
+    with geo_db.connect() as conn:
+        assert conn.scalar(select(func.count()).select_from(GeographicResolution))==12
+        leaves=current_resolution_rows(conn,UUID(first['reference_release_id']))
+        assert len(leaves)==6
+        assert all(row['status']=='AMBIGUOUS' and row['supersedes_id'] is not None
+                   for row in leaves.values())
+        saved=conn.execute(select(ElectionResultObservation.id,ElectionResultObservation.candidate_votes,
+                                  ElectionResultObservation.county_raw)).all()
+        assert sorted(votes,key=lambda r:str(r[0]))==sorted(saved,key=lambda r:str(r[0]))

@@ -30,7 +30,7 @@ def main(argv: list[str] | None = None) -> int:
     run_parser.add_argument("--verbose", action="store_true")
     run_parser.add_argument("--state-totals-csv", type=Path, help="Optional independent state-year totals reference")
     geo_parser = sub.add_parser("geo", help="Validate, resolve, or inspect geographic matches")
-    geo_parser.add_argument("operation", choices=["resolve", "validate", "unresolved", "anomalies", "changes"])
+    geo_parser.add_argument("operation", choices=["resolve", "compare", "quality", "validate", "unresolved", "anomalies", "changes", "alias-import", "alias-approve", "change-import", "change-verify", "identity-link", "evidence-list", "reconcile"])
     geo_parser.add_argument("--vintage", type=int, help="Election year for Census reference selection")
     geo_parser.add_argument("--source", default="census_state_county_georef",
                             help="Geographic source adapter to resolve against")
@@ -38,6 +38,21 @@ def main(argv: list[str] | None = None) -> int:
     geo_parser.add_argument("--years", nargs="+", type=int)
     geo_parser.add_argument("--dry-run", action="store_true")
     geo_parser.add_argument("--output", type=Path, help="CSV review destination")
+    geo_parser.add_argument("--publish", action="store_true", help="Explicitly persist geographic resolution decisions")
+    geo_parser.add_argument("--approve-changes", action="store_true", help="Explicit approval for superseding previously published decisions")
+    geo_parser.add_argument("--expected-proposal-sha256", help="Exact preview digest from geo compare; required for changed published decisions")
+    geo_parser.add_argument("--allow-downgrades", action="store_true", help="Separately approve resolved-to-unresolved/ambiguous demotions")
+    geo_parser.add_argument("--allow-jurisdiction-reassignment", action="store_true", help="Separately approve changes of canonical UUID")
+    geo_parser.add_argument("--expected-observations", type=int, default=94151, help="Expected total MEDSL observations for reconciliation")
+    geo_parser.add_argument("--actor", help="Name or team ID of person publishing or reviewing decisions")
+    geo_parser.add_argument("--file", type=Path, help="CSV file containing evidence proposals")
+    geo_parser.add_argument("--alias-id", help="UUID of an alias proposal to approve")
+    geo_parser.add_argument("--change-id", help="UUID of dated geographic change to verify")
+    geo_parser.add_argument("--old-jurisdiction-id", help="Old canonical jurisdiction UUID")
+    geo_parser.add_argument("--new-jurisdiction-id", help="New canonical jurisdiction UUID")
+    geo_parser.add_argument("--relationship", choices=["SAME_ENTITY_RECODED", "SUCCESSOR"],
+                            default="SAME_ENTITY_RECODED")
+    geo_parser.add_argument("--evidence-url", help="Reviewed HTTPS evidence URL supporting alias approval")
     args = parser.parse_args(argv)
     if args.command == "geo":
         from ingestion.geography.cli import geo_command

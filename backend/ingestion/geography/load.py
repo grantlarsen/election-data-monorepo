@@ -31,7 +31,7 @@ def load_reference(engine: Engine, source_id: UUID, run_id: UUID,
                    asset: AcquiredFile, frame: pl.DataFrame, summary: dict,
                    started_at: datetime | None = None) -> dict:
     a, b = asset.info.metadata["vintage_start"], asset.info.metadata["vintage_end"]
-    county_rows = frame.filter(pl.col("county_code") != "999")
+    county_rows = frame.filter(~pl.col("county_code").is_in(["000", "999"]))
     county_rows = county_rows.filter(pl.col("state_fips").is_in(list(STATE_BY_FIPS)))
     # Polars is the only DataFrame engine; Python mappings are used for batched SQL commands.
     county_records = county_rows.to_dicts()
