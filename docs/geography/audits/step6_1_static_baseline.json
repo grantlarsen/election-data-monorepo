@@ -1,0 +1,55 @@
+{
+  "basis": "STATIC_CSV_AUDIT_ONLY",
+  "source": "Step 6 user-uploaded observation triage; no database connection",
+  "sha256": "c4c2342bb78bcdc9943dccfb9fc77d91761058a77d4cb58153d5e0fc563a6f7c",
+  "records": 1290,
+  "distinct_observations": 1290,
+  "family_counts": {
+    "ALASKA_ELECTION_DISTRICT": 1025,
+    "CENSUS_NAME_ALIAS_CANDIDATE": 134,
+    "DOCUMENTED_HISTORIC_FIPS_CHANGE": 7,
+    "LEGACY_COUNTY_REPORTING_2024": 39,
+    "MIXED_GEOGRAPHY_PLACE_CODE": 21,
+    "REFERENCE_SOURCE_OMISSION": 4,
+    "REFERENCE_VINTAGE_LAG": 4,
+    "SOURCE_FIPS_STATE_CONFLICT": 4,
+    "SPECIAL_ELECTION_REPORTING_UNIT": 52
+  },
+  "year_counts": {
+    "2000": 200,
+    "2004": 144,
+    "2008": 144,
+    "2012": 144,
+    "2016": 147,
+    "2020": 252,
+    "2024": 259
+  },
+  "classifier_preview_counts": {
+    "NON_COUNTY_CLASSIFIED": 1073,
+    "PENDING_REVIEW": 25,
+    "REQUIRES_DATABASE_REFERENCE_OR_REVIEW": 192
+  },
+  "classifier_family_status": [
+    {
+      "family": "ALASKA_ELECTION_DISTRICT",
+      "status": "NON_COUNTY_CLASSIFIED",
+      "observations": 1000
+    },
+    {
+      "family": "ALASKA_ELECTION_DISTRICT",
+      "status": "PENDING_REVIEW",
+      "observations": 25
+    },
+    {
+      "family": "MIXED_GEOGRAPHY_PLACE_CODE",
+      "status": "NON_COUNTY_CLASSIFIED",
+      "observations": 21
+    },
+    {
+      "family": "SPECIAL_ELECTION_REPORTING_UNIT",
+      "status": "NON_COUNTY_CLASSIFIED",
+      "observations": 52
+    }
+  ],
+  "requires_live_validation": "All geographic references, approved aliases, and decision publication must be validated in actual PostgreSQL; this preview does not imply accepted canonical matches"
+}

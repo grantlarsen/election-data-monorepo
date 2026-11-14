@@ -1,0 +1,1367 @@
+[
+  {
+    "year": 2000,
+    "county_fips": "51510",
+    "label": "ALEXANDRIA",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51515",
+    "label": "BEDFORD",
+    "old_status": "RESOLVED_HISTORICAL",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51520",
+    "label": "BRISTOL",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51530",
+    "label": "BUENA VISTA",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51540",
+    "label": "CHARLOTTESVILLE",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51550",
+    "label": "CHESAPEAKE",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51570",
+    "label": "COLONIAL HEIGHTS",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51580",
+    "label": "COVINGTON",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51590",
+    "label": "DANVILLE",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51595",
+    "label": "EMPORIA",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51600",
+    "label": "FAIRFAX",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51610",
+    "label": "FALLS CHURCH",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51620",
+    "label": "FRANKLIN",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51630",
+    "label": "FREDERICKSBURG",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51640",
+    "label": "GALAX",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51650",
+    "label": "HAMPTON",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51660",
+    "label": "HARRISONBURG",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51670",
+    "label": "HOPEWELL",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51678",
+    "label": "LEXINGTON",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51680",
+    "label": "LYNCHBURG",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51683",
+    "label": "MANASSAS",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51685",
+    "label": "MANASSAS PARK",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51690",
+    "label": "MARTINSVILLE",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51700",
+    "label": "NEWPORT NEWS",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51710",
+    "label": "NORFOLK",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51720",
+    "label": "NORTON",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51730",
+    "label": "PETERSBURG",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51735",
+    "label": "POQUOSON",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51740",
+    "label": "PORTSMOUTH",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51750",
+    "label": "RADFORD",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51760",
+    "label": "RICHMOND",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51770",
+    "label": "ROANOKE",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51775",
+    "label": "SALEM",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51790",
+    "label": "STAUNTON",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51800",
+    "label": "SUFFOLK",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51810",
+    "label": "VIRGINIA BEACH",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51820",
+    "label": "WAYNESBORO",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51830",
+    "label": "WILLIAMSBURG",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2000,
+    "county_fips": "51840",
+    "label": "WINCHESTER",
+    "old_status": "RESOLVED",
+    "count": 4
+  },
+  {
+    "year": 2004,
+    "county_fips": "51510",
+    "label": "ALEXANDRIA",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51515",
+    "label": "BEDFORD",
+    "old_status": "RESOLVED_HISTORICAL",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51520",
+    "label": "BRISTOL",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51530",
+    "label": "BUENA VISTA",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51540",
+    "label": "CHARLOTTESVILLE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51550",
+    "label": "CHESAPEAKE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51570",
+    "label": "COLONIAL HEIGHTS",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51580",
+    "label": "COVINGTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51590",
+    "label": "DANVILLE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51595",
+    "label": "EMPORIA",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51600",
+    "label": "FAIRFAX",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51610",
+    "label": "FALLS CHURCH",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51620",
+    "label": "FRANKLIN",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51630",
+    "label": "FREDERICKSBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51640",
+    "label": "GALAX",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51650",
+    "label": "HAMPTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51660",
+    "label": "HARRISONBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51670",
+    "label": "HOPEWELL",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51678",
+    "label": "LEXINGTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51680",
+    "label": "LYNCHBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51683",
+    "label": "MANASSAS",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51685",
+    "label": "MANASSAS PARK",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51690",
+    "label": "MARTINSVILLE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51700",
+    "label": "NEWPORT NEWS",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51710",
+    "label": "NORFOLK",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51720",
+    "label": "NORTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51730",
+    "label": "PETERSBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51735",
+    "label": "POQUOSON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51740",
+    "label": "PORTSMOUTH",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51750",
+    "label": "RADFORD",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51760",
+    "label": "RICHMOND",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51770",
+    "label": "ROANOKE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51775",
+    "label": "SALEM",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51790",
+    "label": "STAUNTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51800",
+    "label": "SUFFOLK",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51810",
+    "label": "VIRGINIA BEACH",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51820",
+    "label": "WAYNESBORO",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51830",
+    "label": "WILLIAMSBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2004,
+    "county_fips": "51840",
+    "label": "WINCHESTER",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51510",
+    "label": "ALEXANDRIA",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51515",
+    "label": "BEDFORD",
+    "old_status": "RESOLVED_HISTORICAL",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51520",
+    "label": "BRISTOL",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51530",
+    "label": "BUENA VISTA",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51540",
+    "label": "CHARLOTTESVILLE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51550",
+    "label": "CHESAPEAKE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51570",
+    "label": "COLONIAL HEIGHTS",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51580",
+    "label": "COVINGTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51590",
+    "label": "DANVILLE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51595",
+    "label": "EMPORIA",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51600",
+    "label": "FAIRFAX",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51610",
+    "label": "FALLS CHURCH",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51620",
+    "label": "FRANKLIN",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51630",
+    "label": "FREDERICKSBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51640",
+    "label": "GALAX",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51650",
+    "label": "HAMPTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51660",
+    "label": "HARRISONBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51670",
+    "label": "HOPEWELL",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51678",
+    "label": "LEXINGTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51680",
+    "label": "LYNCHBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51683",
+    "label": "MANASSAS",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51685",
+    "label": "MANASSAS PARK",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51690",
+    "label": "MARTINSVILLE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51700",
+    "label": "NEWPORT NEWS",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51710",
+    "label": "NORFOLK",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51720",
+    "label": "NORTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51730",
+    "label": "PETERSBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51735",
+    "label": "POQUOSON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51740",
+    "label": "PORTSMOUTH",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51750",
+    "label": "RADFORD",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51760",
+    "label": "RICHMOND",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51770",
+    "label": "ROANOKE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51775",
+    "label": "SALEM",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51790",
+    "label": "STAUNTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51800",
+    "label": "SUFFOLK",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51810",
+    "label": "VIRGINIA BEACH",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51820",
+    "label": "WAYNESBORO",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51830",
+    "label": "WILLIAMSBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2008,
+    "county_fips": "51840",
+    "label": "WINCHESTER",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51510",
+    "label": "ALEXANDRIA",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51515",
+    "label": "BEDFORD",
+    "old_status": "RESOLVED_HISTORICAL",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51520",
+    "label": "BRISTOL",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51530",
+    "label": "BUENA VISTA",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51540",
+    "label": "CHARLOTTESVILLE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51550",
+    "label": "CHESAPEAKE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51570",
+    "label": "COLONIAL HEIGHTS",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51580",
+    "label": "COVINGTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51590",
+    "label": "DANVILLE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51595",
+    "label": "EMPORIA",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51600",
+    "label": "FAIRFAX",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51610",
+    "label": "FALLS CHURCH",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51620",
+    "label": "FRANKLIN",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51630",
+    "label": "FREDERICKSBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51640",
+    "label": "GALAX",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51650",
+    "label": "HAMPTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51660",
+    "label": "HARRISONBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51670",
+    "label": "HOPEWELL",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51678",
+    "label": "LEXINGTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51680",
+    "label": "LYNCHBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51683",
+    "label": "MANASSAS",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51685",
+    "label": "MANASSAS PARK",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51690",
+    "label": "MARTINSVILLE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51700",
+    "label": "NEWPORT NEWS",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51710",
+    "label": "NORFOLK",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51720",
+    "label": "NORTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51730",
+    "label": "PETERSBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51735",
+    "label": "POQUOSON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51740",
+    "label": "PORTSMOUTH",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51750",
+    "label": "RADFORD",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51760",
+    "label": "RICHMOND",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51770",
+    "label": "ROANOKE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51775",
+    "label": "SALEM",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51790",
+    "label": "STAUNTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51800",
+    "label": "SUFFOLK",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51810",
+    "label": "VIRGINIA BEACH",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51820",
+    "label": "WAYNESBORO",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51830",
+    "label": "WILLIAMSBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2012,
+    "county_fips": "51840",
+    "label": "WINCHESTER",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51510",
+    "label": "ALEXANDRIA",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51515",
+    "label": "BEDFORD",
+    "old_status": "RESOLVED_HISTORICAL",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51520",
+    "label": "BRISTOL",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51530",
+    "label": "BUENA VISTA",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51540",
+    "label": "CHARLOTTESVILLE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51550",
+    "label": "CHESAPEAKE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51570",
+    "label": "COLONIAL HEIGHTS",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51580",
+    "label": "COVINGTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51590",
+    "label": "DANVILLE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51595",
+    "label": "EMPORIA",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51600",
+    "label": "FAIRFAX",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51610",
+    "label": "FALLS CHURCH",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51620",
+    "label": "FRANKLIN",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51630",
+    "label": "FREDERICKSBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51640",
+    "label": "GALAX",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51650",
+    "label": "HAMPTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51660",
+    "label": "HARRISONBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51670",
+    "label": "HOPEWELL",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51678",
+    "label": "LEXINGTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51680",
+    "label": "LYNCHBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51683",
+    "label": "MANASSAS",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51685",
+    "label": "MANASSAS PARK",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51690",
+    "label": "MARTINSVILLE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51700",
+    "label": "NEWPORT NEWS",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51710",
+    "label": "NORFOLK",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51720",
+    "label": "NORTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51730",
+    "label": "PETERSBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51735",
+    "label": "POQUOSON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51740",
+    "label": "PORTSMOUTH",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51750",
+    "label": "RADFORD",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51760",
+    "label": "RICHMOND",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51770",
+    "label": "ROANOKE",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51775",
+    "label": "SALEM",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51790",
+    "label": "STAUNTON",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51800",
+    "label": "SUFFOLK",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51810",
+    "label": "VIRGINIA BEACH",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51820",
+    "label": "WAYNESBORO",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51830",
+    "label": "WILLIAMSBURG",
+    "old_status": "RESOLVED",
+    "count": 3
+  },
+  {
+    "year": 2016,
+    "county_fips": "51840",
+    "label": "WINCHESTER",
+    "old_status": "RESOLVED",
+    "count": 3
+  }
+]

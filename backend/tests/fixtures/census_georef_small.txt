@@ -1,0 +1,5 @@
+"fipstate","fipscty","ctyname"
+"01","001","Autauga County, AL"
+"01","003","Baldwin County, AL"
+"01","999","Statewide Alabama"
+"11","001","District of Columbia, DC"

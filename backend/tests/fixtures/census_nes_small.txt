@@ -1,0 +1,4 @@
+"st","cty","county_name"
+"01","001","Autauga County, Alabama"
+"01","003","Baldwin County, Alabama"
+"11","001","District of Columbia, District of Columbia"

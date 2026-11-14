@@ -1,0 +1,40 @@
+{
+  "completed_at": "2026-11-13T22:25:00.960288+00:00",
+  "county_rows": 3144,
+  "distinct_states": 51,
+  "duration_ms": 2298,
+  "excluded_999_or_nonstate": 50,
+  "mode": "load",
+  "outside_50_states_dc": 0,
+  "raw_path": "data/ingestion/raw/census_state_county_georef/nes-2022-2024/9917417d14871825bb8a57c998afa8516fe8a1652d9e4d871b096f77d5a0f35c.txt",
+  "records_already_present": 0,
+  "records_in_file": 3194,
+  "records_inserted": 3195,
+  "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+  "run_id": "42bb6bfe-632d-4f0e-9583-4008ba42b749",
+  "sha256": "9917417d14871825bb8a57c998afa8516fe8a1652d9e4d871b096f77d5a0f35c",
+  "source": "census_state_county_georef",
+  "source_metadata": {
+    "file": "georef2022.txt",
+    "license": "U.S. government public-domain data; attribution requested",
+    "provider": "U.S. Census Bureau",
+    "series": "nes",
+    "source_page": "https://www.census.gov/programs-surveys/nonemployer-statistics/technical-documentation/reference/state-county-geography-reference.html",
+    "vintage_end": 2024,
+    "vintage_semantics": "statistical product reference range; NOT legal effective dates",
+    "vintage_start": 2022
+  },
+  "source_release_version": "nes-2022-2024",
+  "source_url": "https://www2.census.gov/programs-surveys/nonemployer-statistics/datasets/2022/historical-datasets/georef2022.txt",
+  "started_at": "2026-11-13T22:24:58.661420+00:00",
+  "state_rows": 51,
+  "status": "SUCCEEDED",
+  "validation": {
+    "county_rows": 3144,
+    "distinct_states": 51,
+    "excluded_999_or_nonstate": 50,
+    "outside_50_states_dc": 0,
+    "records_in_file": 3194
+  },
+  "vintage": 2024
+}
