@@ -7,10 +7,13 @@ import json
 MATCHED = frozenset({"RESOLVED", "RESOLVED_HISTORICAL", "RESOLVED_ALIAS"})
 
 
-def proposal_fingerprint(reference_release_id, ruleset_version: str, differences: list[dict]) -> str:
+def proposal_fingerprint(reference_release_id, ruleset_version: str, differences: list[dict],
+                         *, context_sha256: str | None = None) -> str:
     """Bind an approval to exactly one release, ruleset, and decision diff."""
     payload = {"reference_release_id": str(reference_release_id),
                "ruleset_version": ruleset_version, "differences": differences}
+    if context_sha256 is not None:
+        payload['context_sha256'] = context_sha256
     return sha256(json.dumps(payload, sort_keys=True, default=str,
                              separators=(",", ":")).encode()).hexdigest()
 

@@ -50,7 +50,8 @@ def reference_engine():
                 scheme VARCHAR(30) NOT NULL,
                 value VARCHAR(5) NOT NULL,
                 valid_from DATE,
-                valid_until DATE
+                valid_until DATE,
+                validity_evidence_url TEXT
             )
         """)
         conn.exec_driver_sql("""
@@ -59,7 +60,10 @@ def reference_engine():
                 parent_id CHAR(32) NOT NULL,
                 child_id CHAR(32) NOT NULL,
                 reference_id CHAR(32) NOT NULL,
-                relationship VARCHAR(30) NOT NULL
+                relationship VARCHAR(30) NOT NULL,
+                valid_from DATE,
+                valid_until DATE,
+                validity_evidence_url TEXT
             )
         """)
     try:

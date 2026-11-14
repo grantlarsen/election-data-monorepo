@@ -1,11 +1,23 @@
-.env
-.venv/
-.venv1/
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.DS_Store
-.vscode/
-data/ingestion/guestbook_response.json
-data/ingestion/raw/
-data/ingestion/geography/
+# Local Python environments
+.venv*/
+
+# Environment files containing credentials
+.env.*
+!.env.example
+
+# Generated delivery packages and audit evidence
+/artifacts/
+/data/data004/
+
+# Python tooling and coverage output
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Local IDE and Windows files
+.idea/
+Thumbs.db
+Desktop.ini

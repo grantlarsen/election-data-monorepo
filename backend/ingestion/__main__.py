@@ -35,6 +35,8 @@ def main(argv: list[str] | None = None) -> int:
     geo_parser.add_argument("--source", default="census_state_county_georef",
                             help="Geographic source adapter to resolve against")
     geo_parser.add_argument("--release-id", help="Explicit Census source_release UUID if a vintage has multiple hashes")
+    geo_parser.add_argument('--context-sha256', help='Replay an archived geographic input context')
+    geo_parser.add_argument('--context-file', type=Path, help='Replay context_manifest from a saved comparison JSON')
     geo_parser.add_argument("--years", nargs="+", type=int)
     geo_parser.add_argument("--dry-run", action="store_true")
     geo_parser.add_argument("--output", type=Path, help="CSV review destination")

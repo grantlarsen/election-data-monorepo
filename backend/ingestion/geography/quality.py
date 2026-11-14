@@ -32,7 +32,7 @@ def validate_loaded_reference(engine: Engine, release_id: UUID) -> dict:
             GeographicReference, JurisdictionRelationship.reference_id == GeographicReference.id
         ).where(GeographicReference.release_id == release_id)).all()
     state_ids = {r.state_fips: r.jurisdiction_id for r in refs if r.kind == "state"}
-    is_place_release = bool(refs) and all(r.kind == "place" for r in refs)
+    is_substate_release = bool(refs) and all(r.kind in {"place", "congressional_district"} for r in refs)
     errors = []
     codes = set()
     for r in refs:
@@ -48,6 +48,9 @@ def validate_loaded_reference(engine: Engine, release_id: UUID) -> dict:
         if r.kind == "place" and (len(r.geoid)!=7 or not r.geoid.isascii() or
                                    not r.geoid.isdecimal() or r.geoid[:2]!=r.state_fips):
             errors.append({"code":"INVALID_PLACE_GEOID","geoid":r.geoid})
+        if r.kind == "congressional_district" and (len(r.geoid)!=4 or not r.geoid.isascii()
+                or not r.geoid.isdecimal() or r.geoid[:2]!=r.state_fips):
+            errors.append({"code":"INVALID_CONGRESSIONAL_DISTRICT_GEOID","geoid":r.geoid})
         if r.kind == "county" and r.state_fips not in state_ids:
             errors.append({"code": "MISSING_PARENT_STATE", "geoid": r.geoid})
     ids = {i.reference_id: i for i in identifiers}
@@ -56,20 +59,20 @@ def validate_loaded_reference(engine: Engine, release_id: UUID) -> dict:
         i = ids.get(r.id)
         if (i is None or i.value != r.geoid or i.jurisdiction_id != r.jurisdiction_id or
             i.scheme != ({"county":"FIPS_COUNTY","state":"FIPS_STATE",
-                          "place":"CENSUS_PLACE_GEOID"}[r.kind])):
+                          "place":"CENSUS_PLACE_GEOID", "congressional_district":"CENSUS_CD_GEOID"}[r.kind])):
             errors.append({"code": "INVALID_IDENTIFIER", "geoid": r.geoid})
-        if r.kind in {"county", "place"}:
+        if r.kind in {"county", "place", "congressional_district"}:
             rel = rels.get(r.id)
             from ingestion.geography.load import stable_jurisdiction_id
             expected_parent = (stable_jurisdiction_id("state",r.state_fips, "")
-                               if is_place_release else state_ids.get(r.state_fips))
+                               if is_substate_release else state_ids.get(r.state_fips))
             if (rel is None or rel.parent_id != expected_parent or
                 rel.child_id != r.jurisdiction_id or rel.parent_id == rel.child_id):
                 errors.append({"code": "INVALID_HIERARCHY", "geoid": r.geoid})
-    if not is_place_release and len(state_ids) != 51:
+    if not is_substate_release and len(state_ids) != 51:
         errors.append({"code": "INCOMPLETE_STATES", "actual": len(state_ids), "expected": 51})
     coverage_gaps = []
-    if refs and not is_place_release and min(r.vintage_start for r in refs) <= 2000:
+    if refs and not is_substate_release and min(r.vintage_start for r in refs) <= 2000:
         known={r.geoid for r in refs if r.kind=="county"}
         for fips,why in [("11001","District of Columbia county-equivalent"),
                          ("12086","Miami-Dade 2000 county")]:
@@ -79,6 +82,7 @@ def validate_loaded_reference(engine: Engine, release_id: UUID) -> dict:
     return {"release_id": str(release_id), "state_count": len(state_ids),
             "county_count": len([r for r in refs if r.kind=="county"]),
             "place_count": len([r for r in refs if r.kind=="place"]),
+            "congressional_district_count": len([r for r in refs if r.kind=="congressional_district"]),
             "known_reference_coverage_gaps":coverage_gaps, "identifier_count": len(identifiers),
             "hierarchy_count": len(relations), "errors": errors, "ok": not errors,
             "limitations": ["Product ranges do not verify legal effective dates",

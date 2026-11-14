@@ -7,20 +7,20 @@ real read-only preview; `dry_run=True` is retained for existing callers.
 from __future__ import annotations
 
 from collections import Counter, defaultdict
-from datetime import date
 from hashlib import sha256
 import json
 from uuid import UUID, uuid4
 
 import polars as pl
-from sqlalchemy import Engine, and_, func, select
+from sqlalchemy import Engine, func, select, text, tuple_
 from sqlalchemy.dialects.postgresql import insert as pg_insert
 
 from app.models.core import DataSource
-from app.models.geography import GeographicAlias, GeographicChange, GeographicReference, GeographicResolution, GeographicReportingUnit
-from app.models.ingestion import ElectionResultObservation, SourceActiveYear, SourceRelease
+from app.models.geography import GeographicResolution, GeographicReportingUnit, GeographicResolutionContext
+from app.models.ingestion import ElectionResultObservation
 from ingestion.geography.rules import RULESET_VERSION, name_key
 from ingestion.geography.publication import proposal_fingerprint, high_risk_changes, enforce_approval
+from ingestion.geography import context
 from ingestion.loader import _chunks
 
 
@@ -58,12 +58,26 @@ def resolve_medsl_v2(engine: Engine, *, vintage: int, years: list[int] | None = 
                      actor: str | None = None,
                      expected_proposal_sha256: str | None = None,
                      allow_downgrades: bool = False,
-                     allow_jurisdiction_reassignment: bool = False) -> tuple[dict,list[dict]]:
+                     allow_jurisdiction_reassignment: bool = False,
+                     context_sha256: str | None = None,
+                     context_manifest: dict | None = None) -> tuple[dict,list[dict]]:
     from ingestion.geography.resolve import choose_release, assess_observation
 
     if publish and not dry_run and not (actor and actor.strip()):
         raise ValueError("Publishing requires --actor for an accountable audit trail")
+    if context_sha256 and context_manifest is not None:
+        raise ValueError('Choose a stored context digest or a preview manifest')
     with engine.begin() as conn:
+        conn.execute(text('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ' +
+                          (' READ ONLY' if dry_run or not publish else '')))
+        frozen = context.restore(conn, context_sha256) if context_sha256 else context_manifest
+        if frozen is not None:
+            if frozen.get('format') != 'data004-context-v1' or frozen.get('ruleset_version') != RULESET_VERSION:
+                raise ValueError('Context format/ruleset differs; use its recorded resolver version')
+            pinned = UUID(frozen['reference_release_id'])
+            if release_id is not None and release_id != pinned:
+                raise ValueError('Context primary reference release differs')
+            release_id = pinned
         ref_release,begin,end=choose_release(conn,vintage,release_id,source_name=source_name)
         allowed=sorted(set(years if years is not None else
             [y for y in range(begin,end+1) if 2000<=y<=2024 and (y-2000)%4==0]))
@@ -76,65 +90,25 @@ def resolve_medsl_v2(engine: Engine, *, vintage: int, years: list[int] | None = 
             # Lock a single source row to serialize concurrent resolution publishers.
             conn.execute(select(DataSource.id).where(DataSource.name=="medsl_presidential_county")
                 .with_for_update()).scalar_one()
-        r=GeographicReference
-        ref_rows=conn.execute(select(r.id,r.geoid,r.name_raw,r.name_key,r.jurisdiction_id,
-            r.state_fips,r.vintage_end).where(r.release_id==ref_release,r.kind=="county")).mappings().all()
-        by_code={v["geoid"]:dict(v) for v in ref_rows}
-        if not by_code or len(by_code)!=len(ref_rows):
-            raise ValueError("Missing or duplicate county reference identifiers")
+        manifest = frozen if frozen is not None else context.capture(conn, ref_release, allowed)
+        if manifest['election_years'] != allowed:
+            raise ValueError('Context election-year scope differs')
+        by_code, latest, legacy_by_code, newer_by_code, supplemental_2000_by_code, aliases, changes = context.indexes(manifest, begin, end)
         by_name=defaultdict(list)
         for v in by_code.values():
             by_name[(v["state_fips"],name_key(v["name_raw"]))].append(v)
-        newest=conn.execute(select(func.max(r.vintage_end)).where(r.kind=="county")).scalar_one_or_none()
-        latest={}
-        if newest is not None and newest>end:
-            recent=conn.execute(select(r.geoid,r.name_raw,r.vintage_end).where(
-                r.kind=="county",r.vintage_end==newest)).all()
-            latest={c:(y,name_key(n)) for c,n,y in recent}
-        # Immutable independent references: obtain most recent pre-2022
-        # Connecticut county version, never map it to a planning region.
-        legacy_by_code={}
-        if 2024 in allowed:
-            legacy_rows=conn.execute(select(r.id,r.geoid,r.name_raw,r.name_key,r.jurisdiction_id,
-                r.state_fips,r.vintage_end).where(r.kind=="county",r.state_fips=="09",
-                r.vintage_end<=2021).order_by(r.vintage_end.desc())).mappings().all()
-            for x in legacy_rows:
-                legacy_by_code.setdefault(x["geoid"],dict(x))
-        newer_by_code={}
-        for x in conn.execute(select(r.id,r.geoid,r.name_raw,r.name_key,r.jurisdiction_id,
-            r.state_fips,r.vintage_end).where(r.kind=="county",r.vintage_end>end)
-            .order_by(r.vintage_end.desc())).mappings().all():
-            newer_by_code.setdefault(x["geoid"],dict(x))
-        supplemental_2000_by_code = {}
-        if 2000 in allowed:
-            # Independent Census 2000 snapshot; only exact GEOID/name matches
-            # may supplement absent codes. Never rewrite the selected reference.
-            for x in conn.execute(select(
-                r.id, r.geoid, r.name_raw, r.name_key, r.jurisdiction_id,
-                r.state_fips, r.vintage_end, r.release_id,
-            ).join(SourceRelease, SourceRelease.id == r.release_id)
-             .join(DataSource, DataSource.id == SourceRelease.source_id)
-             .where(r.kind == "county", r.vintage_start == 2000,
-                    r.vintage_end == 2000,
-                    DataSource.name == "census_2000_counties_gazetteer")
-             .order_by(SourceRelease.retrieved_at.desc())).mappings().all():
-                existing = supplemental_2000_by_code.setdefault(x["geoid"], dict(x))
-                if existing["name_raw"] != x["name_raw"] or existing["jurisdiction_id"] != x["jurisdiction_id"]:
-                    raise ValueError("Conflicting Census 2000 Gazetteer releases; pin/review release before matching")
-        aliases=[dict(x) for x in conn.execute(select(GeographicAlias.__table__).where(
-            GeographicAlias.status=="APPROVED",
-            GeographicAlias.source_name=="medsl_presidential_county")).mappings().all()]
-        changes=[dict(x) for x in conn.execute(select(GeographicChange.__table__).where(
-            GeographicChange.status=="VERIFIED")).mappings().all()]
         o=ElectionResultObservation
+        scope = [(UUID(x['release_id']), x['year']) for x in manifest['observation_scope']]
         observations=conn.execute(select(o.id,o.source_row_number,o.year,o.state_code,o.state_fips,
             o.county_raw,o.county_fips_raw,o.county_fips,o.row_sha256,o.candidate_votes,
-            o.total_votes).join(SourceActiveYear,and_(o.release_id==SourceActiveYear.release_id,
-                o.year==SourceActiveYear.year))
-            .join(DataSource,DataSource.id==SourceActiveYear.source_id)
-            .where(DataSource.name=="medsl_presidential_county",o.year.in_(allowed))
+            o.total_votes).where(tuple_(o.release_id,o.year).in_(scope))
             .order_by(o.year,o.state_code,o.source_row_number)).mappings().all()
         if not observations:raise ValueError("No active MEDSL observations for years requested")
+        observation_sha = context.digest([dict(x) for x in observations])
+        if frozen is not None and manifest.get('observation_sha256') != observation_sha:
+            raise ValueError('Recorded observation inputs changed')
+        manifest = {**manifest, 'observation_sha256': observation_sha}
+        input_sha = context.digest(manifest)
         previous=current_resolution_rows(conn,ref_release)
         proposals=[]
         review=[]
@@ -163,7 +137,8 @@ def resolve_medsl_v2(engine: Engine, *, vintage: int, years: list[int] | None = 
                         "method":decision["method"],"reason":decision["reason"],
                         "evidence_json":{**decision["evidence_json"],"ruleset_version":RULESET_VERSION},
                         "ruleset_version":RULESET_VERSION,"decision_sha256":decision_digest(decision),
-                        "supersedes_id":old["id"] if old else None,"published_by":actor})
+                        "supersedes_id":old["id"] if old else None,"published_by":actor,
+                        "context_sha256":input_sha})
             if publish and not dry_run and decision["status"] in {"NON_COUNTY_CLASSIFIED", "PENDING_REVIEW"}:
                 ev=decision["evidence_json"]
                 if ev.get("identifier_scheme"):
@@ -187,7 +162,8 @@ def resolve_medsl_v2(engine: Engine, *, vintage: int, years: list[int] | None = 
         revised=sum(x["change"]=="REVISED" for x in differences)
         # The pure publish gate is separately unit-tested. The digest binds
         # review approval to this exact source release and set of proposals.
-        proposal_sha256 = proposal_fingerprint(ref_release, RULESET_VERSION, differences)
+        proposal_sha256 = proposal_fingerprint(ref_release, RULESET_VERSION, differences,
+                                               context_sha256=input_sha)
         downgrades, reassigned = high_risk_changes(differences)
         if publish and not dry_run:
             enforce_approval(revised=revised, actor=actor,
@@ -199,6 +175,9 @@ def resolve_medsl_v2(engine: Engine, *, vintage: int, years: list[int] | None = 
                 allow_jurisdiction_reassignment=allow_jurisdiction_reassignment)
         inserted=0
         if publish and not dry_run:
+            if insert_rows:
+                conn.execute(pg_insert(GeographicResolutionContext.__table__).values(
+                    sha256=input_sha, manifest=manifest).on_conflict_do_nothing())
             for chunk in _chunks(list(reporting_units.values()),400):
                 conn.execute(pg_insert(GeographicReportingUnit.__table__).values(chunk)
                     .on_conflict_do_nothing(constraint="uq_geo_reporting_unit_scope"))
@@ -221,16 +200,14 @@ def resolve_medsl_v2(engine: Engine, *, vintage: int, years: list[int] | None = 
             .sort(["year","state"]).to_dicts())
         after=conn.execute(select(o.year,o.state_code,
             func.coalesce(func.sum(o.candidate_votes),0).label("votes"))
-            .join(SourceActiveYear,and_(o.release_id==SourceActiveYear.release_id,
-                o.year==SourceActiveYear.year))
-            .join(DataSource,DataSource.id==SourceActiveYear.source_id)
-            .where(DataSource.name=="medsl_presidential_county",o.year.in_(allowed))
+            .where(tuple_(o.release_id,o.year).in_(scope))
             .group_by(o.year,o.state_code).order_by(o.year,o.state_code)).all()
         expected={(x["year"],x["state"]):int(x["candidate_votes_total"]) for x in votes}
         actual={(y,st):int(amount) for y,st,amount in after}
         if expected!=actual:
             raise RuntimeError("Election vote totals changed during geographic resolution; transaction rolled back")
         return {"reference_release_id":str(ref_release),"ruleset_version":RULESET_VERSION,
+            "context_sha256":input_sha,"context_manifest":manifest,
             "vintage":vintage,"product_years":[begin,end],"election_years":allowed,
             "records_examined":len(proposals),"records_inserted":inserted,
             "records_already_present":len(proposals)-inserted if publish and not dry_run else None,

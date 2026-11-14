@@ -1,10 +1,10 @@
-"""Step 6: reference evidence and resolutions; original election rows are immutable."""
+"""Versioned geography and reference evidence; original election rows are immutable."""
 from datetime import date, datetime
 from uuid import UUID, uuid4
 
-from sqlalchemy import (CheckConstraint, Date, DateTime, ForeignKey, Index,
+from sqlalchemy import (CheckConstraint, Date, DateTime, ForeignKey, ForeignKeyConstraint, Index,
                         Integer, String, Text, UniqueConstraint, func, text)
-from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy.dialects.postgresql import JSONB, ExcludeConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.database import Base
@@ -14,14 +14,15 @@ class GeographicReference(Base):
     __tablename__ = "geographic_reference"
     __table_args__ = (
         UniqueConstraint("release_id", "kind", "geoid", name="uq_geo_reference_release_kind_geoid"),
+        UniqueConstraint("id", "jurisdiction_id", name="uq_geo_reference_identity"),
         CheckConstraint("vintage_start <= vintage_end", name="ck_geo_reference_vintage"),
-        CheckConstraint("kind IN ('state', 'county', 'place')", name="ck_geo_reference_kind"),
+        CheckConstraint("kind IN ('state', 'county', 'place', 'congressional_district')", name="ck_geo_reference_kind"),
         Index("ix_geo_reference_vintage_code", "vintage_start", "vintage_end", "geoid"),
     )
     id: Mapped[UUID] = mapped_column(primary_key=True, default=uuid4)
     release_id: Mapped[UUID] = mapped_column(ForeignKey("source_release.id"), nullable=False, index=True)
     jurisdiction_id: Mapped[UUID] = mapped_column(ForeignKey("jurisdiction.id"), nullable=False, index=True)
-    kind: Mapped[str] = mapped_column(String(20), nullable=False)
+    kind: Mapped[str] = mapped_column(String(32), nullable=False)
     geoid: Mapped[str] = mapped_column(String(10), nullable=False)
     state_fips: Mapped[str] = mapped_column(String(2), nullable=False)
     name_raw: Mapped[str] = mapped_column(Text, nullable=False)
@@ -38,6 +39,12 @@ class JurisdictionIdentifier(Base):
         UniqueConstraint("reference_id", "scheme", name="uq_jurisdiction_identifier_reference_scheme"),
         CheckConstraint("valid_until IS NULL OR valid_from IS NULL OR valid_until > valid_from",
                         name="ck_jurisdiction_identifier_dates"),
+        CheckConstraint("(valid_from IS NULL AND valid_until IS NULL) OR "
+                        "length(trim(validity_evidence_url)) > 0 AND validity_evidence_url IS NOT NULL",
+                        name="ck_jurisdiction_identifier_date_evidence"),
+        ForeignKeyConstraint(["reference_id", "jurisdiction_id"],
+                             ["geographic_reference.id", "geographic_reference.jurisdiction_id"],
+                             name="fk_geo_identifier_identity"),
         Index("ix_jurisdiction_identifier_scheme_value", "scheme", "value"),
     )
     id: Mapped[UUID] = mapped_column(primary_key=True, default=uuid4)
@@ -48,22 +55,89 @@ class JurisdictionIdentifier(Base):
     # Legal effective dates are UNKNOWN for CBP multi-year snapshots. Never infer from file ranges.
     valid_from: Mapped[date | None] = mapped_column(Date)
     valid_until: Mapped[date | None] = mapped_column(Date)
+    validity_evidence_url: Mapped[str | None] = mapped_column(Text)
 
 
 class JurisdictionRelationship(Base):
     __tablename__ = "jurisdiction_relationship"
-    __table_args__ = (UniqueConstraint("reference_id", name="uq_jurisdiction_relationship_reference"),)
+    __table_args__ = (
+        UniqueConstraint("reference_id", name="uq_jurisdiction_relationship_reference"),
+        CheckConstraint("parent_id <> child_id", name="ck_geo_relationship_distinct"),
+        CheckConstraint("valid_until IS NULL OR valid_from IS NULL OR valid_until > valid_from",
+                        name="ck_geo_relationship_dates"),
+        CheckConstraint("(valid_from IS NULL AND valid_until IS NULL) OR "
+                        "length(trim(validity_evidence_url)) > 0 AND validity_evidence_url IS NOT NULL",
+                        name="ck_geo_relationship_date_evidence"),
+        ForeignKeyConstraint(["reference_id", "child_id"],
+                             ["geographic_reference.id", "geographic_reference.jurisdiction_id"],
+                             name="fk_geo_relationship_identity"),
+    )
     id: Mapped[UUID] = mapped_column(primary_key=True, default=uuid4)
     parent_id: Mapped[UUID] = mapped_column(ForeignKey("jurisdiction.id"), nullable=False)
     child_id: Mapped[UUID] = mapped_column(ForeignKey("jurisdiction.id"), nullable=False)
     reference_id: Mapped[UUID] = mapped_column(ForeignKey("geographic_reference.id"), nullable=False)
     relationship: Mapped[str] = mapped_column(String(30), nullable=False, default="contains")
+    valid_from: Mapped[date | None] = mapped_column(Date)
+    valid_until: Mapped[date | None] = mapped_column(Date)
+    validity_evidence_url: Mapped[str | None] = mapped_column(Text)
+
+
+class JurisdictionBoundaryVintage(Base):
+    """Verified [from, until) boundary applicability; geometry belongs to DATA-007.
+
+    A release's statistical coverage is never sufficient to create these rows.
+    The exclusion is global per identity, including concurrent transactions.
+    """
+    __tablename__ = "jurisdiction_boundary_vintage"
+    __table_args__ = (
+        UniqueConstraint("jurisdiction_id", "version_label", name="uq_geo_boundary_label"),
+        ForeignKeyConstraint(["reference_id", "jurisdiction_id"],
+                             ["geographic_reference.id", "geographic_reference.jurisdiction_id"],
+                             name="fk_geo_boundary_identity"),
+        CheckConstraint("valid_until IS NULL OR valid_until > valid_from", name="ck_geo_boundary_dates"),
+        CheckConstraint("length(trim(evidence_url)) > 0 AND length(trim(evidence_note)) > 0",
+                        name="ck_geo_boundary_evidence"),
+        ExcludeConstraint(("jurisdiction_id", "="),
+                          (func.daterange(text("valid_from"), text("valid_until"), '[)'), "&&"),
+                          name="ex_geo_boundary_overlap", using="gist",
+                          ops={"jurisdiction_id": "public.gist_uuid_ops"}),
+    )
+    id: Mapped[UUID] = mapped_column(primary_key=True, default=uuid4)
+    jurisdiction_id: Mapped[UUID] = mapped_column(ForeignKey("jurisdiction.id"), nullable=False)
+    reference_id: Mapped[UUID] = mapped_column(ForeignKey("geographic_reference.id"), nullable=False)
+    version_label: Mapped[str] = mapped_column(String(100), nullable=False)
+    valid_from: Mapped[date] = mapped_column(Date, nullable=False)
+    valid_until: Mapped[date | None] = mapped_column(Date)
+    evidence_url: Mapped[str] = mapped_column(Text, nullable=False)
+    evidence_note: Mapped[str] = mapped_column(Text, nullable=False)
+
+
+class GeographicResolutionContext(Base):
+    """One immutable input manifest per digest, shared by many decisions."""
+    __tablename__ = "geographic_resolution_context"
+    sha256: Mapped[str] = mapped_column(String(64), primary_key=True)
+    manifest: Mapped[dict] = mapped_column(JSONB, nullable=False)
 
 
 class GeographicResolution(Base):
     __tablename__ = "geographic_resolution"
     __table_args__ = (
         UniqueConstraint("supersedes_id", name="uq_geo_resolution_supersedes"),
+        UniqueConstraint("id", "observation_id", "reference_release_id", name="uq_geo_resolution_scope"),
+        ForeignKeyConstraint(["supersedes_id", "observation_id", "reference_release_id"],
+                             ["geographic_resolution.id", "geographic_resolution.observation_id",
+                              "geographic_resolution.reference_release_id"], name="fk_geo_resolution_chain_scope"),
+        ForeignKeyConstraint(["reference_id", "jurisdiction_id"],
+                             ["geographic_reference.id", "geographic_reference.jurisdiction_id"],
+                             name="fk_geo_resolution_identity"),
+        CheckConstraint("supersedes_id IS NULL OR supersedes_id <> id", name="ck_geo_resolution_not_self"),
+        CheckConstraint("status IN ('RESOLVED','RESOLVED_HISTORICAL','RESOLVED_ALIAS',"
+                        "'UNRESOLVED','AMBIGUOUS','INVALID','OUT_OF_VINTAGE','PENDING_REVIEW',"
+                        "'NON_COUNTY_CLASSIFIED')", name="ck_geo_resolution_status"),
+        CheckConstraint("(status IN ('RESOLVED','RESOLVED_HISTORICAL','RESOLVED_ALIAS') "
+                        "AND jurisdiction_id IS NOT NULL AND reference_id IS NOT NULL) OR "
+                        "(status NOT IN ('RESOLVED','RESOLVED_HISTORICAL','RESOLVED_ALIAS') "
+                        "AND jurisdiction_id IS NULL)", name="ck_geo_resolution_target"),
         Index("ix_geo_resolution_release_status", "reference_release_id", "status"),
         Index("uq_geo_resolution_root", "observation_id", "reference_release_id",
               unique=True, postgresql_where=text("supersedes_id IS NULL")),
@@ -83,6 +157,7 @@ class GeographicResolution(Base):
     decision_sha256: Mapped[str | None] = mapped_column(String(64))
     supersedes_id: Mapped[UUID | None] = mapped_column(ForeignKey("geographic_resolution.id"))
     published_by: Mapped[str | None] = mapped_column(String(100))
+    context_sha256: Mapped[str | None] = mapped_column(ForeignKey("geographic_resolution_context.sha256"))
 
 
 class GeographicAlias(Base):

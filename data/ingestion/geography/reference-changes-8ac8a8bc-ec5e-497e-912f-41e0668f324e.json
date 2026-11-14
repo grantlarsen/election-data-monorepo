@@ -1,0 +1,849 @@
+{
+  "changes": [
+    {
+      "evidence": [
+        {
+          "geoid": "22059",
+          "jurisdiction_id": "4d3eb804-3ffb-5ea7-b68f-a12647bd85c7",
+          "name_key": "LA SALLE",
+          "name_raw": "La Salle Parish, LA",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "22",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "22059",
+          "jurisdiction_id": "4d3eb804-3ffb-5ea7-b68f-a12647bd85c7",
+          "name_key": "LA SALLE",
+          "name_raw": "La Salle Parish, LA",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "22",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "22059",
+          "jurisdiction_id": "4d3eb804-3ffb-5ea7-b68f-a12647bd85c7",
+          "name_key": "LA SALLE",
+          "name_raw": "La Salle Parish, LA",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "22",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "22059",
+          "jurisdiction_id": "f862f27f-9694-5b28-ba7f-93765f0c6afb",
+          "name_key": "LASALLE",
+          "name_raw": "LaSalle Parish, Louisiana",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "22",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "22059",
+          "jurisdiction_id": "f862f27f-9694-5b28-ba7f-93765f0c6afb",
+          "name_key": "LASALLE",
+          "name_raw": "LaSalle Parish, Louisiana",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "22",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        }
+      ],
+      "geoid": "22059",
+      "type": "NAME_VARIATION_SAME_GEOID"
+    },
+    {
+      "evidence": [
+        {
+          "geoid": "35013",
+          "jurisdiction_id": "86be9621-5187-5782-8881-6a682814e6ff",
+          "name_key": "DONA ANA",
+          "name_raw": "Dona Ana County, NM",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "35",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "35013",
+          "jurisdiction_id": "86be9621-5187-5782-8881-6a682814e6ff",
+          "name_key": "DONA ANA",
+          "name_raw": "Dona Ana County, NM",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "35",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "35013",
+          "jurisdiction_id": "86be9621-5187-5782-8881-6a682814e6ff",
+          "name_key": "DONA ANA",
+          "name_raw": "Dona Ana County, NM",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "35",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "35013",
+          "jurisdiction_id": "a5ae047d-6506-5939-9373-674a9896b565",
+          "name_key": "DO A ANA",
+          "name_raw": "Do\ufffda Ana County, New Mexico",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "35",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "35013",
+          "jurisdiction_id": "a5ae047d-6506-5939-9373-674a9896b565",
+          "name_key": "DO A ANA",
+          "name_raw": "Do a Ana County, New Mexico",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "35",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        }
+      ],
+      "geoid": "35013",
+      "type": "NAME_VARIATION_SAME_GEOID"
+    },
+    {
+      "evidence": [
+        {
+          "geoid": "24005",
+          "jurisdiction_id": "c0270693-c9e8-5d84-9606-4d0cce2536b6",
+          "name_key": "BALTIMORE",
+          "name_raw": "Baltimore County, MD",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "24",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "24510",
+          "jurisdiction_id": "82e90726-4d71-5b71-b24d-ecff9980e8ee",
+          "name_key": "BALTIMORE",
+          "name_raw": "Baltimore city, MD",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "24",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "24005",
+          "jurisdiction_id": "c0270693-c9e8-5d84-9606-4d0cce2536b6",
+          "name_key": "BALTIMORE",
+          "name_raw": "Baltimore County, MD",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "24",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "24510",
+          "jurisdiction_id": "82e90726-4d71-5b71-b24d-ecff9980e8ee",
+          "name_key": "BALTIMORE",
+          "name_raw": "Baltimore city, MD",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "24",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "24005",
+          "jurisdiction_id": "c0270693-c9e8-5d84-9606-4d0cce2536b6",
+          "name_key": "BALTIMORE",
+          "name_raw": "Baltimore County, MD",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "24",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "24510",
+          "jurisdiction_id": "82e90726-4d71-5b71-b24d-ecff9980e8ee",
+          "name_key": "BALTIMORE",
+          "name_raw": "Baltimore city, MD",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "24",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "24005",
+          "jurisdiction_id": "c0270693-c9e8-5d84-9606-4d0cce2536b6",
+          "name_key": "BALTIMORE",
+          "name_raw": "Baltimore County, Maryland",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "24",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "24510",
+          "jurisdiction_id": "82e90726-4d71-5b71-b24d-ecff9980e8ee",
+          "name_key": "BALTIMORE",
+          "name_raw": "Baltimore city, Maryland",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "24",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "24005",
+          "jurisdiction_id": "c0270693-c9e8-5d84-9606-4d0cce2536b6",
+          "name_key": "BALTIMORE",
+          "name_raw": "Baltimore County, Maryland",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "24",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        },
+        {
+          "geoid": "24510",
+          "jurisdiction_id": "82e90726-4d71-5b71-b24d-ecff9980e8ee",
+          "name_key": "BALTIMORE",
+          "name_raw": "Baltimore city, Maryland",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "24",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        }
+      ],
+      "name_key": "BALTIMORE",
+      "state_fips": "24",
+      "type": "CODE_VARIATION_SAME_LABEL"
+    },
+    {
+      "evidence": [
+        {
+          "geoid": "29189",
+          "jurisdiction_id": "7d3bb971-0f2e-55ca-9e13-2e8fe9c51630",
+          "name_key": "ST LOUIS",
+          "name_raw": "St. Louis County, MO",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "29",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "29510",
+          "jurisdiction_id": "89cf1b12-60aa-51be-8816-b520b372c6e4",
+          "name_key": "ST LOUIS",
+          "name_raw": "St. Louis city, MO",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "29",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "29189",
+          "jurisdiction_id": "7d3bb971-0f2e-55ca-9e13-2e8fe9c51630",
+          "name_key": "ST LOUIS",
+          "name_raw": "St. Louis County, MO",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "29",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "29510",
+          "jurisdiction_id": "89cf1b12-60aa-51be-8816-b520b372c6e4",
+          "name_key": "ST LOUIS",
+          "name_raw": "St. Louis city, MO",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "29",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "29189",
+          "jurisdiction_id": "7d3bb971-0f2e-55ca-9e13-2e8fe9c51630",
+          "name_key": "ST LOUIS",
+          "name_raw": "St. Louis County, MO",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "29",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "29510",
+          "jurisdiction_id": "89cf1b12-60aa-51be-8816-b520b372c6e4",
+          "name_key": "ST LOUIS",
+          "name_raw": "St. Louis city, MO",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "29",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "29189",
+          "jurisdiction_id": "7d3bb971-0f2e-55ca-9e13-2e8fe9c51630",
+          "name_key": "ST LOUIS",
+          "name_raw": "St. Louis County, Missouri",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "29",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "29510",
+          "jurisdiction_id": "89cf1b12-60aa-51be-8816-b520b372c6e4",
+          "name_key": "ST LOUIS",
+          "name_raw": "St. Louis city, Missouri",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "29",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "29189",
+          "jurisdiction_id": "7d3bb971-0f2e-55ca-9e13-2e8fe9c51630",
+          "name_key": "ST LOUIS",
+          "name_raw": "St. Louis County, Missouri",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "29",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        },
+        {
+          "geoid": "29510",
+          "jurisdiction_id": "89cf1b12-60aa-51be-8816-b520b372c6e4",
+          "name_key": "ST LOUIS",
+          "name_raw": "St. Louis city, Missouri",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "29",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        }
+      ],
+      "name_key": "ST LOUIS",
+      "state_fips": "29",
+      "type": "CODE_VARIATION_SAME_LABEL"
+    },
+    {
+      "evidence": [
+        {
+          "geoid": "51019",
+          "jurisdiction_id": "827628d9-3c49-566e-860f-77a8cd9d94f3",
+          "name_key": "BEDFORD",
+          "name_raw": "Bedford County, VA",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "51",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "51515",
+          "jurisdiction_id": "b1d41af6-ba1f-5530-aa25-881351161d51",
+          "name_key": "BEDFORD",
+          "name_raw": "Bedford city, VA",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "51",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "51019",
+          "jurisdiction_id": "827628d9-3c49-566e-860f-77a8cd9d94f3",
+          "name_key": "BEDFORD",
+          "name_raw": "Bedford County, VA",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "51",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "51515",
+          "jurisdiction_id": "b1d41af6-ba1f-5530-aa25-881351161d51",
+          "name_key": "BEDFORD",
+          "name_raw": "Bedford city, VA",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "51",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "51019",
+          "jurisdiction_id": "827628d9-3c49-566e-860f-77a8cd9d94f3",
+          "name_key": "BEDFORD",
+          "name_raw": "Bedford County, VA",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "51",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "51515",
+          "jurisdiction_id": "b1d41af6-ba1f-5530-aa25-881351161d51",
+          "name_key": "BEDFORD",
+          "name_raw": "Bedford city, VA",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "51",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "51019",
+          "jurisdiction_id": "827628d9-3c49-566e-860f-77a8cd9d94f3",
+          "name_key": "BEDFORD",
+          "name_raw": "Bedford County, Virginia",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "51",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "51019",
+          "jurisdiction_id": "827628d9-3c49-566e-860f-77a8cd9d94f3",
+          "name_key": "BEDFORD",
+          "name_raw": "Bedford County, Virginia",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "51",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        }
+      ],
+      "name_key": "BEDFORD",
+      "state_fips": "51",
+      "type": "CODE_VARIATION_SAME_LABEL"
+    },
+    {
+      "evidence": [
+        {
+          "geoid": "51059",
+          "jurisdiction_id": "05e212dd-d950-53e7-a313-b15041a43b77",
+          "name_key": "FAIRFAX",
+          "name_raw": "Fairfax County, VA",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "51",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "51600",
+          "jurisdiction_id": "6ab08f31-2382-5fad-95bb-2bc44a44ce0c",
+          "name_key": "FAIRFAX",
+          "name_raw": "Fairfax city, VA",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "51",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "51059",
+          "jurisdiction_id": "05e212dd-d950-53e7-a313-b15041a43b77",
+          "name_key": "FAIRFAX",
+          "name_raw": "Fairfax County, VA",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "51",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "51600",
+          "jurisdiction_id": "6ab08f31-2382-5fad-95bb-2bc44a44ce0c",
+          "name_key": "FAIRFAX",
+          "name_raw": "Fairfax city, VA",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "51",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "51059",
+          "jurisdiction_id": "05e212dd-d950-53e7-a313-b15041a43b77",
+          "name_key": "FAIRFAX",
+          "name_raw": "Fairfax County, VA",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "51",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "51600",
+          "jurisdiction_id": "6ab08f31-2382-5fad-95bb-2bc44a44ce0c",
+          "name_key": "FAIRFAX",
+          "name_raw": "Fairfax city, VA",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "51",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "51059",
+          "jurisdiction_id": "05e212dd-d950-53e7-a313-b15041a43b77",
+          "name_key": "FAIRFAX",
+          "name_raw": "Fairfax County, Virginia",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "51",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "51600",
+          "jurisdiction_id": "6ab08f31-2382-5fad-95bb-2bc44a44ce0c",
+          "name_key": "FAIRFAX",
+          "name_raw": "Fairfax city, Virginia",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "51",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "51059",
+          "jurisdiction_id": "05e212dd-d950-53e7-a313-b15041a43b77",
+          "name_key": "FAIRFAX",
+          "name_raw": "Fairfax County, Virginia",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "51",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        },
+        {
+          "geoid": "51600",
+          "jurisdiction_id": "6ab08f31-2382-5fad-95bb-2bc44a44ce0c",
+          "name_key": "FAIRFAX",
+          "name_raw": "Fairfax city, Virginia",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "51",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        }
+      ],
+      "name_key": "FAIRFAX",
+      "state_fips": "51",
+      "type": "CODE_VARIATION_SAME_LABEL"
+    },
+    {
+      "evidence": [
+        {
+          "geoid": "51067",
+          "jurisdiction_id": "6bf27d32-979d-5f6b-b171-793cd3e919a7",
+          "name_key": "FRANKLIN",
+          "name_raw": "Franklin County, VA",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "51",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "51620",
+          "jurisdiction_id": "3f1cd8c1-3353-5289-9d8f-6a0754c321d3",
+          "name_key": "FRANKLIN",
+          "name_raw": "Franklin city, VA",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "51",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "51067",
+          "jurisdiction_id": "6bf27d32-979d-5f6b-b171-793cd3e919a7",
+          "name_key": "FRANKLIN",
+          "name_raw": "Franklin County, VA",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "51",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "51620",
+          "jurisdiction_id": "3f1cd8c1-3353-5289-9d8f-6a0754c321d3",
+          "name_key": "FRANKLIN",
+          "name_raw": "Franklin city, VA",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "51",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "51067",
+          "jurisdiction_id": "6bf27d32-979d-5f6b-b171-793cd3e919a7",
+          "name_key": "FRANKLIN",
+          "name_raw": "Franklin County, VA",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "51",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "51620",
+          "jurisdiction_id": "3f1cd8c1-3353-5289-9d8f-6a0754c321d3",
+          "name_key": "FRANKLIN",
+          "name_raw": "Franklin city, VA",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "51",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "51067",
+          "jurisdiction_id": "6bf27d32-979d-5f6b-b171-793cd3e919a7",
+          "name_key": "FRANKLIN",
+          "name_raw": "Franklin County, Virginia",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "51",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "51620",
+          "jurisdiction_id": "3f1cd8c1-3353-5289-9d8f-6a0754c321d3",
+          "name_key": "FRANKLIN",
+          "name_raw": "Franklin city, Virginia",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "51",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "51067",
+          "jurisdiction_id": "6bf27d32-979d-5f6b-b171-793cd3e919a7",
+          "name_key": "FRANKLIN",
+          "name_raw": "Franklin County, Virginia",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "51",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        },
+        {
+          "geoid": "51620",
+          "jurisdiction_id": "3f1cd8c1-3353-5289-9d8f-6a0754c321d3",
+          "name_key": "FRANKLIN",
+          "name_raw": "Franklin city, Virginia",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "51",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        }
+      ],
+      "name_key": "FRANKLIN",
+      "state_fips": "51",
+      "type": "CODE_VARIATION_SAME_LABEL"
+    },
+    {
+      "evidence": [
+        {
+          "geoid": "51159",
+          "jurisdiction_id": "aace9627-3842-5043-a0b4-acc1448d74cd",
+          "name_key": "RICHMOND",
+          "name_raw": "Richmond County, VA",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "51",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "51760",
+          "jurisdiction_id": "ceb9a0d9-0080-5f69-bf1f-c3444284b304",
+          "name_key": "RICHMOND",
+          "name_raw": "Richmond city, VA",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "51",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "51159",
+          "jurisdiction_id": "aace9627-3842-5043-a0b4-acc1448d74cd",
+          "name_key": "RICHMOND",
+          "name_raw": "Richmond County, VA",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "51",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "51760",
+          "jurisdiction_id": "ceb9a0d9-0080-5f69-bf1f-c3444284b304",
+          "name_key": "RICHMOND",
+          "name_raw": "Richmond city, VA",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "51",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "51159",
+          "jurisdiction_id": "aace9627-3842-5043-a0b4-acc1448d74cd",
+          "name_key": "RICHMOND",
+          "name_raw": "Richmond County, VA",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "51",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "51760",
+          "jurisdiction_id": "ceb9a0d9-0080-5f69-bf1f-c3444284b304",
+          "name_key": "RICHMOND",
+          "name_raw": "Richmond city, VA",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "51",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "51159",
+          "jurisdiction_id": "aace9627-3842-5043-a0b4-acc1448d74cd",
+          "name_key": "RICHMOND",
+          "name_raw": "Richmond County, Virginia",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "51",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "51760",
+          "jurisdiction_id": "ceb9a0d9-0080-5f69-bf1f-c3444284b304",
+          "name_key": "RICHMOND",
+          "name_raw": "Richmond city, Virginia",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "51",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "51159",
+          "jurisdiction_id": "aace9627-3842-5043-a0b4-acc1448d74cd",
+          "name_key": "RICHMOND",
+          "name_raw": "Richmond County, Virginia",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "51",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        },
+        {
+          "geoid": "51760",
+          "jurisdiction_id": "ceb9a0d9-0080-5f69-bf1f-c3444284b304",
+          "name_key": "RICHMOND",
+          "name_raw": "Richmond city, Virginia",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "51",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        }
+      ],
+      "name_key": "RICHMOND",
+      "state_fips": "51",
+      "type": "CODE_VARIATION_SAME_LABEL"
+    },
+    {
+      "evidence": [
+        {
+          "geoid": "51161",
+          "jurisdiction_id": "57d72b5a-1365-59ff-8fcf-49a959e09d7e",
+          "name_key": "ROANOKE",
+          "name_raw": "Roanoke County, VA",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "51",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "51770",
+          "jurisdiction_id": "ffd187ab-2684-5ba8-a2b7-f71c83bebdb4",
+          "name_key": "ROANOKE",
+          "name_raw": "Roanoke city, VA",
+          "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+          "state_fips": "51",
+          "vintage_end": 2001,
+          "vintage_start": 1996
+        },
+        {
+          "geoid": "51161",
+          "jurisdiction_id": "57d72b5a-1365-59ff-8fcf-49a959e09d7e",
+          "name_key": "ROANOKE",
+          "name_raw": "Roanoke County, VA",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "51",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "51770",
+          "jurisdiction_id": "ffd187ab-2684-5ba8-a2b7-f71c83bebdb4",
+          "name_key": "ROANOKE",
+          "name_raw": "Roanoke city, VA",
+          "release_id": "b489978b-69fb-44f5-b6a5-8f1b5d4bbc6d",
+          "state_fips": "51",
+          "vintage_end": 2011,
+          "vintage_start": 2002
+        },
+        {
+          "geoid": "51161",
+          "jurisdiction_id": "57d72b5a-1365-59ff-8fcf-49a959e09d7e",
+          "name_key": "ROANOKE",
+          "name_raw": "Roanoke County, VA",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "51",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "51770",
+          "jurisdiction_id": "ffd187ab-2684-5ba8-a2b7-f71c83bebdb4",
+          "name_key": "ROANOKE",
+          "name_raw": "Roanoke city, VA",
+          "release_id": "0da6b8a7-2494-4bd4-9d12-bb918800b54f",
+          "state_fips": "51",
+          "vintage_end": 2016,
+          "vintage_start": 2012
+        },
+        {
+          "geoid": "51161",
+          "jurisdiction_id": "57d72b5a-1365-59ff-8fcf-49a959e09d7e",
+          "name_key": "ROANOKE",
+          "name_raw": "Roanoke County, Virginia",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "51",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "51770",
+          "jurisdiction_id": "ffd187ab-2684-5ba8-a2b7-f71c83bebdb4",
+          "name_key": "ROANOKE",
+          "name_raw": "Roanoke city, Virginia",
+          "release_id": "c09bc8c1-edf6-40a4-9fb2-f3873d077ec7",
+          "state_fips": "51",
+          "vintage_end": 2021,
+          "vintage_start": 2017
+        },
+        {
+          "geoid": "51161",
+          "jurisdiction_id": "57d72b5a-1365-59ff-8fcf-49a959e09d7e",
+          "name_key": "ROANOKE",
+          "name_raw": "Roanoke County, Virginia",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "51",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        },
+        {
+          "geoid": "51770",
+          "jurisdiction_id": "ffd187ab-2684-5ba8-a2b7-f71c83bebdb4",
+          "name_key": "ROANOKE",
+          "name_raw": "Roanoke city, Virginia",
+          "release_id": "a88486f5-f907-460b-be24-93e2611f4943",
+          "state_fips": "51",
+          "vintage_end": 2024,
+          "vintage_start": 2022
+        }
+      ],
+      "name_key": "ROANOKE",
+      "state_fips": "51",
+      "type": "CODE_VARIATION_SAME_LABEL"
+    }
+  ],
+  "geoid_name_change_groups": 2,
+  "limitations": "These are comparison candidates, not confirmed legal successions.",
+  "name_geoid_change_groups": 7,
+  "reference_count": 15708
+}

@@ -1,0 +1,102 @@
+{
+  "aliases": [
+    {
+      "evidence_url": "https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.html",
+      "first_year": 2024,
+      "id": "3ab0e599-55bd-4a2a-bd0f-620667b42ce1",
+      "last_year": 2024,
+      "source_label_raw": "DEWITT",
+      "state_code": "IL",
+      "status": "PROPOSED",
+      "target_geoid": "17039"
+    },
+    {
+      "evidence_url": "https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.html",
+      "first_year": 2024,
+      "id": "f09c84a5-9707-45a2-8ee4-ee93523f6bdb",
+      "last_year": 2024,
+      "source_label_raw": "JODAVIESS",
+      "state_code": "IL",
+      "status": "PROPOSED",
+      "target_geoid": "17085"
+    },
+    {
+      "evidence_url": "https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.html",
+      "first_year": 2020,
+      "id": "399e8246-d409-4b1f-bb57-bd90ff75d8db",
+      "last_year": 2024,
+      "source_label_raw": "LA SALLE",
+      "state_code": "LA",
+      "status": "PROPOSED",
+      "target_geoid": "22059"
+    },
+    {
+      "evidence_url": "https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.html",
+      "first_year": 2000,
+      "id": "ac7fcbdf-aba2-4715-a707-2f3082290218",
+      "last_year": 2020,
+      "source_label_raw": "SAINT LOUIS",
+      "state_code": "MN",
+      "status": "PROPOSED",
+      "target_geoid": "27137"
+    },
+    {
+      "evidence_url": "https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.html",
+      "first_year": 2024,
+      "id": "56ef98fc-9775-41d4-a674-75c4e3e734bc",
+      "last_year": 2024,
+      "source_label_raw": "DE KALB",
+      "state_code": "MO",
+      "status": "PROPOSED",
+      "target_geoid": "29063"
+    },
+    {
+      "evidence_url": "https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.html",
+      "first_year": 2020,
+      "id": "2bb31ec3-d8cd-447c-bde8-97c72b41ed10",
+      "last_year": 2024,
+      "source_label_raw": "DONA ANA",
+      "state_code": "NM",
+      "status": "PROPOSED",
+      "target_geoid": "35013"
+    },
+    {
+      "evidence_url": "https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.html",
+      "first_year": 2000,
+      "id": "8ddac47d-2bce-4462-b844-39b3ec0263c6",
+      "last_year": 2024,
+      "source_label_raw": "CHARLES CITY",
+      "state_code": "VA",
+      "status": "PROPOSED",
+      "target_geoid": "51036"
+    },
+    {
+      "evidence_url": "https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.html",
+      "first_year": 2000,
+      "id": "efbe68d6-7011-4e23-a6c3-f9d1bd6d9033",
+      "last_year": 2024,
+      "source_label_raw": "JAMES CITY",
+      "state_code": "VA",
+      "status": "PROPOSED",
+      "target_geoid": "51095"
+    }
+  ],
+  "changes": [
+    {
+      "effective_date": "2015-05-01",
+      "evidence_url": "https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.2010.html",
+      "id": "960e0198-6512-48b0-87d3-2ef04b7c906a",
+      "new_geoid": "46102",
+      "old_geoid": "46113",
+      "status": "PROPOSED"
+    },
+    {
+      "effective_date": "2015-07-01",
+      "evidence_url": "https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.2010.html",
+      "id": "6165e235-c5f7-46f6-adbd-ed3b1153c862",
+      "new_geoid": "02158",
+      "old_geoid": "02270",
+      "status": "PROPOSED"
+    }
+  ]
+}
