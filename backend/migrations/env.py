@@ -7,6 +7,7 @@ from app.database import Base, DATABASE_URL, engine
 import app.models  # Existing model imports; preserved for backward compatibility
 import app.models.core  # Ensure core tables are available to Alembic
 import app.models.ingestion  # Register Step 5 provenance and observation tables
+import app.models.identity  # Register DATA-002 identity tables
 
 
 config = context.config

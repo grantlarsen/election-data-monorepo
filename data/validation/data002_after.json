@@ -1,0 +1,1553 @@
+{
+  "alembic_revisions": [
+    "d002a150fd10"
+  ],
+  "database": "electoral",
+  "tables": {
+    "candidacy": {
+      "rows": 0,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "person_id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "contest_id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "party_id",
+          "type": "UUID",
+          "nullable": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "contest_id"
+          ],
+          "target_table": "contest",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "party_id"
+          ],
+          "target_table": "political_party",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "person_id"
+          ],
+          "target_table": "person",
+          "target_columns": [
+            "id"
+          ]
+        }
+      ],
+      "unique_constraints": [],
+      "indexes": [
+        {
+          "name": "ix_candidacy_contest_id",
+          "columns": [
+            "contest_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "ix_candidacy_party_id",
+          "columns": [
+            "party_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "ix_candidacy_person_id",
+          "columns": [
+            "person_id"
+          ],
+          "unique": false
+        }
+      ],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    },
+    "committee_relationship": {
+      "rows": 0,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "organization_id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "person_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "candidacy_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "role",
+          "type": "VARCHAR(60)",
+          "nullable": false
+        },
+        {
+          "name": "cycle",
+          "type": "INTEGER",
+          "nullable": true
+        },
+        {
+          "name": "valid_from",
+          "type": "DATE",
+          "nullable": true
+        },
+        {
+          "name": "valid_until",
+          "type": "DATE",
+          "nullable": true
+        },
+        {
+          "name": "source_id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "release_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "source_record_key",
+          "type": "VARCHAR(200)",
+          "nullable": true
+        },
+        {
+          "name": "evidence",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "dedupe_key",
+          "type": "VARCHAR(64)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "candidacy_id"
+          ],
+          "target_table": "candidacy",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "organization_id"
+          ],
+          "target_table": "organization",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "person_id"
+          ],
+          "target_table": "person",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "release_id"
+          ],
+          "target_table": "source_release",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "source_id"
+          ],
+          "target_table": "data_source",
+          "target_columns": [
+            "id"
+          ]
+        }
+      ],
+      "unique_constraints": [
+        {
+          "name": "uq_committee_relationship_dedupe",
+          "columns": [
+            "dedupe_key"
+          ]
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ix_committee_relationship_candidacy",
+          "columns": [
+            "candidacy_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "ix_committee_relationship_org",
+          "columns": [
+            "organization_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "ix_committee_relationship_person",
+          "columns": [
+            "person_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "uq_committee_relationship_dedupe",
+          "columns": [
+            "dedupe_key"
+          ],
+          "unique": true
+        }
+      ],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    },
+    "data_source": {
+      "rows": 3,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "url",
+          "type": "VARCHAR(1000)",
+          "nullable": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "unique_constraints": [
+        {
+          "name": "data_source_name_key",
+          "columns": [
+            "name"
+          ]
+        }
+      ],
+      "indexes": [
+        {
+          "name": "data_source_name_key",
+          "columns": [
+            "name"
+          ],
+          "unique": true
+        }
+      ],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    },
+    "election_result_observation": {
+      "rows": 94151,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "release_id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "source_row_number",
+          "type": "INTEGER",
+          "nullable": false
+        },
+        {
+          "name": "row_sha256",
+          "type": "VARCHAR(64)",
+          "nullable": false
+        },
+        {
+          "name": "logical_key",
+          "type": "VARCHAR(64)",
+          "nullable": false
+        },
+        {
+          "name": "year",
+          "type": "INTEGER",
+          "nullable": false
+        },
+        {
+          "name": "state_raw",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "state_code_raw",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "state_code",
+          "type": "VARCHAR(2)",
+          "nullable": false
+        },
+        {
+          "name": "state_fips",
+          "type": "VARCHAR(2)",
+          "nullable": false
+        },
+        {
+          "name": "county_raw",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "county_normalized",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "county_fips_raw",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "county_fips",
+          "type": "VARCHAR(5)",
+          "nullable": true
+        },
+        {
+          "name": "office_raw",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "candidate_raw",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "candidate_normalized",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "candidate_kind",
+          "type": "VARCHAR(30)",
+          "nullable": false
+        },
+        {
+          "name": "party_raw",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "party_normalized",
+          "type": "VARCHAR(200)",
+          "nullable": true
+        },
+        {
+          "name": "mode_raw",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "mode_normalized",
+          "type": "VARCHAR(100)",
+          "nullable": true
+        },
+        {
+          "name": "version_raw",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "candidate_votes",
+          "type": "BIGINT",
+          "nullable": true
+        },
+        {
+          "name": "total_votes",
+          "type": "BIGINT",
+          "nullable": true
+        },
+        {
+          "name": "jurisdiction_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "candidacy_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "party_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "raw_json",
+          "type": "JSONB",
+          "nullable": false
+        },
+        {
+          "name": "warnings_json",
+          "type": "JSONB",
+          "nullable": false
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "candidacy_id"
+          ],
+          "target_table": "candidacy",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "jurisdiction_id"
+          ],
+          "target_table": "jurisdiction",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "party_id"
+          ],
+          "target_table": "political_party",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "release_id"
+          ],
+          "target_table": "source_release",
+          "target_columns": [
+            "id"
+          ]
+        }
+      ],
+      "unique_constraints": [
+        {
+          "name": "uq_result_observation_source_row",
+          "columns": [
+            "release_id",
+            "source_row_number"
+          ]
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ix_result_observation_county",
+          "columns": [
+            "county_fips"
+          ],
+          "unique": false
+        },
+        {
+          "name": "ix_result_observation_release_year",
+          "columns": [
+            "release_id",
+            "year"
+          ],
+          "unique": false
+        },
+        {
+          "name": "ix_result_observation_year_state",
+          "columns": [
+            "year",
+            "state_code"
+          ],
+          "unique": false
+        },
+        {
+          "name": "uq_result_observation_source_row",
+          "columns": [
+            "release_id",
+            "source_row_number"
+          ],
+          "unique": true
+        }
+      ],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    },
+    "external_identifier": {
+      "rows": 0,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "namespace",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "identifier_type",
+          "type": "VARCHAR(50)",
+          "nullable": false
+        },
+        {
+          "name": "value",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "person_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "candidacy_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "organization_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "party_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "label_raw",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "source_id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "release_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "source_record_key",
+          "type": "VARCHAR(200)",
+          "nullable": true
+        },
+        {
+          "name": "evidence",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "candidacy_id"
+          ],
+          "target_table": "candidacy",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "organization_id"
+          ],
+          "target_table": "organization",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "party_id"
+          ],
+          "target_table": "political_party",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "person_id"
+          ],
+          "target_table": "person",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "release_id"
+          ],
+          "target_table": "source_release",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "source_id"
+          ],
+          "target_table": "data_source",
+          "target_columns": [
+            "id"
+          ]
+        }
+      ],
+      "unique_constraints": [
+        {
+          "name": "uq_external_identifier_namespace_type_value",
+          "columns": [
+            "namespace",
+            "identifier_type",
+            "value"
+          ]
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ix_external_identifier_candidacy",
+          "columns": [
+            "candidacy_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "ix_external_identifier_organization",
+          "columns": [
+            "organization_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "ix_external_identifier_party",
+          "columns": [
+            "party_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "ix_external_identifier_person",
+          "columns": [
+            "person_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "uq_external_identifier_namespace_type_value",
+          "columns": [
+            "namespace",
+            "identifier_type",
+            "value"
+          ],
+          "unique": true
+        }
+      ],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    },
+    "geographic_reference": {
+      "rows": 19155,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "release_id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "jurisdiction_id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "kind",
+          "type": "VARCHAR(20)",
+          "nullable": false
+        },
+        {
+          "name": "geoid",
+          "type": "VARCHAR(10)",
+          "nullable": false
+        },
+        {
+          "name": "state_fips",
+          "type": "VARCHAR(2)",
+          "nullable": false
+        },
+        {
+          "name": "name_raw",
+          "type": "TEXT",
+          "nullable": false
+        },
+        {
+          "name": "name_key",
+          "type": "TEXT",
+          "nullable": false
+        },
+        {
+          "name": "vintage_start",
+          "type": "INTEGER",
+          "nullable": false
+        },
+        {
+          "name": "vintage_end",
+          "type": "INTEGER",
+          "nullable": false
+        },
+        {
+          "name": "source_row_number",
+          "type": "INTEGER",
+          "nullable": true
+        },
+        {
+          "name": "note",
+          "type": "TEXT",
+          "nullable": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "jurisdiction_id"
+          ],
+          "target_table": "jurisdiction",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "release_id"
+          ],
+          "target_table": "source_release",
+          "target_columns": [
+            "id"
+          ]
+        }
+      ],
+      "unique_constraints": [
+        {
+          "name": "uq_geo_reference_release_kind_geoid",
+          "columns": [
+            "release_id",
+            "kind",
+            "geoid"
+          ]
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ix_geo_reference_vintage_code",
+          "columns": [
+            "vintage_start",
+            "vintage_end",
+            "geoid"
+          ],
+          "unique": false
+        },
+        {
+          "name": "ix_geographic_reference_jurisdiction_id",
+          "columns": [
+            "jurisdiction_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "ix_geographic_reference_release_id",
+          "columns": [
+            "release_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "uq_geo_reference_release_kind_geoid",
+          "columns": [
+            "release_id",
+            "kind",
+            "geoid"
+          ],
+          "unique": true
+        }
+      ],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    },
+    "geographic_resolution": {
+      "rows": 94151,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "observation_id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "reference_release_id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "reference_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "jurisdiction_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(30)",
+          "nullable": false
+        },
+        {
+          "name": "method",
+          "type": "VARCHAR(60)",
+          "nullable": false
+        },
+        {
+          "name": "reason",
+          "type": "TEXT",
+          "nullable": false
+        },
+        {
+          "name": "evidence_json",
+          "type": "JSONB",
+          "nullable": false
+        },
+        {
+          "name": "resolved_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "ruleset_version",
+          "type": "VARCHAR(64)",
+          "nullable": false
+        },
+        {
+          "name": "decision_sha256",
+          "type": "VARCHAR(64)",
+          "nullable": true
+        },
+        {
+          "name": "supersedes_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "published_by",
+          "type": "VARCHAR(100)",
+          "nullable": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "jurisdiction_id"
+          ],
+          "target_table": "jurisdiction",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "observation_id"
+          ],
+          "target_table": "election_result_observation",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "reference_id"
+          ],
+          "target_table": "geographic_reference",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "reference_release_id"
+          ],
+          "target_table": "source_release",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "supersedes_id"
+          ],
+          "target_table": "geographic_resolution",
+          "target_columns": [
+            "id"
+          ]
+        }
+      ],
+      "unique_constraints": [
+        {
+          "name": "uq_geo_resolution_supersedes",
+          "columns": [
+            "supersedes_id"
+          ]
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ix_geo_resolution_observation_release",
+          "columns": [
+            "observation_id",
+            "reference_release_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "ix_geo_resolution_release_status",
+          "columns": [
+            "reference_release_id",
+            "status"
+          ],
+          "unique": false
+        },
+        {
+          "name": "uq_geo_resolution_root",
+          "columns": [
+            "observation_id",
+            "reference_release_id"
+          ],
+          "unique": true
+        },
+        {
+          "name": "uq_geo_resolution_supersedes",
+          "columns": [
+            "supersedes_id"
+          ],
+          "unique": true
+        }
+      ],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    },
+    "identity_assignment_event": {
+      "rows": 0,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "identifier_id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "target_type",
+          "type": "VARCHAR(30)",
+          "nullable": false
+        },
+        {
+          "name": "person_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "candidacy_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "organization_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "party_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "actor",
+          "type": "VARCHAR(150)",
+          "nullable": false
+        },
+        {
+          "name": "evidence",
+          "type": "TEXT",
+          "nullable": false
+        },
+        {
+          "name": "assigned_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "candidacy_id"
+          ],
+          "target_table": "candidacy",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "identifier_id"
+          ],
+          "target_table": "external_identifier",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "organization_id"
+          ],
+          "target_table": "organization",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "party_id"
+          ],
+          "target_table": "political_party",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "person_id"
+          ],
+          "target_table": "person",
+          "target_columns": [
+            "id"
+          ]
+        }
+      ],
+      "unique_constraints": [],
+      "indexes": [
+        {
+          "name": "ix_identity_event_identifier",
+          "columns": [
+            "identifier_id"
+          ],
+          "unique": false
+        }
+      ],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    },
+    "jurisdiction": {
+      "rows": 3258,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "level",
+          "type": "VARCHAR(50)",
+          "nullable": false
+        },
+        {
+          "name": "state_code",
+          "type": "VARCHAR(2)",
+          "nullable": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "unique_constraints": [],
+      "indexes": [],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    },
+    "organization": {
+      "rows": 0,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(250)",
+          "nullable": false
+        },
+        {
+          "name": "kind",
+          "type": "VARCHAR(30)",
+          "nullable": false
+        },
+        {
+          "name": "creation_key",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "party_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "party_id"
+          ],
+          "target_table": "political_party",
+          "target_columns": [
+            "id"
+          ]
+        }
+      ],
+      "unique_constraints": [
+        {
+          "name": "uq_organization_creation_key",
+          "columns": [
+            "creation_key"
+          ]
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ix_organization_party",
+          "columns": [
+            "party_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "uq_organization_creation_key",
+          "columns": [
+            "creation_key"
+          ],
+          "unique": true
+        }
+      ],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    },
+    "person": {
+      "rows": 0,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "full_name",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "creation_key",
+          "type": "VARCHAR(200)",
+          "nullable": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "unique_constraints": [
+        {
+          "name": "uq_person_creation_key",
+          "columns": [
+            "creation_key"
+          ]
+        }
+      ],
+      "indexes": [
+        {
+          "name": "uq_person_creation_key",
+          "columns": [
+            "creation_key"
+          ],
+          "unique": true
+        }
+      ],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    },
+    "person_name": {
+      "rows": 0,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "person_id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "name_raw",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "kind",
+          "type": "VARCHAR(30)",
+          "nullable": false
+        },
+        {
+          "name": "valid_from",
+          "type": "DATE",
+          "nullable": true
+        },
+        {
+          "name": "valid_until",
+          "type": "DATE",
+          "nullable": true
+        },
+        {
+          "name": "source_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "release_id",
+          "type": "UUID",
+          "nullable": true
+        },
+        {
+          "name": "source_record_key",
+          "type": "VARCHAR(200)",
+          "nullable": true
+        },
+        {
+          "name": "evidence",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "dedupe_key",
+          "type": "VARCHAR(64)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "person_id"
+          ],
+          "target_table": "person",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "release_id"
+          ],
+          "target_table": "source_release",
+          "target_columns": [
+            "id"
+          ]
+        },
+        {
+          "columns": [
+            "source_id"
+          ],
+          "target_table": "data_source",
+          "target_columns": [
+            "id"
+          ]
+        }
+      ],
+      "unique_constraints": [
+        {
+          "name": "uq_person_name_dedupe",
+          "columns": [
+            "dedupe_key"
+          ]
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ix_person_name_person",
+          "columns": [
+            "person_id"
+          ],
+          "unique": false
+        },
+        {
+          "name": "uq_person_name_dedupe",
+          "columns": [
+            "dedupe_key"
+          ],
+          "unique": true
+        }
+      ],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    },
+    "political_party": {
+      "rows": 0,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [],
+      "unique_constraints": [
+        {
+          "name": "political_party_name_key",
+          "columns": [
+            "name"
+          ]
+        }
+      ],
+      "indexes": [
+        {
+          "name": "political_party_name_key",
+          "columns": [
+            "name"
+          ],
+          "unique": true
+        }
+      ],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    },
+    "source_release": {
+      "rows": 7,
+      "columns": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "source_id",
+          "type": "UUID",
+          "nullable": false
+        },
+        {
+          "name": "version",
+          "type": "VARCHAR(40)",
+          "nullable": false
+        },
+        {
+          "name": "sha256",
+          "type": "VARCHAR(64)",
+          "nullable": false
+        },
+        {
+          "name": "filename",
+          "type": "VARCHAR(255)",
+          "nullable": false
+        },
+        {
+          "name": "file_id",
+          "type": "BIGINT",
+          "nullable": false
+        },
+        {
+          "name": "download_url",
+          "type": "TEXT",
+          "nullable": false
+        },
+        {
+          "name": "raw_path",
+          "type": "TEXT",
+          "nullable": false
+        },
+        {
+          "name": "retrieved_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "published_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "metadata_json",
+          "type": "JSONB",
+          "nullable": false
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "source_id"
+          ],
+          "target_table": "data_source",
+          "target_columns": [
+            "id"
+          ]
+        }
+      ],
+      "unique_constraints": [
+        {
+          "name": "uq_source_release_version_hash",
+          "columns": [
+            "source_id",
+            "version",
+            "sha256"
+          ]
+        }
+      ],
+      "indexes": [
+        {
+          "name": "uq_source_release_version_hash",
+          "columns": [
+            "source_id",
+            "version",
+            "sha256"
+          ],
+          "unique": true
+        }
+      ],
+      "model_missing_columns": [],
+      "database_unmodeled_columns": []
+    }
+  },
+  "observation_candidacy_links_need_provenance_review": 0
+}

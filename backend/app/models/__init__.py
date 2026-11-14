@@ -10,3 +10,4 @@ from .core import (
 )
 # Register geographic tables for metadata and integration tests.
 from .geography import GeographicReference, JurisdictionIdentifier, JurisdictionRelationship, GeographicResolution
+from .identity import (PersonName, Organization, ExternalIdentifier, IdentityAssignmentEvent, CommitteeRelationship)
