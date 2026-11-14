@@ -8,6 +8,7 @@ from sqlalchemy import (
     DateTime,
     ForeignKey,
     String,
+    UniqueConstraint,
     func,
 )
 from sqlalchemy.orm import Mapped, mapped_column
@@ -17,11 +18,14 @@ from app.database import Base
 
 class Person(Base):
     __tablename__ = "person"
+    __table_args__ = (UniqueConstraint("creation_key", name="uq_person_creation_key"),)
 
     id: Mapped[UUID] = mapped_column(
         primary_key=True, default=uuid4
     )
     full_name: Mapped[str] = mapped_column(String(200))
+    # Nullable for pre-DATA-002 people; required by idempotent identity service.
+    creation_key: Mapped[str | None] = mapped_column(String(200))
 
 
 class PoliticalParty(Base):
