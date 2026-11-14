@@ -37,10 +37,11 @@ def test_special_reporting_units_have_no_implied_county():
         assert d['namespace']=='MEDSL_REPORTING_UNIT'
 
 
-def test_kansas_city_place_is_not_a_county_and_2024_bad_code_is_not_hidden():
+def test_kansas_city_reporting_unit_is_not_a_county_and_2024_bad_code_is_not_hidden():
     good=non_county_classification(observation('MO','KANSAS CITY',2020,'2938000'))
-    assert good['namespace']=='CENSUS_PLACE'
-    assert good['identifier']=='2938000'
+    assert good['namespace']=='MEDSL_REPORTING_UNIT'
+    assert good['kind']=='source_reporting_unit'
+    assert good['identifier']=='MO:2020:KANSAS CITY'
     assert non_county_classification(observation('MO','KANSAS CITY',2024,'36000')) is None
 
 

@@ -153,10 +153,13 @@ def geo_command(args) -> int:
             raise ValueError(f"geo {args.operation} requires --vintage")
         context_manifest = None
         if args.context_file:
-            context_manifest = json.loads(args.context_file.read_text(encoding='utf-8'))['context_manifest']
+            from ingestion.geography.context import read_preview
+            context_manifest = read_preview(args.context_file)
         if args.context_sha256 and context_manifest is not None:
             raise ValueError('Choose --context-file or --context-sha256')
-        with engine.connect() as conn:
+        with engine.connect() as conn, conn.begin():
+            from sqlalchemy import text
+            conn.execute(text('SET TRANSACTION READ ONLY'))
             from ingestion.geography.context import restore
             pinned = restore(conn, args.context_sha256) if args.context_sha256 else context_manifest
             selected = UUID(args.release_id) if args.release_id else (

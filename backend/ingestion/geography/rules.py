@@ -8,12 +8,12 @@ from __future__ import annotations
 import re
 import unicodedata
 
-RULESET_VERSION = "step6.2.0"
+RULESET_VERSION = "step6.2.1"
 ALASKA_ELECTION_RESULTS = "https://www.elections.alaska.gov/election-results/"
 ALASKA_2018_DISTRICT_99_EVIDENCE = "https://www.elections.alaska.gov/doc/mp/2018/2018GenMedaiPacket.pdf"
 CENSUS_CT_CHANGE = "https://www.federalregister.gov/documents/2022/06/06/2022-12063/change-to-county-equivalents-in-the-state-of-connecticut"
 CENSUS_2015_CHANGES = "https://www.census.gov/programs-surveys/acs/technical-documentation/table-and-geography-changes/2015/geography-changes.html"
-CENSUS_MO_PLACES = "https://tigerweb.geo.census.gov/tigerwebmain/Files/bas26/tigerweb_bas26_incplace_mo.html"
+MISSOURI_KANSAS_CITY_REPORTING = "https://kceb.org/absentee/requirements/"
 
 # Avoid stripping CITY: Charles City County and independent Richmond city differ
 # from counties/cities named Charles or Richmond. Suffixes removed only at end.
@@ -65,10 +65,14 @@ def non_county_classification(obs: dict) -> dict | None:
         method = "SOURCE_FEDERAL_PRECINCT"
     elif state == "MO" and label == "KANSAS CITY":
         if raw == "2938000":
-            return dict(status="NON_COUNTY_CLASSIFIED", method="CENSUS_PLACE_GEOID",
-                        kind="census_place", namespace="CENSUS_PLACE", identifier=raw,
-                        evidence_url=CENSUS_MO_PLACES,
-                        reason="Seven-digit Census place GEOID, not a county identifier; no county allocation")
+            # MEDSL's place-style code does not establish that the returns
+            # cover the whole incorporated place. KCEB serves Kansas City
+            # within Jackson County; source coverage needs separate review.
+            return dict(status="NON_COUNTY_CLASSIFIED", method="SOURCE_KANSAS_CITY_REPORTING_UNIT",
+                        kind="source_reporting_unit", namespace="MEDSL_REPORTING_UNIT",
+                        identifier=f"MO:{year}:KANSAS CITY",
+                        evidence_url=MISSOURI_KANSAS_CITY_REPORTING,
+                        reason="Source Kansas City reporting unit; place-style raw code does not establish a Census place boundary or county allocation")
         # A contradictory code is an error, not a valid place match.
         return None
     else:
