@@ -1,0 +1,14 @@
+{
+  "county_count": 3139,
+  "errors": [],
+  "hierarchy_count": 3139,
+  "identifier_count": 3190,
+  "limitations": [
+    "Product ranges do not verify legal effective dates",
+    "No boundary geometry loaded",
+    "Name/code-change identity continuity requires human review"
+  ],
+  "ok": true,
+  "release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+  "state_count": 51
+}

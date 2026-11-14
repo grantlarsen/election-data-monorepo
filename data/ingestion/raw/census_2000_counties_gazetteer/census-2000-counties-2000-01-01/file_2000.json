@@ -1,0 +1,18 @@
+{
+  "download_url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/county2k.zip",
+  "local_filename": "a685df41544f11bc1afca88300a464f25458c3c2f838fea9199f635445b54c2e.zip",
+  "retrieved_at": "2026-11-14T00:37:01.182857+00:00",
+  "sha256": "a685df41544f11bc1afca88300a464f25458c3c2f838fea9199f635445b54c2e",
+  "source_metadata": {
+    "file": "county2k.zip",
+    "license": "U.S. federal public-domain data",
+    "provider": "U.S. Census Bureau",
+    "record_layout_url": "https://www.census.gov/programs-surveys/geography/technical-documentation/records-layout/gaz-record-layouts.2000.html",
+    "series": "Census 2000 Gazetteer",
+    "source_page": "https://www.census.gov/geographies/reference-files/2000/geo/gazetter-file.html",
+    "vintage_end": 2000,
+    "vintage_semantics": "Census 2000 geography as of January 1, 2000",
+    "vintage_start": 2000
+  },
+  "version": "census-2000-counties-2000-01-01"
+}

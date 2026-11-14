@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+import json
 import logging
 import os
 from pathlib import Path
@@ -150,9 +151,18 @@ def geo_command(args) -> int:
             return 0 if report["complete"] else 1
         if args.vintage is None:
             raise ValueError(f"geo {args.operation} requires --vintage")
+        context_manifest = None
+        if args.context_file:
+            context_manifest = json.loads(args.context_file.read_text(encoding='utf-8'))['context_manifest']
+        if args.context_sha256 and context_manifest is not None:
+            raise ValueError('Choose --context-file or --context-sha256')
         with engine.connect() as conn:
+            from ingestion.geography.context import restore
+            pinned = restore(conn, args.context_sha256) if args.context_sha256 else context_manifest
+            selected = UUID(args.release_id) if args.release_id else (
+                UUID(pinned['reference_release_id']) if pinned is not None else None)
             release_id, _, _ = choose_release(conn, args.vintage,
-                                               UUID(args.release_id) if args.release_id else None,
+                                               selected,
                                                source_name=args.source)
         if args.operation == "validate":
             detail = validate_loaded_reference(engine, release_id)
@@ -170,14 +180,16 @@ def geo_command(args) -> int:
                                            approve_changes=args.approve_changes, actor=args.actor,
                                            expected_proposal_sha256=args.expected_proposal_sha256,
                                            allow_downgrades=args.allow_downgrades,
-                                           allow_jurisdiction_reassignment=args.allow_jurisdiction_reassignment)
+                                           allow_jurisdiction_reassignment=args.allow_jurisdiction_reassignment,
+                                           context_sha256=args.context_sha256,
+                                           context_manifest=context_manifest)
             out = Path(args.output) if args.output else data_dir / "geography" / f"review-{run_id}.csv"
             save_csv(out, review)
             detail["review_csv"] = str(out)
             report_path = data_dir / "geography" / f"resolution-{run_id}.json"
             atomic_json(report_path, detail)
             print({k: v for k, v in detail.items()
-                   if k not in {"coverage_by_year_state", "differences", "vote_totals_by_year_state"}})
+                   if k not in {"coverage_by_year_state", "differences", "vote_totals_by_year_state", "context_manifest"}})
             print(f"Coverage by year/state: {report_path}")
             return 0
         if args.operation == "quality":

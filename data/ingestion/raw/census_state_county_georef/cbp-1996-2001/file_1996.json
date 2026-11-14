@@ -1,0 +1,17 @@
+{
+  "download_url": "https://www2.census.gov/programs-surveys/cbp/technical-documentation/reference/state-county-geography-reference/georef96_01.txt",
+  "local_filename": "ab37675ce654169b02257938af6a95353aa7400830fee6e8dc4e071710fa0ff4.txt",
+  "retrieved_at": "2026-11-13T22:16:24.113659+00:00",
+  "sha256": "ab37675ce654169b02257938af6a95353aa7400830fee6e8dc4e071710fa0ff4",
+  "source_metadata": {
+    "file": "georef96_01.txt",
+    "license": "U.S. government public-domain data; attribution requested",
+    "provider": "U.S. Census Bureau",
+    "series": "cbp",
+    "source_page": "https://www.census.gov/programs-surveys/cbp/technical-documentation/reference/state-county-geography-reference.html",
+    "vintage_end": 2001,
+    "vintage_semantics": "statistical product reference range; NOT legal effective dates",
+    "vintage_start": 1996
+  },
+  "version": "cbp-1996-2001"
+}

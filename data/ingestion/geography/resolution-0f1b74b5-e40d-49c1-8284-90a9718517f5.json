@@ -1,0 +1,405 @@
+{
+  "coverage_by_year_state": [
+    {
+      "observations": 12,
+      "state": "AK",
+      "status": "AMBIGUOUS",
+      "year": 2000
+    },
+    {
+      "observations": 152,
+      "state": "AK",
+      "status": "UNRESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 268,
+      "state": "AL",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 300,
+      "state": "AR",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 60,
+      "state": "AZ",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 232,
+      "state": "CA",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 252,
+      "state": "CO",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 32,
+      "state": "CT",
+      "status": "RESOLVED_HISTORICAL",
+      "year": 2000
+    },
+    {
+      "observations": 4,
+      "state": "CT",
+      "status": "UNRESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 4,
+      "state": "DC",
+      "status": "UNRESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 12,
+      "state": "DE",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 264,
+      "state": "FL",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 4,
+      "state": "FL",
+      "status": "UNRESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 636,
+      "state": "GA",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 16,
+      "state": "HI",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 396,
+      "state": "IA",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 176,
+      "state": "ID",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 408,
+      "state": "IL",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 368,
+      "state": "IN",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 420,
+      "state": "KS",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 480,
+      "state": "KY",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 252,
+      "state": "LA",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 4,
+      "state": "LA",
+      "status": "RESOLVED_HISTORICAL",
+      "year": 2000
+    },
+    {
+      "observations": 56,
+      "state": "MA",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 96,
+      "state": "MD",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 64,
+      "state": "ME",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 4,
+      "state": "ME",
+      "status": "UNRESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 332,
+      "state": "MI",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 4,
+      "state": "MN",
+      "status": "AMBIGUOUS",
+      "year": 2000
+    },
+    {
+      "observations": 344,
+      "state": "MN",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 460,
+      "state": "MO",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 4,
+      "state": "MO",
+      "status": "UNRESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 328,
+      "state": "MS",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 224,
+      "state": "MT",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 400,
+      "state": "NC",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 212,
+      "state": "ND",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 372,
+      "state": "NE",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 40,
+      "state": "NH",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 84,
+      "state": "NJ",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 128,
+      "state": "NM",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 4,
+      "state": "NM",
+      "status": "RESOLVED_HISTORICAL",
+      "year": 2000
+    },
+    {
+      "observations": 68,
+      "state": "NV",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 248,
+      "state": "NY",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 352,
+      "state": "OH",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 308,
+      "state": "OK",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 144,
+      "state": "OR",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 268,
+      "state": "PA",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 20,
+      "state": "RI",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 4,
+      "state": "RI",
+      "status": "UNRESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 184,
+      "state": "SC",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 260,
+      "state": "SD",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 4,
+      "state": "SD",
+      "status": "RESOLVED_HISTORICAL",
+      "year": 2000
+    },
+    {
+      "observations": 380,
+      "state": "TN",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 1016,
+      "state": "TX",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 116,
+      "state": "UT",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 8,
+      "state": "VA",
+      "status": "AMBIGUOUS",
+      "year": 2000
+    },
+    {
+      "observations": 524,
+      "state": "VA",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 4,
+      "state": "VA",
+      "status": "RESOLVED_HISTORICAL",
+      "year": 2000
+    },
+    {
+      "observations": 56,
+      "state": "VT",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 156,
+      "state": "WA",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 288,
+      "state": "WI",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 220,
+      "state": "WV",
+      "status": "RESOLVED",
+      "year": 2000
+    },
+    {
+      "observations": 92,
+      "state": "WY",
+      "status": "RESOLVED",
+      "year": 2000
+    }
+  ],
+  "decision_drift_for_review": 0,
+  "dry_run": true,
+  "election_years": [
+    2000
+  ],
+  "previous_decisions_preserved": 0,
+  "product_years": [
+    1996,
+    2001
+  ],
+  "records_already_present": null,
+  "records_examined": 12628,
+  "records_inserted": 0,
+  "reference_release_id": "c02ea6b7-f7c5-40b5-b44a-51beb25ea69b",
+  "review_count": 200,
+  "review_csv": "data/ingestion/geography/review-0f1b74b5-e40d-49c1-8284-90a9718517f5.csv",
+  "status_counts": {
+    "AMBIGUOUS": 24,
+    "RESOLVED": 12380,
+    "RESOLVED_HISTORICAL": 48,
+    "UNRESOLVED": 176
+  },
+  "vintage": 2000
+}

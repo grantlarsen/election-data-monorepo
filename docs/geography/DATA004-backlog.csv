@@ -1,0 +1,9 @@
+task_id,recommended_status,remaining_engineering_hours,remaining_review_hours,scope
+DATA-004,Complete,0,1,"Versioned identity/identifier/boundary/relationship architecture implemented; migration applied; PostgreSQL suite and live preservation/replay verified. Review handoff only."
+DATA-005,Partially complete,8,,"Reconcile 144 excluded 2008 observations: 123 AK district rows; 12 special-unit rows; 3 MN alias cases; 6 VA label cases. Coverage and official totals before canonical supersession."
+DATA-007,Not started,26,,"Import/validate real 2008 county and 119th CD geometry; explicitly reviewed district identities, applicability periods, historical relationships and geometry-version links."
+GEO-001,Independent review pending,12,,"Five-vintage read-only evidence archived; independently review 1837 differences, 109 preview review cases, 3 zero-vote Bedford downgrades, NM reference encoding and 7-year non-county semantics."
+GEO-002,Awaiting independent approval,10,,"No decisions/evidence approvals published. Review exact context/proposal fingerprints; append approved changes only; test publication replay and coordinate canonical supersession."
+DATA-003 follow-up,Proposed,4-8,,"Support only reviewed cross-release historical/supplemental canonical lineage; current eligibility deliberately excludes those 47 new geography matches. Preserve published batches."
+DATA-027,Not started,24,,"Retain existing 2020/2024 voting-mode reconciliation scope; geography classification does not prove additive county totals."
+DATA-028,Not started,16,,"Retain 2024 source-quality scope; research four Missouri Kansas City 36000 source codes without manufacturing a place/county mapping."

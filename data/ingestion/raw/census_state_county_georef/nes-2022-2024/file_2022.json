@@ -1,0 +1,17 @@
+{
+  "download_url": "https://www2.census.gov/programs-surveys/nonemployer-statistics/datasets/2022/historical-datasets/georef2022.txt",
+  "local_filename": "9917417d14871825bb8a57c998afa8516fe8a1652d9e4d871b096f77d5a0f35c.txt",
+  "retrieved_at": "2026-11-13T22:24:59.040608+00:00",
+  "sha256": "9917417d14871825bb8a57c998afa8516fe8a1652d9e4d871b096f77d5a0f35c",
+  "source_metadata": {
+    "file": "georef2022.txt",
+    "license": "U.S. government public-domain data; attribution requested",
+    "provider": "U.S. Census Bureau",
+    "series": "nes",
+    "source_page": "https://www.census.gov/programs-surveys/nonemployer-statistics/technical-documentation/reference/state-county-geography-reference.html",
+    "vintage_end": 2024,
+    "vintage_semantics": "statistical product reference range; NOT legal effective dates",
+    "vintage_start": 2022
+  },
+  "version": "nes-2022-2024"
+}
