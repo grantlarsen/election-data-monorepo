@@ -21,6 +21,7 @@ from app.models.ingestion import ElectionResultObservation
 from ingestion.geography.rules import RULESET_VERSION, name_key
 from ingestion.geography.publication import proposal_fingerprint, high_risk_changes, enforce_approval
 from ingestion.geography import context
+from ingestion.geography import selection
 from ingestion.loader import _chunks
 
 
@@ -60,7 +61,8 @@ def resolve_medsl_v2(engine: Engine, *, vintage: int, years: list[int] | None = 
                      allow_downgrades: bool = False,
                      allow_jurisdiction_reassignment: bool = False,
                      context_sha256: str | None = None,
-                     context_manifest: dict | None = None) -> tuple[dict,list[dict]]:
+                     context_manifest: dict | None = None,
+                     publication_manifest: dict | None = None) -> tuple[dict,list[dict]]:
     from ingestion.geography.resolve import choose_release, assess_observation
 
     if publish and not dry_run and not (actor and actor.strip()):
@@ -109,6 +111,12 @@ def resolve_medsl_v2(engine: Engine, *, vintage: int, years: list[int] | None = 
             raise ValueError('Recorded observation inputs changed')
         manifest = {**manifest, 'observation_sha256': observation_sha}
         input_sha = context.digest(manifest)
+        selected = (selection.validate(publication_manifest, ref_release, RULESET_VERSION, input_sha)
+                    if publication_manifest is not None else None)
+        publication_sha = context.digest(publication_manifest) if selected is not None else None
+        seen_selected = set()
+        replayed = 0
+        selected_differences = []
         previous=current_resolution_rows(conn,ref_release)
         proposals=[]
         review=[]
@@ -128,18 +136,34 @@ def resolve_medsl_v2(engine: Engine, *, vintage: int, years: list[int] | None = 
                 "proposed_method":decision["method"],"old_jurisdiction_id":str(old["jurisdiction_id"]) if old and old["jurisdiction_id"] else None,
                 "proposed_jurisdiction_id":str(decision["jurisdiction_id"]) if decision["jurisdiction_id"] else None}
             changed=(old is None or semantic_signature(decision)!=semantic_signature(old))
+            selected_here = selected is not None and str(obs['id']) in selected
+            if selected_here:
+                seen_selected.add(str(obs['id']))
+                already_published = selection.check_target(selected[str(obs['id'])], obs['id'], old, decision,
+                    context_sha256=input_sha, publication_sha256=publication_sha,
+                    actor=actor if publish and not dry_run else None)
+                replayed += int(already_published)
+                if not changed and not already_published:
+                    raise ValueError('Publication target is unchanged and is not an authorized replay')
             if changed:
-                differences.append({**entry,"change":"NEW" if old is None else "REVISED"})
-                if publish and not dry_run:
+                diff = {**entry,"change":"NEW" if old is None else "REVISED"}
+                differences.append(diff)
+                if selected_here:
+                    selected_differences.append(diff)
+                if publish and not dry_run and (selected is None or selected_here):
+                    audit = ({'publication_audit': {'publication_sha256': publication_sha,
+                        'allow_downgrades': allow_downgrades,
+                        'allow_jurisdiction_reassignment': allow_jurisdiction_reassignment}}
+                        if selected is not None else {})
                     insert_rows.append({"id":uuid4(),"observation_id":obs["id"],
                         "reference_release_id":ref_release,"reference_id":decision["reference_id"],
                         "jurisdiction_id":decision["jurisdiction_id"],"status":decision["status"],
                         "method":decision["method"],"reason":decision["reason"],
-                        "evidence_json":{**decision["evidence_json"],"ruleset_version":RULESET_VERSION},
+                        "evidence_json":{**decision["evidence_json"],"ruleset_version":RULESET_VERSION, **audit},
                         "ruleset_version":RULESET_VERSION,"decision_sha256":decision_digest(decision),
                         "supersedes_id":old["id"] if old else None,"published_by":actor,
                         "context_sha256":input_sha})
-            if publish and not dry_run and decision["status"] in {"NON_COUNTY_CLASSIFIED", "PENDING_REVIEW"}:
+            if publish and not dry_run and changed and (selected is None or selected_here) and decision["status"] in {"NON_COUNTY_CLASSIFIED", "PENDING_REVIEW"}:
                 ev=decision["evidence_json"]
                 if ev.get("identifier_scheme"):
                     unit={"id":uuid4(),"source_name":"medsl_presidential_county",
@@ -159,18 +183,30 @@ def resolve_medsl_v2(engine: Engine, *, vintage: int, years: list[int] | None = 
                     "status":decision["status"],"method":decision["method"],
                     "reason":decision["reason"],"evidence":json.dumps(decision["evidence_json"],default=str)})
             proposals.append({**entry,"status":decision["status"],"method":decision["method"]})
+        if selected is not None and seen_selected != set(selected):
+            raise ValueError('Publication manifest contains observations outside the frozen scope')
         revised=sum(x["change"]=="REVISED" for x in differences)
         # The pure publish gate is separately unit-tested. The digest binds
         # review approval to this exact source release and set of proposals.
         proposal_sha256 = proposal_fingerprint(ref_release, RULESET_VERSION, differences,
                                                context_sha256=input_sha)
         downgrades, reassigned = high_risk_changes(differences)
+        publish_differences = differences if selected is None else selected_differences
+        publish_downgrades, publish_reassigned = high_risk_changes(publish_differences)
+        if selected is not None:
+            # Risk flags apply on replay as well, using the reviewed predecessors.
+            approved_risks = [{'old_status': x['previous']['status'] if x['previous'] else None,
+                'old_jurisdiction_id': x['previous']['jurisdiction_id'] if x['previous'] else None,
+                'proposed_status': x['decision']['status'],
+                'proposed_jurisdiction_id': x['decision']['jurisdiction_id']}
+                for x in selected.values()]
+            publish_downgrades, publish_reassigned = high_risk_changes(approved_risks)
         if publish and not dry_run:
-            enforce_approval(revised=revised, actor=actor,
+            enforce_approval(revised=revised if selected is None else len(selected), actor=actor,
                 approve_changes=approve_changes,
                 preview_digest=expected_proposal_sha256,
-                current_digest=proposal_sha256,
-                downgrade_count=len(downgrades), reassignment_count=len(reassigned),
+                current_digest=proposal_sha256 if selected is None else publication_sha,
+                downgrade_count=len(publish_downgrades), reassignment_count=len(publish_reassigned),
                 allow_downgrades=allow_downgrades,
                 allow_jurisdiction_reassignment=allow_jurisdiction_reassignment)
         inserted=0
@@ -206,7 +242,7 @@ def resolve_medsl_v2(engine: Engine, *, vintage: int, years: list[int] | None = 
         actual={(y,st):int(amount) for y,st,amount in after}
         if expected!=actual:
             raise RuntimeError("Election vote totals changed during geographic resolution; transaction rolled back")
-        return {"reference_release_id":str(ref_release),"ruleset_version":RULESET_VERSION,
+        detail = {"reference_release_id":str(ref_release),"ruleset_version":RULESET_VERSION,
             "context_sha256":input_sha,"context_manifest":manifest,
             "vintage":vintage,"product_years":[begin,end],"election_years":allowed,
             "records_examined":len(proposals),"records_inserted":inserted,
@@ -222,4 +258,13 @@ def resolve_medsl_v2(engine: Engine, *, vintage: int, years: list[int] | None = 
             "decision_drift_for_review":revised,
             "new_decisions":len(differences)-revised,"changed_decisions":revised,
             "differences": [{k:(str(v) if isinstance(v,UUID) else v) for k,v in row.items()}
-                            for row in differences]},review
+                            for row in differences]}
+        # Keep legacy compare output byte-compatible for archived GEO-001 replay.
+        if selected is not None:
+            detail.update(publication_manifest=publication_manifest, publication_sha256=publication_sha,
+                publication_target_count=len(selected), publication_pending_count=len(selected_differences),
+                publication_replayed_count=replayed,
+                unselected_difference_count=len(differences)-len(selected_differences),
+                publication_downgrades=len(publish_downgrades),
+                publication_reassignments=len(publish_reassigned))
+        return detail,review
