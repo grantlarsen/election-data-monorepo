@@ -9,6 +9,8 @@
 /artifacts/
 /data/data004/
 /data/geo001/
+/data/geo002/
+/data/geo002-replay/
 
 # Python tooling and coverage output
 .ruff_cache/

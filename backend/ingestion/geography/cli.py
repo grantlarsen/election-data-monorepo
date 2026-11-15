@@ -151,6 +151,12 @@ def geo_command(args) -> int:
             return 0 if report["complete"] else 1
         if args.vintage is None:
             raise ValueError(f"geo {args.operation} requires --vintage")
+        publication_manifest = None
+        if args.publication_manifest:
+            if args.operation not in {'compare', 'resolve'}:
+                raise ValueError('--publication-manifest requires compare or resolve')
+            from ingestion.geography.selection import read
+            publication_manifest = read(args.publication_manifest)
         context_manifest = None
         if args.context_file:
             from ingestion.geography.context import read_preview
@@ -185,14 +191,15 @@ def geo_command(args) -> int:
                                            allow_downgrades=args.allow_downgrades,
                                            allow_jurisdiction_reassignment=args.allow_jurisdiction_reassignment,
                                            context_sha256=args.context_sha256,
-                                           context_manifest=context_manifest)
+                                           context_manifest=context_manifest,
+                                           publication_manifest=publication_manifest)
             out = Path(args.output) if args.output else data_dir / "geography" / f"review-{run_id}.csv"
             save_csv(out, review)
             detail["review_csv"] = str(out)
             report_path = data_dir / "geography" / f"resolution-{run_id}.json"
             atomic_json(report_path, detail)
             print({k: v for k, v in detail.items()
-                   if k not in {"coverage_by_year_state", "differences", "vote_totals_by_year_state", "context_manifest"}})
+                   if k not in {"coverage_by_year_state", "differences", "vote_totals_by_year_state", "context_manifest", "publication_manifest"}})
             print(f"Coverage by year/state: {report_path}")
             return 0
         if args.operation == "quality":

@@ -225,7 +225,8 @@ def resolve_medsl(engine: Engine, *, vintage: int, years: list[int] | None = Non
                   allow_downgrades: bool = False,
                   allow_jurisdiction_reassignment: bool = False,
                   context_sha256: str | None = None,
-                  context_manifest: dict | None = None) -> tuple[dict, list[dict]]:
+                  context_manifest: dict | None = None,
+                  publication_manifest: dict | None = None) -> tuple[dict, list[dict]]:
     """Compatible interface delegating to the reviewed Step 6.1 resolver."""
     from ingestion.geography.resolution_v2 import resolve_medsl_v2
     return resolve_medsl_v2(engine, vintage=vintage, years=years,
@@ -235,4 +236,5 @@ def resolve_medsl(engine: Engine, *, vintage: int, years: list[int] | None = Non
                             expected_proposal_sha256=expected_proposal_sha256,
                             allow_downgrades=allow_downgrades,
                             allow_jurisdiction_reassignment=allow_jurisdiction_reassignment,
-                            context_sha256=context_sha256, context_manifest=context_manifest)
+                            context_sha256=context_sha256, context_manifest=context_manifest,
+                            publication_manifest=publication_manifest)
