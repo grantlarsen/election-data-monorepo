@@ -259,7 +259,7 @@ describe("election map display", () => {
     expect(screen.getByTestId("location")).toHaveTextContent(
       `jurisdiction_id=${jurisdictionId}`,
     );
-    expect(screen.getByRole("link", { name: "BARACK OBAMA" })).toHaveAttribute(
+    expect(within(screen.getByRole('table', { name: 'Candidate votes and share of reported votes' })).getByRole("link", { name: "BARACK OBAMA" })).toHaveAttribute(
       "href",
       expect.stringContaining(`/candidates/${candidacyId}?`),
     );

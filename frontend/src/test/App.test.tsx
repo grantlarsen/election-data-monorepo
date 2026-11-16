@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter, useLocation, useNavigate } from 'react-router';
 import { describe, expect, it, vi } from 'vitest';
 import { App } from '../App';
-import { candidacyId, contest, contestId, page, publication, result } from './fixtures';
+import { candidateProfile, candidacyId, contest, contestId, page, publication, result } from './fixtures';
 
 function HistoryProbe() {
   const location = useLocation();
@@ -17,7 +17,7 @@ function respond(body: unknown, status = 200) {
   return { ok: status === 200, status, json: async () => body } as Response;
 }
 function mockData() {
-  const fetch = vi.fn(async (url: string) => respond(url.startsWith('/api/v1/contests') ? page([contest]) : page([result])));
+  const fetch = vi.fn(async (url: string) => respond(url.startsWith('/api/v1/candidates/') ? candidateProfile : url.startsWith('/api/v1/contests') ? page([contest]) : page([result])));
   vi.stubGlobal('fetch', fetch);
   return fetch;
 }
@@ -137,8 +137,8 @@ describe('research shell', () => {
     expect(fetch.mock.calls.at(-1)![0]).toContain(`contest_id=${contestId}`);
     await user.click(await screen.findByRole('link', { name: result.label }));
     expect(screen.getByTestId('location')).toHaveTextContent(`/candidates/${candidacyId}?year=2008&state_code=NY&contest_id=${contestId}`);
-    expect(screen.getByRole('heading', { name: 'Full candidate profile is not available yet' })).toBeVisible();
-    expect(screen.getByText(/identifier has not been verified/)).toBeVisible();
+    expect(await screen.findByRole('heading', { name: 'Identity & candidacy' })).toBeVisible();
+    expect(screen.getByText(/has not been linked to a verified person/)).toBeVisible();
     await user.click(screen.getByRole('link', { name: 'View this contest’s published returns' }));
     await screen.findByRole('table');
     await user.click(screen.getByRole('button', { name: 'Show filters' }));

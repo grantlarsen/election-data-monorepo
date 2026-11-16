@@ -55,6 +55,11 @@ Prepare its pinned Census display package using the
 [frontend setup, scope and verification guide](docs/frontend.md) for routes,
 tests and the remaining geography/profile dependencies.
 
+Candidate pages now show reviewed identity, contest returns, sourced committees
+and campaign finance with explicit missing-data states. See the
+[candidate matching and profile runbook](docs/data/candidate_identity_profiles.md)
+for the additive migration, pinned FEC imports and operator review queue.
+
 Check PostGIS directly:
 
 ```powershell

@@ -16,6 +16,7 @@ import {
 import type { MapUnit } from "./types";
 import { useElectionMap } from "./useElectionMap";
 import { StateResultsSummary } from "./StateResultsSummary";
+import { CandidateLink } from "../CandidateLink";
 
 const GeographyMap = lazy(() =>
   import("./GeographyMap").then((module) => ({ default: module.GeographyMap })),
@@ -121,21 +122,20 @@ export function ElectionMapPage() {
         : a.name.localeCompare(b.name),
   );
   const units = selected ? [selected] : sorted;
+  const candidateResults = (data?.units || []).flatMap(unit => unit.summary.candidates
+    .filter(candidate => ["candidate", "source_candidate"].includes(candidate.kind)));
   const candidates = [
     ...new Set(
-      (data?.units || []).flatMap((unit) =>
-        unit.summary.candidates
-          .filter((candidate) =>
-            ["candidate", "source_candidate"].includes(candidate.kind),
-          )
-          .map((candidate) => candidate.label),
-      ),
+      candidateResults.map(candidate => candidate.label),
     ),
   ].sort();
-  const legend = [
+  const legend: { label: string; color: string; candidacyId?: string | null }[] = [
     ...(data?.reporting_level === "congressional_district"
       ? Object.entries(partyPalette).map(([label, color]) => ({ label, color }))
-      : candidates.map((label) => ({ label, color: candidateColor(label) }))),
+      : candidates.map((label) => {
+          const ids = new Set(candidateResults.filter(candidate => candidate.label === label).map(candidate => candidate.candidacy_id));
+          return { label, color: candidateColor(label), candidacyId: ids.size === 1 ? [...ids][0] : null };
+        })),
     { label: "Tie", color: tieColor },
     { label: "Undetermined / zero total", color: indeterminateColor },
     { label: "No published returns", color: missingColor },
@@ -227,7 +227,7 @@ export function ElectionMapPage() {
             </Suspense>
           )}
           <ul className="map-legend" aria-label="Map legend">
-            {legend.map(({ label, color }) => (
+            {legend.map(({ label, color, candidacyId }) => (
               <li key={label}>
                 <span
                   aria-hidden="true"
@@ -235,7 +235,7 @@ export function ElectionMapPage() {
                     background: color,
                   }}
                 />
-                {label}
+                <CandidateLink candidacyId={candidacyId}>{label}</CandidateLink>
               </li>
             ))}
           </ul>

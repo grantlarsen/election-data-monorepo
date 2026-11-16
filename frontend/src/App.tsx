@@ -1,4 +1,6 @@
 import { ElectionMapPage } from './map/ElectionMapPage';
+import { CandidatePage } from './CandidatePage';
+import { CandidateLink } from './CandidateLink';
 import { useEffect, useState } from 'react';
 import { Link, Navigate, NavLink, Route, Routes, useLocation, useParams, useSearchParams } from 'react-router';
 import type { Contest, Page, Result } from './api';
@@ -54,7 +56,7 @@ function ResultsPage() {
             const candidateQuery = new URLSearchParams(filterSearch(params).slice(1));
             candidateQuery.set('contest_id', item.contest_id);
             return <tr key={`${item.publication.batch_id}:${item.contest_id}:${item.jurisdiction.id}:${item.candidacy_id ?? item.observation_ids.join(',')}`}>
-              <th scope="row">{item.candidacy_id ? <Link to={`/candidates/${item.candidacy_id}?${candidateQuery}`}>{item.label}</Link> : <>{item.label}<span className="cell-note">Anonymous {humanize(item.basis)} bucket · no person identity</span></>}<span className="cell-note">{humanize(item.basis)}</span></th>
+              <th scope="row">{item.candidacy_id ? <CandidateLink candidacyId={item.candidacy_id} search={candidateQuery}>{item.label}</CandidateLink> : <>{item.label}<span className="cell-note">Anonymous {humanize(item.basis)} bucket · no person identity</span></>}<span className="cell-note">{humanize(item.basis)}</span></th>
               <td><FilterLink to={`/contests/${item.contest_id}`}>{item.office_name}</FilterLink><span className="cell-note">{item.election_date} · {humanize(item.stage)}</span><span className="cell-note">{item.jurisdiction.name} ({item.jurisdiction.state_code}) · {humanize(item.reporting_level)}</span></td>
               <td className="number">{item.votes.toLocaleString('en-US')}</td>
               <td><span>Reference vintage: {item.reference_vintage_start}–{item.reference_vintage_end}</span><span className="cell-note">Statistical reference; legal boundary dates may differ.</span>
@@ -66,19 +68,6 @@ function ResultsPage() {
         <Pagination page={page} />
       </>;
     }}</DataState>}
-  </>;
-}
-
-function CandidatePage() {
-  const { candidacyId = '' } = useParams();
-  const [params] = useSearchParams();
-  const contestId = params.get('contest_id');
-  const error = validateSearch(params) || (!isUuid(candidacyId) ? 'The candidacy identifier must be a valid UUID.' : null);
-  return <><Title title="Candidate selection">A candidacy identifies a candidate in one contest. It is distinct from a person or campaign committee.</Title>
-    {error ? <Notice title="Invalid selection" error><p>{error}</p></Notice> : <>
-      <div className="selection-context"><p>Candidacy ID: <code>{candidacyId}</code></p>{contestId && <FilterLink to={`/contests/${contestId}`}>View this contest’s published returns</FilterLink>}</div>
-      <Notice title="Full candidate profile is not available yet"><p>This selection preserves the candidacy and your filters. The identifier has not been verified against a published profile record.</p><p>Person identity, linked committees and campaign finance will appear when source-backed profiles are available.</p><FilterLink to="/candidates">Browse published candidate returns</FilterLink></Notice>
-    </>}
   </>;
 }
 
@@ -103,7 +92,7 @@ export function App() {
       </div>
     </header>
     <div className={`workspace${filtersOpen ? ' filters-open' : ''}`}>
-      <Filters open={filtersOpen} /><main id="main-content" className={location.pathname === '/map' ? 'map-page' : undefined} tabIndex={-1}><RouteFocus />
+      <Filters open={filtersOpen} /><main id="main-content" className={location.pathname === '/map' ? 'map-page' : location.pathname.startsWith('/candidates/') ? 'candidate-page' : undefined} tabIndex={-1}><RouteFocus />
       <Routes>
         <Route path="/" element={<Navigate to={`/map${search || '?year=2008'}`} replace />} />
         <Route path="/map" element={<ElectionMapPage />} />

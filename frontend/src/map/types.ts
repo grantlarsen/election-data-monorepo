@@ -38,6 +38,12 @@ export interface MapUnit {
     | "missing_reference"
     | "missing_geometry";
 }
+
+/** A leader label resolves only within its own result group, with no guessed IDs. */
+export function leaderCandidate(summary: Summary): MapCandidate | undefined {
+  const matches = summary.candidates.filter(candidate => candidate.label === summary.leader);
+  return matches.length === 1 ? matches[0] : undefined;
+}
 export interface ElectionMap {
   year: number;
   office: string;

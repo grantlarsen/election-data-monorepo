@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import type { ElectionMap, MapUnit } from "./types";
-import { number, percent, margin } from "./types";
+import { number, percent, margin, leaderCandidate } from "./types";
+import { CandidateLink } from '../CandidateLink';
 import { mapCandidateColor, resultColor, indeterminateColor } from "./electionColors";
 import { humanize } from "../filters";
 
@@ -48,7 +49,7 @@ export function ElectionTooltip({
       <div className="popover-leader">
         {summary?.leader ? (
           <>
-            <span aria-hidden="true">●</span> Leading here: {summary.leader}
+            <span aria-hidden="true">●</span> Leading here: <CandidateLink candidacyId={leaderCandidate(summary)?.candidacy_id} contestId={unit?.contest_id}>{summary.leader}</CandidateLink>
           </>
         ) : summary?.status === "tie" ? (
           "Tied reported votes"
@@ -85,7 +86,7 @@ export function ElectionTooltip({
                 {initials}
               </div>
               <div className="popover-candidate-body">
-                <div className="popover-name">{candidate.label}</div>
+                <div className="popover-name"><CandidateLink candidacyId={candidate.candidacy_id} contestId={unit?.contest_id}>{candidate.label}</CandidateLink></div>
                 {byParty && <div className="popover-extra">{candidate.party_labels?.join(" / ") || "No source party label"}</div>}
                 {!named && (
                   <div className="popover-extra">

@@ -76,6 +76,51 @@ export interface Page<T> {
   availability: 'available' | 'no_matching_data' | 'no_matching_published_results';
 }
 
+export interface CandidateProfile {
+  id: string;
+  label: string | null;
+  source_label: string | null;
+  candidate_kind: string;
+  person: { id: string; full_name: string } | null;
+  identity_status: 'resolved' | 'pending_review' | 'unresolved';
+  identity_evidence: { status: string; confidence: string; evidence: Record<string, unknown>;
+    decision_evidence: string | null; decided_at: string | null; record_id: string | null;
+    fec_candidate_id: string | null; source: Source }[];
+  identifiers: { namespace: string; identifier_type: string; value: string; evidence: string | null; source: Source | null; source_id: string }[];
+  contest: { id: string; election_id: string; election_date: string; stage: string; election_cycle: number; office_name: string; jurisdiction: Geography };
+  latest_election?: CandidateProfile['contest'] & { candidacy_id: string } | null;
+  committees: { id: string; name: string; role: string; cycle: number; fec_ids: string[]; evidence: string | null; source: Source | null; source_id: string }[];
+  finance: {
+    status: 'available' | 'partial' | 'missing' | 'identity_unresolved' | 'ambiguous';
+    cycle: number;
+    total_raised: string | null;
+    total_spent: string | null;
+    reported_receipts: string | null;
+    reported_disbursements: string | null;
+    transfers_from_authorized: string | null;
+    transfers_to_authorized: string | null;
+    cash_on_hand: string | null;
+    debts: string | null;
+    coverage_end: string | null;
+    definition: string | null;
+    fec_candidate_id: string | null;
+    source: Source | null;
+  };
+  results: Page<Result> & { reporting_level: string; reporting_mode: string };
+}
+
+export async function fetchCandidate(id: string, query: string, signal: AbortSignal): Promise<CandidateProfile> {
+  const response = await fetch(`/api/v1/candidates/${id}?${query}`, { signal, headers: { Accept: 'application/json' } });
+  if (!response.ok) throw new ApiError(response.status, response.status === 404
+    ? 'This candidacy was not found. Check the profile address or browse published returns.'
+    : 'The candidate profile is temporarily unavailable. Please try again.');
+  const profile: CandidateProfile = await response.json();
+  if (profile.id?.toLowerCase() !== id.toLowerCase() || !profile.contest || !profile.finance || !profile.results ||
+      !Array.isArray(profile.results.items) || !Array.isArray(profile.committees) ||
+      !Array.isArray(profile.identifiers) || !Array.isArray(profile.identity_evidence)) throw new Error('Unexpected candidate profile response');
+  return profile;
+}
+
 export class ApiError extends Error {
   constructor(public readonly status: number, message: string) { super(message); }
 }

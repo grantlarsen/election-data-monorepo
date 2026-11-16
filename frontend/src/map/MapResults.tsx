@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import type { ElectionMap, MapUnit } from "./types";
-import { margin, number, percent } from "./types";
+import { margin, number, percent, leaderCandidate } from "./types";
+import { CandidateLink } from '../CandidateLink';
 import { filterSearch } from "../filters";
 
 export function JurisdictionDetail({
@@ -14,7 +15,7 @@ export function JurisdictionDetail({
     <section className="county-detail" aria-labelledby="county-detail-heading">
       <h2 id="county-detail-heading">{selected.name} · Published returns</h2>
       {selected.summary.status !== "no_results" && <p>
-        {selected.summary.leader || "No determined leader"} · Margin{" "}
+        <CandidateLink candidacyId={leaderCandidate(selected.summary)?.candidacy_id} contestId={selected.contest_id}>{selected.summary.leader || "No determined leader"}</CandidateLink> · Margin{" "}
         {margin(selected.summary)}
         {selected.summary.margin_votes !== null &&
           ` (${number(selected.summary.margin_votes)} votes)`}
@@ -33,15 +34,7 @@ export function JurisdictionDetail({
             {selected.summary.candidates.map((candidate) => (
               <tr key={candidate.label}>
                 <th scope="row">
-                  {candidate.candidacy_id ? (
-                    <Link
-                      to={`/candidates/${candidate.candidacy_id}${filterSearch(params)}&contest_id=${selected.contest_id}`}
-                    >
-                      {candidate.label}
-                    </Link>
-                  ) : (
-                    candidate.label
-                  )}
+                  <CandidateLink candidacyId={candidate.candidacy_id} contestId={selected.contest_id} search={new URLSearchParams(filterSearch(params).slice(1))}>{candidate.label}</CandidateLink>
                 </th>
                 <td className="number">{number(candidate.votes)}</td>
                 <td className="number">{percent(candidate.share)}</td>
@@ -104,7 +97,7 @@ export function ResultsTable({
               <td>
                 {unit.summary.candidates.map((candidate) => (
                   <span className="candidate-line" key={candidate.label}>
-                    {candidate.label}
+                    <CandidateLink candidacyId={candidate.candidacy_id} contestId={unit.contest_id}>{candidate.label}</CandidateLink>
                     <span>
                       {number(candidate.votes)} · {percent(candidate.share)}
                     </span>
@@ -117,8 +110,8 @@ export function ResultsTable({
                   : number(unit.summary.total_votes)}
               </td>
               <td>
-                {unit.summary.leader ||
-                  (unit.summary.status === "tie" ? "Tie" : "Undetermined")}
+                <CandidateLink candidacyId={leaderCandidate(unit.summary)?.candidacy_id} contestId={unit.contest_id}>{unit.summary.leader ||
+                  (unit.summary.status === "tie" ? "Tie" : "Undetermined")}</CandidateLink>
                 <span className="cell-note">
                   {margin(unit.summary)}
                   {unit.summary.margin_votes !== null &&

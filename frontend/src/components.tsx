@@ -84,7 +84,7 @@ export function Notice({ title, children, error = false }: { title: string; chil
   </section>;
 }
 
-function SourceDetails({ source }: { source: Source }) {
+export function SourceDetails({ source }: { source: Source }) {
   const url = sourceUrl(source.url);
   return <div className="source-details">
     <p>{url ? <a href={url} target="_blank" rel="noreferrer">{source.name} — source download</a> : source.name} · Version {source.version}</p>
@@ -92,13 +92,14 @@ function SourceDetails({ source }: { source: Source }) {
   </div>;
 }
 
-export function Provenance({ publications }: { publications: Publication[] }) {
+export function Provenance({ publications, collapsible = true }: { publications: Publication[]; collapsible?: boolean }) {
+  const Details = collapsible ? 'details' : 'div';
   if (!publications.length) return <p className="coverage-label">No published returns</p>;
   return <div className="provenance">{publications.map(publication => <div key={publication.batch_id}>
     <p className="coverage-label"><span className={`badge ${publication.status === 'PARTIAL' ? 'badge-partial' : ''}`}>{publication.status === 'PARTIAL' ? 'Partial publication' : 'Complete publication'}</span> {publication.source.name} · {publication.source.version}</p>
     {publication.status === 'PARTIAL' && <p className="coverage-warning">Coverage is incomplete. Missing returns are not zero votes.</p>}
     {publication.reporting_levels.includes('county') && !publication.county_coverage_verified && <p className="coverage-warning">County coverage has not been independently verified.</p>}
-    <details><summary>Source and publication details</summary>
+    <Details>{collapsible && <summary>Source and publication details</summary>}
       <SourceDetails source={publication.source} />
       <dl><dt>Published</dt><dd>{publication.published_at}</dd><dt>Batch</dt><dd>{publication.batch_id}</dd><dt>Scope</dt><dd>{publication.scope_key}</dd><dt>Reporting</dt><dd>{publication.reporting_levels.join(', ')} · {publication.reporting_modes.join(', ')}</dd>
         {publication.reference_release_id && <><dt>Geographic reference release</dt><dd>{publication.reference_release_id}</dd></>}
@@ -106,7 +107,7 @@ export function Provenance({ publications }: { publications: Publication[] }) {
         {publication.correction_batch_id && <><dt>Correction batch</dt><dd>{publication.correction_batch_id}</dd></>}
       </dl>
       {publication.correction_source && <><h3>Reviewed correction source</h3><SourceDetails source={publication.correction_source} /></>}
-    </details>
+    </Details>
   </div>)}</div>;
 }
 
