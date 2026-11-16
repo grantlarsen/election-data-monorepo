@@ -134,12 +134,14 @@ class ResultItem(BaseModel):
 
 class StateResultItem(BaseModel):
     contest_id: UUID
+    election_id: UUID
+    election_date: date
     jurisdiction: Geography
     candidate_bucket: str
     bucket_kind: Literal["source_candidate", "aggregate"]
     votes: int
     source_locator: str
-    source_adjustment: int
+    source_adjustment: int | None
     publication: Publication
 
 

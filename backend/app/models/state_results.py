@@ -18,8 +18,9 @@ class StateResultBatch(Base):
         UniqueConstraint('id','scope_key',name='uq_state_batch_scope'),
         ForeignKeyConstraint(['supersedes_id','scope_key'],
             ['state_result_batch.id','state_result_batch.scope_key'],name='fk_state_batch_predecessor_scope'),
-        CheckConstraint('election_year = 2008',name='ck_state_batch_year'),
-        CheckConstraint("scope_key = 'president:general:2008:state:TOTAL'",name='ck_state_batch_scope'),
+        CheckConstraint('election_year IN (2000,2004,2008,2012,2016,2020,2024)',name='ck_state_batch_year'),
+        CheckConstraint("scope_key = 'president:general:' || election_year::text || ':state:TOTAL'",name='ck_state_batch_scope'),
+        CheckConstraint("election_year <> 2008 OR (compared_source_release_id IS NOT NULL AND compared_canonical_batch_id IS NOT NULL)",name='ck_state_batch_comparison'),
         CheckConstraint('length(trim(published_by)) > 0 AND length(trim(authorization_note)) > 0',name='ck_state_batch_authorization'),
         CheckConstraint('supersedes_id IS NULL OR supersedes_id <> id',name='ck_state_batch_not_self'),
     )
@@ -29,8 +30,8 @@ class StateResultBatch(Base):
     ruleset_version: Mapped[str] = mapped_column(String(64),nullable=False)
     election_year: Mapped[int] = mapped_column(Integer,nullable=False)
     source_release_id: Mapped[UUID] = mapped_column(ForeignKey('source_release.id'),nullable=False)
-    compared_source_release_id: Mapped[UUID] = mapped_column(ForeignKey('source_release.id'),nullable=False)
-    compared_canonical_batch_id: Mapped[UUID] = mapped_column(ForeignKey('canonical_result_batch.id'),nullable=False)
+    compared_source_release_id: Mapped[UUID | None] = mapped_column(ForeignKey('source_release.id'))
+    compared_canonical_batch_id: Mapped[UUID | None] = mapped_column(ForeignKey('canonical_result_batch.id'))
     published_by: Mapped[str] = mapped_column(String(100),nullable=False)
     authorization_note: Mapped[str] = mapped_column(Text,nullable=False)
     manifest_json: Mapped[dict] = mapped_column(JSONB,nullable=False)
@@ -42,9 +43,10 @@ class StateVoteReturn(Base):
     __tablename__ = 'state_vote_return'
     __table_args__ = (
         CheckConstraint('state_code IN ('+','.join(repr(s) for s in sorted(STATE_NAMES))+')',name='ck_state_return_state'),
-        CheckConstraint("candidate_bucket IN ('BARACK OBAMA','JOHN MCCAIN','OTHER')",name='ck_state_return_bucket'),
+        CheckConstraint("length(trim(candidate_bucket)) > 0",name='ck_state_return_bucket'),
         CheckConstraint('votes >= 0 AND medsl_source_votes >= 0 AND medsl_county_votes >= 0',name='ck_state_return_nonnegative'),
         CheckConstraint('votes = medsl_source_votes + source_adjustment',name='ck_state_return_adjustment'),
+        CheckConstraint('(medsl_source_votes IS NULL AND medsl_county_votes IS NULL AND source_adjustment IS NULL) OR (medsl_source_votes IS NOT NULL AND medsl_county_votes IS NOT NULL AND source_adjustment IS NOT NULL)',name='ck_state_return_comparison'),
     )
     batch_id: Mapped[UUID] = mapped_column(ForeignKey('state_result_batch.id'),primary_key=True)
     state_code: Mapped[str] = mapped_column(String(2),primary_key=True)
@@ -52,9 +54,9 @@ class StateVoteReturn(Base):
     jurisdiction_id: Mapped[UUID] = mapped_column(ForeignKey('jurisdiction.id'),nullable=False)
     contest_id: Mapped[UUID] = mapped_column(ForeignKey('contest.id'),nullable=False)
     votes: Mapped[int] = mapped_column(BigInteger,nullable=False)
-    medsl_source_votes: Mapped[int] = mapped_column(BigInteger,nullable=False)
-    medsl_county_votes: Mapped[int] = mapped_column(BigInteger,nullable=False)
-    source_adjustment: Mapped[int] = mapped_column(BigInteger,nullable=False)
+    medsl_source_votes: Mapped[int | None] = mapped_column(BigInteger)
+    medsl_county_votes: Mapped[int | None] = mapped_column(BigInteger)
+    source_adjustment: Mapped[int | None] = mapped_column(BigInteger)
     source_locator: Mapped[str] = mapped_column(Text,nullable=False)
     components_json: Mapped[list] = mapped_column(JSONB,nullable=False)
 

@@ -87,21 +87,23 @@ def summary(projection):
         resolution='FEC_PRECEDENCE',remaining_authority_differences=0)
 
 
-def state_contest(session,st,jurisdiction_id):
+def state_contest(session,st,jurisdiction_id,year=2008):
+    from ingestion.canonical_medsl import DATES
     office=elections.office(session,creation_key='us:federal:president',
         name='President of the United States',office_kind='executive')
     existing=list(session.scalars(select(Contest).join(Election,Contest.election_id==Election.id)
         .where(Contest.jurisdiction_id==jurisdiction_id,Contest.office_id==office.id,
-            Election.election_type=='general',Election.election_date==date(2008,11,4))))
+            Election.election_type=='general',Election.election_date==date(year,*DATES[year]))))
     if len(existing)>1:
         raise ValueError(f'Ambiguous presidential contest for {st}')
     if existing:
         return existing[0]
-    term=elections.office_term(session,creation_key='us:federal:president:term:2009',
-        office_id=office.id,start_date=date(2009,1,20),end_date=date(2013,1,20))
-    election=elections.election(session,creation_key=f'fec:president:general:2008:{st}',
-        election_date=date(2008,11,4),election_type='general',jurisdiction_id=jurisdiction_id,election_cycle=2008)
-    return elections.contest(session,creation_key=f'fec:president:contest:2008:{st}',
+    term=elections.office_term(session,creation_key=f'us:federal:president:term:{year+1}',
+        office_id=office.id,start_date=date(year+1,1,20),end_date=date(year+5,1,20))
+    prefix='fec' if year==2008 else 'medsl'
+    election=elections.election(session,creation_key=f'{prefix}:president:general:{year}:{st}',
+        election_date=date(year,*DATES[year]),election_type='general',jurisdiction_id=jurisdiction_id,election_cycle=year)
+    return elections.contest(session,creation_key=f'{prefix}:president:contest:{year}:{st}',
         office_name='U.S. President',election_id=election.id,jurisdiction_id=jurisdiction_id,
         office_id=office.id,office_term_id=term.id)
 
@@ -183,7 +185,8 @@ def publish(session, evidence_dir, *, expected_fingerprint, actor, archive_dir):
 def read_state_totals(session, *, year, state_code=None):
     """Authoritative state accessor; never adds state totals to county returns."""
     if year!=2008:
-        raise ValueError('FEC-authoritative state publication is currently scoped to 2008')
+        from app.services.presidential_state_returns import read_totals
+        return read_totals(session,year=year,state_code=state_code)
     if state_code is not None and state_code not in STATE_NAMES:
         raise ValueError('Unknown state code')
     pointer=session.get(StateResultPublication,SCOPE)

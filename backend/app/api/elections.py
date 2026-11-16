@@ -36,6 +36,16 @@ def get_read_session() -> Generator[Session, None, None]:
 ReadSession = Annotated[Session, Depends(get_read_session)]
 
 
+@router.get("/presidential-coverage")
+def presidential_coverage(session: ReadSession) -> dict:
+    from app.services.presidential_coverage import inventory
+    try:
+        return inventory(session)
+    except ValueError as exc:
+        logger.error("Presidential coverage integrity check failed")
+        raise HTTPException(503, "Published presidential coverage failed integrity validation") from exc
+
+
 @router.get("/elections", response_model=Page[ElectionItem])
 def elections(filters: Annotated[ElectionFilters, Query()], session: ReadSession) -> dict:
     return election_queries.list_elections(session, filters)

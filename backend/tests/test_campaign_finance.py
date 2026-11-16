@@ -363,12 +363,12 @@ def test_migration_roundtrip_matches_models_and_preserves_existing_data(identity
 
 
 @pytest.mark.integration
-def test_fresh_database_migration_chain_reaches_finance_head(identity_engine):
+def test_fresh_database_migration_chain_reaches_current_head(identity_engine):
     # The guarded fixture supplies a disposable database. A second, empty schema
     # exercises historical migration code instead of metadata.create_all.
     config = Config(str(Path(__file__).parents[1] / "alembic.ini"))
     script = ScriptDirectory.from_config(config)
-    assert script.get_current_head() == "campaign_finance"
+    assert script.get_current_head() == "presidential_state_coverage"
     schema = "finance_migrate_" + uuid4().hex
     with identity_engine.begin() as connection:
         connection.execute(text(f'CREATE SCHEMA "{schema}"'))

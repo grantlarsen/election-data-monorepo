@@ -40,6 +40,11 @@ Election discovery and published results are available under `/api/v1`.
 See the [election API contract and verification guide](docs/api/elections.md)
 for filters, pagination, source coverage and the separate state/county grains.
 
+Presidential results for 2000–2024 have a seven-election coverage inventory at
+`/api/v1/presidential-coverage`. See the [presidential source and publication
+guide](docs/data/presidential_coverage.md) for pinned FEC state summaries,
+partial MEDSL county coverage, migrations and replay commands.
+
 2024 MEDSL House district ingestion is available through the shared observation
 and canonical publication pipeline. See the [House data contract](docs/data/house_returns_2024.md)
 and [PowerShell runbook](docs/data/house_returns_2024_runbook.md) for pinned-source
