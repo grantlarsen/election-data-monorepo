@@ -1,23 +1,14 @@
-"""Minimal API for validating the electoral platform's local Docker stack."""
-
-import os
+"""Electoral discovery and published results API."""
 
 from fastapi import FastAPI, HTTPException
-from sqlalchemy import create_engine, text
-from sqlalchemy.engine import URL
+from sqlalchemy import text
+
+from app.database import engine
+from app.api.elections import router as election_router
 
 app = FastAPI(title="Electoral Research API", version="0.1.0")
 
-# Building the URL this way supports passwords containing special characters.
-database_url = URL.create(
-    drivername="postgresql+psycopg",
-    username=os.environ["DB_USER"],
-    password=os.environ["DB_PASSWORD"],
-    host=os.environ.get("DB_HOST", "db"),
-    port=int(os.environ.get("DB_PORT", "5432")),
-    database=os.environ["DB_NAME"],
-)
-engine = create_engine(database_url, pool_pre_ping=True)
+app.include_router(election_router)
 
 
 @app.get("/health")
