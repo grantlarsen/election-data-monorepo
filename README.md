@@ -60,6 +60,10 @@ and campaign finance with explicit missing-data states. See the
 [candidate matching and profile runbook](docs/data/candidate_identity_profiles.md)
 for the additive migration, pinned FEC imports and operator review queue.
 
+Versioned committee records, source candidate–committee linkages, amended filings
+and report/cycle financial snapshots are defined in the
+[campaign finance schema and rollout guide](docs/data/campaign_finance.md).
+
 Check PostGIS directly:
 
 ```powershell

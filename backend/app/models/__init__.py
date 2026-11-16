@@ -18,3 +18,4 @@ from .state_results import StateResultBatch, StateVoteReturn, StateResultPublica
 from .county_corrections import CountyCorrectionBatch, CountyVoteCorrection
 from .house_returns import HouseReturnDetail, HouseDistrictReconciliation
 from .candidate_identity import FecCandidateRecord, CandidateIdentityReview, CandidateFinanceSummary
+from .campaign_finance import FecCommitteeRecord, FecCandidateCommitteeLink, CommitteeFiling, CommitteeFinanceSnapshot

@@ -249,8 +249,8 @@ def link_committee(session: Session, *, organization_id: UUID, source_id: UUID,
             raise ValueError("candidacy not found")
         if person_id is not None and candidacy.person_id != person_id:
             raise IdentityConflictError("candidacy is not associated with the supplied person")
-    if cycle is not None and cycle < 1788:
-        raise ValueError("cycle out of range")
+    if cycle is not None and (cycle < 1788 or cycle > 9998 or cycle % 2):
+        raise ValueError("cycle must be an even year between 1788 and 9998")
     _dates(valid_from, valid_until)
     _source(session, source_id, release_id)
     payload = dict(organization_id=organization_id, person_id=person_id, candidacy_id=candidacy_id,
