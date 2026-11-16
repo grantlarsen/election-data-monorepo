@@ -11,6 +11,15 @@
 /data/geo001/
 /data/geo002/
 /data/geo002-replay/
+/data/data005/
+/data/data005-live-replay/
+/data/data005-fec/
+/data/data005-county/
+/data/data005-county-apply/
+/data/presidential-returns-maintenance/
+/data/ingestion/raw/official_presidential_county_corrections/
+/data/ingestion/raw/fec_presidential_official/
+/data/*
 
 # Python tooling and coverage output
 .ruff_cache/

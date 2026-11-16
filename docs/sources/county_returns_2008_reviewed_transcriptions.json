@@ -1,0 +1,29 @@
+{
+  "format": "data005-reviewed-county-transcription-v1",
+  "tables": [
+    {
+      "state": "WY",
+      "evidence_id": "wy-followup-1",
+      "source_sha256": "a32fe3fd5017b0b29cc24f947c8e5fc28badd177a306ead5cf5de25f07fb708d",
+      "source_url": "https://sos.wyo.gov/Elections/Docs/2008/08Results/General/SW-Candidates.pdf",
+      "source_locator": "PDF page 1 of 3; United States President and Vice President; 23 counties and Total",
+      "file": "DATA005-wy-reviewed.csv",
+      "sha256": "60f7d96ac49d63ad64078cf5939459d8d8535fb8dffcce2d04c6e376882e168e",
+      "method": "Rendered 250 dpi with PyMuPDF 1.28.2; Tesseract OCR psm 6; visually checked against archived page. Big Horn Nader corrected from OCR 4 to printed 41. All eight county columns sum to printed controls.",
+      "numeric_review_by": "codex",
+      "geographic_publication_approval": false
+    },
+    {
+      "state": "MT",
+      "evidence_id": "mt-canvass",
+      "source_sha256": "d374342c8dea416c350dcb16cf3ea316c6301b4b202a376302c996c0f1fdbd4c",
+      "source_url": "https://sosmt.gov/wp-content/uploads/attachments/2008_State_General.pdf",
+      "source_locator": "Canvass PDF page 1 of 4; President and Vice President; 56 county rows and five printed candidate controls",
+      "file": "DATA005-mt-reviewed.csv",
+      "sha256": "8217e8e2bda9aad1f877be172d8b1596c0e1cd109abf79278a687b2a18665cf6",
+      "method": "Visual transcription from archived source rendered at 250 dpi. All five county columns independently sum to printed controls. Broadwater is transcribed as printed: Obama 365, McCain 756. Legal/certification issues are not inferred from turnout gaps.",
+      "numeric_review_by": "codex",
+      "geographic_publication_approval": false
+    }
+  ]
+}

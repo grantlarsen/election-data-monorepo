@@ -1,0 +1,805 @@
+[
+  {
+    "id": "al-certified",
+    "state": "AL",
+    "kind": "results",
+    "url": "https://www.sos.alabama.gov/sites/default/files/voter-pdfs/2008/statecert-2008-general-election-11-25-2008-complete.pdf"
+  },
+  {
+    "id": "al-amendment-1208",
+    "state": "AL",
+    "kind": "amendment",
+    "url": "https://sos.alabama.gov/sites/default/files/voter-pdfs/2008/statecert-2008-general-election-amended-canvass-2008-12-08.pdf"
+  },
+  {
+    "id": "al-amendment-1218",
+    "state": "AL",
+    "kind": "amendment",
+    "url": "https://sos.alabama.gov/sites/default/files/voter-pdfs/2008/statecert-2008-general-election-amended-canvass-2008-12-18.pdf"
+  },
+  {
+    "id": "az-canvass",
+    "state": "AZ",
+    "kind": "results",
+    "url": "https://apps.azsos.gov/election/2008/General/Canvass2008GE.pdf"
+  },
+  {
+    "id": "ar-index",
+    "state": "AR",
+    "kind": "index",
+    "url": "https://www.sos.arkansas.gov/elections/for-election-results/"
+  },
+  {
+    "id": "ca-president",
+    "state": "CA",
+    "kind": "results",
+    "url": "https://elections.cdn.sos.ca.gov/sov/2008-general/17_22_pres_by_county.pdf"
+  },
+  {
+    "id": "co-abstract",
+    "state": "CO",
+    "kind": "results",
+    "url": "https://spl.cde.state.co.us/artemis/sserials/s111internet/s111200708internet.pdf"
+  },
+  {
+    "id": "ct-contest",
+    "state": "CT",
+    "kind": "index",
+    "url": "https://electionhistory.ct.gov/contest/6959"
+  },
+  {
+    "id": "de-index",
+    "state": "DE",
+    "kind": "index",
+    "url": "https://elections.delaware.gov/elections/election_archive.shtml"
+  },
+  {
+    "id": "fl-download",
+    "state": "FL",
+    "kind": "index",
+    "url": "https://results.elections.myflorida.com/downloadresults.asp?ElectionDate=11%2F4%2F2008"
+  },
+  {
+    "id": "ga-index",
+    "state": "GA",
+    "kind": "index",
+    "url": "https://sos.ga.gov/page/election-results"
+  },
+  {
+    "id": "hi-index",
+    "state": "HI",
+    "kind": "index",
+    "url": "https://elections.hawaii.gov/election-results/"
+  },
+  {
+    "id": "id-index",
+    "state": "ID",
+    "kind": "index",
+    "url": "https://voteidaho.gov/election-results/"
+  },
+  {
+    "id": "il-index",
+    "state": "IL",
+    "kind": "index",
+    "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx"
+  },
+  {
+    "id": "in-index",
+    "state": "IN",
+    "kind": "index",
+    "url": "https://www.in.gov/sos/elections/election-commission/election-results/"
+  },
+  {
+    "id": "ia-canvass",
+    "state": "IA",
+    "kind": "results",
+    "url": "https://sos.iowa.gov/elections/pdf/2008/officialcanvass2008general.pdf"
+  },
+  {
+    "id": "ks-canvass",
+    "state": "KS",
+    "kind": "results",
+    "url": "https://www.sos.ks.gov/elections/08elec/2008_General_Official_Results.pdf"
+  },
+  {
+    "id": "ky-index",
+    "state": "KY",
+    "kind": "index",
+    "url": "https://elect.ky.gov/results/2000-2009/Pages/2008primaryandgeneralelectionresults.aspx"
+  },
+  {
+    "id": "la-index",
+    "state": "LA",
+    "kind": "index",
+    "url": "https://www.sos.la.gov/ElectionsAndVoting/GetElectionInformation/FindResultsAndStatistics/Pages/default.aspx"
+  },
+  {
+    "id": "ma-index",
+    "state": "MA",
+    "kind": "index",
+    "url": "https://electionstats.state.ma.us/"
+  },
+  {
+    "id": "md-president",
+    "state": "MD",
+    "kind": "results",
+    "url": "https://elections.maryland.gov/elections/archive/2008/results/general/gen_detail_results_2008_4_BOT001-.html"
+  },
+  {
+    "id": "mi-index",
+    "state": "MI",
+    "kind": "index",
+    "url": "https://www.michigan.gov/sos/elections/election-results-and-data"
+  },
+  {
+    "id": "ms-index",
+    "state": "MS",
+    "kind": "index",
+    "url": "https://www.sos.ms.gov/elections-voting/election-results"
+  },
+  {
+    "id": "mt-canvass",
+    "state": "MT",
+    "kind": "results",
+    "url": "https://sosmt.gov/wp-content/uploads/attachments/2008_State_General.pdf"
+  },
+  {
+    "id": "mt-index",
+    "state": "MT",
+    "kind": "index",
+    "url": "https://sosmt.gov/ELECTIONS/Results/"
+  },
+  {
+    "id": "ne-canvass",
+    "state": "NE",
+    "kind": "results",
+    "url": "https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2008/2008%20General%20Canvass%20Book.pdf"
+  },
+  {
+    "id": "nv-president",
+    "state": "NV",
+    "kind": "results",
+    "url": "https://nvsos.gov/SOSelectionPages/results/2008StateWideGeneral/ElectionSummary.aspx"
+  },
+  {
+    "id": "nh-index",
+    "state": "NH",
+    "kind": "index",
+    "url": "https://www.sos.nh.gov/elections/elections/election-results/2008-election-results"
+  },
+  {
+    "id": "nj-canvass",
+    "state": "NJ",
+    "kind": "results",
+    "url": "https://nj.gov/state/elections/assets/pdf/election-results/2008/2008-official-gen-elect-tallies-pres-120208.pdf"
+  },
+  {
+    "id": "nm-index",
+    "state": "NM",
+    "kind": "index",
+    "url": "https://www.sos.nm.gov/sos-archive/election-results-archive/2008-election-results/"
+  },
+  {
+    "id": "ny-contest",
+    "state": "NY",
+    "kind": "index",
+    "url": "https://results.elections.ny.gov/contest/3509"
+  },
+  {
+    "id": "nc-index",
+    "state": "NC",
+    "kind": "index",
+    "url": "https://er.ncsbe.gov/?contest=0&county_id=0&election_dt=11%2F04%2F2008&office=FED"
+  },
+  {
+    "id": "nd-index",
+    "state": "ND",
+    "kind": "index",
+    "url": "https://results.sos.nd.gov/"
+  },
+  {
+    "id": "oh-index",
+    "state": "OH",
+    "kind": "index",
+    "url": "https://www.ohiosos.gov/elections/election-results-and-data/2008-election-results/"
+  },
+  {
+    "id": "ok-president",
+    "state": "OK",
+    "kind": "results",
+    "url": "https://oklahoma.gov/content/dam/ok/en/elections/election-results/2008-election-results/2008-general-election-results/08pres.pdf"
+  },
+  {
+    "id": "or-index",
+    "state": "OR",
+    "kind": "index",
+    "url": "https://sos.oregon.gov/elections/Pages/historical-data.aspx"
+  },
+  {
+    "id": "pa-index",
+    "state": "PA",
+    "kind": "index",
+    "url": "https://www.pa.gov/agencies/dos/resources/voting-and-elections-resources/voting-and-election-statistics/election-data"
+  },
+  {
+    "id": "sc-index",
+    "state": "SC",
+    "kind": "index",
+    "url": "https://www.scvotes.gov/elections-statistics/election-results/"
+  },
+  {
+    "id": "sd-index",
+    "state": "SD",
+    "kind": "index",
+    "url": "https://sdsos.gov/elections-voting/election-resources/election-history/2008/2008_general_election_statewide_races_by_county.aspx"
+  },
+  {
+    "id": "tn-index",
+    "state": "TN",
+    "kind": "index",
+    "url": "https://sos.tn.gov/elections/results"
+  },
+  {
+    "id": "tx-president",
+    "state": "TX",
+    "kind": "results",
+    "url": "https://elections.sos.state.tx.us/elchist141_race62.htm"
+  },
+  {
+    "id": "ut-index",
+    "state": "UT",
+    "kind": "index",
+    "url": "https://vote.utah.gov/historical-election-results/"
+  },
+  {
+    "id": "vt-contest",
+    "state": "VT",
+    "kind": "index",
+    "url": "https://electionarchive.vermont.gov/contest/75447"
+  },
+  {
+    "id": "wa-index",
+    "state": "WA",
+    "kind": "index",
+    "url": "https://www.sos.wa.gov/ko/node/151"
+  },
+  {
+    "id": "wv-index",
+    "state": "WV",
+    "kind": "index",
+    "url": "https://apps.sos.wv.gov/elections/results/results.aspx?eid=4&type=OFFICIAL&year=2008"
+  },
+  {
+    "id": "wi-index",
+    "state": "WI",
+    "kind": "index",
+    "url": "https://elections.wi.gov/elections/election-results"
+  },
+  {
+    "id": "wy-index",
+    "state": "WY",
+    "kind": "index",
+    "url": "https://sos.wyo.gov/Elections/Docs/2008/2008GeneralResults.aspx"
+  },
+  {
+    "id": "census-cousub2000",
+    "state": "",
+    "kind": "reference",
+    "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/cousub2k.zip"
+  },
+  {
+    "id": "pa-general-js",
+    "state": "PA",
+    "kind": "reference",
+    "url": "https://www.electionreturns.pa.gov/Scripts/AppScripts/GeneralController.js?v=1.2"
+  },
+  {
+    "id": "pa-election-js",
+    "state": "PA",
+    "kind": "reference",
+    "url": "https://www.electionreturns.pa.gov/Scripts/AppScripts/HeaderController.js?v=1.2"
+  },
+  {
+    "id": "pa-service-js",
+    "state": "PA",
+    "kind": "reference",
+    "url": "https://www.electionreturns.pa.gov/Scripts/AppScripts/ElectionService.js?v=1.2"
+  },
+  {
+    "id": "ga-county-pdf",
+    "state": "GA",
+    "kind": "results",
+    "url": "https://sos.ga.gov/sites/default/files/2022-01/november_2008_generalelection_bycounty.pdf"
+  },
+  {
+    "id": "ia-otherhost",
+    "state": "IA",
+    "kind": "results",
+    "url": "https://sos.iowa.gov/elections/pdf/2008/officialcanvass2008general.pdf"
+  },
+  {
+    "id": "pa-2008-metadata",
+    "state": "PA",
+    "kind": "results",
+    "url": "https://www.electionreturns.pa.gov/api/ElectionReturn/GetElectionTesting?methodName=GetElectionDetail&electionid=17&electiontype=G&isactive=0"
+  },
+  {
+    "id": "pa-2008-state",
+    "state": "PA",
+    "kind": "results",
+    "url": "https://www.electionreturns.pa.gov/api/ElectionReturn/GET?methodName=GetDashboardData&electionid=17&electiontype=G&isactive=0"
+  },
+  {
+    "id": "pa-2008-president",
+    "state": "PA",
+    "kind": "results",
+    "url": "https://www.electionreturns.pa.gov/api/ElectionReturn/GetCountyBreak?officeId=1&districtId=1&methodName=GetCountyBreak&electionid=17&electiontype=G&isactive=0"
+  },
+  {
+    "id": "ia-precinct-linked-xlsx",
+    "state": "IA",
+    "kind": "results",
+    "url": "https://sos.iowa.gov/elections/pdf/precinctresults/2008general/statewidegenpct.xlsx"
+  },
+  {
+    "id": "ma-source",
+    "state": "MA",
+    "kind": "results",
+    "url": "https://electionstats.state.ma.us/elections/get_source_documentation/104457"
+  },
+  {
+    "id": "mt-writeins",
+    "state": "MT",
+    "kind": "results",
+    "url": "https://sosmt.gov/wp-content/uploads/attachments/Write-Ins.2008.pdf"
+  },
+  {
+    "id": "ms-2008-archive",
+    "state": "MS",
+    "kind": "index",
+    "url": "https://da.mdah.ms.gov/series/sos/s0107/2008"
+  },
+  {
+    "id": "ms-hinds-detail",
+    "state": "MS",
+    "kind": "index",
+    "url": "https://da.mdah.ms.gov/series/sos/s0107/2008/detail/901533"
+  },
+  {
+    "id": "oh-results-portal",
+    "state": "OH",
+    "kind": "index",
+    "url": "https://data.ohiosos.gov/portal/past-election-results"
+  },
+  {
+    "id": "la-guide",
+    "state": "LA",
+    "kind": "reference",
+    "url": "https://redist.legis.la.gov/2011_Files/doj/08%20Data%20CD%20DVDs/Voter%20Registration%20Election%20Results%20and%20Candidate%20information/Election%20and%20Candidate%20data.pdf"
+  },
+  {
+    "id": "ga-general-summary",
+    "state": "GA",
+    "kind": "results",
+    "url": "https://sos.ga.gov/sites/default/files/2022-01/november_2008_generalelection_totals.pdf"
+  },
+  {
+    "id": "hi-followup-1",
+    "state": "HI",
+    "kind": "results",
+    "url": "https://files.hawaii.gov/elections/files/results/2008/general/coh.pdf"
+  },
+  {
+    "id": "hi-followup-2",
+    "state": "HI",
+    "kind": "results",
+    "url": "https://files.hawaii.gov/elections/files/results/2008/general/com.pdf"
+  },
+  {
+    "id": "hi-followup-3",
+    "state": "HI",
+    "kind": "results",
+    "url": "https://files.hawaii.gov/elections/files/results/2008/general/cok.pdf"
+  },
+  {
+    "id": "hi-followup-4",
+    "state": "HI",
+    "kind": "results",
+    "url": "https://files.hawaii.gov/elections/files/results/2008/general/cch.pdf"
+  },
+  {
+    "id": "id-followup-1",
+    "state": "ID",
+    "kind": "results",
+    "url": "https://archive.sos.idaho.gov/ELECT/results/2008/General/cnty_pres.htm"
+  },
+  {
+    "id": "ct-followup-1",
+    "state": "CT",
+    "kind": "results",
+    "url": "https://ct.elstats.civera.com/api/download_contest/6959_table.csv?split_party=false"
+  },
+  {
+    "id": "vt-followup-1",
+    "state": "VT",
+    "kind": "results",
+    "url": "https://vt2.elstats.civera.com/api/download_contest/75447_table.csv?split_party=false"
+  },
+  {
+    "id": "ky-followup-1",
+    "state": "KY",
+    "kind": "results",
+    "url": "https://elect.ky.gov/SiteCollectionDocuments/Election%20Results/2000-2009/2008/General%20Election/STATEwide%20by%20candidate%20by%20county%20gen%2008.txt"
+  },
+  {
+    "id": "ms-followup-1",
+    "state": "MS",
+    "kind": "results",
+    "url": "https://www.sos.ms.gov/elections-voting/election-results/2008/2008-election-results"
+  },
+  {
+    "id": "pa-followup-1",
+    "state": "PA",
+    "kind": "results",
+    "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/resources/voting-and-elections/bulk-data/ElectionReturns_2008_General_ReadMe.txt"
+  },
+  {
+    "id": "pa-followup-2",
+    "state": "PA",
+    "kind": "results",
+    "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/dos/resources/voting-and-elections/bulk-data/ElectionReturns_2008_General_PrecinctReturns.txt"
+  },
+  {
+    "id": "sc-followup-1",
+    "state": "SC",
+    "kind": "results",
+    "url": "https://scvotes.gov/wp-content/uploads/2022/08/Election_Report_2008.pdf"
+  },
+  {
+    "id": "tn-followup-1",
+    "state": "TN",
+    "kind": "results",
+    "url": "https://tnelections.tnsosfiles.com/sharetngov/archived/election/results/2008-11/uspresident.pdf"
+  },
+  {
+    "id": "wa-followup-1",
+    "state": "WA",
+    "kind": "results",
+    "url": "https://www.sos.wa.gov/sites/default/files/2022-05/2008-general-data.zip"
+  },
+  {
+    "id": "wy-followup-1",
+    "state": "WY",
+    "kind": "results",
+    "url": "https://sos.wyo.gov/Elections/Docs/2008/08Results/General/SW-Candidates.pdf"
+  },
+  {
+    "id": "ar-followup-1",
+    "state": "AR",
+    "kind": "results",
+    "url": "https://www.sos.arkansas.gov/electionresults/index.php?elecid=181"
+  },
+  {
+    "id": "in-followup-1",
+    "state": "IN",
+    "kind": "results",
+    "url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2008"
+  },
+  {
+    "id": "census-ele",
+    "state": "US",
+    "kind": "reference",
+    "url": "https://www2.census.gov/library/publications/2011/compendia/usa-counties/excel/ELE01.xls"
+  },
+  {
+    "id": "census-metadata",
+    "state": "US",
+    "kind": "reference",
+    "url": "https://www2.census.gov/library/publications/2011/compendia/usa-counties/excel/Mastdata.xls"
+  },
+  {
+    "id": "census-source",
+    "state": "US",
+    "kind": "reference",
+    "url": "https://www2.census.gov/library/publications/2011/compendia/usa-counties/excel/Source.xls"
+  },
+  {
+    "id": "census-footnotes",
+    "state": "US",
+    "kind": "reference",
+    "url": "https://www2.census.gov/library/publications/2011/compendia/usa-counties/excel/Footnote_Reference.xls"
+  },
+  {
+    "id": "census-publication",
+    "state": "US",
+    "kind": "index",
+    "url": "https://www.census.gov/library/publications/2011/compendia/usa-counties-2011.html"
+  },
+  {
+    "id": "il-county-text",
+    "state": "IL",
+    "kind": "results",
+    "url": "https://elections.il.gov/NewDocDisplay.aspx?khDtbt6dhc8zLboSZnz8zqVh5SQVox7uAOAe2nieWDAlNyd4%2btjArHsz9xVXIJ4p6Y57u3FvWw0%2bgnNWdT3uKyV44EJPSNKJqSNPoTMrt%2fmA2Vga9kq1ZVcE%2fKSRRVYPmEiR0E1M2978KTDoe9Wt%2by0Fu4gjQ7hcfhl%2f%2f1D5qId5Ex2btBAktyuUqbC3tmKh"
+  },
+  {
+    "id": "il-county-xls",
+    "state": "IL",
+    "kind": "results",
+    "url": "https://elections.il.gov/NewDocDisplay.aspx?khDtbt6dhc8zLboSZnz8zqVh5SQVox7uAOAe2nieWDAlNyd4%2btjArHsz9xVXIJ4p6Y57u3FvWw0%2bgnNWdT3uKyV44EJPSNKJqSNPoTMrt%2fmA2Vga9kq1ZVcE%2fKSRRVYPmEiR0E1M2978KTDoe9Wt%2by0Fu4gjQ7hcfhl%2f%2f1D5qId5Ex2btBAktxdA3jlhBQA1"
+  },
+  {
+    "id": "il-state-control",
+    "state": "IL",
+    "kind": "results",
+    "url": "https://elections.il.gov/NewDocDisplay.aspx?khDtbt6dhc8zLboSZnz8zqVh5SQVox7uAOAe2nieWDAlNyd4%2btjArHsz9xVXIJ4p6Y57u3FvWw0%2bgnNWdT3uKyV44EJPSNKJqSNPoTMrt%2fmA2Vga9kq1ZVcE%2fKSRRVYPmEiR0E1M294%2fG9VxI%2byEMFthnmNvGlJJJja51WmVMkjm7RcEAZfrBIUuIX9bTpQn%2f8BWecZKQtA%3d"
+  },
+  {
+    "id": "sd-president",
+    "state": "SD",
+    "kind": "results",
+    "url": "https://sdsos.gov/elections-voting/election-resources/election-history/2008/2008_general_election_statewide_races_county_totals.aspx"
+  },
+  {
+    "id": "ma-president",
+    "state": "MA",
+    "kind": "results",
+    "url": "https://electionstats.state.ma.us/elections/view/104457/"
+  },
+  {
+    "id": "ma-president-csv",
+    "state": "MA",
+    "kind": "results",
+    "url": "https://electionstats.state.ma.us/elections/download/104457/"
+  },
+  {
+    "id": "mt-results",
+    "state": "MT",
+    "kind": "index",
+    "url": "https://sosmt.gov/elections/results/"
+  },
+  {
+    "id": "ms-archives",
+    "state": "MS",
+    "kind": "index",
+    "url": "https://da.mdah.ms.gov/series/sos/s0107"
+  },
+  {
+    "id": "ga-results",
+    "state": "GA",
+    "kind": "index",
+    "url": "https://sos.ga.gov/page/georgia-election-results"
+  },
+  {
+    "id": "ga-2008-county",
+    "state": "GA",
+    "kind": "results",
+    "url": "https://sos.ga.gov/elections/election_results/2008_1104/003.htm"
+  },
+  {
+    "id": "oh-2008-president",
+    "state": "OH",
+    "kind": "results",
+    "url": "https://www.ohiosos.gov/elections/election-results-and-data/2008-election-results/president-november-4-2008/"
+  },
+  {
+    "id": "la-data",
+    "state": "LA",
+    "kind": "index",
+    "url": "https://redist.legis.la.gov/2011_Files/doj/08%20Data%20CD%20DVDs/Voter%20Registration%20Election%20Results%20and%20Candidate%20information/"
+  },
+  {
+    "id": "ia-host-certified",
+    "state": "IA",
+    "kind": "results",
+    "url": "https://sos.iowa.gov/elections/pdf/2008/OfficialCanvass2008General.pdf"
+  },
+  {
+    "id": "ga-host-president",
+    "state": "GA",
+    "kind": "results",
+    "url": "https://sos.ga.gov/elections/election_results/2008_1104/003.htm"
+  },
+  {
+    "id": "pa-api-definitions",
+    "state": "PA",
+    "kind": "reference",
+    "url": "https://www.electionreturns.pa.gov/Scripts/AppScripts/Service.js?v=1.2"
+  },
+  {
+    "id": "id-complete-csv",
+    "state": "ID",
+    "kind": "results",
+    "url": "https://canvass.sos.idaho.gov/eng/contests/download/277/show_granularity_dt_id:3/.csv"
+  },
+  {
+    "id": "pa-general2008",
+    "state": "PA",
+    "kind": "results",
+    "url": "https://www.electionreturns.pa.gov/General/CountyResults?ElectionID=27&ElectionType=G&IsActive=0"
+  },
+  {
+    "id": "ct-gaz2000-page",
+    "state": "",
+    "kind": "index",
+    "url": "https://www.census.gov/geographies/reference-files/2000/geo/gazetter-file.html"
+  },
+  {
+    "id": "ia-canvass-no-www",
+    "state": "IA",
+    "kind": "results",
+    "url": "https://sos.iowa.gov/elections/pdf/2008/officialcanvass2008general.pdf?download=1"
+  },
+  {
+    "id": "mt-general-xls",
+    "state": "MT",
+    "kind": "results",
+    "url": "https://sosmt.gov/wp-content/uploads/attachments/2008_State_General.xls"
+  },
+  {
+    "id": "oh-csv-newhost",
+    "state": "OH",
+    "kind": "results",
+    "url": "https://data.ohiosos.gov/globalassets/elections/2008/gen/pres.csv"
+  },
+  {
+    "id": "ct-statement",
+    "state": "CT",
+    "kind": "results",
+    "url": "https://portal.ct.gov/-/media/sots/electionservices/statementofvote_pdfs/2008sovpdf.pdf"
+  },
+  {
+    "id": "id-contest",
+    "state": "ID",
+    "kind": "results",
+    "url": "https://canvass.sos.idaho.gov/eng/contests/view/277"
+  },
+  {
+    "id": "ms-pages2",
+    "state": "MS",
+    "kind": "index",
+    "url": "https://da.mdah.ms.gov/series/sos/s0107/2008?page=2"
+  },
+  {
+    "id": "ms-pages3",
+    "state": "MS",
+    "kind": "index",
+    "url": "https://da.mdah.ms.gov/series/sos/s0107/2008?page=3"
+  },
+  {
+    "id": "ms-adams",
+    "state": "MS",
+    "kind": "results",
+    "url": "https://da.mdah.ms.gov/series-files/sos/s0107/2008/pdf/Adams%20County.pdf"
+  },
+  {
+    "id": "ms-hinds",
+    "state": "MS",
+    "kind": "results",
+    "url": "https://da.mdah.ms.gov/series-files/sos/s0107/2008/pdf/Hinds%20County.pdf"
+  },
+  {
+    "id": "ms-hinds1",
+    "state": "MS",
+    "kind": "results",
+    "url": "https://da.mdah.ms.gov/series-files/sos/s0107/2008/pdf/Hinds%20County%201.pdf"
+  },
+  {
+    "id": "oh-old-csv",
+    "state": "OH",
+    "kind": "results",
+    "url": "https://www.ohiosos.gov/globalassets/elections/2008/gen/pres.csv"
+  },
+  {
+    "id": "ia-current-canvass",
+    "state": "IA",
+    "kind": "results",
+    "url": "https://sos.iowa.gov/media/18306/download?inline"
+  },
+  {
+    "id": "census-cousub2010",
+    "state": "",
+    "kind": "reference",
+    "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/Gaz_cousubs_national.zip"
+  },
+  {
+    "id": "pa-election-catalog",
+    "state": "PA",
+    "kind": "results",
+    "url": "https://www.electionreturns.pa.gov/api/ElectionReturn/GetAllElections?methodName=GetAllElections"
+  },
+  {
+    "id": "pa-election27-metadata",
+    "state": "PA",
+    "kind": "results",
+    "url": "https://www.electionreturns.pa.gov/api/ElectionReturn/GetElectionTesting?methodName=GetElectionDetail&electionid=27&electiontype=G&isactive=0"
+  },
+  {
+    "id": "pa-election27-state",
+    "state": "PA",
+    "kind": "results",
+    "url": "https://www.electionreturns.pa.gov/api/ElectionReturn/GET?methodName=GetDashboardData&electionid=27&electiontype=G&isactive=0"
+  },
+  {
+    "id": "pa-election27-president",
+    "state": "PA",
+    "kind": "results",
+    "url": "https://www.electionreturns.pa.gov/api/ElectionReturn/GetCountyBreak?officeId=1&districtId=1&methodName=GetCountyBreak&electionid=27&electiontype=G&isactive=0"
+  },
+  {
+    "id": "fl-extract",
+    "state": "FL",
+    "kind": "results",
+    "url": "https://results.elections.myflorida.com/ResultsExtract.Asp",
+    "post_fields": {
+      "ElectionDate": "11/4/2008",
+      "OfficialResults": "Y",
+      "PartyRaces": "N",
+      "DataMode": ""
+    }
+  },
+  {
+    "id": "census-flags",
+    "state": "US",
+    "kind": "reference",
+    "url": "https://www2.census.gov/library/publications/2011/compendia/usa-counties/excel/Flag_Reference.xls"
+  },
+  {
+    "id": "sd-history",
+    "state": "SD",
+    "kind": "index",
+    "url": "https://sdsos.gov/elections-voting/election-resources/election-history/election-history-search.aspx"
+  },
+  {
+    "id": "ia-index",
+    "state": "IA",
+    "kind": "index",
+    "url": "https://sos.iowa.gov/iowans/election-results-statistics"
+  },
+  {
+    "id": "ny-export",
+    "state": "NY",
+    "kind": "candidate-url-unverified",
+    "url": "https://ny.elstats.civera.com/api/download_contest/3509_table.csv?split_party=false"
+  },
+  {
+    "id": "il-2008-downloads",
+    "state": "IL",
+    "kind": "index",
+    "url": "https://www.elections.il.gov/electionoperations/DownloadVoteTotals.aspx",
+    "post_fields": {
+      "MenuTabContainer_ClientState": "{\"ActiveTabIndex\":0,\"TabEnabledState\":[true,true,true,true,true,true,true],\"TabWasLoadedOnceState\":[false,false,false,false,false,false,false]}",
+      "__EVENTTARGET": "ctl00$ContentPlaceHolder1$ddlCurrent",
+      "__EVENTARGUMENT": "",
+      "__LASTFOCUS": "",
+      "__VIEWSTATE": "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",
+      "__VIEWSTATEGENERATOR": "6F916C3C",
+      "__EVENTVALIDATION": "ch0rvld4AcbdgMiro4itHqz3XM3OGTPGJs7vRMq0oMYyAeDw+Q3HuT2d6WRALjyCp0/yQewmWjFd6SBmUYTXSH6VHEqKQJVt0zC0l05SiKmxa3YQ1fx+0PVskvZxMAUPWWKlKVFfKY9vT8IiPh3vfu/kIRo+0WUmficf0CJRR3eHuNKIZPskiV9zAeIih/8HnzIov9NhL6A3DSI5uTArUfdnl8KcvKfTPxJhB3SnQDs6YBxPROdxtWFayOA75pYnEQt4AMd7efy1fglgjH+KyRNUjU97bmQwZK3leEpemUQZ2kJ9KvXYlA+rmA9wZn4dHQ4LimvObR8uHXMa/+a/fkb5Y27OXKJ0qbekWvJM5a9tZVFhT+s55oHVHG4nASe80XHWpgFOCKA+Jy3Cs5JiZCFajy6YbFt36rxSL6rTB9DLNrL84jy+O7kGRv/zwB4Qk9NXBccmyin/DEg89Q5OcfQlXN5upm/e77we05YqKb8dTpBx2hZv6sbqjkpH7Pj02KuQWZ0GCGwafKKUEgEt2UKkgMz2VOiG8RKJl8R0wcjGVpTYLP+0lhTEe/1rmv34dz7hCv1BRwn2Y43TYfjrfiS7+XYkKLFyFz2gwRftahOfzdd3KDzfZTAyVEl08EKheLpMCBuv2ixkSg/MYtW4gekNunDMJ4ztsR6dFPwcOHA3rK2+B5khY1gdsaW7Ps+hKASdObKAbHuf/uGjPgY0gWSUssyI6iJxy7AuNgs2YFT/rmJMTV9+HpvEI6XKVuuU8Gu/L/JWUtEafT+fAFyamgDq39/PEoZYAv8L1L8qvFXyNCbFuNRyQGkHQhXR1rubXp9ws/5hXlF4FUX7X+zkRo/cWlJ+vMi4hgrdSVyVhohytUvREVZqSgYyIvTqyo1XT4pHGO42pUodIfRNmnNOVm5bGCo0sMPt08c8Fw77OMwxPpR9tAhSJZzGGa+kJfLeEivdKJLg1sas366qvQ9LFgus1SWpVXmuF/BnTJ5+vMQDzjI5GO2zGpcZmbtq369lhGW7KTCTLTFsSWv9Wj9XR5szI/VScBCLIc6PVqVF56TSepW9/Xunlb1yxqcP4tsZzCMfc/VgsbR7g1QxwDOGL/xXK/rnO+BzDZ+jmUIuoJ1K8+S7itP56Kuh6A5MicBV+YnH+uiqfI6cjzL0xAoITKCqztfJB9Mu325M5ZstO7M3o/SLD+/u4QOacfpLMfkDQ8AphQVi0pFU7B7xJ45eIf+YiRLX04csEJow1P1zkVZZQZkoldQgUNFWsRkUGdIvp131xHi2JD1YKWa1/qjvN93LA2voJV4hU8jBxRPPrJQ6+0lD6Ap0pdqt+LxvoRDItKm1ItAn5BoBQKhwWs1VNsVO8uO7b0qaZub9WZnc64tLx/v2fU7jd0gSRjrY0yBJFeHt6tfhscx0RDASns0S+pbG6wnhIWqxOTeaGedV+MUKwZW3v1BaPMCWzYMJn+wmPlnMhNCMEQh/ydP79ssBhOOb8kDxQHTHY3MGhuC3PehXvHweTEHl7zVa3vtlf2Gm1L5cAKmoToSyUcSnKKLJhO6QqavUUaK/8QAKRyxLQ1zssVS7EKQyvvaODI6RoyXr08dDDG0Ex+bMj0bdmP8ydh65263i5jH1Ug6KHn2AiyrVnpjq",
+      "ctl00$ContentPlaceHolder1$ddlCurrent": "2008",
+      "ctl00$ContentPlaceHolder1$ddlArchived": ""
+    }
+  },
+  {
+    "id": "ia-certified-canvass",
+    "state": "IA",
+    "kind": "results",
+    "url": "https://sos.iowa.gov/elections/pdf/2008/OfficialCanvass2008General.pdf"
+  },
+  {
+    "id": "ia-state-precinct",
+    "state": "IA",
+    "kind": "results",
+    "url": "https://sos.iowa.gov/elections/pdf/precinctresults/2008general/statewide.zip"
+  },
+  {
+    "id": "il-download",
+    "state": "IL",
+    "kind": "results",
+    "url": "https://www.elections.il.gov/electionoperations/DownloadVoteTotals.aspx"
+  },
+  {
+    "id": "ky-office-totals",
+    "state": "KY",
+    "kind": "results",
+    "url": "https://elect.ky.gov/SiteCollectionDocuments/Election%20Results/2000-2009/2008/General%20Election/STATEwide%20by%20office%20gen%2008.txt"
+  }
+]

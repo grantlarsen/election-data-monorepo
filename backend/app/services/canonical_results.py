@@ -31,6 +31,16 @@ class MaterializationError(ValueError):
     pass
 
 
+def state_totals(session: Session, *, year: int, state_code: str | None = None) -> dict:
+    """Source-authoritative state TOTAL results, with explicit county grain limits.
+
+    FEC takes precedence for 2008. County candidate_totals retains its own batch,
+    geography and coverage contract; never add the two reporting levels.
+    """
+    from app.services.fec_state_results import read_state_totals
+    return read_state_totals(session,year=year,state_code=state_code)
+
+
 def _hash_projection(year: int, release: SourceRelease, reference_id: UUID,
                      observations: list, geography: dict, state_groups: dict) -> str:
     sha = sha256()
@@ -103,7 +113,7 @@ def _load_projection(session: Session, year: int, reference_release_id: UUID | N
     return release, reference_release_id, observations, geography
 
 
-def _plan(session: Session, year: int, reference_release_id: UUID | None):
+def _plan(session: Session, year: int, reference_release_id: UUID | None, *, correction_batch_id=None, ignore_corrections=False):
     release, ref_release, observations, geography = _load_projection(session, year, reference_release_id)
     state_rows = session.scalars(select(Jurisdiction).where(Jurisdiction.level == "state")).all()
     state_groups = defaultdict(list)
@@ -180,9 +190,20 @@ def _plan(session: Session, year: int, reference_release_id: UUID | None):
     # aggregate categories and potentially overlapping voting modes.
     source_sum = sum(o.candidate_votes or 0 for o in observations)
     target_sum = sum(o.candidate_votes for o, _, _, _ in accepted)
-    return dict(release=release, ref_release=ref_release, observations=observations,
+    plan = dict(release=release, ref_release=ref_release, observations=observations,
         accepted=accepted, rejected=rejected, fingerprint=fingerprint,
-        source_sum=source_sum, target_sum=target_sum)
+        source_sum=source_sum, target_sum=target_sum,correction_batch=None,corrections={},
+        effective_votes={o.id:o.candidate_votes for o,_,_,_ in accepted})
+    if not ignore_corrections:
+        if correction_batch_id is None:
+            pointer=session.get(CanonicalPublication,f'medsl_presidential_county:{year}:county_total')
+            current=session.get(CanonicalResultBatch,pointer.batch_id) if pointer else None
+            correction_batch_id=current.correction_batch_id if current else None
+        if correction_batch_id is not None:
+            if year!=2008:raise MaterializationError('County corrections are scoped to 2008')
+            from app.services.county_corrections import amend_plan
+            plan=amend_plan(session,plan,correction_batch_id)
+    return plan
 
 
 def _chunks(items, n=500):
@@ -192,7 +213,7 @@ def _chunks(items, n=500):
 
 def materialize_medsl_year(session: Session, *, year: int, dry_run: bool = True,
                            allow_partial: bool = False,
-                           reference_release_id: UUID | None = None) -> dict:
+                           reference_release_id: UUID | None = None, correction_batch_id=None) -> dict:
     """Caller owns transaction; mutations only if dry_run=False.
 
     Caller MUST run at REPEATABLE READ for source-selection consistency.
@@ -203,13 +224,13 @@ def materialize_medsl_year(session: Session, *, year: int, dry_run: bool = True,
         raise MaterializationError("Unsupported MEDSL presidential year")
     scope_key = f"medsl_presidential_county:{year}:county_total"
     session.execute(text("SELECT pg_advisory_xact_lock(hashtext(:scope))"), {"scope": scope_key})
-    plan = _plan(session, year, reference_release_id)
+    plan = _plan(session, year, reference_release_id,correction_batch_id=correction_batch_id)
     observed = len(plan["observations"])
     included = len(plan["accepted"])
     issues = Counter(code for _, code in plan["rejected"])
     if observed != included + sum(issues.values()):
         raise MaterializationError("Partition accounting does not reconcile")
-    status = "PARTIAL" if issues else "COMPLETE"
+    status = "PARTIAL" if issues or plan['correction_batch'] else "COMPLETE"
     report = dict(year=year, scope=scope_key, dry_run=dry_run,
         release_id=str(plan["release"].id), reference_release_id=str(plan["ref_release"]),
         fingerprint=plan["fingerprint"], status=status,
@@ -217,6 +238,10 @@ def materialize_medsl_year(session: Session, *, year: int, dry_run: bool = True,
         issue_counts=dict(sorted(issues.items())),
         raw_votes_nonadditive=plan["source_sum"],
         eligible_canonical_votes=plan["target_sum"])
+    if plan['correction_batch']:
+        report.update(correction_batch_id=str(plan['correction_batch'].id),
+            corrected_observations=len(plan['corrections']),
+            correction_vote_adjustment=plan['correction_batch'].vote_adjustment)
     if dry_run:
         report["action"] = "PREVIEW_ONLY"
         return report
@@ -241,6 +266,7 @@ def materialize_medsl_year(session: Session, *, year: int, dry_run: bool = True,
         batch = CanonicalResultBatch(id=uuid4(), scope_key=scope_key,
             fingerprint=plan["fingerprint"], ruleset_version=RULESET,
             source_release_id=plan["release"].id, reference_release_id=plan["ref_release"],
+            correction_batch_id=plan['correction_batch'].id if plan['correction_batch'] else None,
             election_year=year, status=status, input_rows=observed,
             accepted_rows=included, excluded_rows=sum(issues.values()),
             raw_votes_nonadditive=plan["source_sum"], canonical_votes=plan["target_sum"],
@@ -287,7 +313,8 @@ def materialize_medsl_year(session: Session, *, year: int, dry_run: bool = True,
                 geographic_resolution_id=geo.id, candidacy_id=candidate_id,
                 ballot_line_id=None, source_label=obs.candidate_raw or obs.candidate_normalized or "UNSPECIFIED",
                 reporting_level=ref.kind, reporting_mode="TOTAL", vote_kind=kind,
-                votes=obs.candidate_votes))
+                votes=plan['effective_votes'][obs.id],
+                correction_id=plan['corrections'][obs.id].id if obs.id in plan['corrections'] else None))
         for chunk in _chunks(rows):
             session.execute(pg_insert(CanonicalVoteReturn).values(chunk))
         issue_rows = [dict(id=uuid4(), batch_id=batch.id, observation_id=obs.id,

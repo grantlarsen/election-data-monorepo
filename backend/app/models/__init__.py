@@ -14,3 +14,5 @@ from .geography import JurisdictionBoundaryVintage, GeographicResolutionContext
 from .identity import (PersonName, Organization, ExternalIdentifier, IdentityAssignmentEvent, CommitteeRelationship)
 
 from .election import (Office, OfficeTerm, BallotLine, CanonicalResultBatch, CanonicalPublication, CanonicalVoteReturn, CanonicalMaterializationIssue)
+from .state_results import StateResultBatch, StateVoteReturn, StateResultPublication
+from .county_corrections import CountyCorrectionBatch, CountyVoteCorrection

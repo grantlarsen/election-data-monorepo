@@ -1,0 +1,272 @@
+[
+  {
+    "id": "fec-2008-president",
+    "url": "https://www.fec.gov/documents/1660/2008pres.pdf",
+    "authority": "Federal Election Commission; results compiled from state election offices"
+  },
+  {
+    "id": "fec-2008-preface",
+    "url": "https://www.fec.gov/documents/1668/preface2008.pdf",
+    "authority": "Federal Election Commission"
+  },
+  {
+    "id": "mo-2008-manual",
+    "url": "https://www.sos.mo.gov/cmsimages/BlueBook/2009-2010/7_Elec.pdf",
+    "authority": "Missouri Secretary of State"
+  },
+  {
+    "id": "mn-2008-manual",
+    "url": "https://www.leg.mn.gov/archive/sessions/electionresults/2008-11-04-g-man.pdf",
+    "authority": "Minnesota Legislative Manual 2009-2010; Legislative Reference Library"
+  },
+  {
+    "id": "va-2008-counties",
+    "url": "https://va2.elstats.civera.com/api/download_contest/39050_table.csv?split_party=false",
+    "authority": "Virginia Department of Elections historical results export"
+  },
+  {
+    "id": "ak-2008-statewide",
+    "url": "https://www.elections.alaska.gov/results/08GENR/data/results.htm",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district8",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd8.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ct-2008-statement",
+    "url": "https://portal.ct.gov/-/media/sots/electionservices/statementofvote_pdfs/2008sovpdf.pdf",
+    "authority": "Connecticut Secretary of State"
+  },
+  {
+    "id": "me-2008-president",
+    "url": "https://lldc.mainelegislature.org/Open/Elections/Returns/2008/20081104/elec_20081104ac.pdf",
+    "authority": "Maine official tabulation archived by State Law and Legislative Reference Library"
+  },
+  {
+    "id": "ri-2008-president",
+    "url": "https://www.ri.gov/election/results/2008/general_election/races/215.html",
+    "authority": "Rhode Island Board of Elections"
+  },
+  {
+    "id": "ri-2008-description",
+    "url": "https://elections.ri.gov/publications/Data_Files/data_description_2008.pdf",
+    "authority": "Rhode Island Board of Elections"
+  },
+  {
+    "id": "ak-2008-district01",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd1.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district02",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd2.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district03",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd3.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district04",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd4.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district05",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd5.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district06",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd6.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district07",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd7.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district09",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd9.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district10",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd10.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district11",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd11.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district12",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd12.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district13",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd13.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district14",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd14.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district15",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd15.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district16",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd16.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district17",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd17.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district18",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd18.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district19",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd19.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district20",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd20.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district21",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd21.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district22",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd22.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district23",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd23.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district24",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd24.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district25",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd25.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district26",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd26.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district27",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd27.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district28",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd28.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district29",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd29.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district30",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd30.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district31",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd31.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district32",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd32.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district33",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd33.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district34",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd34.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district35",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd35.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district36",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd36.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district37",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd37.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district38",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd38.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district39",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd39.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "ak-2008-district40",
+    "url": "https://www.elections.alaska.gov/Core/Archive/08GENR/data/sovc/hd40.pdf",
+    "authority": "Alaska Division of Elections"
+  },
+  {
+    "id": "mn-2008-county-text",
+    "url": "https://electionresults.sos.mn.gov/Results/MediaFile_Archive/Index?erselectionId=63&mediafileid=51",
+    "authority": "Minnesota Secretary of State archived downloadable text; page labels results unofficial"
+  },
+  {
+    "id": "mn-2008-county-table",
+    "url": "https://electionresults.sos.mn.gov/Results/MediaFile_Archive/Index?erselectionId=63&mediafileid=6",
+    "authority": "Minnesota Secretary of State county lookup"
+  },
+  {
+    "id": "mn-2008-layout",
+    "url": "https://electionresults.sos.mn.gov/Results/MediaFileLayout/Index?erselectionId=63",
+    "authority": "Minnesota Secretary of State text file layout"
+  },
+  {
+    "id": "mn-2008-download-index",
+    "url": "https://electionresults.sos.mn.gov/Select/MediaFiles/Index?ersElectionId=63",
+    "authority": "Minnesota Secretary of State archive index; unofficial label retained"
+  }
+]
