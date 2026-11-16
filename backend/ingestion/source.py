@@ -147,9 +147,12 @@ class DataverseMEDSL:
     DOI = "doi:10.7910/DVN/VOQCHQ"
     METADATA_URL = "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/VOQCHQ"
     HOST = "https://dataverse.harvard.edu"
+    ORIGINAL_FILENAME = "countypres_2000-2024.csv"
 
     def describe(self) -> SourceInfo:
-        response = json.loads(_request(self.METADATA_URL) or b"{}")
+        metadata_path = getattr(self, "metadata_path", None)
+        response = (json.loads(Path(metadata_path).read_text(encoding="utf-8-sig")) if metadata_path else
+                    json.loads(_request(self.METADATA_URL) or b"{}"))
         if response.get("status") != "OK":
             raise AcquisitionError("Dataverse returned an unsuccessful metadata response")
         dataset = response["data"]
@@ -157,9 +160,9 @@ class DataverseMEDSL:
         if release.get("versionState") != "RELEASED":
             raise AcquisitionError("Latest Dataverse version is not released")
         files = [f for f in release["files"]
-                 if f.get("dataFile", {}).get("originalFileName") == "countypres_2000-2024.csv"]
+                 if f.get("dataFile", {}).get("originalFileName") == self.ORIGINAL_FILENAME]
         if len(files) != 1:
-            raise AcquisitionError(f"Expected exactly one original MEDSL county CSV; found {len(files)}")
+            raise AcquisitionError(f"Expected exactly one original {self.ORIGINAL_FILENAME}; found {len(files)}")
         df = files[0]["dataFile"]
         version = f"{release['versionNumber']}.{release['versionMinorNumber']}"
         file_id = int(df["id"])

@@ -40,6 +40,11 @@ Election discovery and published results are available under `/api/v1`.
 See the [election API contract and verification guide](docs/api/elections.md)
 for filters, pagination, source coverage and the separate state/county grains.
 
+2024 MEDSL House district ingestion is available through the shared observation
+and canonical publication pipeline. See the [House data contract](docs/data/house_returns_2024.md)
+and [PowerShell runbook](docs/data/house_returns_2024_runbook.md) for pinned-source
+replay, missing-vote flags, fusion lines, district reconciliation and publication.
+
 The React/TypeScript research frontend is available at http://localhost:5173
 after `docker compose up -d --build`. It provides persistent filters, contest
 and result browsing, source labels, and a 2008 presidential state-to-county map.

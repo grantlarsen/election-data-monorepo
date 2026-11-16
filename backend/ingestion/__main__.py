@@ -29,6 +29,8 @@ def main(argv: list[str] | None = None) -> int:
     run_parser.add_argument("--years", nargs="+", type=int, default=None, help="Subset of election years")
     run_parser.add_argument("--verbose", action="store_true")
     run_parser.add_argument("--state-totals-csv", type=Path, help="Optional independent state-year totals reference")
+    run_parser.add_argument("--source-metadata-file", type=Path, help="Pinned official Dataverse metadata JSON; reuse a verified cached original offline")
+    run_parser.add_argument("--expected-sha256", help="Require an exact original-file SHA-256 before parsing/loading")
     geo_parser = sub.add_parser("geo", help="Validate, resolve, or inspect geographic matches")
     geo_parser.add_argument("operation", choices=["resolve", "compare", "quality", "validate", "unresolved", "anomalies", "changes", "alias-import", "alias-approve", "change-import", "change-verify", "identity-link", "evidence-list", "reconcile"])
     geo_parser.add_argument("--vintage", type=int, help="Election year for Census reference selection")
@@ -70,7 +72,18 @@ def main(argv: list[str] | None = None) -> int:
         adapter = module.Job(args.vintage) if getattr(module.Job, "geographic_reference", False) else module.Job()
     except (ImportError, AttributeError) as exc:
         parser.error(f"Unknown or broken source adapter {args.source}: {exc}")
+    if args.expected_sha256 and not re.fullmatch(r"[0-9a-f]{64}", args.expected_sha256):
+        parser.error("--expected-sha256 requires 64 lowercase hexadecimal characters")
+    if args.source_metadata_file:
+        from ingestion.source import DataverseMEDSL
+        if not isinstance(adapter, DataverseMEDSL):
+            parser.error("--source-metadata-file requires a Dataverse adapter")
+        if not args.expected_sha256:
+            parser.error("Pinned metadata requires --expected-sha256")
+        adapter.metadata_path = args.source_metadata_file
     if getattr(adapter, "geographic_reference", False):
+        if args.expected_sha256:
+            parser.error("--expected-sha256 is supported for election observation adapters")
         from ingestion.geography.cli import run_geographic_job
         try:
             return run_geographic_job(adapter, args)
@@ -113,6 +126,8 @@ def main(argv: list[str] | None = None) -> int:
 
         LOG.info("Source: %s; years: %s; mode: %s", args.source, sorted(years), mode)
         asset = acquire(adapter, data_dir, refresh=args.refresh)
+        if args.expected_sha256 and asset.sha256 != args.expected_sha256:
+            raise ValueError("Original-file SHA-256 differs from --expected-sha256; no observations committed")
         report.update({"dataset_version": asset.info.version, "file_id": asset.info.file_id,
                        "download_url": asset.info.download_url, "raw_path": str(asset.path),
                        "sha256": asset.sha256, "retrieved_at": asset.retrieved_at.isoformat(),
@@ -127,6 +142,7 @@ def main(argv: list[str] | None = None) -> int:
         issues = check.issues
         rejections = check.rejections
         report.update({"records_in_file": raw_count, "records_selected": selected_count,
+                       "records_excluded": raw_count - selected_count,
                        "records_rejected": len(rejections), "issues": issues})
         if rejections:
             rejections_path = data_dir / "rejections" / f"{run_id}.json"
