@@ -36,6 +36,10 @@ Open:
 - http://localhost:8000/health/db
 - http://localhost:8000/docs
 
+Election discovery and published results are available under `/api/v1`.
+See the [election API contract and verification guide](docs/api/elections.md)
+for filters, pagination, source coverage and the separate state/county grains.
+
 Check PostGIS directly:
 
 ```powershell

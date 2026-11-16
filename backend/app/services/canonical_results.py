@@ -339,26 +339,36 @@ def materialize_medsl_year(session: Session, *, year: int, dry_run: bool = True,
 
 
 def candidate_totals(session: Session, *, batch_id: UUID, contest_id: UUID,
-                     reporting_level: str, reporting_mode: str = "TOTAL") -> list[dict]:
+                     reporting_level: str, reporting_mode: str = "TOTAL",
+                     jurisdiction_ids: set[UUID] | None = None) -> list[dict]:
     """Derive additive candidate votes; fail closed on overlapping representations.
 
     Only a single batch, contest, reporting level and mode is accepted. Aggregate
     categories and write-in buckets are intentionally not candidate totals.
+    An optional reporting-unit selection bounds API page work without changing
+    the aggregation or overlap checks within any selected unit.
     """
-    rows = session.scalars(select(CanonicalVoteReturn).where(
+    query = select(CanonicalVoteReturn).where(
         CanonicalVoteReturn.batch_id == batch_id,
         CanonicalVoteReturn.contest_id == contest_id,
         CanonicalVoteReturn.reporting_level == reporting_level,
-        CanonicalVoteReturn.reporting_mode == reporting_mode)).all()
+        CanonicalVoteReturn.reporting_mode == reporting_mode)
+    if jurisdiction_ids is not None:
+        query = query.where(CanonicalVoteReturn.jurisdiction_id.in_(jurisdiction_ids))
+    rows = session.scalars(query).all()
     from app.models.election import BallotLine
     from app.models.core import Candidacy
+    candidates = {item.id: item for item in session.scalars(select(Candidacy).where(
+        Candidacy.id.in_({r.candidacy_id for r in rows if r.candidacy_id}))).all()}
+    lines = {item.id: item for item in session.scalars(select(BallotLine).where(
+        BallotLine.id.in_({r.ballot_line_id for r in rows if r.ballot_line_id}))).all()}
     keyed = defaultdict(list)
     for row in rows:
         if row.vote_kind not in {"ballot_line", "candidate_total"}:
             continue
         if row.candidacy_id is None:
             raise MaterializationError("Candidate vote has no candidacy")
-        entity = session.get(Candidacy, row.candidacy_id)
+        entity = candidates.get(row.candidacy_id)
         if entity is None or entity.contest_id != contest_id:
             raise MaterializationError("Vote candidacy belongs to a different contest")
         keyed[(row.jurisdiction_id, row.reporting_level, row.candidacy_id)].append(row)
@@ -374,7 +384,7 @@ def candidate_totals(session: Session, *, batch_id: UUID, contest_id: UUID,
             if len(set(ids)) != len(ids):
                 raise MaterializationError("Duplicate line votes in reporting grain")
             for row in group:
-                line = session.get(BallotLine, row.ballot_line_id)
+                line = lines.get(row.ballot_line_id)
                 if line is None or line.candidacy_id != candidacy_id:
                     raise MaterializationError("Ballot-line candidacy mismatch")
         result.append(dict(jurisdiction_id=str(jurisdiction_id),
