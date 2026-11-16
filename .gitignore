@@ -22,6 +22,8 @@
 /data/*
 
 # Python tooling and coverage output
+__pycache__/
+*.py[cod]
 .ruff_cache/
 .mypy_cache/
 .coverage
@@ -33,3 +35,8 @@ coverage.xml
 .idea/
 Thumbs.db
 Desktop.ini
+
+# Frontend dependencies and generated output
+node_modules/
+frontend/dist/
+frontend/coverage/
