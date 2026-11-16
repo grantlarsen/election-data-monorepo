@@ -1,4 +1,6 @@
-import { Link, Navigate, NavLink, Route, Routes, useParams, useSearchParams } from 'react-router';
+import { ElectionMapPage } from './map/ElectionMapPage';
+import { useEffect, useState } from 'react';
+import { Link, Navigate, NavLink, Route, Routes, useLocation, useParams, useSearchParams } from 'react-router';
 import type { Contest, Page, Result } from './api';
 import { apiQuery, filterSearch, humanize, isUuid, validateSearch } from './filters';
 import { FilterLink, Filters, FirstPageLink, Notice, Pagination, Provenance, RouteFocus, usePage } from './components';
@@ -15,23 +17,6 @@ function DataState<T>({ page, error, retry, empty, children }: {
   if (page.total === 0) return <Notice title="No matching data"><p>{empty}</p><p>Try a different year, office or geography. An absent record does not mean zero votes.</p></Notice>;
   if (!page.items.length) return <><Notice title="No records on this page"><p>The page offset is beyond the matching records.</p><FirstPageLink /></Notice><Pagination page={page} /></>;
   return children(page);
-}
-
-function MapPage() {
-  const [params] = useSearchParams();
-  const error = validateSearch(params);
-  return <>
-    <Title title="Explore elections">Start with an election and geography, then follow the published record.</Title>
-    {error && <Notice title="Review your filters" error><p>{error}</p></Notice>}
-    <section className="map-placeholder" aria-labelledby="map-heading">
-      <div className="map-mark" aria-hidden="true">◎</div>
-      <p className="eyebrow">Geographic exploration</p><h2 id="map-heading">Map boundaries are not available yet</h2>
-      <p>Historical boundaries are required before results can be drawn accurately. Your filters are ready for browsing published contests and returns.</p>
-      <FilterLink to="/contests">Browse contests <span aria-hidden="true">→</span></FilterLink>
-    </section>
-    <div className="guide-grid"><article><span className="eyebrow">01 / Discover</span><h2>Follow the contest</h2><p>Find elections by year, office and state. Modeled contests may exist before returns are published.</p><FilterLink to="/contests">Explore contests</FilterLink></article>
-      <article><span className="eyebrow">02 / Inspect</span><h2>Read the source record</h2><p>Inspect candidate returns and anonymous vote buckets with their source release and historical geographic reference.</p><FilterLink to="/candidates">Browse published returns</FilterLink></article></div>
-  </>;
 }
 
 function ContestPage() {
@@ -103,22 +88,32 @@ function NotFound() {
 
 export function App() {
   const [params] = useSearchParams();
+  const location = useLocation();
+  const [filterPanel, setFilterPanel] = useState({ locationKey: location.key, open: false });
+  const filtersOpen = filterPanel.locationKey === location.key && filterPanel.open;
+  useEffect(() => {
+    setFilterPanel({ locationKey: location.key, open: false });
+  }, [location.key]);
   const search = filterSearch(params);
   return <>
     <a className="skip-link" href="#main-content">Skip to main content</a>
-    <header className="site-header"><Link className="brand" to={`/map${search}`} aria-label="Electoral Atlas home"><span className="brand-mark" aria-hidden="true">E/A</span><span>Electoral Atlas<small>US political data platform</small></span></Link><span className="header-note">Public records. Visible sources.</span></header>
-    <nav className="primary-nav" aria-label="Primary navigation">{[['/map', 'Map'], ['/contests', 'Contests'], ['/candidates', 'Candidates']].map(([to, label]) => <NavLink key={to} to={`${to}${search}`}>{label}</NavLink>)}</nav>
-    <div className="workspace"><Filters /><main id="main-content" tabIndex={-1}><RouteFocus />
-      <div className="selection-strip" aria-label="Applied filters"><span>{params.get('year') || 'All years'}</span><span>{params.get('office') || 'All offices'}</span><span>{params.get('state_code')?.toUpperCase() || 'All states and DC'}</span><span>{humanize(params.get('stage') || 'All stages')}</span><span>{humanize(params.get('reporting_level') || 'county')} reporting</span></div>
+    <header className="site-header"><Link className="brand" to={`/map${search}`} aria-label="Electoral Atlas home"><span className="brand-mark" aria-hidden="true">E/A</span><span>Electoral Atlas</span></Link>
+      <div className="header-actions"><nav className="primary-nav" aria-label="Primary navigation">{[['/map', 'Map'], ['/contests', 'Contests'], ['/candidates', 'Candidates']].map(([to, label]) => <NavLink key={to} to={`${to}${search}`}>{label}</NavLink>)}</nav>
+        <button type="button" className="filter-toggle" aria-expanded={filtersOpen} aria-controls="election-filters" onClick={() => setFilterPanel({ locationKey: location.key, open: !filtersOpen })}>{filtersOpen ? 'Hide filters' : 'Show filters'}</button>
+      </div>
+    </header>
+    <div className={`workspace${filtersOpen ? ' filters-open' : ''}`}>
+      <Filters open={filtersOpen} /><main id="main-content" className={location.pathname === '/map' ? 'map-page' : undefined} tabIndex={-1}><RouteFocus />
       <Routes>
         <Route path="/" element={<Navigate to={`/map${search || '?year=2008'}`} replace />} />
-        <Route path="/map" element={<MapPage />} />
+        <Route path="/map" element={<ElectionMapPage />} />
         <Route path="/contests" element={<ContestPage />} />
         <Route path="/contests/:contestId" element={<ResultsPage />} />
         <Route path="/candidates" element={<ResultsPage />} />
         <Route path="/candidates/:candidacyId" element={<CandidatePage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <div className="selection-strip" role="group" aria-label="Applied filters"><span>{params.get('year') || 'All years'}</span><span>{params.get('office') || 'All offices'}</span><span>{params.get('state_code')?.toUpperCase() || 'All states and DC'}</span><span>{humanize(params.get('stage') || 'All stages')}</span><span>{humanize(params.get('reporting_level') || 'county')} reporting</span></div>
     </main></div>
     <footer className="site-footer">Election research with historical geography and source context. Missing records never imply zero votes.</footer>
   </>;
