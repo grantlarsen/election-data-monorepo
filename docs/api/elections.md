@@ -1,5 +1,8 @@
 # Election discovery and published results
 
+The [election map display API](election-map.md) reuses these publication and result
+contracts for the 2008 state/county map, with a separate pinned boundary package.
+
 The read-only API under `/api/v1` uses existing canonical election entities,
 active county publications and the separate FEC state authority publication.
 It does not materialize results or update source, identity, geography or

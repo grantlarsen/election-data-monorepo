@@ -1,0 +1,3 @@
+-r requirements.txt
+# Optional preparation tool; the API only reads the prepared JSON package.
+pyshp==2.3.1

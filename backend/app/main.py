@@ -5,10 +5,12 @@ from sqlalchemy import text
 
 from app.database import engine
 from app.api.elections import router as election_router
+from app.api.maps import router as map_router
 
 app = FastAPI(title="Electoral Research API", version="0.1.0")
 
 app.include_router(election_router)
+app.include_router(map_router)
 
 
 @app.get("/health")

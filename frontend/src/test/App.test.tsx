@@ -23,14 +23,55 @@ function mockData() {
 }
 
 describe('research shell', () => {
-  it('opens the default map selection and labels missing boundaries without inventing a map', async () => {
+  it('starts with collapsed filters and toggles them without changing the selection', async () => {
+    mockData();
+    const user = userEvent.setup();
+    open('/map?year=2008&state_code=AR');
+    const toggle = screen.getByRole('button', { name: 'Show filters' });
+    expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    expect(screen.queryByRole('complementary', { name: 'Filters' })).not.toBeInTheDocument();
+    toggle.focus();
+    await user.keyboard('{Enter}');
+    expect(toggle).toHaveAttribute('aria-expanded', 'true');
+    expect(screen.getByRole('complementary', { name: 'Filters' })).toBeVisible();
+    expect(screen.getByLabelText('State or DC')).toHaveValue('AR');
+    await user.click(screen.getByRole('button', { name: 'Hide filters' }));
+    expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    expect(screen.getByTestId('location')).toHaveTextContent('/map?year=2008&state_code=AR');
+    const tags = screen.getByRole('group', { name: 'Applied filters' });
+    expect(tags).toHaveTextContent('2008');
+    expect(tags).toBe(screen.getByRole('main').lastElementChild);
+    expect(screen.queryByText('Geographic exploration')).not.toBeInTheDocument();
+    expect(screen.queryByText('Explore elections')).not.toBeInTheDocument();
+  });
+
+  it('collapses filters after applying, section navigation, and browser history', async () => {
+    mockData();
+    const user = userEvent.setup();
+    open('/map?year=2008');
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
+    await user.selectOptions(screen.getByLabelText('State or DC'), 'AR');
+    await user.click(screen.getByRole('button', { name: 'Apply filters' }));
+    expect(screen.getByRole('button', { name: 'Show filters' })).toHaveAttribute('aria-expanded', 'false');
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
+    expect(screen.getByLabelText('State or DC')).toHaveValue('AR');
+    await user.click(screen.getByRole('link', { name: 'Contests' }));
+    expect(screen.getByRole('button', { name: 'Show filters' })).toHaveAttribute('aria-expanded', 'false');
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
+    await user.click(screen.getByRole('button', { name: 'Browser back' }));
+    expect(screen.getByRole('button', { name: 'Show filters' })).toHaveAttribute('aria-expanded', 'false');
+    await user.click(screen.getByRole('button', { name: 'Browser back' }));
+    expect(screen.getByRole('button', { name: 'Show filters' })).toHaveAttribute('aria-expanded', 'false');
+  });
+
+  it('opens the default map selection and requests its display contract', async () => {
     const fetch = mockData();
     open('/');
-    expect(await screen.findByRole('heading', { name: 'Explore elections' })).toBeVisible();
+    expect(await screen.findByRole('heading', { name: 'Election map' })).toBeVisible();
     expect(screen.getByTestId('location')).toHaveTextContent('/map?year=2008');
-    expect(screen.getByRole('heading', { name: 'Map boundaries are not available yet' })).toBeVisible();
+    expect(await screen.findByRole('heading', { name: 'Map data could not be loaded' })).toBeVisible();
     expect(screen.getByRole('link', { name: 'Map' })).toHaveAttribute('aria-current', 'page');
-    expect(fetch).not.toHaveBeenCalled();
+    expect(fetch).toHaveBeenCalledWith('/api/v1/election-map?year=2008', expect.objectContaining({ signal: expect.any(AbortSignal) }));
     expect(screen.getByRole('link', { name: 'Skip to main content' })).toHaveAttribute('href', '#main-content');
   });
 
@@ -38,6 +79,7 @@ describe('research shell', () => {
     const fetch = mockData();
     const user = userEvent.setup();
     open('/map?year=2008');
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
     await user.clear(screen.getByLabelText('Election year'));
     await user.type(screen.getByLabelText('Election year'), '2024');
     await user.type(screen.getByLabelText('Office'), 'U.S. House');
@@ -58,6 +100,7 @@ describe('research shell', () => {
     expect(query.get('reporting_level')).toBe('congressional_district');
     expect(query.get('reporting_mode')).toBe('TOTAL');
     await user.click(screen.getByRole('link', { name: 'Map' }));
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
     expect(screen.getByLabelText('Election year')).toHaveValue(2024);
     expect(screen.getByLabelText('Office')).toHaveValue('U.S. House');
     expect(screen.getByLabelText('State or DC')).toHaveValue('NY');
@@ -67,16 +110,20 @@ describe('research shell', () => {
     const user = userEvent.setup();
     mockData();
     const mounted = open('/map?year=2008&state_code=NY');
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
     await user.clear(screen.getByLabelText('Election year'));
     await user.type(screen.getByLabelText('Election year'), '2024');
     await user.click(screen.getByRole('button', { name: 'Apply filters' }));
     await user.click(screen.getByRole('button', { name: 'Browser back' }));
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
     expect(screen.getByLabelText('Election year')).toHaveValue(2008);
     await user.click(screen.getByRole('button', { name: 'Browser forward' }));
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
     expect(screen.getByLabelText('Election year')).toHaveValue(2024);
     const url = screen.getByTestId('location').textContent!;
     mounted.unmount();
     open(url);
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
     expect(screen.getByLabelText('Election year')).toHaveValue(2024);
     expect(screen.getByLabelText('State or DC')).toHaveValue('NY');
   });
@@ -94,6 +141,7 @@ describe('research shell', () => {
     expect(screen.getByText(/identifier has not been verified/)).toBeVisible();
     await user.click(screen.getByRole('link', { name: 'View this contest’s published returns' }));
     await screen.findByRole('table');
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
     expect(screen.getByLabelText('State or DC')).toHaveValue('NY');
   });
 
@@ -102,9 +150,11 @@ describe('research shell', () => {
     const user = userEvent.setup();
     open(`/contests/${contestId}?year=2008&offset=25`);
     await screen.findByRole('table');
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
     await user.click(screen.getByRole('button', { name: 'Apply filters' }));
     expect(screen.getByTestId('location')).toHaveTextContent('/contests?year=2008');
     expect(screen.getByTestId('location')).not.toHaveTextContent('offset=');
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
     await user.click(screen.getByRole('link', { name: 'Clear filters' }));
     expect(screen.getByTestId('location').textContent).toBe('/contests');
   });
@@ -190,11 +240,13 @@ describe('loading, errors and missing data', () => {
     const user = userEvent.setup();
     open('/contests?year=2008');
     await screen.findByRole('heading', { name: contest.office_name });
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
     await user.clear(screen.getByLabelText('Election year'));
     await user.type(screen.getByLabelText('Election year'), '2024');
     await user.click(screen.getByRole('button', { name: 'Apply filters' }));
     expect(screen.getByRole('status')).toHaveTextContent('Loading published data');
     expect(screen.queryByRole('heading', { name: contest.office_name })).not.toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: 'Show filters' }));
     await user.click(screen.getByRole('link', { name: 'Clear filters' }));
     await screen.findByRole('heading', { name: 'No matching data' });
     await act(async () => finish(respond(page([contest]))));

@@ -42,9 +42,11 @@ for filters, pagination, source coverage and the separate state/county grains.
 
 The React/TypeScript research frontend is available at http://localhost:5173
 after `docker compose up -d --build`. It provides persistent filters, contest
-and result browsing, source labels, and explicit missing-data states. See the
+and result browsing, source labels, and a 2008 presidential state-to-county map.
+Prepare its pinned Census display package using the
+[map API and boundary guide](docs/api/election-map.md). See the
 [frontend setup, scope and verification guide](docs/frontend.md) for routes,
-tests and the remaining map/profile dependencies.
+tests and the remaining geography/profile dependencies.
 
 Check PostGIS directly:
 

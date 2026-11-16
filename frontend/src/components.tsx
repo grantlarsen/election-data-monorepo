@@ -5,7 +5,7 @@ import { ApiError, fetchPage, sourceUrl } from './api';
 import type { Page, Publication, Source } from './api';
 import { filterKeys, filterSearch, humanize, levels, stages, states } from './filters';
 
-export function Filters() {
+export function Filters({ open }: { open: boolean }) {
   const [params] = useSearchParams();
   const location = useLocation();
   const navigate = useNavigate();
@@ -19,8 +19,8 @@ export function Filters() {
     }
     navigate(`/${location.pathname.split('/')[1]}?${next}`);
   }
-  return <aside className="filter-panel" aria-labelledby="filters-heading">
-    <div className="panel-heading"><h2 id="filters-heading">Explore the data</h2><span className="eyebrow">Filters</span></div>
+  return <aside id="election-filters" className="filter-panel" hidden={!open} aria-labelledby="filters-heading">
+    <div className="panel-heading"><h2 id="filters-heading">Filters</h2></div>
     <form key={params.toString()} onSubmit={apply}>
       <label>Election year<input type="number" name="year" min="1" max="9998" step="1" placeholder="All years" defaultValue={params.get('year') ?? ''} /></label>
       <label>Office<input name="office" list="offices" maxLength={200} placeholder="All offices" defaultValue={params.get('office') ?? ''} aria-describedby="office-help" /></label>
