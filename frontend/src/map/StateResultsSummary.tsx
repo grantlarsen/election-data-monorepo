@@ -1,4 +1,5 @@
-import { Notice, Provenance } from "../components";
+import { Notice } from "../components";
+import { MapSources } from "./MapSources";
 import type { ElectionMap } from "./types";
 import { margin, number, percent } from "./types";
 import { candidateColor, indeterminateColor } from "./electionColors";
@@ -98,7 +99,7 @@ export function StateResultsSummary({ selection }: { selection: ElectionMap }) {
               returns. State and county publications may differ and are not added
               together.
             </p>
-            <Provenance publications={data.publications} />
+            <details><summary>Statewide sources</summary><MapSources publications={data.publications} /></details>
           </div>
         </>
       )}

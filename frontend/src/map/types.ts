@@ -2,6 +2,7 @@ import type { JurisdictionCollection } from "../geography/unitedStates";
 import type { Publication } from "../api";
 
 export interface MapCandidate {
+  party_labels?: string[];
   label: string;
   kind: string;
   votes: number;

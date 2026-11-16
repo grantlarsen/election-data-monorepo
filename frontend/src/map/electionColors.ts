@@ -1,4 +1,14 @@
-import type { Summary } from "./types";
+import type { Summary, MapCandidate } from "./types";
+
+export const partyPalette = { Democratic: "#3276ac", Republican: "#bd5548", "Other / independent": "#358369", "Multiple major parties": "#8c6bb1" };
+export function partyGroup(labels: string[] = []): keyof typeof partyPalette {
+  const democratic = labels.some(label => ["DEMOCRATIC", "DEMOCRAT", "DEMOCRATIC-FARMER-LABOR"].includes(label));
+  const republican = labels.includes("REPUBLICAN");
+  return democratic && republican ? "Multiple major parties" : democratic ? "Democratic" : republican ? "Republican" : "Other / independent";
+}
+export function mapCandidateColor(candidate: MapCandidate, byParty: boolean): string {
+  return byParty ? partyPalette[partyGroup(candidate.party_labels)] : candidateColor(candidate.label);
+}
 
 // Stable source-label colors across elections and drill-down scopes; no inferred parties.
 const palette = [
@@ -23,8 +33,9 @@ export function candidateColor(label: string): string {
     hash = (Math.imul(hash, 31) + character.charCodeAt(0)) >>> 0;
   return palette[hash % palette.length];
 }
-export function resultColor(summary?: Summary): string {
+export function resultColor(summary?: Summary, byParty = false): string {
   if (!summary || summary.status === "no_results") return missingColor;
   if (summary.status === "tie") return tieColor;
-  return summary.leader ? candidateColor(summary.leader) : indeterminateColor;
+  const leader = summary.candidates.find(candidate => candidate.label === summary.leader);
+  return leader ? mapCandidateColor(leader, byParty) : indeterminateColor;
 }

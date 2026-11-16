@@ -71,6 +71,7 @@ export async function fetchElectionMap(
           (c) =>
             !c ||
             typeof c.label !== "string" ||
+            (c.party_labels !== undefined && (!Array.isArray(c.party_labels) || c.party_labels.some(label => typeof label !== "string"))) ||
             !count(c.votes) ||
             !optionalPercent(c.share),
         ),

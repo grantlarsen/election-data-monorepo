@@ -170,3 +170,11 @@ tbody th { font-weight: 600; }
 @media (max-width: 700px) { .site-header { padding: 8px 12px; } .header-actions { justify-content: space-between; width: 100%; gap: 8px; } .primary-nav { gap: 16px; font-size: .9rem; } .filter-toggle { padding: 7px 10px; font-size: .8rem; } .workspace { display: block; } .filter-panel { border-right: 0; border-bottom: 1px solid var(--border); padding: 12px; } .filter-panel form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; } .filter-panel .field-help, .filter-panel details { grid-column: 1 / -1; } form > button { margin-top: 12px; } .reset-link { align-self: end; } main { padding: 12px; } .map-placeholder { padding: 16px; } .map-mark { display: none; } .selection-strip { gap: 5px; } .map-breadcrumb { margin-left: 0; } .state-summary { grid-template-columns: 1fr; padding: 10px; gap: 8px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
 @media (max-width: 700px) { .us-map-heading { position: static; display: flex; justify-content: flex-end; padding: 4px 6px; } }
+.map-presets { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0; font-size: .8rem; }
+.map-notes { margin: 10px 0; font-size: .78rem; color: var(--muted); }
+.map-notes p { margin: 5px 0; }
+.map-source-list { padding-left: 18px; margin: 6px 0; }
+.map-source-list li { margin: 3px 0; }
+.map-page .county-detail { margin: 8px 0; padding: 10px 12px; }
+.county-detail > p { margin: 4px 0 8px; }
+.county-detail > .table-scroll { margin: 6px 0; }

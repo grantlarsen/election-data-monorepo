@@ -211,3 +211,7 @@ def test_other_vintages_and_grains_do_not_reuse_2008_counties(tmp_path, monkeypa
     (tmp_path / '2008.json').write_text(json.dumps(dict(version='tiger2008-display-v1', year=2008, outputs={})))
     assert maps.load_boundaries(None, 2024, 'congressional_district') == (None, [])
     assert maps.load_boundaries(None, 2008, 'congressional_district') == (None, [])
+    (tmp_path / '2024.json').write_text(json.dumps(dict(version='tiger2024-display-v1',year=2024,
+        reporting_levels=['congressional_district'],outputs={})))
+    assert maps.load_boundaries(None,2024,'state') == (None,[])
+    assert maps.load_boundaries('NY',2024,'county') == (None,[])

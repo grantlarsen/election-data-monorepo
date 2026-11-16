@@ -49,7 +49,7 @@ export function GeographyMap({
           : "United States election map"
       }
       selectedId={selectedId}
-      fill={(unit) => resultColor(unit?.summary)}
+      fill={(unit) => resultColor(unit?.summary, data.reporting_level === "congressional_district")}
       describe={(unit, feature) =>
         `${unit?.name || feature.properties.name}: ${unit?.summary.leader || (unit?.summary.status === "tie" ? "Tie" : "No determined leader")}`
       }
@@ -66,7 +66,7 @@ export function GeographyMap({
       attribution={
         <>
           {data.boundary
-            ? `U.S. Census Bureau · ${data.boundary.version}`
+            ? `U.S. Census Bureau · ${data.year} boundaries`
             : "Boundary provenance available in source details"}{" "}
           ·{" "}
           <a href={greatLakes.source.documentation}>
