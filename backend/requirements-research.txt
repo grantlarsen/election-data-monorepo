@@ -1,0 +1,6 @@
+# Optional, used only to extract archived official election evidence.
+pypdf>=6,<7
+fonttools>=4,<5
+beautifulsoup4>=4,<5
+xlrd>=2,<3
+pymupdf>=1.26,<2
