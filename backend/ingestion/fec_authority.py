@@ -3,7 +3,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 
-from ingestion.data005 import BUCKETS, digest, fec_states, sum_observations
+from ingestion.presidential_returns_2008 import BUCKETS, digest, fec_states, sum_observations
 from ingestion.medsl import STATE_NAMES
 
 RULESET = 'fec-2008-state-authority-v1'

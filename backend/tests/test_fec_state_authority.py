@@ -18,14 +18,14 @@ from app.models.ingestion import ElectionResultObservation
 from app.models.state_results import StateResultBatch, StateVoteReturn, StateResultPublication
 from app.services.canonical_results import materialize_medsl_year, state_totals
 from app.services.fec_state_results import plan, publish, read_state_totals
-from ingestion.data005 import BUCKETS
+from ingestion.presidential_returns_2008 import BUCKETS
 from ingestion.fec_authority import AUTHORIZATION, SCOPE, authority_rows, load_authority
 from ingestion.medsl import STATE_NAMES
 from test_data003_postgres import pg_engine, _seed, _observe
 from test_data004_postgres import pg, migration
 
 
-MIGRATION='d005fec2008a_authoritative_state_results.py'
+MIGRATION='authoritative_state_results.py'
 
 
 def official_fixture(path):
@@ -190,7 +190,7 @@ def test_migration_roundtrip_append_only_targets_and_publication_completeness(pg
     before=set(inspect(pg).get_table_names())
     assert {'state_result_batch','state_vote_return','state_result_publication'}<=before
     with pg.begin() as c,Operations.context(MigrationContext.configure(c)):
-        migration('d005county01_reviewed_county_corrections.py').upgrade()
+        migration('reviewed_county_corrections.py').upgrade()
     seed_comparison(pg,tmp_path)
     directory=official_fixture(tmp_path/'official')
     with Session(pg) as s:

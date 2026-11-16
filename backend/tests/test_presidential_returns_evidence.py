@@ -1,13 +1,13 @@
-"""DATA-005: exact independent comparisons, hierarchy and evidence failures."""
+"""Presidential returns: exact independent comparisons, hierarchy and evidence failures."""
 from copy import deepcopy
 import json
 
 import pytest
 
-from ingestion.data005 import (BUCKETS, alaska_district, bucket, compare, digest,
+from ingestion.presidential_returns_2008 import (BUCKETS, alaska_district, bucket, compare, digest,
     evidence, exclusion_partition, fec_states, manual_units, minnesota_units,
     sum_observations, virginia_units)
-from app.services.data005_reconcile import geography_audit
+from app.services.presidential_returns_reconciliation import geography_audit
 
 
 RECORD = dict(id='fixture', url='https://authority.example/results', sha256='a'*64,

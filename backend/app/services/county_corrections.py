@@ -9,8 +9,8 @@ from app.models.core import DataSource
 from app.models.ingestion import SourceRelease
 from app.models.election import CanonicalPublication,CanonicalResultBatch
 from app.models.county_corrections import CountyCorrectionBatch,CountyVoteCorrection
-from ingestion.data005 import digest
-from ingestion.county_corrections import AUTHORIZATION,RULESET,validate_changes
+from ingestion.presidential_returns_2008 import digest
+from ingestion.county_corrections import AUTHORIZATION,RULESET,validate_changes,evidence_path
 
 SCOPE='medsl_presidential_county:2008:county_total'
 
@@ -115,7 +115,7 @@ def publish(session,review,*,expected_fingerprint,actor,archive_dir,root):
     if batch is None:
         archive_dir.mkdir(parents=True,exist_ok=True)
         for record in review['evidence_files']:
-            original=(root/record['file']).read_bytes()
+            original=evidence_path(root,record['file']).read_bytes()
             if sha256(original).hexdigest()!=record['sha256']:
                 raise ValueError('Evidence changed before publication')
             path=archive_dir/record['sha256']

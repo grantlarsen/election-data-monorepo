@@ -17,8 +17,8 @@ from ingestion.county2008 import (assess, census_cells, civera_csv, florida,
     california, candidate_csv, colorado, complete_county_coverage, explain_difference, hawaii, idaho, illinois, maryland, massachusetts,
     montana, montana_legislative_accounting, municipal_to_counties, new_jersey, oklahoma, pennsylvania, pennsylvania_counties, south_dakota,
     observation_inventory, stable_town_lookup, tennessee, texas, wyoming)
-from ingestion.data005 import BUCKETS, digest, evidence, exclusion_partition, minnesota_units, provenance, unit_key
-from app.services.data005_reconcile import load_official, table, write
+from ingestion.presidential_returns_2008 import BUCKETS, digest, evidence, exclusion_partition, minnesota_units, provenance, unit_key
+from app.services.presidential_returns_reconciliation import load_official, table, write
 
 
 class Archive:
@@ -109,12 +109,13 @@ def official_counties(archive, prior, mn_directory, mn_lookup):
     official['CT']=municipal_to_counties(ct,lookup,names,r['ct-followup-1'])
     for row in official['CT']:
         row['crosswalk_sources']=[r[x] for x in ('census-cousub2000','census-cousub2010')]
-    reviewed=Path(__file__).resolve().parents[3]/'docs/sources/DATA005-county-reviewed.json'
+    reviewed=Path(__file__).resolve().parents[3]/'docs/sources/county_returns_2008_reviewed_transcriptions.json'
     if not reviewed.exists():
         # Backend mounted at /app; repository docs live at /workspace for offline run.
-        reviewed=Path('docs/sources/DATA005-county-reviewed.json')
+        reviewed=Path('docs/sources/county_returns_2008_reviewed_transcriptions.json')
     for entry in json.loads(reviewed.read_text(encoding='utf-8'))['tables']:
-        path=reviewed.parent/entry['file']
+        from ingestion.county_corrections import evidence_path
+        path=evidence_path(reviewed.parents[2],'docs/sources/'+entry['file'])
         if sha256(path.read_bytes()).hexdigest()!=entry['sha256'] or r[entry['evidence_id']]['sha256']!=entry['source_sha256']:
             raise ValueError('Reviewed numeric transcription/source checksum differs')
         if entry['state']=='WY':

@@ -22,8 +22,8 @@ def setup(pg, *, reassigned=False):
     from alembic.operations import Operations
     from test_data004_postgres import migration
     with pg.begin() as c,Operations.context(MigrationContext.configure(c)):
-        migration('d005fec2008a_authoritative_state_results.py').upgrade()
-        migration('d005county01_reviewed_county_corrections.py').upgrade()
+        migration('authoritative_state_results.py').upgrade()
+        migration('reviewed_county_corrections.py').upgrade()
     medsl_fixture(pg)
     with Session(pg) as s, s.begin():
         obs = list(s.scalars(select(O).order_by(O.source_row_number)))

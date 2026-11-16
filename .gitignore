@@ -16,6 +16,7 @@
 /data/data005-fec/
 /data/data005-county/
 /data/data005-county-apply/
+/data/presidential-returns-maintenance/
 /data/ingestion/raw/official_presidential_county_corrections/
 /data/ingestion/raw/fec_presidential_official/
 /data/*

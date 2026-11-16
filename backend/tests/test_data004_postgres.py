@@ -249,8 +249,8 @@ def test_upgrade_downgrade_reupgrade_preserves_canonical_and_legacy_rows(pg):
     from test_data003_postgres import _seed,_observe
     from app.services.canonical_results import materialize_medsl_year
     with pg.begin() as c,Operations.context(MigrationContext.configure(c)):
-        migration('d005fec2008a_authoritative_state_results.py').upgrade()
-        migration('d005county01_reviewed_county_corrections.py').upgrade()
+        migration('authoritative_state_results.py').upgrade()
+        migration('reviewed_county_corrections.py').upgrade()
     with Session(pg) as s,s.begin():
         seed_data=_seed(s)
         _observe(s,seed_data,2,name='A',votes=100,total=180)

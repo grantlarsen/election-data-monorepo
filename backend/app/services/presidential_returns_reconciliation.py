@@ -1,4 +1,4 @@
-"""Build DATA-005 evidence/coverage reports from a read-only database export.
+"""Build presidential-return evidence/coverage reports from a read-only database export.
 
 This command is offline and never publishes decisions or canonical results.
 Exit 2 with --require-complete when outstanding evidence/mismatches remain.
@@ -13,7 +13,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 
-from ingestion.data005 import (BUCKETS, FORMAT, alaska_district, compare, digest, evidence,
+from ingestion.presidential_returns_2008 import (BUCKETS, FORMAT, alaska_district, compare, digest, evidence,
     exclusion_partition, fec_states, manual_units, sum_observations, unit_key,
     virginia_units, minnesota_units)
 

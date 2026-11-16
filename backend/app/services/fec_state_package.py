@@ -6,8 +6,8 @@ import json
 from pathlib import Path
 from xml.etree import ElementTree
 
-from app.services.data005_package import bundle
-from ingestion.data005 import digest
+from app.services.presidential_returns_package import bundle
+from ingestion.presidential_returns_2008 import digest
 
 ROOT=Path(__file__).resolve().parents[3]
 DATA=ROOT/'data/data005-fec'
@@ -57,7 +57,7 @@ def update_backlog(audit,tests):
             'Original MEDSL observations/geographic decisions and all five county publications preserved; '
             '32 old tables exact, protected original rows in four appended catalog/event tables exact. '
             'Original 144 dispositions, AK40/MO116/MN87/VA134 independent unit checks retained. '
-            'docs/data/DATA005-FEC.md; data/data005-fec/resolved-45.csv; resolution-audit.json; artifacts/data005-fec/.'),
+            'docs/data/fec_state_authority_2008.md; data/data005-fec/resolved-45.csv; resolution-audit.json; artifacts/data005-fec/.'),
         'Remaining work':(
             'State-level source precedence and all 45 original discrepancies are resolved. '
             'Extend independent county verification nationwide; locate/adjudicate state corrections below state level using county evidence, '
@@ -114,10 +114,10 @@ def main():
     files=[ROOT/'.gitignore',ROOT/'Election_Data_Project_Backlog.csv',
         ROOT/'backend/app/models/__init__.py',ROOT/'backend/app/models/state_results.py',
         ROOT/'backend/app/services/canonical_results.py',ROOT/'backend/ingestion/fec_authority.py',
-        ROOT/'backend/ingestion/data005.py',ROOT/'backend/tests/test_fec_state_authority.py',
-        ROOT/'backend/migrations/versions/d005fec2008a_authoritative_state_results.py']
+        ROOT/'backend/ingestion/presidential_returns_2008.py',ROOT/'backend/tests/test_fec_state_authority.py',
+        ROOT/'backend/migrations/versions/authoritative_state_results.py']
     files+=list((ROOT/'backend/app/services').glob('fec_state_*.py'))
-    files+=list((ROOT/'docs/data').glob('DATA005*'))
+    files+=list((ROOT/'docs/data').glob('*2008*'))
     evidence=[p for p in DATA.rglob('*') if p.is_file()]
     evidence+=[ROOT/'data/data005/final/state-comparisons.csv',ROOT/'data/data005/evidence/retrievals.json']
     record=next(r for r in read(ROOT/'data/data005/evidence/retrievals.json') if r['id']=='fec-2008-president')

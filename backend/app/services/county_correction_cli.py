@@ -12,7 +12,7 @@ from app.services.county_corrections import SCOPE,prepare,publish
 from app.services.geo001_audit import all_fingerprints
 from app.services.fec_state_results import read_state_totals
 from ingestion.county_corrections import load_review
-from ingestion.data005 import digest
+from ingestion.presidential_returns_2008 import digest
 
 APPENDS=('data_source','source_release','canonical_result_batch','canonical_vote_return','canonical_materialization_issue')
 

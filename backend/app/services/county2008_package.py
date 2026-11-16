@@ -7,8 +7,8 @@ import json
 from pathlib import Path
 from xml.etree import ElementTree
 
-from app.services.data005_package import bundle
-from app.services.data005_reconcile import write
+from app.services.presidential_returns_package import bundle
+from app.services.presidential_returns_reconciliation import write
 
 
 ROOT=Path(__file__).resolve().parents[3]
@@ -49,7 +49,7 @@ def backlog(data,summary,tests):
         f'for CA/MD/OK/TX. {tests} current-source offline/PostgreSQL tests pass, no failures/skips; '
         'identical offline replay and all 40 live public table fingerprints preserved. '
         'No county publication attempted; original observations, decisions, five county batches/pointers and '
-        'FEC authority preserved. docs/data/DATA005-COUNTY.md; DATA005-COUNTY-RUNBOOK.md; '
+        'FEC authority preserved. docs/data/county_returns_verification_2008.md; county_returns_verification_2008_runbook.md; '
         'data/data005-county/final/; artifacts/data005-county/.')
     row['Remaining work']=(
         'Obtain comparable election-authority evidence for GA12, IA83, KY26, LA22, MS80, OH40 county/bucket '
@@ -134,11 +134,11 @@ def main():
         source_unchanged_after_tests=True,status='PARTIALLY_COMPLETE'))
     backlog(data,summary,tests['tests'])
     source_files=[ROOT/'.gitignore',ROOT/'Election_Data_Project_Backlog.csv',ROOT/'backend/requirements-research.txt']
-    source_files += list((ROOT/'backend/app/services').glob('data005_*.py'))
+    source_files += list((ROOT/'backend/app/services').glob('presidential_returns_*.py')) + list((ROOT/'backend/app/services').glob('election_evidence_*.py'))
     source_files += list((ROOT/'backend/app/services').glob('county2008_*.py'))
-    source_files += [ROOT/'backend/ingestion/data005.py',ROOT/'backend/ingestion/county2008.py',
+    source_files += [ROOT/'backend/ingestion/presidential_returns_2008.py',ROOT/'backend/ingestion/county2008.py',
                      ROOT/'backend/tests/test_county2008.py',ROOT/'backend/tests/run_county2008_tests.py']
-    source_files += list((ROOT/'docs/data').glob('DATA005*'))+list((ROOT/'docs/sources').glob('DATA005*'))
+    source_files += list((ROOT/'docs/data').glob('*2008*'))+list((ROOT/'docs/sources').glob('*2008*'))
     evidence_files=[f for f in data.rglob('*') if f.is_file()]
     evidence_files += [f for f in (ROOT/'data/data005/evidence').rglob('*') if f.is_file()]
     evidence_files += [ROOT/'data/geo001/data005-144-handoff.csv']

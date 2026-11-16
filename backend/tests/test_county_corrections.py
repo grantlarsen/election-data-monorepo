@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import DBAPIError
 from alembic.migration import MigrationContext
 from alembic.operations import Operations
-from ingestion.data005 import digest
+from ingestion.presidential_returns_2008 import digest
 from ingestion.county_corrections import validate_changes,AUTHORIZATION
 from app.models.core import DataSource
 from app.models.ingestion import ElectionResultObservation
@@ -55,6 +55,13 @@ def test_review_scope_rejects_withheld_duplicates_and_incompatible_groups():
         with pytest.raises(ValueError,match='scope'):validate_changes(wrong,digest(wrong),1)
     with pytest.raises(ValueError,match='Duplicate'):validate_changes([row,row],digest([row,row]),2)
     with pytest.raises(ValueError,match='digest'):validate_changes([row],'0'*64,1)
+
+
+def test_historical_transcription_paths_resolve_without_changing_manifest_names(tmp_path):
+    from ingestion.county_corrections import evidence_path
+    original='docs/sources/DATA005-mt-reviewed.csv'
+    assert evidence_path(tmp_path,original)==tmp_path/'docs/sources/montana_presidential_canvass_2008.csv'
+    assert evidence_path(tmp_path,'data/unchanged.pdf')==tmp_path/'data/unchanged.pdf'
 
 
 def test_apply_replay_and_default_planner_preserve_raw_votes_and_old_batches(pg_engine,tmp_path):
@@ -164,8 +171,8 @@ def test_county_supersession_does_not_republish_fec_authority(pg_engine,tmp_path
 
 def test_real_migration_guards_history_and_corrected_vote_lineage(pg,tmp_path):
     with pg.begin() as c,Operations.context(MigrationContext.configure(c)):
-        migration('d005fec2008a_authoritative_state_results.py').upgrade()
-        migration('d005county01_reviewed_county_corrections.py').upgrade()
+        migration('authoritative_state_results.py').upgrade()
+        migration('reviewed_county_corrections.py').upgrade()
     review=fixture_review(pg,tmp_path)
     with Session(pg) as s,s.begin():
         s.execute(text('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ'))
@@ -188,4 +195,4 @@ def test_real_migration_guards_history_and_corrected_vote_lineage(pg,tmp_path):
         c.execute(text('UPDATE canonical_publication SET batch_id=:id'),{'id':incomplete})
     with pg.begin() as c,Operations.context(MigrationContext.configure(c)):
         with pytest.raises(RuntimeError,match='history'):
-            migration('d005county01_reviewed_county_corrections.py').downgrade()
+            migration('reviewed_county_corrections.py').downgrade()

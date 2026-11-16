@@ -24,7 +24,7 @@ from app.models.ingestion import SourceRelease
 from app.models.state_results import StateResultBatch, StateVoteReturn, StateResultPublication
 from app.services.canonical_results import _plan
 from app.services import elections
-from ingestion.data005 import digest
+from ingestion.presidential_returns_2008 import digest
 from ingestion.fec_authority import AUTHORIZATION, RULESET, SCOPE, authority_rows, load_authority
 from ingestion.medsl import STATE_NAMES
 

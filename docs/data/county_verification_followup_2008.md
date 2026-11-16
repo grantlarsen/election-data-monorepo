@@ -4,8 +4,8 @@ This task owns the work remaining after publication of DATA-005's 283 supported
 county corrections. The active PARTIAL county batch is
 `5d21c419-327d-4327-8251-c7bdd672448e`: 9,336 accepted rows, 138 exclusions and
 130,679,051 votes. FEC state authority remains unchanged at 131,313,820 votes.
-See [publication evidence](DATA005-APPLY-STATUS.md) and the historical
-[county verification report](DATA005-COUNTY.md).
+See [publication evidence](county_corrections_publication_2008.md) and the historical
+[county verification report](county_returns_verification_2008.md).
 
 Priority: P0. Status: Not started. Remaining engineering estimate: **24 hours,
 low confidence**, transferred from DATA-005 rather than counted twice. Waiting
@@ -57,7 +57,7 @@ a reconciled partial dataset; task status alone cannot stand in for approval.
 - `data/data005-county/final/original-144-dispositions.csv`
 - `data/data005-county/final/state-coverage.csv` and `reference-hierarchy.csv`
 - `data/data005-county-apply/applied-283.csv` and `verification.json`
-- `docs/sources/DATA005-county-sources.json` and the archived raw evidence
+- `docs/sources/county_returns_2008_sources.json` and the archived raw evidence
 
 The 566 ledger is a frozen comparison of original source values. Of those
 differences, 245 are supported by applied corrections, 58 concern incomplete PA

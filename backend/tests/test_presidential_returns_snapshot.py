@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 from app.models.election import CanonicalResultBatch, CanonicalVoteReturn
 from app.services.canonical_results import materialize_medsl_year
-from app.services.data005_snapshot import snapshot
+from app.services.presidential_returns_snapshot import snapshot
 from test_data003_postgres import pg_engine, _seed, _observe
 
 

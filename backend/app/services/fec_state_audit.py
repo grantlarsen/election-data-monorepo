@@ -11,7 +11,7 @@ from sqlalchemy.orm import Session
 from app.database import engine
 from app.services.fec_state_results import plan, read_state_totals, summary
 from app.services.geo001_audit import all_fingerprints
-from ingestion.data005 import digest
+from ingestion.presidential_returns_2008 import digest
 from ingestion.fec_authority import SCOPE
 from app.models.state_results import StateResultBatch, StateVoteReturn, StateResultPublication
 from app.models.core import DataSource

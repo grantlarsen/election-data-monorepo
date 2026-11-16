@@ -69,7 +69,7 @@ def backlog(summary):
             'VA 134 localities has two OTHER differences totaling 17 versus historical export. MN manual/export 33 named write-ins explained. '
             'All original 144 observation dispositions delivered; 132 PostgreSQL/full-suite tests passed, zero skips; schema current/check passed; '
             'all 37 live table fingerprints and five stored canonical publications preserved. '
-            'docs/data/DATA005.md; DATA005-RUNBOOK.md; data/data005/final/; artifacts/data005/. No canonical publication attempted.'),
+            'docs/data/presidential_returns_2008.md; presidential_returns_2008_runbook.md; data/data005/final/; artifacts/data005/. No canonical publication attempted.'),
         'Remaining work': (
             'Resolve/adjudicate 45 source/FEC bucket discrepancies in 20 states and Virginia official-export conflict; '
             'extend independent county coverage nationwide; retain unknown AK District 99 and zero-vote special-unit semantics; '
@@ -146,11 +146,11 @@ def main():
     output.mkdir(parents=True, exist_ok=False)
     source = [ROOT/'.gitignore', ROOT/'Election_Data_Project_Backlog.csv',
               ROOT/'backend/requirements-research.txt']
-    source += list((ROOT/'backend/app/services').glob('data005_*.py'))
-    source += [ROOT/'backend/ingestion/data005.py']
-    source += list((ROOT/'backend/tests').glob('test_data005_*.py'))
-    source += list((ROOT/'docs/data').glob('DATA005*'))
-    source += list((ROOT/'docs/sources').glob('DATA005*'))
+    source += list((ROOT/'backend/app/services').glob('presidential_returns_*.py')) + list((ROOT/'backend/app/services').glob('election_evidence_*.py'))
+    source += [ROOT/'backend/ingestion/presidential_returns_2008.py']
+    source += list((ROOT/'backend/tests').glob('test_presidential_returns_*.py'))
+    source += list((ROOT/'docs/data').glob('*2008*'))
+    source += list((ROOT/'docs/sources').glob('*2008*'))
     evidence_files = [p for p in DATA.rglob('*') if p.is_file()]
     evidence_files += [ROOT/'data/geo001/data005-144-handoff.csv', ROOT/'data/geo002/approval-manifest.json']
     evidence_files += list((ROOT/'data/geo002/approvals').glob('*.json'))

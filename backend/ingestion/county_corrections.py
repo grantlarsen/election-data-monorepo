@@ -2,11 +2,22 @@
 from hashlib import sha256
 import json
 from pathlib import Path
-from ingestion.data005 import digest
+from ingestion.presidential_returns_2008 import digest
 
 REVIEW_SHA='596801cc989380199a7511b305c480f6aaa27b838b815102658d0eaa8432c9e5'
 AUTHORIZATION='Apply the proposed corrections'
 RULESET='data005-county-corrections-v1'
+
+# Published manifests retain their original names and digests. Resolve those
+# historical paths to the descriptive filenames without rewriting the evidence.
+LEGACY_EVIDENCE_PATHS={
+    'docs/sources/DATA005-mt-reviewed.csv':'docs/sources/montana_presidential_canvass_2008.csv',
+    'docs/sources/DATA005-wy-reviewed.csv':'docs/sources/wyoming_presidential_canvass_2008.csv',
+}
+
+
+def evidence_path(root,relative):
+    return root/LEGACY_EVIDENCE_PATHS.get(relative,relative)
 
 
 def validate_changes(changes, expected_sha, count):
@@ -49,15 +60,16 @@ def load_review(directory, root):
     for key,r in sorted(required.items()):
         value=r['archive_location'].replace('\\','/')
         relative='data/'+value.split('/data/',1)[1] if '/data/' in value else value
-        path=root/relative
+        path=evidence_path(root,relative)
         if not r['success'] or sha256(path.read_bytes()).hexdigest()!=r['sha256']:
             raise ValueError(f'Official raw file checksum differs: {key}')
         files.append(dict(id=key,file=relative,sha256=r['sha256'],url=r['url'],retrieved_at=r['retrieved_at']))
-    reviewed=root/'docs/sources/DATA005-county-reviewed.json'
+    reviewed=root/'docs/sources/county_returns_2008_reviewed_transcriptions.json'
     tables=json.loads(reviewed.read_text(encoding='utf-8'))
     for row in tables['tables']:
-        path=reviewed.parent/row['file']
+        legacy_file='docs/sources/'+row['file']
+        path=evidence_path(root,legacy_file)
         if sha256(path.read_bytes()).hexdigest()!=row['sha256'] or required[row['evidence_id']]['sha256']!=row['source_sha256']:
             raise ValueError('Reviewed numeric transcription differs')
-        files.append(dict(id=row['file'],file=path.relative_to(root).as_posix(),sha256=row['sha256']))
+        files.append(dict(id=row['file'],file=legacy_file,sha256=row['sha256']))
     return dict(proposal=proposal,changes=changes,evidence_files=files,review_sha256=REVIEW_SHA)

@@ -1,4 +1,4 @@
-# DATA-005: corrections published
+# County corrections publication ? 2008
 
 The authorized **283 county corrections are applied**. The active canonical
 batch is `5d21c419-327d-4327-8251-c7bdd672448e`, fingerprint
@@ -51,7 +51,7 @@ those replay checks. Publication, replay, schema and preservation evidence are i
 ## Remaining work
 
 The correction rollout is complete. Remaining evidence, conflict adjudication,
-geography and coverage work now belongs to [DATA-029](DATA029.md). DATA-005 retains
+geography and coverage work now belongs to [DATA-029](county_verification_followup_2008.md). DATA-005 retains
 its broader incomplete acceptance status; its remaining engineering estimate is
 zero because the previous 24-hour low-confidence estimate is transferred to
 DATA-029. Original acceptance criteria and historical verification reports are

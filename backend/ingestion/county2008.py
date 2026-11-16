@@ -12,7 +12,7 @@ import io
 import json
 import re
 
-from ingestion.data005 import BUCKETS, number, provenance, unit_key
+from ingestion.presidential_returns_2008 import BUCKETS, number, provenance, unit_key
 
 
 ITEMS = dict(zip(('total', *BUCKETS),
