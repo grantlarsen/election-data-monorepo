@@ -269,17 +269,19 @@ def list_state_results(session: Session, filters: ElectionFilters) -> dict:
     if filters.jurisdiction_id is not None:
         query = query.where(StateVoteReturn.jurisdiction_id == filters.jurisdiction_id)
     total = session.scalar(select(func.count()).select_from(query.subquery()))
-    rows = session.execute(query.order_by(StateVoteReturn.state_code, StateVoteReturn.candidate_bucket,
+    rows = session.execute(query.order_by(StateResultBatch.election_year.desc(), StateVoteReturn.state_code, StateVoteReturn.candidate_bucket,
                                          StateVoteReturn.batch_id).limit(filters.limit).offset(filters.offset)).all()
     publications = {}
     # Validate even an offset beyond the last page against the authority manifest.
-    if total:
-        state_totals(session, year=2008)
+    for year in session.scalars(query.with_only_columns(StateResultBatch.election_year).distinct()):
+        state_totals(session, year=year)
     items = []
     for row, batch, pointer in rows:
         if batch.id not in publications:
             publications[batch.id] = _publication(session, batch, pointer)
-        items.append(dict(contest_id=row.contest_id,
+        contest = session.get(Contest, row.contest_id)
+        election = session.get(Election, contest.election_id)
+        items.append(dict(contest_id=row.contest_id, election_id=election.id, election_date=election.election_date,
             jurisdiction=_geography(session.get(Jurisdiction, row.jurisdiction_id)),
             candidate_bucket=row.candidate_bucket,
             bucket_kind="aggregate" if row.candidate_bucket == "OTHER" else "source_candidate",

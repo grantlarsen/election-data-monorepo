@@ -1,0 +1,197 @@
+[
+  {
+    "year": 2000,
+    "columns": [
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "url": "https://www.fec.gov/documents/1614/2000ptables.xls",
+    "sha256": "10f4d0941f2013f496056e53b48b54c2a5ab2ac629cfa6578330f4af53333b85",
+    "retrieved_at": "2026-11-16T21:30:25.182157+00:00",
+    "filename": "2000ptables.xls",
+    "sheet": "2000 Pres Elec & Pop Vote-p. 12",
+    "headers": {
+      "A1": "2000 PRESIDENTIAL ELECTORAL AND POPULAR VOTE",
+      "D3": "Popular Vote - Bush (R)",
+      "E3": "Popular Vote - Gore (D)",
+      "F3": "Popular Vote - All Others",
+      "G3": "Total Vote"
+    },
+    "national_buckets": [
+      50456002,
+      50999897,
+      3949201
+    ],
+    "national_votes": 105405100,
+    "state_labels": {
+      "DC*": "DC"
+    }
+  },
+  {
+    "year": 2004,
+    "columns": [
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "url": "https://www.fec.gov/documents/1628/2004pres.xls",
+    "sha256": "302fdbc371f7f9c81c9bc8ec68caf0a5724e78b2e7c4c3a2b6ca90f3cc83fdfa",
+    "retrieved_at": "2026-11-16T21:28:52.410993+00:00",
+    "filename": "2004pres.xls",
+    "sheet": "Table 2. Pres Elec & Pop Vote",
+    "headers": {
+      "A1": "2004 PRESIDENTIAL ELECTORAL AND POPULAR VOTE",
+      "D3": "Popular Vote Bush (R)",
+      "E3": "Popular Vote Kerry (D)",
+      "F3": "Popular Vote All Others",
+      "G3": "Popular Vote Total Vote"
+    },
+    "national_buckets": [
+      62040610,
+      59028444,
+      1226291
+    ],
+    "national_votes": 122295345
+  },
+  {
+    "year": 2012,
+    "columns": [
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "url": "https://www.fec.gov/documents/1684/2012pres.xls",
+    "sha256": "8b3cb324ef9d14b69bd643681f753c3c3d5aa1c4b72eadbf03e010046ecf8067",
+    "retrieved_at": "2026-11-16T21:28:52.874926+00:00",
+    "filename": "2012pres.xls",
+    "sheet": "Table 2. Electoral &  Pop Vote",
+    "headers": {
+      "A1": "2012 PRESIDENTIAL ELECTORAL AND POPULAR VOTE",
+      "D5": "Obama (D)",
+      "E5": "Romney (R)",
+      "F5": "All Others",
+      "G5": "Total Vote"
+    },
+    "national_buckets": [
+      65915795,
+      60933504,
+      2236111
+    ],
+    "national_votes": 129085410
+  },
+  {
+    "year": 2016,
+    "columns": [
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "url": "https://www.fec.gov/documents/1890/federalelections2016.xlsx",
+    "sha256": "b4a1d1383602bc388cfbdf1fbea2476476d32e0b44b44236d3a3910fa9782eb6",
+    "retrieved_at": "2026-11-16T21:28:53.363414+00:00",
+    "filename": "federalelections2016.xlsx",
+    "sheet": "Table 2. Electoral &  Pop Vote",
+    "headers": {
+      "A1": "2016 PRESIDENTIAL ELECTORAL AND POPULAR VOTE",
+      "D4": "Trump (R)",
+      "E4": "Clinton (D)",
+      "F4": "All Others",
+      "G4": "Total Vote"
+    },
+    "national_buckets": [
+      62984828,
+      65853514,
+      7830934
+    ],
+    "national_votes": 136669276
+  },
+  {
+    "year": 2020,
+    "columns": [
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "url": "https://www.fec.gov/documents/4228/federalelections2020.xlsx",
+    "sha256": "5073b6d2c76c86c941508dfb1a11cc497e8529b0068c5132aceb0f385c19352e",
+    "retrieved_at": "2026-11-16T21:28:54.141673+00:00",
+    "filename": "federalelections2020.xlsx",
+    "sheet": "3. Table 2 Electoral & Pop Vote",
+    "headers": {
+      "A1": "2020 PRESIDENTIAL ELECTORAL AND POPULAR VOTE",
+      "D4": "Biden (D)",
+      "E4": "Trunp (R)",
+      "F4": "All Others",
+      "G4": "Total Vote"
+    },
+    "national_buckets": [
+      81283501,
+      74223975,
+      2922155
+    ],
+    "national_votes": 158429631,
+    "state_labels": {
+      "ME*": "ME",
+      "NE*": "NE"
+    }
+  },
+  {
+    "year": 2024,
+    "columns": [
+      "M",
+      "Y",
+      "AE"
+    ],
+    "url": "https://www.fec.gov/documents/5645/2024presgeresults.xlsx",
+    "sha256": "68acdee2924d771b92a05cd950dec850b462c633c05563207ac7e206116e7366",
+    "retrieved_at": "2026-11-16T21:28:57.059585+00:00",
+    "filename": "2024presgeresults.xlsx",
+    "sheet": "OFFICIAL 2024 PRES GE RESULTS",
+    "headers": {
+      "A1": "STATE",
+      "M1": "HARRIS",
+      "Y1": "TRUMP",
+      "AE1": "TOTAL VOTES"
+    },
+    "candidate_columns": [
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z",
+      "AA",
+      "AB",
+      "AC",
+      "AD"
+    ],
+    "national_buckets": [
+      75017613,
+      77302580,
+      2918109
+    ],
+    "national_votes": 155238302
+  }
+]

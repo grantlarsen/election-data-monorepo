@@ -6,15 +6,20 @@ contracts for the 2008 state/county map, with a separate pinned boundary package
 The read-only API under `/api/v1` uses existing canonical election entities,
 active county publications and the separate FEC state authority publication.
 It does not materialize results or update source, identity, geography or
-publication records. No new migration is required; the existing migration head
-is `d005county01`.
+publication records. Presidential 2000–2024 coverage uses the additive
+`presidential_state_coverage` migration; see the
+[presidential source, coverage and replay guide](../data/presidential_coverage.md).
+`GET /api/v1/presidential-coverage` provides all seven years, publication availability,
+excluded county observations and explicit state-minus-county differences.
+State-result items include election ID/date; `source_adjustment` is nullable when
+no comparable MEDSL source-wide adjustment has been established.
 
 | GET endpoint | Items |
 | --- | --- |
 | `/api/v1/elections` | Election events, including events with no published returns |
 | `/api/v1/contests` | Office contests, including contests with no published returns |
 | `/api/v1/results` | Candidate totals and separately labeled anonymous vote buckets at one reporting grain/mode |
-| `/api/v1/state-results` | Verified FEC state candidate buckets; currently 2008 presidential general only |
+| `/api/v1/state-results` | Verified FEC state candidate buckets for the seven 2000–2024 presidential general elections |
 
 The full typed contract is available at `/docs` and `/openapi.json`.
 
@@ -56,7 +61,8 @@ Discovery sorts by election date descending, then event/contest UUID ascending.
 County results sort by election date descending, contest UUID, reporting-unit
 UUID, batch UUID and result key ascending. A candidate's result key is its
 candidacy UUID; an anonymous bucket uses its immutable return UUID. State
-results sort by state code, bucket label and batch UUID ascending.
+results sort by election year descending, then state code, bucket label and
+batch UUID ascending.
 
 Counts, publication selection and page reads share a PostgreSQL repeatable-read,
 read-only transaction. Across separate page requests, a publication may advance.
