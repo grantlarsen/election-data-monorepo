@@ -201,3 +201,10 @@ No migrations or publication writes were made.
 Official references: [D3 Albers USA](https://d3js.org/d3-geo/conic#geoAlbersUsa),
 [D3 spherical winding convention](https://d3js.org/d3-geo),
 [Census 2008 TIGER documentation](https://www2.census.gov/geo/pdfs/maps-data/data/tiger/tgrshp2008/TGRSHP08.pdf).
+
+# 2024 House map update
+
+The modular map page now supports the published 2024 House data with pinned
+119th Congress display geometry, a source-party legend, district details and
+modeled race links including missing-vote contests. See the
+[House map guide](house-map.md) for preparation, display semantics and validation.

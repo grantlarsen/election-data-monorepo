@@ -27,13 +27,14 @@ SOURCES = {
     "state": "7e384585322cf39de8bfac2723c5cbba709da65050cee51ebe16460bcb007a8e",
     "county": "956511da5ad39ca31ed3134c7beb0d26092ab647995a5db75920234a19eeba21",
 }
+DISTRICT_SHA256 = "2b4238aed7e865df75d0c9cfcd8dffa1b79007b24519ecc4b213e683078b031a"
 
 
 def encode(value: dict) -> bytes:
     return json.dumps(value, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()
 
 
-def prepare(connection: Connection, *, data_dir: Path, output: Path) -> dict:
+def prepare(connection: Connection, *, data_dir: Path, output: Path, year: int = 2008) -> dict:
     import shapefile  # Optional ingestion dependency, not required by the API.
 
     groups = defaultdict(list)
@@ -41,11 +42,17 @@ def prepare(connection: Connection, *, data_dir: Path, output: Path) -> dict:
     repairs = defaultdict(int)
     excluded = defaultdict(int)
     fips_to_state = {value: key for key, value in STATE_FIPS.items()}
-    for file_id, (level, expected) in enumerate(SOURCES.items(), 1):
-        filename = f"tl_2008_us_{level}.zip"
-        url = f"https://www2.census.gov/geo/tiger/TIGER2008/{filename}"
-        info = SourceInfo("census_tiger_boundaries", "", "2008", file_id, filename,
-                          url, None, None, {"vintage": 2008, "level": level})
+    if year not in {2008, 2024}:
+        raise ValueError("Supported display years are 2008 and 2024")
+    selected_sources = SOURCES if year == 2008 else {
+        "congressional_district": DISTRICT_SHA256}
+    for file_id, (level, expected) in enumerate(selected_sources.items(), 1):
+        filename = f"tl_2008_us_{level}.zip" if year == 2008 else "cb_2024_us_cd119_500k.zip"
+        url = (f"https://www2.census.gov/geo/tiger/TIGER2008/{filename}" if year == 2008 else
+               f"https://www2.census.gov/geo/tiger/GENZ2024/shp/{filename}")
+        info = SourceInfo("census_tiger_boundaries" if year == 2008 else "census_congressional_boundaries",
+                          "", str(year), file_id if year == 2008 else 2024, filename,
+                          url, None, None, {"vintage": year, "level": level})
         acquired = acquire(SimpleNamespace(key=info.source_name, describe=lambda: info), data_dir)
         if acquired.sha256 != expected:
             raise ValueError(f"Pinned Census {level} archive checksum differs")
@@ -65,7 +72,10 @@ def prepare(connection: Connection, *, data_dir: Path, output: Path) -> dict:
                 if state_code is None:
                     excluded[level] += 1  # Territories are outside the presidential scope.
                     continue
-                geoid = attrs["STATEFP"] + (attrs["COUNTYFP"] if level == "county" else "")
+                geoid = attrs["GEOID"] if year == 2024 else attrs["STATEFP"] + (attrs["COUNTYFP"] if level == "county" else "")
+                if geoid.endswith("ZZ"):
+                    excluded["undefined_district"] += 1
+                    continue
                 raw = json.dumps(record.shape.__geo_interface__)
                 # Report every repair. Precision reduction avoids invalid ring rounding.
                 row = connection.execute(text("""
@@ -79,12 +89,16 @@ def prepare(connection: Connection, *, data_dir: Path, output: Path) -> dict:
                 """), {"raw": raw}).mappings().one()
                 if not row["valid"] or row["empty"] or row["geometry"]["type"] not in {"Polygon", "MultiPolygon"}:
                     raise ValueError(f"Invalid display polygon: {geoid}")
-                key = "state" if level == "state" else f"county:{state_code}"
+                key = "state" if level == "state" else f"{level}:{state_code}"
                 repairs[key] += int(not row["original_valid"])
                 groups[key].append(dict(type="Feature", id=geoid, geometry=row["geometry"],
-                    properties=dict(geoid=geoid, name=attrs["NAME"], state_code=state_code)))
-    if len(groups["state"]) != 51 or any(f"county:{code}" not in groups for code in STATE_FIPS):
+                    properties=dict(geoid=geoid, name=attrs.get("NAME") or attrs.get("NAMELSAD") or geoid, state_code=state_code)))
+    if year == 2008 and (len(groups["state"]) != 51 or any(f"county:{code}" not in groups for code in STATE_FIPS)):
         raise ValueError("Boundary package lacks states/DC or county files")
+    if year == 2024:
+        if sum(len(v) for v in groups.values()) != 436 or len(groups) != 51:
+            raise ValueError("Expected 435 voting districts and DC across 51 jurisdictions")
+        groups["congressional_district"] = [f for values in list(groups.values()) for f in values]
     outputs = {}
     for key, features in sorted(groups.items()):
         features.sort(key=lambda feature: feature["id"])
@@ -102,17 +116,20 @@ def prepare(connection: Connection, *, data_dir: Path, output: Path) -> dict:
         # atomic_json uses pretty JSON, so pin its actual serialized bytes.
         file_digest = sha256_file(target)
         outputs[key] = dict(object=digest, sha256=file_digest, count=len(features), repaired=repairs[key])
-    manifest = dict(version=VERSION, year=2008, boundary_vintage="2008-01-01",
-        vintage_note="Census 2008 current geography; generally January 1, 2008. Not a certification of election-day boundaries.",
-        documentation_url=DOCUMENTATION, crs="EPSG:4326", source_crs="EPSG:4269",
+    manifest = dict(version=f"tiger{year}-display-v1", year=year, reporting_levels=list(selected_sources),
+        boundary_vintage="2008-01-01" if year == 2008 else "119th Congress / 2024 election",
+        vintage_note="Census 2008 current geography; generally January 1, 2008. Not a certification of election-day boundaries." if year == 2008 else
+            "Census 2024 cartographic 119th congressional districts, 1:500,000. Display shapes, not measurements or reconstructed returns.",
+        documentation_url=DOCUMENTATION if year == 2008 else "https://www.census.gov/geographies/mapping-files/2024/geo/carto-boundary-file.html", crs="EPSG:4326", source_crs="EPSG:4269",
         simplification_degrees=0.005, precision_degrees=0.00001,
         sources=sources, excluded_territory_features=dict(excluded), outputs=outputs)
-    path = output / "2008.json"
+    path = output / f"{year}.json"
     unchanged = path.exists() and json.loads(path.read_text()) == manifest
     if not unchanged:
         atomic_json(path, manifest)
     return dict(status="unchanged" if unchanged else "prepared", states=51,
-                counties=sum(len(v) for k, v in groups.items() if k != "state"),
+                districts=len(groups.get("congressional_district", [])),
+                counties=sum(len(v) for k, v in groups.items() if k.startswith("county:")),
                 repaired=sum(repairs.values()), manifest=str(path))
 
 
@@ -120,10 +137,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data-dir", type=Path, default=Path("data/ingestion"))
     parser.add_argument("--output", type=Path, default=Path("data/boundaries"))
+    parser.add_argument("--year", type=int, choices=[2008, 2024], default=2008)
     args = parser.parse_args()
     from app.database import engine
     with engine.connect() as connection:
-        print(json.dumps(prepare(connection, data_dir=args.data_dir, output=args.output)))
+        print(json.dumps(prepare(connection, data_dir=args.data_dir, output=args.output, year=args.year)))
 
 
 if __name__ == "__main__":

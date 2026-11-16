@@ -29,7 +29,7 @@ export function Filters({ open }: { open: boolean }) {
       <label>Election stage<select name="stage" defaultValue={params.get('stage') ?? ''}><option value="">All stages</option>{stages.map(stage => <option key={stage} value={stage}>{humanize(stage)}</option>)}</select></label>
       <label>State or DC<select name="state_code" defaultValue={params.get('state_code')?.toUpperCase() ?? ''}><option value="">All states and DC</option>{states.map(state => <option key={state}>{state}</option>)}</select></label>
       <label>Reporting level<select name="reporting_level" defaultValue={params.get('reporting_level') ?? 'county'}>{levels.map(level => <option key={level} value={level}>{humanize(level)}</option>)}</select></label>
-      <details><summary>Specific reporting unit</summary><label>Jurisdiction UUID<input name="jurisdiction_id" defaultValue={params.get('jurisdiction_id') ?? ''} placeholder="Optional canonical UUID" /></label><p className="field-help">Selects an exact reporting unit for returns. State selection scopes discovery without aggregating counties.</p></details>
+      {location.pathname !== '/map' && <details><summary>Specific reporting unit</summary><label>Jurisdiction UUID<input name="jurisdiction_id" defaultValue={params.get('jurisdiction_id') ?? ''} placeholder="Optional canonical UUID" /></label><p className="field-help">Selects an exact reporting unit for returns. State selection scopes discovery without aggregating counties.</p></details>}
       <button type="submit">Apply filters</button>
       <Link className="reset-link" to={location.pathname.split('/').slice(0, 2).join('/')}>Clear filters</Link>
     </form>

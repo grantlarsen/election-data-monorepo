@@ -46,7 +46,9 @@ and [PowerShell runbook](docs/data/house_returns_2024_runbook.md) for pinned-sou
 replay, missing-vote flags, fusion lines, district reconciliation and publication.
 
 The React/TypeScript research frontend is available at http://localhost:5173
-after `docker compose up -d --build`. It provides persistent filters, contest
+after `docker compose up -d --build`, with a [2024 House district map](docs/house-map.md)
+using pinned 119th Congress display shapes and published MEDSL returns.
+It provides persistent filters, contest
 and result browsing, source labels, and a 2008 presidential state-to-county map.
 Prepare its pinned Census display package using the
 [map API and boundary guide](docs/api/election-map.md). See the

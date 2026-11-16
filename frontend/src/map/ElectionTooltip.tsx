@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import type { ElectionMap, MapUnit } from "./types";
 import { number, percent, margin } from "./types";
-import { candidateColor, indeterminateColor } from "./electionColors";
+import { mapCandidateColor, resultColor, indeterminateColor } from "./electionColors";
 import { humanize } from "../filters";
 
 /** Reference-card styling over published data; no inferred parties or elected status. */
@@ -18,9 +18,8 @@ export function ElectionTooltip({
   const publication = data.publications.find(
     (item) => item.batch_id === unit?.publication_batch_id,
   );
-  const leaderColor = summary?.leader
-    ? candidateColor(summary.leader)
-    : indeterminateColor;
+  const byParty = data.reporting_level === "congressional_district";
+  const leaderColor = resultColor(summary, byParty);
   const context =
     publication?.status === "PARTIAL"
       ? "Partial publication"
@@ -65,7 +64,7 @@ export function ElectionTooltip({
             candidate.kind,
           );
           const color = named
-            ? candidateColor(candidate.label)
+            ? mapCandidateColor(candidate, byParty)
             : indeterminateColor;
           const initials = named
             ? candidate.label
@@ -87,6 +86,7 @@ export function ElectionTooltip({
               </div>
               <div className="popover-candidate-body">
                 <div className="popover-name">{candidate.label}</div>
+                {byParty && <div className="popover-extra">{candidate.party_labels?.join(" / ") || "No source party label"}</div>}
                 {!named && (
                   <div className="popover-extra">
                     {humanize(candidate.kind)} vote category

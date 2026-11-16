@@ -1,15 +1,17 @@
 import { JurisdictionDetail, ResultsTable } from "./MapResults";
 import { lazy, Suspense, useCallback, useState } from "react";
 import { Link, useSearchParams } from "react-router";
-import { FilterLink, Notice, Provenance } from "../components";
+import { FilterLink, Notice } from "../components";
 import { humanize, validateSearch } from "../filters";
 import { sourceUrl } from "../api";
+import { MapSources } from "./MapSources";
 import { number } from "./types";
 import {
   candidateColor,
   missingColor,
   tieColor,
   indeterminateColor,
+  partyPalette,
 } from "./electionColors";
 import type { MapUnit } from "./types";
 import { useElectionMap } from "./useElectionMap";
@@ -131,7 +133,9 @@ export function ElectionMapPage() {
     ),
   ].sort();
   const legend = [
-    ...candidates.map((label) => ({ label, color: candidateColor(label) })),
+    ...(data?.reporting_level === "congressional_district"
+      ? Object.entries(partyPalette).map(([label, color]) => ({ label, color }))
+      : candidates.map((label) => ({ label, color: candidateColor(label) }))),
     { label: "Tie", color: tieColor },
     { label: "Undetermined / zero total", color: indeterminateColor },
     { label: "No published returns", color: missingColor },
@@ -139,6 +143,10 @@ export function ElectionMapPage() {
   return (
     <>
       <header className="map-page-heading">
+        <nav className="map-presets" aria-label="Election map examples">
+          <Link to="/map?year=2024&office=U.S.+House&stage=general&reporting_level=congressional_district">2024 House districts</Link>
+          <Link to="/map?year=2008&office=U.S.+President&stage=general">2008 President</Link>
+        </nav>
         <h1 id="page-title" tabIndex={-1}>
           {data ? `${data.state_code || "United States"} · ${humanize(data.reporting_level).replace(/^./, (char) => char.toUpperCase())} returns` : "Election map"}
         </h1>
@@ -232,11 +240,9 @@ export function ElectionMapPage() {
             ))}
           </ul>
           <p className="result-count">
-            {number(data.coverage.boundary_units)} boundary units ·{" "}
-            {number(data.coverage.units_with_results)} units with returns ·{" "}
-            {number(data.coverage.missing_results)} missing results ·{" "}
-            {number(data.coverage.results_without_geometry)} result units
-            without matching geometry
+            {number(data.coverage.units_with_results)} areas with results
+            {data.coverage.missing_results > 0 && ` · ${number(data.coverage.missing_results)} unavailable`}
+            {data.coverage.results_without_geometry > 0 && ` · ${number(data.coverage.results_without_geometry)} without map shapes`}
           </p>
           {data.reporting_level === "county" && data.state_code && (
             <StateResultsSummary selection={data} />
@@ -244,6 +250,7 @@ export function ElectionMapPage() {
           {selected && (
             <JurisdictionDetail selected={selected} params={params} />
           )}
+          {!selected && <>
           <div className="map-table-heading">
             <h2>Votes, shares & margins</h2>
             <label>
@@ -264,45 +271,18 @@ export function ElectionMapPage() {
             selected={selected}
             onSelect={select}
           />
-          <section
-            className="source-panel"
-            aria-labelledby="map-sources-heading"
-          >
-            <h2 id="map-sources-heading">Sources & historical geography</h2>
-            <p>{data.metric_note} Colors identify source candidate labels; leaders and margins describe published returns. The table supports keyboard and touch navigation.</p>
-            <p>{data.source_note}</p>
-            <Provenance publications={data.publications} />
-            {data.boundary && (
-              <details>
-                <summary>Boundary source and display transformation</summary>
-                <p>{data.boundary.vintage_note}</p>
-                <p>
-                  <a href={sourceUrl(data.boundary.documentation_url)}>
-                    Census TIGER/Line documentation
-                  </a>
-                </p>
-                <dl>
-                  <dt>Display package</dt>
-                  <dd>{data.boundary.version}</dd>
-                  <dt>Display SHA-256</dt>
-                  <dd>{data.boundary.display_sha256}</dd>
-                  <dt>Repaired input polygons in this view</dt>
-                  <dd>{data.boundary.repaired_features}</dd>
-                </dl>
-                {data.boundary.sources.map((source) => (
-                  <div key={source.level}>
-                    <a href={sourceUrl(source.url)}>{source.level} archive</a>
-                    <dl>
-                      <dt>Archive SHA-256</dt>
-                      <dd>{source.sha256}</dd>
-                      <dt>Retrieved</dt>
-                      <dd>{source.retrieved_at}</dd>
-                    </dl>
-                  </div>
-                ))}
-              </details>
-            )}
-          </section>
+          </>}
+          <aside className="map-notes" aria-label="Sources and notes">
+            {data.publications.some(publication => publication.status === "PARTIAL") &&
+              <p className="coverage-warning">Partial coverage · Missing returns are not zero votes.</p>}
+            <details>
+              <summary>Sources & notes</summary>
+              <MapSources publications={data.publications} />
+              <p>{data.metric_note}</p>
+              <p>{data.source_note}</p>
+              {data.boundary && <p>{data.boundary.vintage_note} <a href={sourceUrl(data.boundary.documentation_url)}>Census boundaries</a></p>}
+            </details>
+          </aside>
         </>
       )}
     </>

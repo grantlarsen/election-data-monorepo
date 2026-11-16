@@ -15,6 +15,7 @@ from sqlalchemy.orm import Session
 from app.api.election_schemas import ElectionFilters, ResultFilters
 from app.api.map_schemas import MapFilters
 from app.models.geography import GeographicReference
+from app.models.core import PoliticalParty
 from app.services import election_queries
 from app.services.canonical_results import MaterializationError
 from ingestion.medsl import STATE_FIPS
@@ -57,6 +58,8 @@ def load_boundaries(state_code: str | None, year: int = 2008,
         if manifest["version"] != f"tiger{year}-display-v1" or manifest["year"] != year:
             raise ValueError("Unsupported boundary vintage")
         level = reporting_level or ('county' if state_code else 'state')
+        if level not in manifest.get('reporting_levels', ['state', 'county', 'congressional_district']):
+            return None, []
         key = f"{level}:{state_code}" if state_code and level != 'state' else level
         if level == 'congressional_district' and key not in manifest['outputs']:
             return None, []  # A county package cannot stand in for district boundaries.
@@ -126,12 +129,18 @@ def build_map(session: Session, filters: MapFilters) -> dict:
     groups = defaultdict(list)
     contexts = {}
     publications = {}
+    parties = {}
     state_geoids = {}
     for row in rows:
         jurisdiction = row["jurisdiction"]
         if jurisdiction['state_code'] not in STATE_FIPS or jurisdiction['level'] != level:
             raise MaterializationError('Result reporting unit has an incompatible state or level')
         if level != "state":
+            for party_id in row.get('party_ids', []):
+                if party_id not in parties:
+                    party = session.get(PoliticalParty, party_id)
+                    if party:
+                        parties[party_id] = party.name
             reference = session.get(GeographicReference, row["geographic_reference_id"])
             if (reference is None or reference.kind != level or
                 reference.jurisdiction_id != jurisdiction["id"] or
@@ -142,6 +151,7 @@ def build_map(session: Session, filters: MapFilters) -> dict:
                 raise MaterializationError("Map reference does not match result geography")
             geoid = reference.geoid
             candidate = dict(label=row["label"], votes=row["votes"], kind=row["candidate_kind"],
+                party_labels=sorted(parties[p] for p in row.get("party_ids", []) if p in parties),
                 candidacy_id=row["candidacy_id"], geographic_reference_id=row["geographic_reference_id"],
                 reference_vintage_start=reference.vintage_start, reference_vintage_end=reference.vintage_end,
                 observation_ids=row["observation_ids"], correction_ids=row["correction_ids"])
@@ -172,6 +182,28 @@ def build_map(session: Session, filters: MapFilters) -> dict:
         units[geoid] = dict(id=geoid, geoid=geoid, name=props["name"], state_code=props["state_code"],
             jurisdiction_id=None, contest_id=None, publication_batch_id=None, has_geometry=True,
             geometry_match='boundary_only', summary=summarize([]))
+    if level == 'congressional_district' and any(key not in groups for key in units):
+        # Missing-vote contests still need a canonical identity and race link.
+        contests = election_queries.list_contests(session, ElectionFilters(
+            year=filters.year, office=filters.office, stage=filters.stage,
+            state_code=filters.state_code, limit=200))
+        contest_rows = list(contests['items'])
+        while contests['has_more']:
+            contests = election_queries.list_contests(session, ElectionFilters(
+                year=filters.year, office=filters.office, stage=filters.stage,
+                state_code=filters.state_code, limit=200, offset=contests['offset'] + 200))
+            contest_rows.extend(contests['items'])
+        for contest in contest_rows:
+            refs = session.scalars(select(GeographicReference).where(
+                GeographicReference.jurisdiction_id == contest['jurisdiction']['id'],
+                GeographicReference.kind == level,
+                GeographicReference.vintage_start == filters.year,
+                GeographicReference.vintage_end == filters.year)).all()
+            for ref in refs:
+                if ref.geoid in units and ref.geoid not in groups:
+                    if units[ref.geoid]['contest_id'] not in {None, contest['id']}:
+                        raise MaterializationError('Multiple contests target a missing-result district')
+                    units[ref.geoid].update(jurisdiction_id=ref.jurisdiction_id, contest_id=contest['id'])
     for key, candidates in groups.items():
         (jurisdiction_id, contest_id, batch_id), jurisdiction, geoid = contexts[key]
         matched = key in units

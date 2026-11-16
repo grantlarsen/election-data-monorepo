@@ -133,3 +133,13 @@ The display adapter supports year/grain lookup and generic federal election
 selection; only the pinned 2008 state/county package is prepared. Full PostGIS
 boundary persistence, multi-vintage cataloging, 119th district ingestion, tiles
 and a general geometry API remain separate DATA-007/API-002 work.
+
+# 2024 congressional district display package
+
+The shared map endpoint supports the prepared 2024 House package. Use
+`year=2024&office=U.S.%20House&reporting_level=congressional_district` with an
+optional `state_code`. Candidate entries now include additive `party_labels`
+from canonical source-backed ballot lines. Missing-vote districts retain their
+canonical jurisdiction IDs and modeled contest links. See the
+[House map guide](../house-map.md). Geometry persistence and other vintages remain
+separate data work; the sections below describe the original 2008 package.

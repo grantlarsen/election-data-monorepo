@@ -23,6 +23,7 @@ class MapFilters(BaseModel):
 
 
 class MapCandidate(BaseModel):
+    party_labels: list[str] = Field(default_factory=list)
     label: str
     kind: str
     votes: int

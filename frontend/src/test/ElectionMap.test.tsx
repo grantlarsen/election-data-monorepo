@@ -168,7 +168,7 @@ describe("election map display", () => {
     expect(within(map).getByRole("button", { name: "Map select Albany County" })).toBeEnabled();
   });
 
-  it("preserves a federal district election and derives its legend from actual candidates", async () => {
+  it("preserves a federal district election and shows a compact party legend", async () => {
     const data = dataset(true);
     Object.assign(data, {
       year: 2024,
@@ -207,7 +207,7 @@ describe("election map display", () => {
       name: "NY · Congressional district returns",
     });
     expect(screen.getByLabelText("Map legend")).toHaveTextContent(
-      "Example federal candidate",
+      "Democratic",
     );
     expect(screen.getByLabelText("Map legend")).not.toHaveTextContent("Obama");
     await user.click(screen.getByRole("button", { name: "District 1" }));
@@ -233,6 +233,7 @@ describe("election map display", () => {
     expect(screen.getByLabelText("Map legend")).toHaveTextContent(
       "No published returns",
     );
+    await userEvent.click(screen.getByText("Sources & notes"));
     expect(screen.getByText(/non-additive sources/)).toBeVisible();
     expect(screen.getAllByText("Partial publication").length).toBeGreaterThan(
       0,
@@ -262,6 +263,9 @@ describe("election map display", () => {
       "href",
       expect.stringContaining(`/candidates/${candidacyId}?`),
     );
+    expect(screen.queryByText("Reporting unit lineage")).not.toBeInTheDocument();
+    expect(screen.queryByLabelText("Election map results table")).not.toBeInTheDocument();
+    expect(screen.queryByText(/GEOID/)).not.toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Back" }));
     await waitFor(() =>
       expect(
@@ -284,7 +288,7 @@ describe("election map display", () => {
     await screen.findByRole("heading", {
       name: "Albany County · Published returns",
     });
-    const button = screen.getByRole("button", { name: "Albany County" });
+    const button = screen.getByRole("button", { name: "Map select Albany County" });
     button.focus();
     await user.keyboard("{Enter}");
     expect(screen.getByTestId("location")).toHaveTextContent("map_unit=36001");
@@ -337,7 +341,7 @@ describe("election map display", () => {
     await user.click(screen.getByRole("button", { name: "Missing County" }));
     expect(
       await screen.findByText(
-        "No published returns for this boundary unit. GEOID: 36003",
+        "No published returns for this area.",
       ),
     ).toBeVisible();
     expect(screen.getByTestId("location")).toHaveTextContent("map_unit=36003");

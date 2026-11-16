@@ -13,21 +13,13 @@ export function JurisdictionDetail({
   return (
     <section className="county-detail" aria-labelledby="county-detail-heading">
       <h2 id="county-detail-heading">{selected.name} · Published returns</h2>
-      <p>
-        {selected.summary.status === "no_results"
-          ? "No published returns for this boundary unit."
-          : selected.has_geometry
-            ? "Exact GEOID match to the 2008 display package."
-            : "No matching geometry for this reporting unit."}{" "}
-        GEOID: {selected.geoid || "Unavailable"}
-      </p>
-      <p>
+      {selected.summary.status !== "no_results" && <p>
         {selected.summary.leader || "No determined leader"} · Margin{" "}
         {margin(selected.summary)}
         {selected.summary.margin_votes !== null &&
           ` (${number(selected.summary.margin_votes)} votes)`}
-      </p>
-      <div className="table-scroll">
+      </p>}
+      {selected.summary.candidates.length > 0 ? <div className="table-scroll">
         <table>
           <caption>Candidate votes and share of reported votes</caption>
           <thead>
@@ -57,34 +49,7 @@ export function JurisdictionDetail({
             ))}
           </tbody>
         </table>
-      </div>
-      <details>
-        <summary>Reporting unit lineage</summary>
-        <dl>
-          <dt>Publication batch</dt>
-          <dd>{selected.publication_batch_id}</dd>
-          {selected.summary.candidates.map((candidate) => (
-            <div key={candidate.label}>
-              <dt>{candidate.label} · Reference</dt>
-              <dd>{candidate.geographic_reference_id}</dd>
-              {candidate.reference_vintage_start != null && (
-                <>
-                  <dt>Statistical reference vintage</dt>
-                  <dd>
-                    {candidate.reference_vintage_start}–
-                    {candidate.reference_vintage_end}; legal boundary dates may
-                    differ.
-                  </dd>
-                </>
-              )}
-              <dt>Observations</dt>
-              <dd>{candidate.observation_ids.join(", ")}</dd>
-              <dt>Corrections</dt>
-              <dd>{candidate.correction_ids.join(", ") || "None"}</dd>
-            </div>
-          ))}
-        </dl>
-      </details>
+      </div> : <p>No published returns for this area.</p>}
       {selected.contest_id && (
         <Link to={`/contests/${selected.contest_id}${filterSearch(params)}`}>
           View contest returns
@@ -115,7 +80,7 @@ export function ResultsTable({
       <table>
         <caption>
           {selected ? selected.name : data.state_code || "United States"} ·{" "}
-          {data.reporting_level} reporting · TOTAL mode
+          Election results
         </caption>
         <thead>
           <tr>
@@ -135,9 +100,6 @@ export function ResultsTable({
                 <button className="text-button" onClick={() => onSelect(unit)}>
                   {unit.name}
                 </button>
-                <span className="cell-note">
-                  GEOID {unit.geoid || "Unavailable"}
-                </span>
               </th>
               <td>
                 {unit.summary.candidates.map((candidate) => (
