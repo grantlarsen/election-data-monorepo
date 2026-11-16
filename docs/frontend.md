@@ -208,3 +208,87 @@ The modular map page now supports the published 2024 House data with pinned
 119th Congress display geometry, a source-party legend, district details and
 modeled race links including missing-vote contests. See the
 [House map guide](house-map.md) for preparation, display semantics and validation.
+
+# Candidate profiles
+
+The candidacy placeholder is replaced by a shareable `/candidates/:candidacyId`
+profile. It loads person/review status, contest, published result pages, sourced
+committee links and cycle-specific Total Raised / Total Spent. Unresolved identity,
+missing finance, ambiguous snapshots, zero amounts, loading, retry and 404 states
+are explicit. Navigation preserves explorer context while the profile's identity
+and finance cycle come from its candidacy. Source totals and derived FEC transfer
+adjustments are labeled separately. Decimal currency strings preserve source cents.
+
+See the [candidate identity/profile contract and runbook](data/candidate_identity_profiles.md)
+for schema changes, data dependencies, commands and verification. This supersedes
+the earlier notes that all candidate-profile functionality was unavailable; detailed
+finance categories and the broader person/race API remain separate work.
+
+The profile presentation follows the supplied OpenSecrets screenshot: a portrait
+and three headline figures, section navigation, rounded summary panels, and a
+horizontal financial chart with an exact-value table. Detailed identity and source
+records remain available in expandable disclosures. On mobile, section links wrap
+and headline figures reflow to keep currency amounts readable. Current-cycle and
+authorized-committee scope labels reflect the API data; unavailable cycles, donor
+categories and leadership PAC totals are not shown as working controls.
+
+The portrait from the user-supplied saved reference is bundled locally in
+`frontend/src/assets/people/`, with its source credit in `candidatePresentation.ts`.
+Only a resolved identity with its matching FEC identifier selects that image;
+other profiles use initials, with a fallback if image loading fails. Name casing
+is a display transformation; source names and canonical IDs remain unchanged.
+Financial chart geometry uses the existing reported/adjusted metrics, including
+negative or zero values. Exact decimal strings are preserved in the table and
+CSV download, which also includes cycle, scope definition and source-release
+provenance. Missing amounts remain blank in CSV and unavailable in the UI.
+
+Verification for this presentation update: 87 frontend tests and the production/
+TypeScript build passed. Headless Edge checks cover the live portrait and sourced
+2024 totals, chart, CSV download, section navigation, disclosures, contest context,
+history, 503 retry and 320/375/768/1440px layouts. Evidence is under ignored
+`artifacts/candidate-profiles/redesign-*` files. Backend data and schema are reused.
+
+The introductory Summary card is now replaced by a **Most recent election** panel
+above campaign finance. The API selects the latest completed modeled candidacy
+belonging to the verified person; unresolved identities stay scoped to their own
+candidacy. Future events are excluded. The panel reuses the map renderer, restricts
+geometry/results to that contest, and shows opponents' votes and reported shares
+with the profile candidate highlighted. It explicitly describes dataset coverage;
+it does not imply that elections absent from the database have been ingested.
+Published candidate returns remain a fallback if map data is unavailable. Latest
+election context does not change the selected profile's financial cycle.
+
+Candidate election maps retain the full state geography and mute neighboring
+districts, while highlighting the candidate's own contest area. Highlighting no
+longer automatically crops the viewport to an isolated district. Neighboring areas
+provide context without changing the candidate's selected race or results; map
+zoom controls remain available. The general election explorer retains its existing
+selection/focus behavior.
+
+Zoomed maps support mouse or one-finger drag panning and arrow-key movement.
+The viewport stays within the map extent, additional zoom keeps the adjusted
+center, and Reset zoom restores the original placement and scale. A drag dismisses
+tooltips and suppresses district selection; ordinary clicks and keyboard selection
+are preserved. Touch scrolling outside the zoomed map remains available. A changed
+map selection/boundary scope resets the viewport. Live Edge checks cover mouse,
+touch, cancellation, keyboard movement and reset with unchanged race results.
+
+Mouse-wheel and vertical trackpad scrolling over the map zoom toward the pointer,
+using the existing zoom limits. The map consumes these scroll events so the page
+does not jump while zooming, including at the limits; scrolling outside the canvas
+works normally. Ctrl/Command/Alt-modified scrolling retains browser behavior.
+
+The candidate election source disclosure uses compact reader-facing citations:
+source name/link, version, publication status, coverage notes and the reported-vote
+share definition. Technical record identifiers, checksums, internal scope labels,
+timestamps and whole-publication row counts are omitted from this presentation.
+
+Candidate references in result tables, jurisdiction leaders, map popovers, statewide
+summaries and unambiguous candidate legend entries link to the candidacy profile.
+Links preserve shared explorer filters and use the referenced result's contest
+context rather than stale pagination or map selection. Map popover links can be
+reached by pressing Tab from a focused geography; Escape returns focus to it.
+Anonymous buckets and source-only names without a candidacy ID stay plain text.
+A legend spanning multiple candidacy IDs does not select an arbitrary profile;
+each result row retains its own explicit link. No name-based identity matching is
+performed for navigation.

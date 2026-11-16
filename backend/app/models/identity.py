@@ -131,6 +131,7 @@ class CommitteeRelationship(Base):
         CheckConstraint("person_id IS NOT NULL OR candidacy_id IS NOT NULL", name="ck_committee_relationship_subject"),
         CheckConstraint("valid_from IS NULL OR valid_until IS NULL OR valid_from <= valid_until", name="ck_committee_relationship_dates"),
         CheckConstraint("cycle IS NULL OR cycle >= 1788", name="ck_committee_relationship_cycle"),
+        CheckConstraint("cycle IS NULL OR (cycle <= 9998 AND cycle % 2 = 0)", name="ck_committee_relationship_two_year_cycle"),
         Index("ix_committee_relationship_person", "person_id"),
         Index("ix_committee_relationship_candidacy", "candidacy_id"),
         Index("ix_committee_relationship_org", "organization_id"),

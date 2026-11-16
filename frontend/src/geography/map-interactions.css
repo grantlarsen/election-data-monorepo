@@ -1,0 +1,3 @@
+.us-map .us-map-svg.is-pannable { touch-action: none; }
+.us-map .us-map-svg.is-pannable, .us-map .us-map-svg.is-pannable path { cursor: grab; }
+.us-map .us-map-svg.is-panning, .us-map .us-map-svg.is-panning path { cursor: grabbing; }

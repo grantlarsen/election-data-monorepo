@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 import { geoArea, geoContains } from "d3-geo";
@@ -68,6 +68,84 @@ function rows() {
 }
 
 describe("generic United States mapping", () => {
+  it('allows keyboard access to tooltip candidate links and returns focus to the map with Escape', async () => {
+    render(<UnitedStatesMap features={features} data={matchJurisdictions(features, rows())}
+      title="Linked map" fill={() => '#abc'} describe={row => row?.value || ''}
+      tooltip={() => <a href="/candidates/example">Candidate profile</a>}
+      onSelect={vi.fn()} attribution="Source" />);
+    const path = screen.getByRole('button', { name: 'CA' });
+    const user = userEvent.setup();
+    act(() => path.focus());
+    await user.tab();
+    expect(screen.getByRole('link', { name: 'Candidate profile' })).toHaveFocus();
+    await user.keyboard('{Escape}');
+    expect(path).toHaveFocus();
+    expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
+  });
+  it('zooms toward the wheel pointer, normalizes scroll units, and contains scrolling at zoom limits', () => {
+    render(<UnitedStatesMap features={features} data={matchJurisdictions(features, rows())}
+      title="Wheel map" fill={() => '#abc'} describe={row => row?.value || ''} tooltip={() => ''}
+      onSelect={vi.fn()} focusSelection={false} attribution="Source" />);
+    const map = screen.getByRole('group', { name: 'Wheel map' });
+    vi.spyOn(map, 'getBoundingClientRect').mockReturnValue({ left: 0, top: 0, width: 960, height: 600, right: 960, bottom: 600, x: 0, y: 0, toJSON: () => ({}) });
+    expect(fireEvent.wheel(map, { deltaY: -120, clientX: 720, clientY: 420, cancelable: true })).toBe(false);
+    const view = map.getAttribute('viewBox')!.split(' ').map(Number);
+    expect(view[2]).toBeLessThan(960);
+    expect(view[0] + .75 * view[2]).toBeCloseTo(720);
+    expect(view[1] + .7 * view[3]).toBeCloseTo(420);
+    fireEvent.click(screen.getByRole('button', { name: 'Reset zoom' }));
+    fireEvent.wheel(map, { deltaY: -7.5, deltaMode: 1, clientX: 720, clientY: 420 });
+    expect(map.getAttribute('viewBox')!.split(' ').map(Number)[2]).toBeCloseTo(view[2]);
+    const before = map.getAttribute('viewBox');
+    expect(fireEvent.wheel(map, { deltaY: -120, ctrlKey: true, cancelable: true })).toBe(true);
+    expect(map).toHaveAttribute('viewBox', before!);
+    for (let i = 0; i < 20; i++) fireEvent.wheel(map, { deltaY: -240, clientX: 480, clientY: 300 });
+    expect(map.getAttribute('viewBox')!.split(' ').map(Number)[2]).toBe(240);
+    expect(fireEvent.wheel(map, { deltaY: -240, cancelable: true })).toBe(false);
+    for (let i = 0; i < 20; i++) fireEvent.wheel(map, { deltaY: 240, clientX: 480, clientY: 300 });
+    expect(map).toHaveAttribute('viewBox', '0 0 960 600');
+  });
+  it('pans a zoomed map with arrow keys, preserves its center on zoom-in, and resets the viewport', () => {
+    const { rerender } = render(<UnitedStatesMap features={features} data={matchJurisdictions(features, rows())}
+      title="Pan map" fill={() => '#abc'} describe={row => row?.value || ''} tooltip={() => ''}
+      onSelect={vi.fn()} selectedId="06" focusSelection={false} attribution="Source" />);
+    const map = screen.getByRole('group', { name: 'Pan map' });
+    fireEvent.click(screen.getByRole('button', { name: 'Zoom in' }));
+    expect(map).toHaveClass('is-pannable');
+    const before = map.getAttribute('viewBox')!.split(' ').map(Number);
+    fireEvent.keyDown(map, { key: 'ArrowRight' });
+    const after = map.getAttribute('viewBox')!.split(' ').map(Number);
+    expect(after[0]).toBeGreaterThan(before[0]);
+    expect(after[2]).toBe(before[2]);
+    const centerX = after[0] + after[2] / 2;
+    fireEvent.click(screen.getByRole('button', { name: 'Zoom in' }));
+    const zoomed = map.getAttribute('viewBox')!.split(' ').map(Number);
+    expect(zoomed[0] + zoomed[2] / 2).toBeCloseTo(centerX);
+    fireEvent.click(screen.getByRole('button', { name: 'Reset zoom' }));
+    expect(map).toHaveAttribute('viewBox', `0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`);
+    expect(map).not.toHaveClass('is-pannable');
+    fireEvent.click(screen.getByRole('button', { name: 'Zoom in' }));
+    rerender(<UnitedStatesMap features={{ ...features }} data={matchJurisdictions(features, rows())}
+      title="Pan map" fill={() => '#abc'} describe={row => row?.value || ''} tooltip={() => ''}
+      onSelect={vi.fn()} focusSelection={false} attribution="Source" />);
+    expect(map).toHaveAttribute('viewBox', `0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`);
+  });
+  it("keeps geographic context in view while highlighting a selection and making neighbors passive", () => {
+    const onSelect = vi.fn();
+    render(<UnitedStatesMap features={features} data={matchJurisdictions(features, rows())}
+      title="Context map" fill={() => '#dce4e1'} describe={(datum) => datum?.value || 'Context'}
+      tooltip={() => 'Context'} onSelect={onSelect} selectedId="06" focusSelection={false}
+      isInteractive={datum => datum?.id === '06'} attribution="Test source" />);
+    expect(screen.getByRole('group', { name: 'Context map' })).toHaveAttribute('viewBox', `0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`);
+    expect(screen.getByRole('button', { name: 'CA' })).toHaveAttribute('aria-pressed', 'true');
+    const neighbor = screen.getByRole('img', { name: 'AK' });
+    expect(neighbor).not.toHaveAttribute('tabindex');
+    fireEvent.click(neighbor);
+    expect(onSelect).not.toHaveBeenCalled();
+    expect(screen.getByRole('button', { name: 'Zoom in' })).toBeEnabled();
+    fireEvent.click(screen.getByRole('button', { name: 'CA' }));
+    expect(onSelect).toHaveBeenCalledOnce();
+  });
   it("masks Great Lakes water while retaining both Michigan peninsulas and Wisconsin/Minnesota land", () => {
     const water = greatLakes as FeatureCollection<
       Polygon | MultiPolygon,

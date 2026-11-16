@@ -170,7 +170,7 @@ def list_elections(session: Session, filters: ElectionFilters) -> dict:
                            key=lambda p: (p["scope_key"], str(p["batch_id"])))) for e, j in rows], total, filters)
 
 
-def list_results(session: Session, filters: ResultFilters) -> dict:
+def list_results(session: Session, filters: ResultFilters, *, candidacy_id: UUID | None = None) -> dict:
     vote = CanonicalVoteReturn
     # Candidate groups use their canonical candidacy. Anonymous buckets retain
     # the individual return UUID, avoiding identity inference from source labels.
@@ -182,6 +182,8 @@ def list_results(session: Session, filters: ResultFilters) -> dict:
                    vote.reporting_mode == filters.reporting_mode))
     if filters.jurisdiction_id is not None:
         keys = keys.where(vote.jurisdiction_id == filters.jurisdiction_id)
+    if candidacy_id is not None:
+        keys = keys.where(vote.candidacy_id == candidacy_id)
     if filters.party_id is not None:
         keys = keys.where(vote.candidacy_id.in_(_party_candidates(filters.party_id)))
     grouped = keys.distinct().subquery()

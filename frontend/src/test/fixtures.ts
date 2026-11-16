@@ -1,4 +1,4 @@
-import type { Contest, Page, Publication, Result } from '../api';
+import type { CandidateProfile, Contest, Page, Publication, Result } from '../api';
 
 export const contestId = '00000000-0000-4000-8000-000000000001';
 export const candidacyId = '00000000-0000-4000-8000-000000000002';
@@ -31,3 +31,14 @@ export function page<T>(items: T[], overrides: Partial<Page<T>> = {}): Page<T> {
   return { items, total: items.length, limit: 25, offset: 0, has_more: false,
     availability: items.length ? 'available' : 'no_matching_data', ...overrides };
 }
+
+export const candidateProfile: CandidateProfile = {
+  id: candidacyId, label: result.label, source_label: result.label, candidate_kind: 'candidate',
+  person: null, identity_status: 'pending_review', identity_evidence: [], identifiers: [], committees: [],
+  contest: { ...contest, election_cycle: 2008 },
+  finance: { status: 'identity_unresolved', cycle: 2008, total_raised: null, total_spent: null,
+    reported_receipts: null, reported_disbursements: null, transfers_from_authorized: null,
+    transfers_to_authorized: null, cash_on_hand: null, debts: null, coverage_end: null,
+    definition: null, fec_candidate_id: null, source: null },
+  results: { ...page([result]), reporting_level: 'county', reporting_mode: 'TOTAL' },
+};

@@ -73,6 +73,10 @@ export function MapTooltip({
       style={{ left: position.x, top: position.y }}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
+      onFocusCapture={onEnter}
+      onBlurCapture={event => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) onLeave();
+      }}
     >
       {children}
     </div>,

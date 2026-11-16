@@ -56,6 +56,14 @@ const response = (body: unknown, status = 200) =>
   ({ ok: status === 200, status, json: async () => body }) as Response;
 
 describe("published statewide overview", () => {
+  it('links candidates only when the statewide authority supplies a candidacy ID', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => response({ ...overview, units: [{ ...state,
+      summary: { ...state.summary, candidates: [{ ...state.summary.candidates[0], candidacy_id: 'known' }, state.summary.candidates[1]] },
+    }] })));
+    render(<StateResultsSummary selection={selection} />);
+    expect(await screen.findByRole('link', { name: 'Source leader' })).toHaveAttribute('href', '/candidates/known');
+    expect(screen.queryByRole('link', { name: 'Runner-up' })).not.toBeInTheDocument();
+  });
   it("requests state authority independently of county selection and displays API metrics", async () => {
     const fetch = vi.fn(async (_url: string) => response(overview));
     vi.stubGlobal("fetch", fetch);

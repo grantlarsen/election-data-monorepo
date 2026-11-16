@@ -17,10 +17,14 @@ export function GeographyMap({
   data,
   onSelect,
   selectedId,
+  highlightedIds,
+  focusSelection = true,
 }: {
   data: ElectionMap;
   onSelect: (unit: MapUnit) => void;
   selectedId?: string;
+  highlightedIds?: ReadonlySet<string>;
+  focusSelection?: boolean;
 }) {
   const match = useMemo(() => {
     try {
@@ -49,7 +53,10 @@ export function GeographyMap({
           : "United States election map"
       }
       selectedId={selectedId}
-      fill={(unit) => resultColor(unit?.summary, data.reporting_level === "congressional_district")}
+      focusSelection={focusSelection}
+      isInteractive={(unit) => !highlightedIds || !!unit && highlightedIds.has(unit.id)}
+      fill={(unit) => highlightedIds && (!unit || !highlightedIds.has(unit.id))
+        ? '#dce4e1' : resultColor(unit?.summary, data.reporting_level === "congressional_district")}
       describe={(unit, feature) =>
         `${unit?.name || feature.properties.name}: ${unit?.summary.leader || (unit?.summary.status === "tie" ? "Tie" : "No determined leader")}`
       }

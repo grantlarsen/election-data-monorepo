@@ -84,7 +84,10 @@ describe("reference-style election tooltip", () => {
     expect(
       screen.getByRole("heading", { name: "Albany County, NY" }),
     ).toBeVisible();
-    expect(screen.getByText(/Leading here: Source candidate/)).toBeVisible();
+    expect(screen.getByText(/Leading here:/)).toHaveTextContent('Leading here: Source candidate');
+    screen.getAllByRole('link', { name: 'Source candidate' }).forEach(link => expect(link).toHaveAttribute('href', '/candidates/one'));
+    expect(screen.getByRole('link', { name: 'Runner up' })).toHaveAttribute('href', '/candidates/two');
+    expect(screen.queryByRole('link', { name: 'OTHER' })).not.toBeInTheDocument();
     expect(screen.getByText(/Partial publication/)).toBeVisible();
     expect(screen.getByText("60.00%")).toBeVisible();
     expect(screen.getByText("100 reported votes")).toBeVisible();

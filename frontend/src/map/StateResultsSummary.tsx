@@ -4,6 +4,7 @@ import type { ElectionMap } from "./types";
 import { margin, number, percent } from "./types";
 import { candidateColor, indeterminateColor } from "./electionColors";
 import { useElectionMap } from "./useElectionMap";
+import { CandidateLink } from '../CandidateLink';
 
 /** Independent published state authority; never a sum of county returns. */
 export function StateResultsSummary({ selection }: { selection: ElectionMap }) {
@@ -72,7 +73,7 @@ export function StateResultsSummary({ selection }: { selection: ElectionMap }) {
                 <li key={`${candidate.label}:${index}`}>
                   <div className="state-summary-candidate-name">
                     <i aria-hidden="true" style={{ background: color }} />
-                    {candidate.label}
+                    <CandidateLink candidacyId={candidate.candidacy_id} contestId={unit.contest_id}>{candidate.label}</CandidateLink>
                     {candidate.label === unit.summary.leader && <span className="state-summary-leader">Leading</span>}
                   </div>
                   <div className="state-summary-candidate-total">
