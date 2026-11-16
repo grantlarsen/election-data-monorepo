@@ -16,3 +16,4 @@ from .identity import (PersonName, Organization, ExternalIdentifier, IdentityAss
 from .election import (Office, OfficeTerm, BallotLine, CanonicalResultBatch, CanonicalPublication, CanonicalVoteReturn, CanonicalMaterializationIssue)
 from .state_results import StateResultBatch, StateVoteReturn, StateResultPublication
 from .county_corrections import CountyCorrectionBatch, CountyVoteCorrection
+from .house_returns import HouseReturnDetail, HouseDistrictReconciliation

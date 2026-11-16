@@ -94,9 +94,12 @@ share, margin, turnout or reconstructed geography is inferred.
 State authority uses the existing manifest-verified accessor. State and county
 figures are **non-additive** and may differ due to source corrections and
 county coverage. Every results response exposes this explicitly. Unsupported
-years/offices return empty pages without a county-derived fallback. The 2024
-House ingestion (DATA-006) remains an upstream dependency; this implementation
-does not claim its results are available.
+years/offices return empty pages without a county-derived fallback. The
+[2024 House ingestion](../data/house_returns_2024.md) publishes source-scoped
+district returns through these same endpoints. Request `year=2024`,
+`office=U.S. House`, and `reporting_level=congressional_district` for results.
+Its partial coverage, missing-vote contests and ranked-choice source conventions
+are documented in that contract. House district geometry remains separate work.
 
 Malformed or unknown query parameters return 422. Database failures and detected
 published-result integrity failures return sanitized 503 responses. Existing

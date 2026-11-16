@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 import hashlib
 import json
-from typing import Any, Iterator
+from typing import Any, Callable, Iterator
 from uuid import UUID, uuid4
 
 import polars as pl
@@ -135,7 +135,9 @@ def insert_observation_chunk(conn: Connection, rows: list[dict[str, Any]]) -> in
 
 def load(engine: Engine, source_id: UUID, run_id: UUID, asset: AcquiredFile, df: pl.DataFrame,
          years: set[int], warnings: list[dict], started_at: Any, completed_at: Any,
-         duration_ms: int, *, records_read: int | None = None) -> LoadStats:
+         duration_ms: int, *, records_read: int | None = None,
+         record_builder: Callable[[pl.DataFrame, UUID, dict[str, UUID]], list[dict]] = to_records,
+         detail_loader: Callable[[Connection, UUID, pl.DataFrame], None] | None = None) -> LoadStats:
     release_info = asset.info
     release_id: UUID
     with engine.begin() as conn:
@@ -177,8 +179,10 @@ def load(engine: Engine, source_id: UUID, run_id: UUID, asset: AcquiredFile, df:
         # multi-year Polars DataFrame into a second list of Python dictionaries.
         inserted = 0
         for offset in range(0, df.height, 500):
-            chunk = to_records(df.slice(offset, 500), release_id, party_ids)
+            chunk = record_builder(df.slice(offset, 500), release_id, party_ids)
             inserted += insert_observation_chunk(conn, chunk)
+        if detail_loader is not None:
+            detail_loader(conn, release_id, df)
         loaded_count = int(conn.scalar(select(func.count()).select_from(ElectionResultObservation).where(
             ElectionResultObservation.release_id == release_id,
             ElectionResultObservation.year.in_(sorted(years)))) or 0)
