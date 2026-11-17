@@ -107,6 +107,14 @@ district returns through these same endpoints. Request `year=2024`,
 Its partial coverage, missing-vote contests and ranked-choice source conventions
 are documented in that contract. House district geometry remains separate work.
 
+The [Senate ingestion guide](../data/senate_returns.md) covers MEDSL 2000–2024
+and January 2021 runoffs. Use `office=U.S. Senate` and `reporting_level=state`
+on `/results`. `seat_class=1|2|3` filters election, contest and result discovery;
+contests and canonical result items expose nullable `seat_class`. Senate candidate
+profiles default to state reporting. `/state-results` retains its separate FEC
+presidential authority semantics. Partial or withheld source counts and missing
+historical elections are explicitly documented in the Senate guide.
+
 Malformed or unknown query parameters return 422. Database failures and detected
 published-result integrity failures return sanitized 503 responses. Existing
 `/health` and `/health/db` behavior is preserved.

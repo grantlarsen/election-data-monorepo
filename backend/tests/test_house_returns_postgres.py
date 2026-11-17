@@ -33,7 +33,7 @@ pytestmark = pytest.mark.integration
 @pytest.fixture
 def house_engine(pg):
     with pg.begin() as conn, Operations.context(MigrationContext.configure(conn)):
-        for filename in ("authoritative_state_results.py", "reviewed_county_corrections.py", "house_return_evidence.py"):
+        for filename in ("authoritative_state_results.py", "reviewed_county_corrections.py", "house_return_evidence.py", "senate_return_evidence.py"):
             migration(filename).upgrade()
     return pg
 

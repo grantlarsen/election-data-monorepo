@@ -326,7 +326,7 @@ def test_candidate_api_validation_not_found_and_integrity(monkeypatch):
             url = "/api/v1/candidates/" + str(uuid4())
             assert client.get(url + "?limit=201").status_code == 422
             assert client.get(url + "?offset=-1").status_code == 422
-            assert client.get(url + "?reporting_level=state").status_code == 422
+            assert client.get(url + "?reporting_level=national").status_code == 422
             monkeypatch.setattr(candidates, "candidate_profile", lambda *a, **kw: None)
             assert client.get(url).status_code == 404
             from app.services.canonical_results import MaterializationError

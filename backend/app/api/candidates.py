@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 @router.get("/candidates/{candidacy_id}", response_model=CandidateProfile)
 def profile(candidacy_id: UUID, session: ReadSession,
-            reporting_level: Literal["county", "congressional_district", "legislative_district", "precinct", "place"] | None = None,
+            reporting_level: Literal["state", "county", "congressional_district", "legislative_district", "precinct", "place"] | None = None,
             limit: Annotated[int, Query(ge=1, le=200)] = 50,
             offset: Annotated[int, Query(ge=0)] = 0) -> dict:
     try:

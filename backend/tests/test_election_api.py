@@ -28,6 +28,7 @@ def api_engine(pg):
     with pg.begin() as connection, Operations.context(MigrationContext.configure(connection)):
         migration('authoritative_state_results.py').upgrade()
         migration('reviewed_county_corrections.py').upgrade()
+        migration('senate_return_evidence.py').upgrade()
     return pg
 
 

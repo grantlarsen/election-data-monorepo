@@ -19,3 +19,4 @@ from .county_corrections import CountyCorrectionBatch, CountyVoteCorrection
 from .house_returns import HouseReturnDetail, HouseDistrictReconciliation
 from .candidate_identity import FecCandidateRecord, CandidateIdentityReview, CandidateFinanceSummary
 from .campaign_finance import FecCommitteeRecord, FecCandidateCommitteeLink, CommitteeFiling, CommitteeFinanceSnapshot
+from .senate_returns import SenateSeat, SenateContest, SenateReturnDetail, SenateContestReconciliation

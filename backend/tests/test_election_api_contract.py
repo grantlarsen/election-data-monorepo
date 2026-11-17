@@ -35,7 +35,7 @@ def test_health_and_openapi_contract(client):
     for endpoint in ('elections', 'contests', 'results', 'state-results'):
         operation = schema['paths']['/api/v1/' + endpoint]['get']
         assert '200' in operation['responses']
-    assert client.get('/api/v1/results', params={'reporting_level': 'state'}).status_code == 422
+    assert client.get('/api/v1/results', params={'reporting_level': 'national'}).status_code == 422
     assert client.get('/api/v1/state-results', params={'party_id': str(uuid4())}).status_code == 422
 
 
