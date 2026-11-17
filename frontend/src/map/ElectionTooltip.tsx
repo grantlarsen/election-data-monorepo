@@ -19,8 +19,7 @@ export function ElectionTooltip({
   const publication = data.publications.find(
     (item) => item.batch_id === unit?.publication_batch_id,
   );
-  const byParty = data.reporting_level === "congressional_district";
-  const leaderColor = resultColor(summary, byParty);
+  const leaderColor = resultColor(summary);
   const context =
     publication?.status === "PARTIAL"
       ? "Partial publication"
@@ -65,7 +64,7 @@ export function ElectionTooltip({
             candidate.kind,
           );
           const color = named
-            ? mapCandidateColor(candidate, byParty)
+            ? mapCandidateColor(candidate)
             : indeterminateColor;
           const initials = named
             ? candidate.label
@@ -87,7 +86,7 @@ export function ElectionTooltip({
               </div>
               <div className="popover-candidate-body">
                 <div className="popover-name"><CandidateLink candidacyId={candidate.candidacy_id} contestId={unit?.contest_id}>{candidate.label}</CandidateLink></div>
-                {byParty && <div className="popover-extra">{candidate.party_labels?.join(" / ") || "No source party label"}</div>}
+                {named && <div className="popover-extra">{candidate.party_labels?.join(" / ") || "Party unavailable"}</div>}
                 {!named && (
                   <div className="popover-extra">
                     {humanize(candidate.kind)} vote category

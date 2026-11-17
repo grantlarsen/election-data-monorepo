@@ -55,6 +55,7 @@ const unit = {
     candidates: [
       {
         label: "Source candidate",
+        party_labels: ['DEMOCRATIC'],
         kind: "candidate",
         votes: 60,
         share: 60,
@@ -62,6 +63,7 @@ const unit = {
       },
       {
         label: "Runner up",
+        party_labels: ['REPUBLICAN'],
         kind: "candidate",
         votes: 30,
         share: 30,
@@ -92,6 +94,9 @@ describe("reference-style election tooltip", () => {
     expect(screen.getByText("60.00%")).toBeVisible();
     expect(screen.getByText("100 reported votes")).toBeVisible();
     expect(screen.getByText("aggregate vote category")).toBeVisible();
+    expect(screen.getByText('DEMOCRATIC').closest('.popover-candidate')).toHaveStyle({ '--candidate-color':'#3276ac' });
+    expect(screen.getByText('REPUBLICAN').closest('.popover-candidate')).toHaveStyle({ '--candidate-color':'#bd5548' });
+    expect(screen.getByText('aggregate vote category').closest('.popover-candidate')).toHaveStyle({ '--candidate-color':'#7d8584' });
     expect(screen.queryByRole("img")).not.toBeInTheDocument();
     expect(screen.queryByText(/elected|certified/i)).not.toBeInTheDocument();
   });

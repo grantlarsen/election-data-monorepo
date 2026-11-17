@@ -31,6 +31,7 @@ export function UnitedStatesMap<T>({
   isInteractive = () => true,
   attribution,
   water,
+  featureLabel,
 }: {
   features: JurisdictionCollection;
   data: ReadonlyMap<string, T>;
@@ -44,6 +45,7 @@ export function UnitedStatesMap<T>({
   isInteractive?: (datum: T | undefined, feature: JurisdictionFeature) => boolean;
   attribution: ReactNode;
   water?: FeatureCollection<Polygon | MultiPolygon, { name: string }>;
+  featureLabel?: (feature: JurisdictionFeature) => string[] | undefined;
 }) {
   const [activeId, setActiveId] = useState<string>();
   const drag = useRef<{ pointer: number; x: number; y: number; centerX: number; centerY: number; scale: number; moved: boolean; element: SVGSVGElement } | undefined>(undefined);
@@ -190,6 +192,7 @@ export function UnitedStatesMap<T>({
   }
   const tooltipId = useId();
   const projected = useMemo(() => projectUnitedStates(features), [features]);
+  const labelPath = useMemo(() => featureLabel ? unitedStatesPath(features) : undefined, [features, featureLabel]);
   const waterPaths = useMemo(() => {
     if (!water) return [];
     const path = unitedStatesPath(features);
@@ -333,6 +336,15 @@ export function UnitedStatesMap<T>({
               ),
           )}
         </g>
+        {featureLabel && <g aria-hidden="true" pointerEvents="none">{visible.map(({ feature }) => {
+          const lines = featureLabel(feature);
+          if (!lines) return null;
+          const [x, y] = labelPath!.centroid(projectionFeature(feature));
+          if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+          return <text className="state-elector-label" key={feature.properties.geoid} x={x} y={y}>
+            {lines.map((line, i) => <tspan key={i} x={x} dy={i ? 13 : 0}>{line}</tspan>)}
+          </text>;
+        })}</g>}
       </svg>
       {active && (
         <MapTooltip

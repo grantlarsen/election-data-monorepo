@@ -18,8 +18,8 @@ const map: ElectionMap = {
   features: { type: 'FeatureCollection', features: [{ type: 'Feature', id: '3614', properties: { geoid: '3614', name: 'District 14', state_code: 'NY' }, geometry: { type: 'Polygon', coordinates: [] } }] },
   units: [{ id: '3614', geoid: '3614', state_code: 'NY', jurisdiction_id: null, has_geometry: true, name: 'District 14', contest_id: contestId, publication_batch_id: publication.batch_id,
     summary: { status: 'available', leader: 'ALICE', total_votes: 100, margin_votes: 20, margin_pp: 20, candidates: [
-      { label: 'ALICE', candidacy_id: candidacyId, kind: 'candidate', votes: 60, share: 60, geographic_reference_id: null, observation_ids: [], correction_ids: [] },
-      { label: 'BOB', candidacy_id: null, kind: 'candidate', votes: 40, share: 40, geographic_reference_id: null, observation_ids: [], correction_ids: [] },
+      { label: 'ALICE', candidacy_id: candidacyId, kind: 'candidate', party_labels: ['DEMOCRATIC'], votes: 60, share: 60, geographic_reference_id: null, observation_ids: [], correction_ids: [] },
+      { label: 'BOB', candidacy_id: null, kind: 'candidate', party_labels: ['REPUBLICAN'], votes: 40, share: 40, geographic_reference_id: null, observation_ids: [], correction_ids: [] },
     ] } }, { id: '3601', geoid: '3601', state_code: 'NY', jurisdiction_id: null, has_geometry: false, publication_batch_id: null, name: 'Other contest', contest_id: 'other', summary: { status: 'no_results', total_votes: null, leader: null, margin_votes: null, margin_pp: null, candidates: [] } }],
 };
 
@@ -35,6 +35,8 @@ describe('most recent candidate election', () => {
     expect(screen.getByLabelText('Embedded election map')).toHaveAttribute('data-focus-selection', 'false');
     expect(screen.getByRole('table', { name: 'Candidate votes and share of reported votes' })).toHaveTextContent('60.00%');
     expect(screen.getByText('Bob')).toBeVisible();
+    expect(screen.getByText('Alice').closest('th')!.querySelector('.profile-result-dot')).toHaveStyle({ background:'#3276ac' });
+    expect(screen.getByText('Bob').closest('th')!.querySelector('.profile-result-dot')).toHaveStyle({ background:'#bd5548' });
     expect(screen.getByRole('link', { name: 'Alice' })).toHaveAttribute('href', `/candidates/${candidacyId}?contest_id=${contestId}`);
     expect(screen.queryByRole('link', { name: 'Bob' })).not.toBeInTheDocument();
     expect(screen.getByText('This candidate')).toBeVisible();

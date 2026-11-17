@@ -47,6 +47,7 @@ const county: MapUnit = {
     candidates: [
       {
         label: "BARACK OBAMA",
+        party_labels: ['DEMOCRATIC'],
         kind: "candidate",
         votes: 60,
         share: 60,
@@ -57,6 +58,7 @@ const county: MapUnit = {
       },
       {
         label: "JOHN MCCAIN",
+        party_labels: ['REPUBLICAN'],
         kind: "candidate",
         votes: 30,
         share: 30,
@@ -233,6 +235,9 @@ describe("election map display", () => {
     expect(screen.getByLabelText("Map legend")).toHaveTextContent(
       "No published returns",
     );
+    const legend = screen.getByRole('list', { name: 'Map legend' });
+    expect(within(legend).getByText('BARACK OBAMA').closest('li')!.querySelector('span')).toHaveStyle({ background:'#3276ac' });
+    expect(within(legend).getByText('JOHN MCCAIN').closest('li')!.querySelector('span')).toHaveStyle({ background:'#bd5548' });
     await userEvent.click(screen.getByText("Sources & notes"));
     expect(screen.getByText(/non-additive sources/)).toBeVisible();
     expect(screen.getAllByText("Partial publication").length).toBeGreaterThan(
@@ -381,6 +386,39 @@ describe("election map display", () => {
       }),
     ).toBeVisible();
     expect(screen.getByRole("table")).toHaveTextContent("New York");
+  });
+
+  it.each([2000, 2004, 2012, 2016, 2020, 2024])('retains %s when drilling from the national county URL into a state', async year => {
+    const fetch = vi.fn(async (url: string) => {
+      const query = new URLSearchParams(url.split('?')[1]);
+      const data = dataset(query.has('state_code') && query.get('reporting_level') !== 'state');
+      data.year = Number(query.get('year'));
+      return respond(data);
+    });
+    vi.stubGlobal('fetch', fetch);
+    const user = userEvent.setup();
+    open(`/map?year=${year}&office=U.S.+President&stage=general&reporting_level=county`);
+    expect(screen.getByText('Choose a state on the map to view its county returns.')).toBeVisible();
+    await user.click(await screen.findByRole('button', { name: 'Map select New York' }));
+    await screen.findByRole('heading', { name: 'NY · County returns' });
+    expect(screen.getByTestId('location')).toHaveTextContent(`year=${year}`);
+    const queries = fetch.mock.calls.map(([url]) => new URLSearchParams(url.split('?')[1]));
+    expect(queries.every(query => query.get('year') === String(year))).toBe(true);
+    expect(queries.some(query => query.get('state_code') === 'NY' && query.get('reporting_level') === 'county')).toBe(true);
+  });
+
+  it('shows a prominent explanation when the boundary package uses an historical display approximation', async () => {
+    const data = dataset();
+    data.year = 2004;
+    data.boundary = { approximate: true, version: 'tiger2004-display-v1', boundary_vintage: 'Composite display',
+      vintage_note: 'Approximate 2004 display. Original votes are not redistributed.',
+      documentation_url: 'https://www.census.gov/', display_sha256: 'a'.repeat(64), repaired_features: 0, sources: [] };
+    vi.stubGlobal('fetch', vi.fn(async () => respond(data)));
+    open('/map?year=2004');
+    const heading = await screen.findByRole('heading', { name: 'Historical display approximation' });
+    expect(heading).toBeVisible();
+    expect(within(heading.parentElement!).getByText(data.boundary.vintage_note)).toBeVisible();
+    expect(screen.getByRole('button', { name: 'Map select New York' })).toBeVisible();
   });
 
   it("handles API errors and retries without showing raw response details", async () => {

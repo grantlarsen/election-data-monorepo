@@ -45,6 +45,11 @@ Presidential results for 2000–2024 have a seven-election coverage inventory at
 guide](docs/data/presidential_coverage.md) for pinned FEC state summaries,
 partial MEDSL county coverage, migrations and replay commands.
 
+The frontend links all seven elections at http://localhost:5173/presidential,
+with directly loadable `/presidential/2000` through `/presidential/2024` pages.
+See the [presidential pages guide](docs/presidential-pages.md) for state totals,
+county drill-down, source coverage and year-specific map availability.
+
 2024 MEDSL House district ingestion is available through the shared observation
 and canonical publication pipeline. See the [House data contract](docs/data/house_returns_2024.md)
 and [PowerShell runbook](docs/data/house_returns_2024_runbook.md) for pinned-source

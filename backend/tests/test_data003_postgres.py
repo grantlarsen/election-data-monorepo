@@ -84,12 +84,12 @@ def _seed(session, year=2008):
 
 def _observe(session, seed, n, *, name='ALICE EXAMPLE', votes=100, total=200,
              kind='candidate', mode='TOTAL', logical=None, status='RESOLVED',
-             geography=True):
+             geography=True, party=None):
     row = ElectionResultObservation(release_id=seed['release'].id,
         source_row_number=n,row_sha256=f'{n:064x}',logical_key=logical or f'{n:064x}',
         year=2008,state_code='NY',state_fips='36',county_fips=seed['ref'].geoid,
         county_raw=seed['ref'].name_raw,county_normalized=seed['ref'].name_raw.upper(),office_raw='US PRESIDENT',
-        candidate_raw=name,candidate_normalized=name,
+        candidate_raw=name,candidate_normalized=name,party_raw=party,party_normalized=party,
         candidate_kind=kind,mode_normalized=mode,candidate_votes=votes,
         total_votes=total,raw_json={'candidate':name},warnings_json=[])
     session.add(row);session.flush()

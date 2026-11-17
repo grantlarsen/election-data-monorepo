@@ -58,6 +58,7 @@ export interface ElectionMap {
     | "unsupported_selection"
     | "boundaries_unavailable";
   boundary: null | {
+    approximate?: boolean;
     version: string;
     boundary_vintage: string;
     vintage_note: string;

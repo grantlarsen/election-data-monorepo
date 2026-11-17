@@ -36,8 +36,8 @@ tiles and additional historical boundary vintages remain separate data work.
 `UnitedStatesMap` remains independent of elections. `GeographyMap` supplies the
 election data, identity checks, colors and tooltip. House colors use explicit
 source-backed party labels, including fusion nominations, rather than guessing
-party from candidate names. The existing candidate-label colors remain in use
-for presidential maps. Multiple major-party labels and other/independent labels
+party from candidate names. Presidential views now share the same Democratic
+blue and Republican red palette. Multiple major-party labels and other/independent labels
 have separate legend entries. Candidate labels and every ballot line's votes
 remain available in the underlying results API.
 

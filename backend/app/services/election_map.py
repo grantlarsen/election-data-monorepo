@@ -16,6 +16,7 @@ from app.api.election_schemas import ElectionFilters, ResultFilters
 from app.api.map_schemas import MapFilters
 from app.models.geography import GeographicReference
 from app.models.core import PoliticalParty
+from app.models.ingestion import ElectionResultObservation
 from app.services import election_queries
 from app.services.canonical_results import MaterializationError
 from ingestion.medsl import STATE_FIPS
@@ -25,6 +26,30 @@ METRIC_NOTE = ("Shares use the sum of published candidate and anonymous vote buc
     "Partial publications may omit returns. No turnout or electoral-vote metric is calculated.")
 SOURCE_NOTE = ("Published state authority totals and canonical reporting-unit returns are separate sources. "
     "They may not reconcile and must not be added together. The source panels identify the publications used.")
+
+# Exact, election-scoped FEC summary buckets. These display labels are not person
+# matching or canonical affiliations. Sources: the pinned presidential state
+# workbook catalog and the separately reviewed FEC 2008 presidential publication.
+PRESIDENTIAL_BUCKET_PARTIES = {
+    2000: {'AL GORE': 'DEMOCRATIC', 'GEORGE W. BUSH': 'REPUBLICAN'},
+    2004: {'JOHN KERRY': 'DEMOCRATIC', 'GEORGE W. BUSH': 'REPUBLICAN'},
+    2008: {'BARACK OBAMA': 'DEMOCRATIC', 'JOHN MCCAIN': 'REPUBLICAN'},
+    2012: {'BARACK OBAMA': 'DEMOCRATIC', 'MITT ROMNEY': 'REPUBLICAN'},
+    2016: {'HILLARY CLINTON': 'DEMOCRATIC', 'DONALD TRUMP': 'REPUBLICAN'},
+    2020: {'JOE BIDEN': 'DEMOCRATIC', 'DONALD TRUMP': 'REPUBLICAN'},
+    2024: {'KAMALA HARRIS': 'DEMOCRATIC', 'DONALD TRUMP': 'REPUBLICAN'},
+}
+
+
+def _add_source_party_labels(session: Session, rows: list[dict]) -> None:
+    """Use only the observations behind these published returns, in one lookup."""
+    ids = {value for row in rows for value in row.get('observation_ids', [])}
+    labels = {str(identifier): label for identifier, label in session.execute(
+        select(ElectionResultObservation.id, ElectionResultObservation.party_normalized)
+        .where(ElectionResultObservation.id.in_(ids))) if label} if ids else {}
+    for row in rows:
+        row['party_labels'] = sorted({labels[str(value)] for value in row.get('observation_ids', [])
+                                      if str(value) in labels})
 
 
 def summarize(rows: list[dict]) -> dict:
@@ -85,7 +110,12 @@ def load_boundaries(state_code: str | None, year: int = 2008,
                 raise ValueError('Boundary GEOID, state or grain differs')
         if state_code and level == 'state':
             features = [f for f in features if f['properties']['state_code'] == state_code]
-        metadata = {k: v for k, v in manifest.items() if k != "outputs"}
+        metadata = {k: v for k, v in manifest.items() if k not in {'outputs', 'layers'}}
+        if 'layers' in manifest:
+            layer = manifest['layers'][level]
+            if layer['year'] != year or layer['version'] != manifest['version'] or level not in layer['reporting_levels']:
+                raise ValueError('Boundary layer has an incompatible year or grain')
+            metadata.update(layer)
         metadata.update(display_sha256=item["sha256"], repaired_features=item["repaired"])
         return metadata, features
     except (ValueError, KeyError, TypeError, OSError) as exc:
@@ -105,6 +135,8 @@ def _all_rows(session: Session, selection: MapFilters, reporting_level: str) -> 
         page = query(session, filters)
         rows.extend(page["items"])
         if not page["has_more"]:
+            if reporting_level != 'state':
+                _add_source_party_labels(session, rows)
             return rows
         filters = filters.model_copy(update={"offset": filters.offset + filters.limit})
 
@@ -151,7 +183,8 @@ def build_map(session: Session, filters: MapFilters) -> dict:
                 raise MaterializationError("Map reference does not match result geography")
             geoid = reference.geoid
             candidate = dict(label=row["label"], votes=row["votes"], kind=row["candidate_kind"],
-                party_labels=sorted(parties[p] for p in row.get("party_ids", []) if p in parties),
+                party_labels=sorted(set(row.get('party_labels', [])) |
+                                    {parties[p] for p in row.get("party_ids", []) if p in parties}),
                 candidacy_id=row["candidacy_id"], geographic_reference_id=row["geographic_reference_id"],
                 reference_vintage_start=reference.vintage_start, reference_vintage_end=reference.vintage_end,
                 observation_ids=row["observation_ids"], correction_ids=row["correction_ids"])
@@ -167,7 +200,10 @@ def build_map(session: Session, filters: MapFilters) -> dict:
             if references and references != {STATE_FIPS[jurisdiction['state_code']]}:
                 raise MaterializationError('State reference differs from published jurisdiction')
             geoid = next(iter(references)) if references else None
-            candidate = dict(label=row["candidate_bucket"], votes=row["votes"], kind=row["bucket_kind"])
+            party = (PRESIDENTIAL_BUCKET_PARTIES.get(filters.year, {}).get(row['candidate_bucket'])
+                     if office in {'u.s. president', 'president of the united states'} and filters.stage == 'general' else None)
+            candidate = dict(label=row["candidate_bucket"], votes=row["votes"], kind=row["bucket_kind"],
+                             party_labels=[party] if party else [])
         key = geoid or f"jurisdiction:{jurisdiction['id']}"
         context = (jurisdiction["id"], row["contest_id"], row["publication"]["batch_id"])
         if key in contexts and contexts[key][0] != context:

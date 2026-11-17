@@ -1,0 +1,15 @@
+.electoral-counter { margin: 12px 0 18px; }
+.electoral-counter h2 { font-size: 1rem; margin: 0 0 7px; }
+.electoral-totals { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px 20px; font-size: .85rem; font-weight: 650; }
+.electoral-totals strong { margin-left: 8px; font-size: 1.05rem; font-variant-numeric: tabular-nums; }
+.electoral-bar { display: flex; height: 24px; position: relative; margin: 6px 0; background: #d9ded9; }
+.electoral-bar > span { height: 100%; }
+.electoral-bar > i { position: absolute; top: -4px; bottom: -4px; width: 2px; background: #203431; border-inline: 1px solid white; }
+.electoral-majority { text-align: center; font-size: .72rem; color: var(--muted); margin: 6px 0; }
+.electoral-state-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 4px 20px; }
+.presidential-map-labels { display: grid; grid-template-columns: minmax(0,1fr) 100px; gap: 12px; align-items: center; }
+.presidential-map-labels > div { min-width: 0; }
+.presidential-map-labels aside button { display: flex; width: 100%; justify-content: space-between; gap: 12px; margin: 3px 0; min-height: 30px; padding: 4px 10px; border: 1px solid white; font-size: .8rem; color: white; }
+.presidential-map-labels aside p { font-size: .65rem; color: var(--muted); }
+.state-elector-label { fill: white; stroke: #203431; stroke-width: .8px; paint-order: stroke; font-size: 12px; font-weight: 700; text-anchor: middle; pointer-events: none; }
+@media(max-width:700px) { .presidential-map-labels { grid-template-columns: minmax(0,1fr); } .presidential-map-labels aside { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 3px; } .presidential-map-labels aside p { grid-column: 1/-1; margin: 0; } .presidential-map-labels aside button { margin: 0; } }

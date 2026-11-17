@@ -1,0 +1,3376 @@
+{
+  "2000": {
+    "candidates": [
+      {
+        "name": "George W. Bush",
+        "party": "REPUBLICAN",
+        "votes": 271
+      },
+      {
+        "name": "Al Gore",
+        "party": "DEMOCRATIC",
+        "votes": 266
+      }
+    ],
+    "other": 1,
+    "other_label": "Abstained",
+    "source": {
+      "retrieved_at": "2026-11-16T23:44:41.940353+00:00",
+      "sha256": "3267469dca27a5821535446fd47d75dcee8577465af6cb7efd29ba5a6630cf8d",
+      "url": "https://www.archives.gov/electoral-college/2000"
+    },
+    "states": {
+      "AK": {
+        "electors": 3,
+        "name": "ALASKA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "AL": {
+        "electors": 9,
+        "name": "ALABAMA",
+        "other": 0,
+        "votes": [
+          9,
+          0
+        ]
+      },
+      "AR": {
+        "electors": 6,
+        "name": "ARKANSAS",
+        "other": 0,
+        "votes": [
+          6,
+          0
+        ]
+      },
+      "AZ": {
+        "electors": 8,
+        "name": "ARIZONA",
+        "other": 0,
+        "votes": [
+          8,
+          0
+        ]
+      },
+      "CA": {
+        "electors": 54,
+        "name": "CALIFORNIA",
+        "other": 0,
+        "votes": [
+          0,
+          54
+        ]
+      },
+      "CO": {
+        "electors": 8,
+        "name": "COLORADO",
+        "other": 0,
+        "votes": [
+          8,
+          0
+        ]
+      },
+      "CT": {
+        "electors": 8,
+        "name": "CONNECTICUT",
+        "other": 0,
+        "votes": [
+          0,
+          8
+        ]
+      },
+      "DC": {
+        "electors": 3,
+        "name": "DISTRICT OF COLUMBIA",
+        "other": 1,
+        "votes": [
+          0,
+          2
+        ]
+      },
+      "DE": {
+        "electors": 3,
+        "name": "DELAWARE",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "FL": {
+        "electors": 25,
+        "name": "FLORIDA",
+        "other": 0,
+        "votes": [
+          25,
+          0
+        ]
+      },
+      "GA": {
+        "electors": 13,
+        "name": "GEORGIA",
+        "other": 0,
+        "votes": [
+          13,
+          0
+        ]
+      },
+      "HI": {
+        "electors": 4,
+        "name": "HAWAII",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "IA": {
+        "electors": 7,
+        "name": "IOWA",
+        "other": 0,
+        "votes": [
+          0,
+          7
+        ]
+      },
+      "ID": {
+        "electors": 4,
+        "name": "IDAHO",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "IL": {
+        "electors": 22,
+        "name": "ILLINOIS",
+        "other": 0,
+        "votes": [
+          0,
+          22
+        ]
+      },
+      "IN": {
+        "electors": 12,
+        "name": "INDIANA",
+        "other": 0,
+        "votes": [
+          12,
+          0
+        ]
+      },
+      "KS": {
+        "electors": 6,
+        "name": "KANSAS",
+        "other": 0,
+        "votes": [
+          6,
+          0
+        ]
+      },
+      "KY": {
+        "electors": 8,
+        "name": "KENTUCKY",
+        "other": 0,
+        "votes": [
+          8,
+          0
+        ]
+      },
+      "LA": {
+        "electors": 9,
+        "name": "LOUISIANA",
+        "other": 0,
+        "votes": [
+          9,
+          0
+        ]
+      },
+      "MA": {
+        "electors": 12,
+        "name": "MASSACHUSETTS",
+        "other": 0,
+        "votes": [
+          0,
+          12
+        ]
+      },
+      "MD": {
+        "electors": 10,
+        "name": "MARYLAND",
+        "other": 0,
+        "votes": [
+          0,
+          10
+        ]
+      },
+      "ME": {
+        "electors": 4,
+        "name": "MAINE",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "MI": {
+        "electors": 18,
+        "name": "MICHIGAN",
+        "other": 0,
+        "votes": [
+          0,
+          18
+        ]
+      },
+      "MN": {
+        "electors": 10,
+        "name": "MINNESOTA",
+        "other": 0,
+        "votes": [
+          0,
+          10
+        ]
+      },
+      "MO": {
+        "electors": 11,
+        "name": "MISSOURI",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "MS": {
+        "electors": 7,
+        "name": "MISSISSIPPI",
+        "other": 0,
+        "votes": [
+          7,
+          0
+        ]
+      },
+      "MT": {
+        "electors": 3,
+        "name": "MONTANA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "NC": {
+        "electors": 14,
+        "name": "NORTH CAROLINA",
+        "other": 0,
+        "votes": [
+          14,
+          0
+        ]
+      },
+      "ND": {
+        "electors": 3,
+        "name": "NORTH DAKOTA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "NE": {
+        "electors": 5,
+        "name": "NEBRASKA",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "NH": {
+        "electors": 4,
+        "name": "NEW HAMPSHIRE",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "NJ": {
+        "electors": 15,
+        "name": "NEW JERSEY",
+        "other": 0,
+        "votes": [
+          0,
+          15
+        ]
+      },
+      "NM": {
+        "electors": 5,
+        "name": "NEW MEXICO",
+        "other": 0,
+        "votes": [
+          0,
+          5
+        ]
+      },
+      "NV": {
+        "electors": 4,
+        "name": "NEVADA",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "NY": {
+        "electors": 33,
+        "name": "NEW YORK",
+        "other": 0,
+        "votes": [
+          0,
+          33
+        ]
+      },
+      "OH": {
+        "electors": 21,
+        "name": "OHIO",
+        "other": 0,
+        "votes": [
+          21,
+          0
+        ]
+      },
+      "OK": {
+        "electors": 8,
+        "name": "OKLAHOMA",
+        "other": 0,
+        "votes": [
+          8,
+          0
+        ]
+      },
+      "OR": {
+        "electors": 7,
+        "name": "OREGON",
+        "other": 0,
+        "votes": [
+          0,
+          7
+        ]
+      },
+      "PA": {
+        "electors": 23,
+        "name": "PENNSYLVANIA",
+        "other": 0,
+        "votes": [
+          0,
+          23
+        ]
+      },
+      "RI": {
+        "electors": 4,
+        "name": "RHODE ISLAND",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "SC": {
+        "electors": 8,
+        "name": "SOUTH CAROLINA",
+        "other": 0,
+        "votes": [
+          8,
+          0
+        ]
+      },
+      "SD": {
+        "electors": 3,
+        "name": "SOUTH DAKOTA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "TN": {
+        "electors": 11,
+        "name": "TENNESSEE",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "TX": {
+        "electors": 32,
+        "name": "TEXAS",
+        "other": 0,
+        "votes": [
+          32,
+          0
+        ]
+      },
+      "UT": {
+        "electors": 5,
+        "name": "UTAH",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "VA": {
+        "electors": 13,
+        "name": "VIRGINIA",
+        "other": 0,
+        "votes": [
+          13,
+          0
+        ]
+      },
+      "VT": {
+        "electors": 3,
+        "name": "VERMONT",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "WA": {
+        "electors": 11,
+        "name": "WASHINGTON",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "WI": {
+        "electors": 11,
+        "name": "WISCONSIN",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "WV": {
+        "electors": 5,
+        "name": "WEST VIRGINIA",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "WY": {
+        "electors": 3,
+        "name": "WYOMING",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      }
+    }
+  },
+  "2004": {
+    "candidates": [
+      {
+        "name": "George W. Bush",
+        "party": "REPUBLICAN",
+        "votes": 286
+      },
+      {
+        "name": "John Kerry",
+        "party": "DEMOCRATIC",
+        "votes": 251
+      }
+    ],
+    "other": 1,
+    "other_label": "Other candidates",
+    "source": {
+      "retrieved_at": "2026-11-16T23:44:42.153170+00:00",
+      "sha256": "902f6d90cd984658a07e1fdae05bcd0acd8a73d512c47606012f10e74cd36f32",
+      "url": "https://www.archives.gov/electoral-college/2004"
+    },
+    "states": {
+      "AK": {
+        "electors": 3,
+        "name": "ALASKA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "AL": {
+        "electors": 9,
+        "name": "ALABAMA",
+        "other": 0,
+        "votes": [
+          9,
+          0
+        ]
+      },
+      "AR": {
+        "electors": 6,
+        "name": "ARKANSAS",
+        "other": 0,
+        "votes": [
+          6,
+          0
+        ]
+      },
+      "AZ": {
+        "electors": 10,
+        "name": "ARIZONA",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "CA": {
+        "electors": 55,
+        "name": "CALIFORNIA",
+        "other": 0,
+        "votes": [
+          0,
+          55
+        ]
+      },
+      "CO": {
+        "electors": 9,
+        "name": "COLORADO",
+        "other": 0,
+        "votes": [
+          9,
+          0
+        ]
+      },
+      "CT": {
+        "electors": 7,
+        "name": "CONNECTICUT",
+        "other": 0,
+        "votes": [
+          0,
+          7
+        ]
+      },
+      "DC": {
+        "electors": 3,
+        "name": "DISTRICT OF COLUMBIA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "DE": {
+        "electors": 3,
+        "name": "DELAWARE",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "FL": {
+        "electors": 27,
+        "name": "FLORIDA",
+        "other": 0,
+        "votes": [
+          27,
+          0
+        ]
+      },
+      "GA": {
+        "electors": 15,
+        "name": "GEORGIA",
+        "other": 0,
+        "votes": [
+          15,
+          0
+        ]
+      },
+      "HI": {
+        "electors": 4,
+        "name": "HAWAII",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "IA": {
+        "electors": 7,
+        "name": "IOWA",
+        "other": 0,
+        "votes": [
+          7,
+          0
+        ]
+      },
+      "ID": {
+        "electors": 4,
+        "name": "IDAHO",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "IL": {
+        "electors": 21,
+        "name": "ILLINOIS",
+        "other": 0,
+        "votes": [
+          0,
+          21
+        ]
+      },
+      "IN": {
+        "electors": 11,
+        "name": "INDIANA",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "KS": {
+        "electors": 6,
+        "name": "KANSAS",
+        "other": 0,
+        "votes": [
+          6,
+          0
+        ]
+      },
+      "KY": {
+        "electors": 8,
+        "name": "KENTUCKY",
+        "other": 0,
+        "votes": [
+          8,
+          0
+        ]
+      },
+      "LA": {
+        "electors": 9,
+        "name": "LOUISIANA",
+        "other": 0,
+        "votes": [
+          9,
+          0
+        ]
+      },
+      "MA": {
+        "electors": 12,
+        "name": "MASSACHUSETTS",
+        "other": 0,
+        "votes": [
+          0,
+          12
+        ]
+      },
+      "MD": {
+        "electors": 10,
+        "name": "MARYLAND",
+        "other": 0,
+        "votes": [
+          0,
+          10
+        ]
+      },
+      "ME": {
+        "electors": 4,
+        "name": "MAINE",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "MI": {
+        "electors": 17,
+        "name": "MICHIGAN",
+        "other": 0,
+        "votes": [
+          0,
+          17
+        ]
+      },
+      "MN": {
+        "electors": 10,
+        "name": "MINNESOTA",
+        "other": 1,
+        "votes": [
+          0,
+          9
+        ]
+      },
+      "MO": {
+        "electors": 11,
+        "name": "MISSOURI",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "MS": {
+        "electors": 6,
+        "name": "MISSISSIPPI",
+        "other": 0,
+        "votes": [
+          6,
+          0
+        ]
+      },
+      "MT": {
+        "electors": 3,
+        "name": "MONTANA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "NC": {
+        "electors": 15,
+        "name": "NORTH CAROLINA",
+        "other": 0,
+        "votes": [
+          15,
+          0
+        ]
+      },
+      "ND": {
+        "electors": 3,
+        "name": "NORTH DAKOTA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "NE": {
+        "electors": 5,
+        "name": "NEBRASKA",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "NH": {
+        "electors": 4,
+        "name": "NEW HAMPSHIRE",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "NJ": {
+        "electors": 15,
+        "name": "NEW JERSEY",
+        "other": 0,
+        "votes": [
+          0,
+          15
+        ]
+      },
+      "NM": {
+        "electors": 5,
+        "name": "NEW MEXICO",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "NV": {
+        "electors": 5,
+        "name": "NEVADA",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "NY": {
+        "electors": 31,
+        "name": "NEW YORK",
+        "other": 0,
+        "votes": [
+          0,
+          31
+        ]
+      },
+      "OH": {
+        "electors": 20,
+        "name": "OHIO",
+        "other": 0,
+        "votes": [
+          20,
+          0
+        ]
+      },
+      "OK": {
+        "electors": 7,
+        "name": "OKLAHOMA",
+        "other": 0,
+        "votes": [
+          7,
+          0
+        ]
+      },
+      "OR": {
+        "electors": 7,
+        "name": "OREGON",
+        "other": 0,
+        "votes": [
+          0,
+          7
+        ]
+      },
+      "PA": {
+        "electors": 21,
+        "name": "PENNSYLVANIA",
+        "other": 0,
+        "votes": [
+          0,
+          21
+        ]
+      },
+      "RI": {
+        "electors": 4,
+        "name": "RHODE ISLAND",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "SC": {
+        "electors": 8,
+        "name": "SOUTH CAROLINA",
+        "other": 0,
+        "votes": [
+          8,
+          0
+        ]
+      },
+      "SD": {
+        "electors": 3,
+        "name": "SOUTH DAKOTA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "TN": {
+        "electors": 11,
+        "name": "TENNESSEE",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "TX": {
+        "electors": 34,
+        "name": "TEXAS",
+        "other": 0,
+        "votes": [
+          34,
+          0
+        ]
+      },
+      "UT": {
+        "electors": 5,
+        "name": "UTAH",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "VA": {
+        "electors": 13,
+        "name": "VIRGINIA",
+        "other": 0,
+        "votes": [
+          13,
+          0
+        ]
+      },
+      "VT": {
+        "electors": 3,
+        "name": "VERMONT",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "WA": {
+        "electors": 11,
+        "name": "WASHINGTON",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "WI": {
+        "electors": 10,
+        "name": "WISCONSIN",
+        "other": 0,
+        "votes": [
+          0,
+          10
+        ]
+      },
+      "WV": {
+        "electors": 5,
+        "name": "WEST VIRGINIA",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "WY": {
+        "electors": 3,
+        "name": "WYOMING",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      }
+    }
+  },
+  "2008": {
+    "candidates": [
+      {
+        "name": "Barack Obama",
+        "party": "DEMOCRATIC",
+        "votes": 365
+      },
+      {
+        "name": "John McCain",
+        "party": "REPUBLICAN",
+        "votes": 173
+      }
+    ],
+    "other": 0,
+    "other_label": "Other candidates",
+    "source": {
+      "retrieved_at": "2026-11-16T23:44:42.291633+00:00",
+      "sha256": "787763eaaa0e73d22f0eb950de92b2b8880452813e3afed54bd8d65a360cd67a",
+      "url": "https://www.archives.gov/electoral-college/2008"
+    },
+    "states": {
+      "AK": {
+        "electors": 3,
+        "name": "ALASKA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "AL": {
+        "electors": 9,
+        "name": "ALABAMA",
+        "other": 0,
+        "votes": [
+          0,
+          9
+        ]
+      },
+      "AR": {
+        "electors": 6,
+        "name": "ARKANSAS",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "AZ": {
+        "electors": 10,
+        "name": "ARIZONA",
+        "other": 0,
+        "votes": [
+          0,
+          10
+        ]
+      },
+      "CA": {
+        "electors": 55,
+        "name": "CALIFORNIA",
+        "other": 0,
+        "votes": [
+          55,
+          0
+        ]
+      },
+      "CO": {
+        "electors": 9,
+        "name": "COLORADO",
+        "other": 0,
+        "votes": [
+          9,
+          0
+        ]
+      },
+      "CT": {
+        "electors": 7,
+        "name": "CONNECTICUT",
+        "other": 0,
+        "votes": [
+          7,
+          0
+        ]
+      },
+      "DC": {
+        "electors": 3,
+        "name": "DISTRICT OF COLUMBIA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "DE": {
+        "electors": 3,
+        "name": "DELAWARE",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "FL": {
+        "electors": 27,
+        "name": "FLORIDA",
+        "other": 0,
+        "votes": [
+          27,
+          0
+        ]
+      },
+      "GA": {
+        "electors": 15,
+        "name": "GEORGIA",
+        "other": 0,
+        "votes": [
+          0,
+          15
+        ]
+      },
+      "HI": {
+        "electors": 4,
+        "name": "HAWAII",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "IA": {
+        "electors": 7,
+        "name": "IOWA",
+        "other": 0,
+        "votes": [
+          7,
+          0
+        ]
+      },
+      "ID": {
+        "electors": 4,
+        "name": "IDAHO",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "IL": {
+        "electors": 21,
+        "name": "ILLINOIS",
+        "other": 0,
+        "votes": [
+          21,
+          0
+        ]
+      },
+      "IN": {
+        "electors": 11,
+        "name": "INDIANA",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "KS": {
+        "electors": 6,
+        "name": "KANSAS",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "KY": {
+        "electors": 8,
+        "name": "KENTUCKY",
+        "other": 0,
+        "votes": [
+          0,
+          8
+        ]
+      },
+      "LA": {
+        "electors": 9,
+        "name": "LOUISIANA",
+        "other": 0,
+        "votes": [
+          0,
+          9
+        ]
+      },
+      "MA": {
+        "electors": 12,
+        "name": "MASSACHUSETTS",
+        "other": 0,
+        "votes": [
+          12,
+          0
+        ]
+      },
+      "MD": {
+        "electors": 10,
+        "name": "MARYLAND",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "ME": {
+        "electors": 4,
+        "name": "MAINE",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "MI": {
+        "electors": 17,
+        "name": "MICHIGAN",
+        "other": 0,
+        "votes": [
+          17,
+          0
+        ]
+      },
+      "MN": {
+        "electors": 10,
+        "name": "MINNESOTA",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "MO": {
+        "electors": 11,
+        "name": "MISSOURI",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "MS": {
+        "electors": 6,
+        "name": "MISSISSIPPI",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "MT": {
+        "electors": 3,
+        "name": "MONTANA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "NC": {
+        "electors": 15,
+        "name": "NORTH CAROLINA",
+        "other": 0,
+        "votes": [
+          15,
+          0
+        ]
+      },
+      "ND": {
+        "electors": 3,
+        "name": "NORTH DAKOTA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "NE": {
+        "electors": 5,
+        "name": "NEBRASKA",
+        "other": 0,
+        "votes": [
+          1,
+          4
+        ]
+      },
+      "NH": {
+        "electors": 4,
+        "name": "NEW HAMPSHIRE",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "NJ": {
+        "electors": 15,
+        "name": "NEW JERSEY",
+        "other": 0,
+        "votes": [
+          15,
+          0
+        ]
+      },
+      "NM": {
+        "electors": 5,
+        "name": "NEW MEXICO",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "NV": {
+        "electors": 5,
+        "name": "NEVADA",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "NY": {
+        "electors": 31,
+        "name": "NEW YORK",
+        "other": 0,
+        "votes": [
+          31,
+          0
+        ]
+      },
+      "OH": {
+        "electors": 20,
+        "name": "OHIO",
+        "other": 0,
+        "votes": [
+          20,
+          0
+        ]
+      },
+      "OK": {
+        "electors": 7,
+        "name": "OKLAHOMA",
+        "other": 0,
+        "votes": [
+          0,
+          7
+        ]
+      },
+      "OR": {
+        "electors": 7,
+        "name": "OREGON",
+        "other": 0,
+        "votes": [
+          7,
+          0
+        ]
+      },
+      "PA": {
+        "electors": 21,
+        "name": "PENNSYLVANIA",
+        "other": 0,
+        "votes": [
+          21,
+          0
+        ]
+      },
+      "RI": {
+        "electors": 4,
+        "name": "RHODE ISLAND",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "SC": {
+        "electors": 8,
+        "name": "SOUTH CAROLINA",
+        "other": 0,
+        "votes": [
+          0,
+          8
+        ]
+      },
+      "SD": {
+        "electors": 3,
+        "name": "SOUTH DAKOTA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "TN": {
+        "electors": 11,
+        "name": "TENNESSEE",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "TX": {
+        "electors": 34,
+        "name": "TEXAS",
+        "other": 0,
+        "votes": [
+          0,
+          34
+        ]
+      },
+      "UT": {
+        "electors": 5,
+        "name": "UTAH",
+        "other": 0,
+        "votes": [
+          0,
+          5
+        ]
+      },
+      "VA": {
+        "electors": 13,
+        "name": "VIRGINIA",
+        "other": 0,
+        "votes": [
+          13,
+          0
+        ]
+      },
+      "VT": {
+        "electors": 3,
+        "name": "VERMONT",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "WA": {
+        "electors": 11,
+        "name": "WASHINGTON",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "WI": {
+        "electors": 10,
+        "name": "WISCONSIN",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "WV": {
+        "electors": 5,
+        "name": "WEST VIRGINIA",
+        "other": 0,
+        "votes": [
+          0,
+          5
+        ]
+      },
+      "WY": {
+        "electors": 3,
+        "name": "WYOMING",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      }
+    }
+  },
+  "2012": {
+    "candidates": [
+      {
+        "name": "Barack Obama",
+        "party": "DEMOCRATIC",
+        "votes": 332
+      },
+      {
+        "name": "Mitt Romney",
+        "party": "REPUBLICAN",
+        "votes": 206
+      }
+    ],
+    "other": 0,
+    "other_label": "Other candidates",
+    "source": {
+      "retrieved_at": "2026-11-16T23:45:16.313802+00:00",
+      "sha256": "9f0a24268d6b5c5cc9d361bddb5e391b94d97747697f298222bf684c0b958a96",
+      "url": "https://www.archives.gov/electoral-college/2012"
+    },
+    "states": {
+      "AK": {
+        "electors": 3,
+        "name": "ALASKA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "AL": {
+        "electors": 9,
+        "name": "ALABAMA",
+        "other": 0,
+        "votes": [
+          0,
+          9
+        ]
+      },
+      "AR": {
+        "electors": 6,
+        "name": "ARKANSAS",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "AZ": {
+        "electors": 11,
+        "name": "ARIZONA",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "CA": {
+        "electors": 55,
+        "name": "CALIFORNIA",
+        "other": 0,
+        "votes": [
+          55,
+          0
+        ]
+      },
+      "CO": {
+        "electors": 9,
+        "name": "COLORADO",
+        "other": 0,
+        "votes": [
+          9,
+          0
+        ]
+      },
+      "CT": {
+        "electors": 7,
+        "name": "CONNECTICUT",
+        "other": 0,
+        "votes": [
+          7,
+          0
+        ]
+      },
+      "DC": {
+        "electors": 3,
+        "name": "DISTRICT OF COLUMBIA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "DE": {
+        "electors": 3,
+        "name": "DELAWARE",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "FL": {
+        "electors": 29,
+        "name": "FLORIDA",
+        "other": 0,
+        "votes": [
+          29,
+          0
+        ]
+      },
+      "GA": {
+        "electors": 16,
+        "name": "GEORGIA",
+        "other": 0,
+        "votes": [
+          0,
+          16
+        ]
+      },
+      "HI": {
+        "electors": 4,
+        "name": "HAWAII",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "IA": {
+        "electors": 6,
+        "name": "IOWA",
+        "other": 0,
+        "votes": [
+          6,
+          0
+        ]
+      },
+      "ID": {
+        "electors": 4,
+        "name": "IDAHO",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "IL": {
+        "electors": 20,
+        "name": "ILLINOIS",
+        "other": 0,
+        "votes": [
+          20,
+          0
+        ]
+      },
+      "IN": {
+        "electors": 11,
+        "name": "INDIANA",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "KS": {
+        "electors": 6,
+        "name": "KANSAS",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "KY": {
+        "electors": 8,
+        "name": "KENTUCKY",
+        "other": 0,
+        "votes": [
+          0,
+          8
+        ]
+      },
+      "LA": {
+        "electors": 8,
+        "name": "LOUISIANA",
+        "other": 0,
+        "votes": [
+          0,
+          8
+        ]
+      },
+      "MA": {
+        "electors": 11,
+        "name": "MASSACHUSETTS",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "MD": {
+        "electors": 10,
+        "name": "MARYLAND",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "ME": {
+        "electors": 4,
+        "name": "MAINE",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "MI": {
+        "electors": 16,
+        "name": "MICHIGAN",
+        "other": 0,
+        "votes": [
+          16,
+          0
+        ]
+      },
+      "MN": {
+        "electors": 10,
+        "name": "MINNESOTA",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "MO": {
+        "electors": 10,
+        "name": "MISSOURI",
+        "other": 0,
+        "votes": [
+          0,
+          10
+        ]
+      },
+      "MS": {
+        "electors": 6,
+        "name": "MISSISSIPPI",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "MT": {
+        "electors": 3,
+        "name": "MONTANA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "NC": {
+        "electors": 15,
+        "name": "NORTH CAROLINA",
+        "other": 0,
+        "votes": [
+          0,
+          15
+        ]
+      },
+      "ND": {
+        "electors": 3,
+        "name": "NORTH DAKOTA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "NE": {
+        "electors": 5,
+        "name": "NEBRASKA",
+        "other": 0,
+        "votes": [
+          0,
+          5
+        ]
+      },
+      "NH": {
+        "electors": 4,
+        "name": "NEW HAMPSHIRE",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "NJ": {
+        "electors": 14,
+        "name": "NEW JERSEY",
+        "other": 0,
+        "votes": [
+          14,
+          0
+        ]
+      },
+      "NM": {
+        "electors": 5,
+        "name": "NEW MEXICO",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "NV": {
+        "electors": 6,
+        "name": "NEVADA",
+        "other": 0,
+        "votes": [
+          6,
+          0
+        ]
+      },
+      "NY": {
+        "electors": 29,
+        "name": "NEW YORK",
+        "other": 0,
+        "votes": [
+          29,
+          0
+        ]
+      },
+      "OH": {
+        "electors": 18,
+        "name": "OHIO",
+        "other": 0,
+        "votes": [
+          18,
+          0
+        ]
+      },
+      "OK": {
+        "electors": 7,
+        "name": "OKLAHOMA",
+        "other": 0,
+        "votes": [
+          0,
+          7
+        ]
+      },
+      "OR": {
+        "electors": 7,
+        "name": "OREGON",
+        "other": 0,
+        "votes": [
+          7,
+          0
+        ]
+      },
+      "PA": {
+        "electors": 20,
+        "name": "PENNSYLVANIA",
+        "other": 0,
+        "votes": [
+          20,
+          0
+        ]
+      },
+      "RI": {
+        "electors": 4,
+        "name": "RHODE ISLAND",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "SC": {
+        "electors": 9,
+        "name": "SOUTH CAROLINA",
+        "other": 0,
+        "votes": [
+          0,
+          9
+        ]
+      },
+      "SD": {
+        "electors": 3,
+        "name": "SOUTH DAKOTA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "TN": {
+        "electors": 11,
+        "name": "TENNESSEE",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "TX": {
+        "electors": 38,
+        "name": "TEXAS",
+        "other": 0,
+        "votes": [
+          0,
+          38
+        ]
+      },
+      "UT": {
+        "electors": 6,
+        "name": "UTAH",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "VA": {
+        "electors": 13,
+        "name": "VIRGINIA",
+        "other": 0,
+        "votes": [
+          13,
+          0
+        ]
+      },
+      "VT": {
+        "electors": 3,
+        "name": "VERMONT",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "WA": {
+        "electors": 12,
+        "name": "WASHINGTON",
+        "other": 0,
+        "votes": [
+          12,
+          0
+        ]
+      },
+      "WI": {
+        "electors": 10,
+        "name": "WISCONSIN",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "WV": {
+        "electors": 5,
+        "name": "WEST VIRGINIA",
+        "other": 0,
+        "votes": [
+          0,
+          5
+        ]
+      },
+      "WY": {
+        "electors": 3,
+        "name": "WYOMING",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      }
+    }
+  },
+  "2016": {
+    "candidates": [
+      {
+        "name": "Donald Trump",
+        "party": "REPUBLICAN",
+        "votes": 304
+      },
+      {
+        "name": "Hillary Clinton",
+        "party": "DEMOCRATIC",
+        "votes": 227
+      }
+    ],
+    "other": 7,
+    "other_label": "Other candidates",
+    "source": {
+      "retrieved_at": "2026-11-16T23:45:16.459393+00:00",
+      "sha256": "74f94376961ae7e1d7bea8a01b31d178a855155649042b2233b1dac472a2cf60",
+      "url": "https://www.archives.gov/electoral-college/2016"
+    },
+    "states": {
+      "AK": {
+        "electors": 3,
+        "name": "ALASKA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "AL": {
+        "electors": 9,
+        "name": "ALABAMA",
+        "other": 0,
+        "votes": [
+          9,
+          0
+        ]
+      },
+      "AR": {
+        "electors": 6,
+        "name": "ARKANSAS",
+        "other": 0,
+        "votes": [
+          6,
+          0
+        ]
+      },
+      "AZ": {
+        "electors": 11,
+        "name": "ARIZONA",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "CA": {
+        "electors": 55,
+        "name": "CALIFORNIA",
+        "other": 0,
+        "votes": [
+          0,
+          55
+        ]
+      },
+      "CO": {
+        "electors": 9,
+        "name": "COLORADO",
+        "other": 0,
+        "votes": [
+          0,
+          9
+        ]
+      },
+      "CT": {
+        "electors": 7,
+        "name": "CONNECTICUT",
+        "other": 0,
+        "votes": [
+          0,
+          7
+        ]
+      },
+      "DC": {
+        "electors": 3,
+        "name": "DISTRICT OF COLUMBIA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "DE": {
+        "electors": 3,
+        "name": "DELAWARE",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "FL": {
+        "electors": 29,
+        "name": "FLORIDA",
+        "other": 0,
+        "votes": [
+          29,
+          0
+        ]
+      },
+      "GA": {
+        "electors": 16,
+        "name": "GEORGIA",
+        "other": 0,
+        "votes": [
+          16,
+          0
+        ]
+      },
+      "HI": {
+        "electors": 4,
+        "name": "HAWAII",
+        "other": 1,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "IA": {
+        "electors": 6,
+        "name": "IOWA",
+        "other": 0,
+        "votes": [
+          6,
+          0
+        ]
+      },
+      "ID": {
+        "electors": 4,
+        "name": "IDAHO",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "IL": {
+        "electors": 20,
+        "name": "ILLINOIS",
+        "other": 0,
+        "votes": [
+          0,
+          20
+        ]
+      },
+      "IN": {
+        "electors": 11,
+        "name": "INDIANA",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "KS": {
+        "electors": 6,
+        "name": "KANSAS",
+        "other": 0,
+        "votes": [
+          6,
+          0
+        ]
+      },
+      "KY": {
+        "electors": 8,
+        "name": "KENTUCKY",
+        "other": 0,
+        "votes": [
+          8,
+          0
+        ]
+      },
+      "LA": {
+        "electors": 8,
+        "name": "LOUISIANA",
+        "other": 0,
+        "votes": [
+          8,
+          0
+        ]
+      },
+      "MA": {
+        "electors": 11,
+        "name": "MASSACHUSETTS",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "MD": {
+        "electors": 10,
+        "name": "MARYLAND",
+        "other": 0,
+        "votes": [
+          0,
+          10
+        ]
+      },
+      "ME": {
+        "electors": 4,
+        "name": "MAINE",
+        "other": 0,
+        "votes": [
+          1,
+          3
+        ]
+      },
+      "MI": {
+        "electors": 16,
+        "name": "MICHIGAN",
+        "other": 0,
+        "votes": [
+          16,
+          0
+        ]
+      },
+      "MN": {
+        "electors": 10,
+        "name": "MINNESOTA",
+        "other": 0,
+        "votes": [
+          0,
+          10
+        ]
+      },
+      "MO": {
+        "electors": 10,
+        "name": "MISSOURI",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "MS": {
+        "electors": 6,
+        "name": "MISSISSIPPI",
+        "other": 0,
+        "votes": [
+          6,
+          0
+        ]
+      },
+      "MT": {
+        "electors": 3,
+        "name": "MONTANA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "NC": {
+        "electors": 15,
+        "name": "NORTH CAROLINA",
+        "other": 0,
+        "votes": [
+          15,
+          0
+        ]
+      },
+      "ND": {
+        "electors": 3,
+        "name": "NORTH DAKOTA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "NE": {
+        "electors": 5,
+        "name": "NEBRASKA",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "NH": {
+        "electors": 4,
+        "name": "NEW HAMPSHIRE",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "NJ": {
+        "electors": 14,
+        "name": "NEW JERSEY",
+        "other": 0,
+        "votes": [
+          0,
+          14
+        ]
+      },
+      "NM": {
+        "electors": 5,
+        "name": "NEW MEXICO",
+        "other": 0,
+        "votes": [
+          0,
+          5
+        ]
+      },
+      "NV": {
+        "electors": 6,
+        "name": "NEVADA",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "NY": {
+        "electors": 29,
+        "name": "NEW YORK",
+        "other": 0,
+        "votes": [
+          0,
+          29
+        ]
+      },
+      "OH": {
+        "electors": 18,
+        "name": "OHIO",
+        "other": 0,
+        "votes": [
+          18,
+          0
+        ]
+      },
+      "OK": {
+        "electors": 7,
+        "name": "OKLAHOMA",
+        "other": 0,
+        "votes": [
+          7,
+          0
+        ]
+      },
+      "OR": {
+        "electors": 7,
+        "name": "OREGON",
+        "other": 0,
+        "votes": [
+          0,
+          7
+        ]
+      },
+      "PA": {
+        "electors": 20,
+        "name": "PENNSYLVANIA",
+        "other": 0,
+        "votes": [
+          20,
+          0
+        ]
+      },
+      "RI": {
+        "electors": 4,
+        "name": "RHODE ISLAND",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "SC": {
+        "electors": 9,
+        "name": "SOUTH CAROLINA",
+        "other": 0,
+        "votes": [
+          9,
+          0
+        ]
+      },
+      "SD": {
+        "electors": 3,
+        "name": "SOUTH DAKOTA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "TN": {
+        "electors": 11,
+        "name": "TENNESSEE",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "TX": {
+        "electors": 38,
+        "name": "TEXAS",
+        "other": 2,
+        "votes": [
+          36,
+          0
+        ]
+      },
+      "UT": {
+        "electors": 6,
+        "name": "UTAH",
+        "other": 0,
+        "votes": [
+          6,
+          0
+        ]
+      },
+      "VA": {
+        "electors": 13,
+        "name": "VIRGINIA",
+        "other": 0,
+        "votes": [
+          0,
+          13
+        ]
+      },
+      "VT": {
+        "electors": 3,
+        "name": "VERMONT",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "WA": {
+        "electors": 12,
+        "name": "WASHINGTON",
+        "other": 4,
+        "votes": [
+          0,
+          8
+        ]
+      },
+      "WI": {
+        "electors": 10,
+        "name": "WISCONSIN",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "WV": {
+        "electors": 5,
+        "name": "WEST VIRGINIA",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "WY": {
+        "electors": 3,
+        "name": "WYOMING",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      }
+    }
+  },
+  "2020": {
+    "candidates": [
+      {
+        "name": "Joe Biden",
+        "party": "DEMOCRATIC",
+        "votes": 306
+      },
+      {
+        "name": "Donald Trump",
+        "party": "REPUBLICAN",
+        "votes": 232
+      }
+    ],
+    "other": 0,
+    "other_label": "Other candidates",
+    "source": {
+      "retrieved_at": "2026-11-16T23:45:46.664139+00:00",
+      "sha256": "deb9879a206572f4338ed6df0ec4f7fabdf49f4fe6fcd0288e05391072f2d06f",
+      "url": "https://www.archives.gov/electoral-college/2020"
+    },
+    "states": {
+      "AK": {
+        "electors": 3,
+        "name": "ALASKA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "AL": {
+        "electors": 9,
+        "name": "ALABAMA",
+        "other": 0,
+        "votes": [
+          0,
+          9
+        ]
+      },
+      "AR": {
+        "electors": 6,
+        "name": "ARKANSAS",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "AZ": {
+        "electors": 11,
+        "name": "ARIZONA",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "CA": {
+        "electors": 55,
+        "name": "CALIFORNIA",
+        "other": 0,
+        "votes": [
+          55,
+          0
+        ]
+      },
+      "CO": {
+        "electors": 9,
+        "name": "COLORADO",
+        "other": 0,
+        "votes": [
+          9,
+          0
+        ]
+      },
+      "CT": {
+        "electors": 7,
+        "name": "CONNECTICUT",
+        "other": 0,
+        "votes": [
+          7,
+          0
+        ]
+      },
+      "DC": {
+        "electors": 3,
+        "name": "DISTRICT OF COLUMBIA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "DE": {
+        "electors": 3,
+        "name": "DELAWARE",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "FL": {
+        "electors": 29,
+        "name": "FLORIDA",
+        "other": 0,
+        "votes": [
+          0,
+          29
+        ]
+      },
+      "GA": {
+        "electors": 16,
+        "name": "GEORGIA",
+        "other": 0,
+        "votes": [
+          16,
+          0
+        ]
+      },
+      "HI": {
+        "electors": 4,
+        "name": "HAWAII",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "IA": {
+        "electors": 6,
+        "name": "IOWA",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "ID": {
+        "electors": 4,
+        "name": "IDAHO",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "IL": {
+        "electors": 20,
+        "name": "ILLINOIS",
+        "other": 0,
+        "votes": [
+          20,
+          0
+        ]
+      },
+      "IN": {
+        "electors": 11,
+        "name": "INDIANA",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "KS": {
+        "electors": 6,
+        "name": "KANSAS",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "KY": {
+        "electors": 8,
+        "name": "KENTUCKY",
+        "other": 0,
+        "votes": [
+          0,
+          8
+        ]
+      },
+      "LA": {
+        "electors": 8,
+        "name": "LOUISIANA",
+        "other": 0,
+        "votes": [
+          0,
+          8
+        ]
+      },
+      "MA": {
+        "electors": 11,
+        "name": "MASSACHUSETTS",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "MD": {
+        "electors": 10,
+        "name": "MARYLAND",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "ME": {
+        "electors": 4,
+        "name": "MAINE",
+        "other": 0,
+        "votes": [
+          3,
+          1
+        ]
+      },
+      "MI": {
+        "electors": 16,
+        "name": "MICHIGAN",
+        "other": 0,
+        "votes": [
+          16,
+          0
+        ]
+      },
+      "MN": {
+        "electors": 10,
+        "name": "MINNESOTA",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "MO": {
+        "electors": 10,
+        "name": "MISSOURI",
+        "other": 0,
+        "votes": [
+          0,
+          10
+        ]
+      },
+      "MS": {
+        "electors": 6,
+        "name": "MISSISSIPPI",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "MT": {
+        "electors": 3,
+        "name": "MONTANA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "NC": {
+        "electors": 15,
+        "name": "NORTH CAROLINA",
+        "other": 0,
+        "votes": [
+          0,
+          15
+        ]
+      },
+      "ND": {
+        "electors": 3,
+        "name": "NORTH DAKOTA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "NE": {
+        "electors": 5,
+        "name": "NEBRASKA",
+        "other": 0,
+        "votes": [
+          1,
+          4
+        ]
+      },
+      "NH": {
+        "electors": 4,
+        "name": "NEW HAMPSHIRE",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "NJ": {
+        "electors": 14,
+        "name": "NEW JERSEY",
+        "other": 0,
+        "votes": [
+          14,
+          0
+        ]
+      },
+      "NM": {
+        "electors": 5,
+        "name": "NEW MEXICO",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "NV": {
+        "electors": 6,
+        "name": "NEVADA",
+        "other": 0,
+        "votes": [
+          6,
+          0
+        ]
+      },
+      "NY": {
+        "electors": 29,
+        "name": "NEW YORK",
+        "other": 0,
+        "votes": [
+          29,
+          0
+        ]
+      },
+      "OH": {
+        "electors": 18,
+        "name": "OHIO",
+        "other": 0,
+        "votes": [
+          0,
+          18
+        ]
+      },
+      "OK": {
+        "electors": 7,
+        "name": "OKLAHOMA",
+        "other": 0,
+        "votes": [
+          0,
+          7
+        ]
+      },
+      "OR": {
+        "electors": 7,
+        "name": "OREGON",
+        "other": 0,
+        "votes": [
+          7,
+          0
+        ]
+      },
+      "PA": {
+        "electors": 20,
+        "name": "PENNSYLVANIA",
+        "other": 0,
+        "votes": [
+          20,
+          0
+        ]
+      },
+      "RI": {
+        "electors": 4,
+        "name": "RHODE ISLAND",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "SC": {
+        "electors": 9,
+        "name": "SOUTH CAROLINA",
+        "other": 0,
+        "votes": [
+          0,
+          9
+        ]
+      },
+      "SD": {
+        "electors": 3,
+        "name": "SOUTH DAKOTA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "TN": {
+        "electors": 11,
+        "name": "TENNESSEE",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "TX": {
+        "electors": 38,
+        "name": "TEXAS",
+        "other": 0,
+        "votes": [
+          0,
+          38
+        ]
+      },
+      "UT": {
+        "electors": 6,
+        "name": "UTAH",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "VA": {
+        "electors": 13,
+        "name": "VIRGINIA",
+        "other": 0,
+        "votes": [
+          13,
+          0
+        ]
+      },
+      "VT": {
+        "electors": 3,
+        "name": "VERMONT",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "WA": {
+        "electors": 12,
+        "name": "WASHINGTON",
+        "other": 0,
+        "votes": [
+          12,
+          0
+        ]
+      },
+      "WI": {
+        "electors": 10,
+        "name": "WISCONSIN",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "WV": {
+        "electors": 5,
+        "name": "WEST VIRGINIA",
+        "other": 0,
+        "votes": [
+          0,
+          5
+        ]
+      },
+      "WY": {
+        "electors": 3,
+        "name": "WYOMING",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      }
+    }
+  },
+  "2024": {
+    "candidates": [
+      {
+        "name": "Kamala Harris",
+        "party": "DEMOCRATIC",
+        "votes": 226
+      },
+      {
+        "name": "Donald Trump",
+        "party": "REPUBLICAN",
+        "votes": 312
+      }
+    ],
+    "other": 0,
+    "other_label": "Other candidates",
+    "source": {
+      "retrieved_at": "2026-11-16T23:45:46.845221+00:00",
+      "sha256": "34a7d3644504c69030a626c501f86e7f27a8861d3b0b0a8838aefcc363fb49b9",
+      "url": "https://www.archives.gov/electoral-college/2024"
+    },
+    "states": {
+      "AK": {
+        "electors": 3,
+        "name": "ALASKA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "AL": {
+        "electors": 9,
+        "name": "ALABAMA",
+        "other": 0,
+        "votes": [
+          0,
+          9
+        ]
+      },
+      "AR": {
+        "electors": 6,
+        "name": "ARKANSAS",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "AZ": {
+        "electors": 11,
+        "name": "ARIZONA",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "CA": {
+        "electors": 54,
+        "name": "CALIFORNIA",
+        "other": 0,
+        "votes": [
+          54,
+          0
+        ]
+      },
+      "CO": {
+        "electors": 10,
+        "name": "COLORADO",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "CT": {
+        "electors": 7,
+        "name": "CONNECTICUT",
+        "other": 0,
+        "votes": [
+          7,
+          0
+        ]
+      },
+      "DC": {
+        "electors": 3,
+        "name": "DISTRICT OF COLUMBIA",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "DE": {
+        "electors": 3,
+        "name": "DELAWARE",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "FL": {
+        "electors": 30,
+        "name": "FLORIDA",
+        "other": 0,
+        "votes": [
+          0,
+          30
+        ]
+      },
+      "GA": {
+        "electors": 16,
+        "name": "GEORGIA",
+        "other": 0,
+        "votes": [
+          0,
+          16
+        ]
+      },
+      "HI": {
+        "electors": 4,
+        "name": "HAWAII",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "IA": {
+        "electors": 6,
+        "name": "IOWA",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "ID": {
+        "electors": 4,
+        "name": "IDAHO",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "IL": {
+        "electors": 19,
+        "name": "ILLINOIS",
+        "other": 0,
+        "votes": [
+          19,
+          0
+        ]
+      },
+      "IN": {
+        "electors": 11,
+        "name": "INDIANA",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "KS": {
+        "electors": 6,
+        "name": "KANSAS",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "KY": {
+        "electors": 8,
+        "name": "KENTUCKY",
+        "other": 0,
+        "votes": [
+          0,
+          8
+        ]
+      },
+      "LA": {
+        "electors": 8,
+        "name": "LOUISIANA",
+        "other": 0,
+        "votes": [
+          0,
+          8
+        ]
+      },
+      "MA": {
+        "electors": 11,
+        "name": "MASSACHUSETTS",
+        "other": 0,
+        "votes": [
+          11,
+          0
+        ]
+      },
+      "MD": {
+        "electors": 10,
+        "name": "MARYLAND",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "ME": {
+        "electors": 4,
+        "name": "MAINE",
+        "other": 0,
+        "votes": [
+          3,
+          1
+        ]
+      },
+      "MI": {
+        "electors": 15,
+        "name": "MICHIGAN",
+        "other": 0,
+        "votes": [
+          0,
+          15
+        ]
+      },
+      "MN": {
+        "electors": 10,
+        "name": "MINNESOTA",
+        "other": 0,
+        "votes": [
+          10,
+          0
+        ]
+      },
+      "MO": {
+        "electors": 10,
+        "name": "MISSOURI",
+        "other": 0,
+        "votes": [
+          0,
+          10
+        ]
+      },
+      "MS": {
+        "electors": 6,
+        "name": "MISSISSIPPI",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "MT": {
+        "electors": 4,
+        "name": "MONTANA",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "NC": {
+        "electors": 16,
+        "name": "NORTH CAROLINA",
+        "other": 0,
+        "votes": [
+          0,
+          16
+        ]
+      },
+      "ND": {
+        "electors": 3,
+        "name": "NORTH DAKOTA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "NE": {
+        "electors": 5,
+        "name": "NEBRASKA",
+        "other": 0,
+        "votes": [
+          1,
+          4
+        ]
+      },
+      "NH": {
+        "electors": 4,
+        "name": "NEW HAMPSHIRE",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "NJ": {
+        "electors": 14,
+        "name": "NEW JERSEY",
+        "other": 0,
+        "votes": [
+          14,
+          0
+        ]
+      },
+      "NM": {
+        "electors": 5,
+        "name": "NEW MEXICO",
+        "other": 0,
+        "votes": [
+          5,
+          0
+        ]
+      },
+      "NV": {
+        "electors": 6,
+        "name": "NEVADA",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "NY": {
+        "electors": 28,
+        "name": "NEW YORK",
+        "other": 0,
+        "votes": [
+          28,
+          0
+        ]
+      },
+      "OH": {
+        "electors": 17,
+        "name": "OHIO",
+        "other": 0,
+        "votes": [
+          0,
+          17
+        ]
+      },
+      "OK": {
+        "electors": 7,
+        "name": "OKLAHOMA",
+        "other": 0,
+        "votes": [
+          0,
+          7
+        ]
+      },
+      "OR": {
+        "electors": 8,
+        "name": "OREGON",
+        "other": 0,
+        "votes": [
+          8,
+          0
+        ]
+      },
+      "PA": {
+        "electors": 19,
+        "name": "PENNSYLVANIA",
+        "other": 0,
+        "votes": [
+          0,
+          19
+        ]
+      },
+      "RI": {
+        "electors": 4,
+        "name": "RHODE ISLAND",
+        "other": 0,
+        "votes": [
+          4,
+          0
+        ]
+      },
+      "SC": {
+        "electors": 9,
+        "name": "SOUTH CAROLINA",
+        "other": 0,
+        "votes": [
+          0,
+          9
+        ]
+      },
+      "SD": {
+        "electors": 3,
+        "name": "SOUTH DAKOTA",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      },
+      "TN": {
+        "electors": 11,
+        "name": "TENNESSEE",
+        "other": 0,
+        "votes": [
+          0,
+          11
+        ]
+      },
+      "TX": {
+        "electors": 40,
+        "name": "TEXAS",
+        "other": 0,
+        "votes": [
+          0,
+          40
+        ]
+      },
+      "UT": {
+        "electors": 6,
+        "name": "UTAH",
+        "other": 0,
+        "votes": [
+          0,
+          6
+        ]
+      },
+      "VA": {
+        "electors": 13,
+        "name": "VIRGINIA",
+        "other": 0,
+        "votes": [
+          13,
+          0
+        ]
+      },
+      "VT": {
+        "electors": 3,
+        "name": "VERMONT",
+        "other": 0,
+        "votes": [
+          3,
+          0
+        ]
+      },
+      "WA": {
+        "electors": 12,
+        "name": "WASHINGTON",
+        "other": 0,
+        "votes": [
+          12,
+          0
+        ]
+      },
+      "WI": {
+        "electors": 10,
+        "name": "WISCONSIN",
+        "other": 0,
+        "votes": [
+          0,
+          10
+        ]
+      },
+      "WV": {
+        "electors": 4,
+        "name": "WEST VIRGINIA",
+        "other": 0,
+        "votes": [
+          0,
+          4
+        ]
+      },
+      "WY": {
+        "electors": 3,
+        "name": "WYOMING",
+        "other": 0,
+        "votes": [
+          0,
+          3
+        ]
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ import { matchJurisdictions } from "../geography/unitedStates";
 import type { ElectionMap, MapUnit } from "./types";
 import { ElectionTooltip } from "./ElectionTooltip";
 import { resultColor } from "./electionColors";
+import { electoralAllocation, isPresidential, smallStates } from './ElectoralCollege';
 import greatLakes from "../geography/data/great-lakes.json";
 import type { FeatureCollection, Polygon, MultiPolygon } from "geojson";
 
@@ -44,6 +45,11 @@ export function GeographyMap({
     );
   return (
     <UnitedStatesMap
+      featureLabel={!data.state_code && data.reporting_level === 'state' && isPresidential(data.office, data.stage) ? feature => {
+        const code = feature.properties.state_code;
+        const state = electoralAllocation(data.year)?.states[code];
+        return state && !smallStates.has(code) ? [code, String(state.electors)] : undefined;
+      } : undefined}
       features={data.features}
       data={match.units}
       water={water}
@@ -56,7 +62,7 @@ export function GeographyMap({
       focusSelection={focusSelection}
       isInteractive={(unit) => !highlightedIds || !!unit && highlightedIds.has(unit.id)}
       fill={(unit) => highlightedIds && (!unit || !highlightedIds.has(unit.id))
-        ? '#dce4e1' : resultColor(unit?.summary, data.reporting_level === "congressional_district")}
+        ? '#dce4e1' : resultColor(unit?.summary)}
       describe={(unit, feature) =>
         `${unit?.name || feature.properties.name}: ${unit?.summary.leader || (unit?.summary.status === "tie" ? "Tie" : "No determined leader")}`
       }
@@ -73,7 +79,7 @@ export function GeographyMap({
       attribution={
         <>
           {data.boundary
-            ? `U.S. Census Bureau · ${data.year} boundaries`
+            ? `U.S. Census Bureau · ${data.boundary.boundary_vintage}`
             : "Boundary provenance available in source details"}{" "}
           ·{" "}
           <a href={greatLakes.source.documentation}>

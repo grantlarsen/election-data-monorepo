@@ -6,7 +6,10 @@ The React/TypeScript/Vite application preserves UI-001's navigation, filters,
 published record browsing, source labels and accessible loading/error states.
 UI-002 supplies a modular federal election map using the 2008 presidential
 general election as its base case. Existing result services,
-models and migrations are reused; the migration head remains `d005county01`.
+models and migrations are reused. The presidential pages use the existing
+`presidential_state_coverage` backend migration; they add no schema changes.
+See the [presidential pages guide](presidential-pages.md) for the seven-year
+navigation, separate state/county views, coverage states and verification.
 
 `frontend/src/geography/UnitedStatesMap.tsx` is a reusable SVG choropleth with
 D3's standard Albers USA projection. Its inputs are GeoJSON, matched data,
@@ -75,6 +78,8 @@ routes while preserving API errors. External publication is outside this task.
 | --- | --- |
 | `/` | Opens `/map?year=2008`, preserving supplied shared filters |
 | `/map` | Federal election map; presidential states drill into counties, reporting units open details |
+| `/presidential` | Discover the seven presidential general elections from 2000 through 2024 |
+| `/presidential/:year` | Year-specific state totals, county drill-down, sources, coverage and map link |
 | `/contests` | Paginated modeled contests with source/publication labels |
 | `/contests/:contestId` | Published returns scoped by canonical contest UUID |
 | `/candidates` | Published result rows, with separately labeled anonymous buckets |
@@ -93,10 +98,11 @@ For that election the national view uses FEC states and state selection uses
 the separate canonical county publication. Selection preserves the requested
 office, year and stage. House requests use congressional-district reporting;
 Senate requests use state reporting. The API supplies the supported drill-down
-level. Missing releases/boundaries remain explicitly unavailable: other years
-and offices never inherit 2008 geometries or votes. Only the 2008 state/county
-display package is currently prepared. House/Senate data acquisition remains
-separate work; this refactor does not supply missing results or district shapes.
+level. Missing releases/boundaries remain explicitly unavailable, with no
+automatic fallback to another year or office. All seven presidential state/county
+display packages are now prepared; 2004 prominently discloses its configured
+approximation. See the [boundary guide](geography/presidential_boundaries.md).
+Additional office/result acquisition remains separate work.
 
 Reporting-unit selection uses canonical `jurisdiction_id` plus map-only
 `map_unit` (a two-digit state, four-digit district or five-digit county GEOID).
@@ -117,9 +123,14 @@ Shares include all published candidate/anonymous buckets in the unit denominator
 Margins show the top two named candidates' vote difference and that difference
 as a percentage of the same denominator, displayed with `%`. The existing
 `margin_pp` API field and arithmetic are retained. Missing, zero, tied and indeterminate results
-remain distinct. No turnout or electoral-vote metric is calculated. Colors
-identify source candidate labels through stable label colors without inventing
-party affiliations. The legend is derived from the returned candidates. See the
+remain distinct. No turnout metric is calculated. Electoral College counts are
+reported separately from official certified results, not derived from popular votes. Colors
+use one source-party palette across presidential and House maps, candidate
+markers, legends, tooltips and statewide summaries: Democrats blue (`#3276ac`),
+Republicans red (`#bd5548`), other/independent green, mixed major parties purple
+and unavailable affiliation slate. Candidate names do not determine colors.
+Anonymous buckets, missing results, ties and undetermined leaders retain distinct
+status colors. Presidential legend entries retain their candidate links. See the
 [API metric definitions](api/election-map.md).
 
 County maps include a statewide overview above the map, with candidate
@@ -292,3 +303,48 @@ Anonymous buckets and source-only names without a candidacy ID stay plain text.
 A legend spanning multiple candidacy IDs does not select an arbitrary profile;
 each result row retains its own explicit link. No name-based identity matching is
 performed for navigation.
+
+The shared party-color update passed 147 frontend tests, 27 selected backend tests
+(including isolated PostgreSQL), strict TypeScript and the production build. Live
+Edge checks verified 790 major-party polygons across the seven national and New
+York county maps, plus statewide summaries, tooltip colors, candidate-profile
+markers and mobile layout, without page errors. Screenshot evidence is under
+ignored `artifacts/party-colors/`. Party labels enrich only the read model; no
+affiliation records or published vote values are changed.
+
+
+## Electoral College counter and state labels
+
+Presidential general-election pages and maps now show a national certified
+Electoral College counter for each supported year. The bar keeps Democrats blue
+and Republicans red, marks the 270-vote majority, and separately shows votes for
+other candidates or the 2000 DC abstention. It remains national when state/county
+filters change. It does not infer electors from partial county returns or popular
+state winners. Maine/Nebraska splits and faithless electoral votes are preserved.
+
+The national state map labels larger states with their abbreviation and allocated
+electors. VT, NH, MA, RI, CT, NJ, DE, MD and DC have separate keyboard-accessible
+callout buttons that open county drill-down. On narrow screens the buttons wrap
+below the map. Electoral allocations/source details list all states, including
+splits and other/abstained votes. Map colors continue to describe published
+popular-vote leaders; the certified electoral counter is an independent source.
+House maps and primary elections do not show this counter.
+
+The checked source dataset is `frontend/src/map/electoral-college.json`, extracted
+from the National Archives' official year tables, including source URLs, retrieval
+timestamps and SHA-256 hashes. See [2012 official results](https://www.archives.gov/electoral-college/2012),
+[2000 abstention](https://www.archives.gov/electoral-college/2000) and
+[2020 split allocations](https://www.archives.gov/electoral-college/2020).
+`backend/ingestion/electoral_college.py` reuses the acquisition cache and rejects
+missing/duplicate states, invalid votes, mismatched national totals and changes to
+previously pinned HTML. No schema migration or result republication is needed.
+
+Regenerate directly into the tracked dataset (existing hashes must match):
+
+```powershell
+docker compose run --rm --no-deps -v ./:/workspace api python -m ingestion.electoral_college --output /workspace/frontend/src/map/electoral-college.json
+```
+
+Validation: all 157 frontend tests, five electoral source-parser tests and the
+TypeScript/production build passed. Live browser evidence and screenshots are
+under ignored `artifacts/electoral-college/`.
