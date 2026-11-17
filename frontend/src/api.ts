@@ -116,6 +116,7 @@ export interface Page<T> {
 }
 
 export interface CandidateProfile {
+  provisional_governor_election?: import('./governor').ProvisionalGovernorElection | null;
   provisional_house_election?: import('./house').ProvisionalHouseElection | null;
   provisional_election?: import('./senate').ProvisionalSenateElection | null;
   id: string;

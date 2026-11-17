@@ -11,3 +11,4 @@ os.environ.setdefault("DB_NAME", "pytest_db")
 # Tests opt into scheduler execution explicitly; ordinary TestClients stay offline.
 os.environ.setdefault("SENATE_RESULTS_AUTO_REFRESH", "0")
 os.environ.setdefault("HOUSE_RESULTS_AUTO_REFRESH", "0")
+os.environ.setdefault("GOVERNOR_RESULTS_AUTO_REFRESH", "0")

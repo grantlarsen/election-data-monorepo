@@ -1,0 +1,3478 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-17",
+  "source_snapshot_sha256": "55605f0c86fca12e76bc6be938b639607470bd62119422f20ac24971cb0a7c33",
+  "method": "Exact source/year/state/race/name/party media crosswalk, reviewed against the same Governor election infobox or general-election candidate table and linked biographies. Each Commons file retains its own reviewed reuse metadata and pinned bytes. No canonical person, FEC or face matching.",
+  "research": {
+    "source_candidates": 250,
+    "election_page_matches": 77,
+    "additional_commons_lookups": 185,
+    "lookup_successes": 68,
+    "lookup_failures": 117,
+    "limitations": "Some additional name searches were rate-limited. Results without state/election-specific identity and reuse evidence remain unassigned; a shared name alone is insufficient."
+  },
+  "candidates": [
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-AK",
+      "state_code": "AK",
+      "name": "Bernadette M. Wilson",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/alaska",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Alaska_gubernatorial_election",
+        "election_revision": 1386305499,
+        "nominee_label": "Bernadette Wilson",
+        "nominee_party": "Alaska Republican Party",
+        "source_name_alias": "Bernadette Wilson",
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Bernadette Wilson at an Anchorage Assembly Meeting",
+        "commons_timestamp": "2026-11-14T07:17:15Z"
+      },
+      "source_version": "2026-11-14T07:17:15Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Bernadette_Wilson_2021_(cropped).png",
+        "credit": "The Alaska Landmine / Wikimedia Commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Bernadette_Wilson_2021_%28cropped%29.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Bernadette_Wilson_2021_%28cropped%29.png/330px-Bernadette_Wilson_2021_%28cropped%29.png",
+        "mime_type": "image/png",
+        "url": "/media/candidates/f7e6894daf7a82a4eb099e5f491f95b2cebc977cdff0510e8248573c5aea15a4.png",
+        "sha256": "f7e6894daf7a82a4eb099e5f491f95b2cebc977cdff0510e8248573c5aea15a4",
+        "retrieved_at": "2026-11-17T23:19:59.394033+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-AK",
+      "state_code": "AK",
+      "name": "Dave Bronson",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/alaska",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Alaska_gubernatorial_election",
+        "election_revision": 1386305499,
+        "nominee_label": "[[Dave Bronson]]",
+        "nominee_party": "Alaska Republican Party",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "This photo is available for free public use. Please provide credit in the following format: \"Photo used via Creative Commons license courtesy Paxson Woelber, The Alaska Landmine\"",
+        "commons_timestamp": "2026-08-22T08:33:11Z"
+      },
+      "source_version": "2026-08-22T08:33:11Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Dave_Bronson_March_2022.jpg",
+        "credit": "The Alaska Landmine from Anchorage, USA / Wikimedia Commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Dave_Bronson_March_2022.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Dave_Bronson_March_2022.jpg/330px-Dave_Bronson_March_2022.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/327a3e23e0e2d1e2c546d5bbab11c6eca54c36523d55a7dd44a063c59643ba5f.jpg",
+        "sha256": "327a3e23e0e2d1e2c546d5bbab11c6eca54c36523d55a7dd44a063c59643ba5f",
+        "retrieved_at": "2026-11-17T23:15:58.777281+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-AK",
+      "state_code": "AK",
+      "name": "Jonathan S. \"JKT\" Kreiss-Tomkins",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/alaska",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Alaska_gubernatorial_election",
+        "election_revision": 1386305499,
+        "nominee_label": "'''[[Jonathan Kreiss-Tomkins]]'''",
+        "nominee_party": "Alaska Democratic Party",
+        "source_name_alias": "'''[[Jonathan Kreiss-Tomkins]]'''",
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Jonathan Kreiss-Tomkins",
+        "commons_timestamp": "2026-06-20T01:15:48Z"
+      },
+      "source_version": "2026-06-20T01:15:48Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:JKTphoto_(cropped).jpg",
+        "credit": "Unknown author Unknown author / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/JKTphoto_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/JKTphoto_%28cropped%29.jpg/330px-JKTphoto_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/04627d001128549f909416e9b59b7d307de85e2592607cc6688e4dbd7bd7c4ca.jpg",
+        "sha256": "04627d001128549f909416e9b59b7d307de85e2592607cc6688e4dbd7bd7c4ca",
+        "retrieved_at": "2026-11-17T23:15:58.336047+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-AL",
+      "state_code": "AL",
+      "name": "Doug Jones",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/alabama",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Alabama_gubernatorial_election",
+        "election_revision": 1386201002,
+        "nominee_label": "[[Doug Jones (politician)|Doug Jones]]",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Official photo of Senator Doug Jones (D-AL)",
+        "commons_timestamp": "2026-02-01T08:30:08Z"
+      },
+      "source_version": "2026-02-01T08:30:08Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Senator_Doug_Jones_official_photo_(cropped)_2.jpg",
+        "credit": "United States Senate / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Senator_Doug_Jones_official_photo_(cropped)_2.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Senator_Doug_Jones_official_photo_%28cropped%29_2.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Senator_Doug_Jones_official_photo_%28cropped%29_2.jpg/330px-Senator_Doug_Jones_official_photo_%28cropped%29_2.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/c2d82fe2c2ca58888a2aaac874998804e008bb20e2160272ad4effc6f21f8753.jpg",
+        "sha256": "c2d82fe2c2ca58888a2aaac874998804e008bb20e2160272ad4effc6f21f8753",
+        "retrieved_at": "2026-11-17T23:15:57.793410+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-AL",
+      "state_code": "AL",
+      "name": "Tommy Tuberville",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/alabama",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Alabama_gubernatorial_election",
+        "election_revision": 1386201002,
+        "nominee_label": "'''[[Tommy Tuberville]]'''",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Tommy Tuberville in 2023",
+        "commons_timestamp": "2023-10-02T02:37:55Z"
+      },
+      "source_version": "2023-10-02T02:37:55Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Tommy_Tuberville%2C_official_portrait%2C_118th_Congress_(slight_crop).jpg",
+        "credit": "Rebecca Hammel on behalf of the U.S. Senate / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Tommy_Tuberville%2C_official_portrait%2C_118th_Congress_(slight_crop).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Tommy_Tuberville%2C_official_portrait%2C_118th_Congress_%28slight_crop%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Tommy_Tuberville%2C_official_portrait%2C_118th_Congress_%28slight_crop%29.jpg/330px-Tommy_Tuberville%2C_official_portrait%2C_118th_Congress_%28slight_crop%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/950f117c971b200922dc7f8ffd3c9543db80d77fc38a5366c511445dc50a4c19.jpg",
+        "sha256": "950f117c971b200922dc7f8ffd3c9543db80d77fc38a5366c511445dc50a4c19",
+        "retrieved_at": "2026-11-17T23:15:57.743831+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-AR",
+      "state_code": "AR",
+      "name": "Fred Love",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/arkansas",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Arkansas_gubernatorial_election",
+        "election_revision": 1385988720,
+        "nominee_label": "[[Fredrick Love]]",
+        "nominee_party": "Democratic Party (Arkansas)",
+        "source_name_alias": "[[Fredrick Love]]",
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Democratic Arkansas State Representative Fredrick J. Love speaking to the Arkansas Farm Bureau",
+        "commons_timestamp": "2024-06-05T04:09:36Z"
+      },
+      "source_version": "2024-06-05T04:09:36Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Rep_Fredrick_J_Love_(cropped).jpg",
+        "credit": "Arkansas Farm Bureau / Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Rep_Fredrick_J_Love_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Rep_Fredrick_J_Love_%28cropped%29.jpg/330px-Rep_Fredrick_J_Love_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/af8521bf2eccf7848c9a8705daf294f4d3bbea7a435f8bd097b8318cd64cb362.jpg",
+        "sha256": "af8521bf2eccf7848c9a8705daf294f4d3bbea7a435f8bd097b8318cd64cb362",
+        "retrieved_at": "2026-11-17T23:16:00.132175+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-AR",
+      "state_code": "AR",
+      "name": "Sarah Huckabee Sanders",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/arkansas",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Arkansas_gubernatorial_election",
+        "election_revision": 1385988720,
+        "nominee_label": "'''[[Sarah Huckabee Sanders]]'''",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Arkansas Sarah Huckabee Sanders speaking with attendees at the 2026 Women's Leadership Summit at the San Antonio Marriott Rivercenter on the River Walk in San Antonio, Texas.",
+        "commons_timestamp": "2026-07-14T20:52:48Z"
+      },
+      "source_version": "2026-07-14T20:52:48Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Governor_Sarah_Huckabee_Sanders_2026.jpg",
+        "credit": "Gage Skidmore / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Governor_Sarah_Huckabee_Sanders_2026.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Governor_Sarah_Huckabee_Sanders_2026.jpg/330px-Governor_Sarah_Huckabee_Sanders_2026.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/9d4e2cf97ee5a72227d07871a088e4536e19934f0b1e4c40ce434ec95c783d5b.jpg",
+        "sha256": "9d4e2cf97ee5a72227d07871a088e4536e19934f0b1e4c40ce434ec95c783d5b",
+        "retrieved_at": "2026-11-17T23:15:59.792412+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-AZ",
+      "state_code": "AZ",
+      "name": "Andy Biggs",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/arizona",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election",
+        "election_revision": 1386284688,
+        "nominee_label": "[[Andy Biggs]]",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "U.S. Congressman Andy Biggs speaking with attendees at the 2025 AmericaFest at the Phoenix Convention Center in Phoenix, Arizona.",
+        "commons_timestamp": "2026-05-22T03:33:34Z"
+      },
+      "source_version": "2026-05-22T03:33:34Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Andy_Biggs_2025.jpg",
+        "credit": "Gage Skidmore / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Andy_Biggs_2025.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Andy_Biggs_2025.jpg/330px-Andy_Biggs_2025.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/3bf3de73953cb1d4b81b35b1ed1a266d9e7ef47c0e26cb27df89d5792a9692b3.jpg",
+        "sha256": "3bf3de73953cb1d4b81b35b1ed1a266d9e7ef47c0e26cb27df89d5792a9692b3",
+        "retrieved_at": "2026-11-17T23:15:59.497296+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-AZ",
+      "state_code": "AZ",
+      "name": "Katie Hobbs",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/arizona",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election",
+        "election_revision": 1386284688,
+        "nominee_label": "'''[[Katie Hobbs]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Governor Katie Hobbs speaking with attendees at the 2026 Legislative Forecast Luncheon hosted by the Arizona Chamber of Commerce & Industry at the Phoenix Convention Center in Phoenix, Arizona. Please attribute to Gage Skidmore if used elsewhere.",
+        "commons_timestamp": "2026-05-04T02:12:23Z"
+      },
+      "source_version": "2026-05-04T02:12:23Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Katie_Hobbs_2026.jpg",
+        "credit": "Gage Skidmore from Surprise, AZ, United States of America / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Katie_Hobbs_2026.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Katie_Hobbs_2026.jpg/330px-Katie_Hobbs_2026.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/a916e37897d7327018b124718d30d6a036662730fc3f9b26bc972ccdd6f42d99.jpg",
+        "sha256": "a916e37897d7327018b124718d30d6a036662730fc3f9b26bc972ccdd6f42d99",
+        "retrieved_at": "2026-11-17T23:15:59.083210+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-CA",
+      "state_code": "CA",
+      "name": "Steve Hilton",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/california",
+        "election_page": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election",
+        "election_revision": 1386241002,
+        "nominee_label": "[[Steve Hilton]]",
+        "nominee_party": "[[Republican Party (United States)|Republican]]",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Steve Hilton speaking with attendees at the 2024 AmericaFest at the Phoenix Convention Center in Phoenix, Arizona.",
+        "commons_timestamp": "2026-06-03T04:26:22Z"
+      },
+      "source_version": "2026-06-03T04:26:22Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Steve_Hilton_(54233445987_crop).jpg",
+        "credit": "Gage Skidmore / Wikimedia Commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Steve_Hilton_%2854233445987_crop%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Steve_Hilton_%2854233445987_crop%29.jpg/330px-Steve_Hilton_%2854233445987_crop%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/91d4ec1d0dfe2916b2b9744820fd6a14d9d12518b2c1b587720ae07f5ace4366.jpg",
+        "sha256": "91d4ec1d0dfe2916b2b9744820fd6a14d9d12518b2c1b587720ae07f5ace4366",
+        "retrieved_at": "2026-11-17T23:16:00.764405+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-CA",
+      "state_code": "CA",
+      "name": "Xavier Becerra",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/california",
+        "election_page": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election",
+        "election_revision": 1386241002,
+        "nominee_label": "'''[[Xavier Becerra]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Official portrait of United States Secretary of Human Services Xavier Becerra",
+        "commons_timestamp": "2022-04-06T13:43:43Z"
+      },
+      "source_version": "2022-04-06T13:43:43Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:HHS_Xavier_Becerra_(cropped).jpg",
+        "credit": "United States Department of Health and Human Services / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:HHS_Xavier_Becerra_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/HHS_Xavier_Becerra_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/HHS_Xavier_Becerra_%28cropped%29.jpg/330px-HHS_Xavier_Becerra_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/fefa4d4c7535a1d3dc80f34b1a9258f5c371226b8aa530504d44fa0c688bbaed.jpg",
+        "sha256": "fefa4d4c7535a1d3dc80f34b1a9258f5c371226b8aa530504d44fa0c688bbaed",
+        "retrieved_at": "2026-11-17T23:16:00.435808+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-CO",
+      "state_code": "CO",
+      "name": "Erik Underwood",
+      "party": "O",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/colorado",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Colorado_gubernatorial_election",
+        "election_revision": 1386060990,
+        "reviewed_commons_title": "File:Erik Underwood.jpg",
+        "method": "Reviewed the exact source label and state against the 2026 Governor candidate list and Commons description of the same political candidate. Source party O is retained for Approval Voting/unaffiliated entries. No name-only or face matching.",
+        "image_description": "Erik Underwood discussing My24HourNews.Com",
+        "commons_timestamp": "2020-01-14T22:42:09Z"
+      },
+      "source_version": "2020-01-14T22:42:09Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Erik_Underwood.jpg",
+        "credit": "Pierce007 / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Erik_Underwood.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Erik_Underwood.jpg/330px-Erik_Underwood.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/43b906cbd32388d6d1b5a6387645ae7ad783c6d97637b37fddc109dffabcc8bb.jpg",
+        "sha256": "43b906cbd32388d6d1b5a6387645ae7ad783c6d97637b37fddc109dffabcc8bb",
+        "retrieved_at": "2026-11-17T23:25:33.726295+00:00",
+        "focus": {
+          "x": 18,
+          "y": 22,
+          "zoom": 2.5
+        }
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-CO",
+      "state_code": "CO",
+      "name": "Greg Lopez",
+      "party": "O",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/colorado",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Colorado_gubernatorial_election",
+        "election_revision": 1386060990,
+        "reviewed_commons_title": "File:Greg Lopez 118th Congress portrait.jpg",
+        "method": "Reviewed the exact source label and state against the 2026 Governor candidate list and Commons description of the same political candidate. Source party O is retained for Approval Voting/unaffiliated entries. No name-only or face matching.",
+        "image_description": "A portrait of Rep. Greg Lopez (R-CO) for the 118th U.S. Congress.",
+        "commons_timestamp": "2025-09-01T13:13:24Z"
+      },
+      "source_version": "2025-09-01T13:13:24Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Greg_Lopez_118th_Congress_portrait.jpg",
+        "credit": "Office of the Clerk, U.S. House of Representatives / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Greg_Lopez_118th_Congress_portrait.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Greg_Lopez_118th_Congress_portrait.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Greg_Lopez_118th_Congress_portrait.jpg/330px-Greg_Lopez_118th_Congress_portrait.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/b1a8ec0ca6f29c2265086d1d1818928a9777fc999a0d2fafbccb67d2e65a275a.jpg",
+        "sha256": "b1a8ec0ca6f29c2265086d1d1818928a9777fc999a0d2fafbccb67d2e65a275a",
+        "retrieved_at": "2026-11-17T23:25:33.382143+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-CO",
+      "state_code": "CO",
+      "name": "Phil Weiser",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/colorado",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Colorado_gubernatorial_election",
+        "election_revision": 1386060990,
+        "nominee_label": "'''[[Phil Weiser]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Colorado Attorney General Phil Weiser (D)",
+        "commons_timestamp": "2019-11-06T19:03:43Z"
+      },
+      "source_version": "2019-11-06T19:03:43Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:AG_Phil_Weiser.jpg",
+        "credit": "Phil Photos / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:AG_Phil_Weiser.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/AG_Phil_Weiser.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/AG_Phil_Weiser.jpg/330px-AG_Phil_Weiser.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/7901d12fe5fa5a6cb27dcbc6d6a67bc7ea135dc12a4506af82c439be7f36c133.jpg",
+        "sha256": "7901d12fe5fa5a6cb27dcbc6d6a67bc7ea135dc12a4506af82c439be7f36c133",
+        "retrieved_at": "2026-11-17T23:16:11.204799+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-CO",
+      "state_code": "CO",
+      "name": "Victor Marx",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/colorado",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Colorado_gubernatorial_election",
+        "election_revision": 1386060990,
+        "nominee_label": "[[Victor Marx]]",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Victor Marx speaking with attendees at the 2022 Young Women's Leadership Summit hosted by Turning Point USA at the Gaylord Texan Resort & Convention Center in Grapevine, Texas.",
+        "commons_timestamp": "2026-07-02T00:36:36Z"
+      },
+      "source_version": "2026-07-02T00:36:36Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Victor_Marx_(52125665777)_(cropped).jpg",
+        "credit": "Gage Skidmore from Surprise, AZ, United States of America / Wikimedia Commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Victor_Marx_%2852125665777%29_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Victor_Marx_%2852125665777%29_%28cropped%29.jpg/330px-Victor_Marx_%2852125665777%29_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/75568f951f193d6e3df61803aeae014f8eb78e4cf390d4426820e0c7698dfc69.jpg",
+        "sha256": "75568f951f193d6e3df61803aeae014f8eb78e4cf390d4426820e0c7698dfc69",
+        "retrieved_at": "2026-11-17T23:16:11.439593+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-CT",
+      "state_code": "CT",
+      "name": "Ned Lamont",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/connecticut",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Connecticut_gubernatorial_election",
+        "election_revision": 1386277779,
+        "nominee_label": "'''[[Ned Lamont]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Governor Lamont and former Secretary of Transportation Pete Buttigieg visited the Gold Star Memorial Bridge to discuss infrastructure investments.",
+        "commons_timestamp": "2026-08-17T09:02:54Z"
+      },
+      "source_version": "2026-08-17T09:02:54Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Gold_Star_Bridge_Visit_with_U.S._Secretary_of_Transportation_Pete_Buttigieg_(cropped).jpg",
+        "credit": "James Naleski / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Gold_Star_Bridge_Visit_with_U.S._Secretary_of_Transportation_Pete_Buttigieg_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Gold_Star_Bridge_Visit_with_U.S._Secretary_of_Transportation_Pete_Buttigieg_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Gold_Star_Bridge_Visit_with_U.S._Secretary_of_Transportation_Pete_Buttigieg_%28cropped%29.jpg/330px-Gold_Star_Bridge_Visit_with_U.S._Secretary_of_Transportation_Pete_Buttigieg_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/00e2d00e9c8c9b8adf6cc9649c7cbadb68b3d35e699f32fc1bd5947bc0856be4.jpg",
+        "sha256": "00e2d00e9c8c9b8adf6cc9649c7cbadb68b3d35e699f32fc1bd5947bc0856be4",
+        "retrieved_at": "2026-11-17T23:16:11.881382+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-CT",
+      "state_code": "CT",
+      "name": "Ryan Fazio",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/connecticut",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Connecticut_gubernatorial_election",
+        "election_revision": 1386277779,
+        "nominee_label": "[[Ryan Fazio]]",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Ryan Fazio, Connecticut politician, photographed in 2026.",
+        "commons_timestamp": "2026-08-16T09:34:52Z"
+      },
+      "source_version": "2026-08-16T09:34:52Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Ryan_Fazio%2C_2026_(cropped).jpg",
+        "credit": "James Naleski / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Ryan_Fazio%2C_2026_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Ryan_Fazio%2C_2026_%28cropped%29.jpg/330px-Ryan_Fazio%2C_2026_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/992d26cef82c2ef24ef724f7ed5c952fa9aeee2ffda957a247347d0748b9db59.jpg",
+        "sha256": "992d26cef82c2ef24ef724f7ed5c952fa9aeee2ffda957a247347d0748b9db59",
+        "retrieved_at": "2026-11-17T23:16:12.066562+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-FL",
+      "state_code": "FL",
+      "name": "Byron Donalds",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/florida",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election",
+        "election_revision": 1386298175,
+        "nominee_label": "'''[[Byron Donalds]]'''",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "U.S. Congressman Byron Donalds speaking at the 2025 Conservative Political Action Conference (CPAC) at the Gaylord National Resort & Convention Center in National Harbor, Maryland. Please attribute to Gage Skidmore if used elsewhere.",
+        "commons_timestamp": "2026-10-09T16:22:58Z"
+      },
+      "source_version": "2026-10-09T16:22:58Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Byron_Donalds_2025_(54350933522)_(cropped).jpg",
+        "credit": "Gage Skidmore from Surprise, AZ, United States of America / Wikimedia Commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Byron_Donalds_2025_%2854350933522%29_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Byron_Donalds_2025_%2854350933522%29_%28cropped%29.jpg/330px-Byron_Donalds_2025_%2854350933522%29_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/abd6ce7ca06d863ef3d3454b8e68c154dd556b7fb4f35ec14560def9e913db83.jpg",
+        "sha256": "abd6ce7ca06d863ef3d3454b8e68c154dd556b7fb4f35ec14560def9e913db83",
+        "retrieved_at": "2026-11-17T23:16:12.481612+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-FL",
+      "state_code": "FL",
+      "name": "David Jolly",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/florida",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election",
+        "election_revision": 1386298175,
+        "nominee_label": "[[David Jolly]]",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee. Linked biography and Florida congressional history match the pinned historical legislator Bioguide record; portrait attribution comes from the GPO image repository.",
+        "bioguide_id": "J000296",
+        "biography_url": "https://en.wikipedia.org/wiki/David_Jolly",
+        "legislators_commit": "a263880e99a78b8cfaf0a2487e05558be389de3d",
+        "image_description": "Official portrait of U.S. Representative David Jolly (R-FL).",
+        "commons_timestamp": "aec3e4a88af843b282c0576f420b930f6a9a46ad"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/J000296.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/J000296.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/7554e9a78deff9c3d7a5b0c66e338e83bf292ac2f40c5c5d67fc47bc46b2cee9.jpg",
+        "sha256": "7554e9a78deff9c3d7a5b0c66e338e83bf292ac2f40c5c5d67fc47bc46b2cee9",
+        "retrieved_at": "2026-11-17T23:19:59.353313+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-FL",
+      "state_code": "FL",
+      "name": "Moliere \"Moe\" Dimanche",
+      "party": "I",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/florida",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election",
+        "election_revision": 1386298175,
+        "reviewed_commons_title": "File:Moe Dimanche at Kingdom Church.jpg",
+        "method": "Reviewed the exact source label and state against the 2026 Governor candidate list and Commons description of the same political candidate. Source party O is retained for Approval Voting/unaffiliated entries. No name-only or face matching.",
+        "image_description": "Moliere Dimanche introducing plan to incorporate Pine Hills into a municipality.",
+        "commons_timestamp": "2026-07-18T01:34:17Z"
+      },
+      "source_version": "2026-07-18T01:34:17Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Moe_Dimanche_at_Kingdom_Church.jpg",
+        "credit": "No MOE Corruption / Wikimedia Commons",
+        "license": "CC0",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Moe_Dimanche_at_Kingdom_Church.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Moe_Dimanche_at_Kingdom_Church.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Moe_Dimanche_at_Kingdom_Church.jpg/330px-Moe_Dimanche_at_Kingdom_Church.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/0cfc6cbd635bf9dc2af0f104e7383cd2e3c824deb7832e081eca2e43b257184a.jpg",
+        "sha256": "0cfc6cbd635bf9dc2af0f104e7383cd2e3c824deb7832e081eca2e43b257184a",
+        "retrieved_at": "2026-11-17T23:25:34.559065+00:00",
+        "focus": {
+          "x": 40,
+          "y": 10,
+          "zoom": 1.7
+        }
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-GA",
+      "state_code": "GA",
+      "name": "Keisha Lance Bottoms",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/georgia",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election",
+        "election_revision": 1386273974,
+        "nominee_label": "'''[[Keisha Lance Bottoms]]'''",
+        "nominee_party": "Democratic Party of Georgia",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Official portrait of Keisha Lance Bottoms",
+        "commons_timestamp": "2026-05-20T22:20:27Z"
+      },
+      "source_version": "2026-05-20T22:20:27Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Keisha_Lance_Bottoms_(cropped).jpg",
+        "credit": "Executive Office of the President of the United States / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Keisha_Lance_Bottoms_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Keisha_Lance_Bottoms_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Keisha_Lance_Bottoms_%28cropped%29.jpg/330px-Keisha_Lance_Bottoms_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/d40f7f0e8ea88ef63c19a606ca444f29f7c5a2784016ec13378fd051fbb3acf8.jpg",
+        "sha256": "d40f7f0e8ea88ef63c19a606ca444f29f7c5a2784016ec13378fd051fbb3acf8",
+        "retrieved_at": "2026-11-17T23:16:12.660906+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-GA",
+      "state_code": "GA",
+      "name": "Rick Jackson",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/georgia",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election",
+        "election_revision": 1386273974,
+        "nominee_label": "[[Rick Jackson (businessman)|Rick Jackson]]",
+        "nominee_party": "Georgia Republican Party",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Rick Jackson at Appalachian Gun in Northern Georgia",
+        "commons_timestamp": "2026-06-17T05:12:47Z"
+      },
+      "source_version": "2026-06-17T05:12:47Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Rick_Jackson_(cropped)_(cropped).png",
+        "credit": "Cherie Martin / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Rick_Jackson_%28cropped%29_%28cropped%29.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Rick_Jackson_%28cropped%29_%28cropped%29.png/330px-Rick_Jackson_%28cropped%29_%28cropped%29.png",
+        "mime_type": "image/png",
+        "url": "/media/candidates/101406eef4d53be990f208e7d30fa790f7621e65a57ad5c7e8561b414bf90869.png",
+        "sha256": "101406eef4d53be990f208e7d30fa790f7621e65a57ad5c7e8561b414bf90869",
+        "retrieved_at": "2026-11-17T23:16:13.099209+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-HI",
+      "state_code": "HI",
+      "name": "Gary Cordery",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/hawaii",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Hawaii_gubernatorial_election",
+        "election_revision": 1385780892,
+        "nominee_label": "Gary Cordery",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "https://youtube/BuwE3kk4lvg?is=IHOfpstszJGPOt2A",
+        "commons_timestamp": "2026-08-10T19:09:36Z"
+      },
+      "source_version": "2026-08-10T19:09:36Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Gary_Cordery_Hawaii.jpg",
+        "credit": "ThinkTech Hawaii / Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Gary_Cordery_Hawaii.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Gary_Cordery_Hawaii.jpg/330px-Gary_Cordery_Hawaii.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/1565800f7701b5d72c6751989fb717ef1294333472324b74fcf28a8827d9fc8c.jpg",
+        "sha256": "1565800f7701b5d72c6751989fb717ef1294333472324b74fcf28a8827d9fc8c",
+        "retrieved_at": "2026-11-17T23:16:13.829865+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-HI",
+      "state_code": "HI",
+      "name": "Josh Green",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/hawaii",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Hawaii_gubernatorial_election",
+        "election_revision": 1385780892,
+        "nominee_label": "'''[[Josh Green (politician)|Josh Green]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Josh Green with state of Hawaii seal and flags",
+        "commons_timestamp": "2022-11-22T16:43:23Z"
+      },
+      "source_version": "2022-11-22T16:43:23Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Josh_Green_Official_Photo_2022_(cropped)_(cropped).jpg",
+        "credit": "Aloha102 / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Josh_Green_Official_Photo_2022_%28cropped%29_%28cropped%29.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Josh_Green_Official_Photo_2022_%28cropped%29_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/f6f75f4d431fad4ab2dbd188f63c9b9b7f6774610c1a678211b82a8afa36d315.jpg",
+        "sha256": "f6f75f4d431fad4ab2dbd188f63c9b9b7f6774610c1a678211b82a8afa36d315",
+        "retrieved_at": "2026-11-17T23:16:13.274022+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-IA",
+      "state_code": "IA",
+      "name": "Rob Sand",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/iowa",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Iowa_gubernatorial_election",
+        "election_revision": 1386274946,
+        "nominee_label": "'''[[Rob Sand]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Rob Sand campaigning in Emmet County, September 2025",
+        "commons_timestamp": "2026-11-17T10:42:13Z"
+      },
+      "source_version": "2026-11-17T10:42:13Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Rob_Sand_in_September_2025_(cropped).png",
+        "credit": "Rob Sand for Governor / Wikimedia Commons",
+        "license": "CC0",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Rob_Sand_in_September_2025_(cropped).png#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Rob_Sand_in_September_2025_%28cropped%29.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Rob_Sand_in_September_2025_%28cropped%29.png/330px-Rob_Sand_in_September_2025_%28cropped%29.png",
+        "mime_type": "image/png",
+        "url": "/media/candidates/bacb6210182993da3d01d0b7f2f4f75dd6ffc4bf694b3f5eb15be33bdca1055e.png",
+        "sha256": "bacb6210182993da3d01d0b7f2f4f75dd6ffc4bf694b3f5eb15be33bdca1055e",
+        "retrieved_at": "2026-11-17T23:16:25.145917+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-IA",
+      "state_code": "IA",
+      "name": "Zach Lahn",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/iowa",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Iowa_gubernatorial_election",
+        "election_revision": 1386274946,
+        "nominee_label": "Zach Lahn",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Photo of 2026 Iowa gubernatorial election Republican nominee Zach Lahn on August 14, 2026. Made higher quality photo.",
+        "commons_timestamp": "2026-10-10T02:34:28Z"
+      },
+      "source_version": "2026-10-10T02:34:28Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Zach_Lahn_IA_State_Fair_2026.jog_(cropped).jpg",
+        "credit": "Raydo / Wikimedia Commons",
+        "license": "CC0",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Zach_Lahn_IA_State_Fair_2026.jog_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Zach_Lahn_IA_State_Fair_2026.jog_%28cropped%29.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Zach_Lahn_IA_State_Fair_2026.jog_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/9accb9c41b4bba8d1c2b2b6d665ab72037bdb37af7c1b69c715835a362cd22fb.jpg",
+        "sha256": "9accb9c41b4bba8d1c2b2b6d665ab72037bdb37af7c1b69c715835a362cd22fb",
+        "retrieved_at": "2026-11-17T23:16:25.157917+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-ID",
+      "state_code": "ID",
+      "name": "Brad Little",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/idaho",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Idaho_gubernatorial_election",
+        "election_revision": 1385682829,
+        "nominee_label": "'''[[Brad Little]]'''",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Brad Little , 33rd Governor of Idaho",
+        "commons_timestamp": "2019-07-03T14:34:02Z"
+      },
+      "source_version": "2019-07-03T14:34:02Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Brad_Little_official_photo_(cropped).jpg",
+        "credit": "Phil White/Office of the Governor of Idaho . / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Brad_Little_official_photo_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Brad_Little_official_photo_%28cropped%29.jpg/330px-Brad_Little_official_photo_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/90dcb22a05ece52cf95c7ecd0d50985129e6bbdcf43ce13ecf31c44cc8b1f3c4.jpg",
+        "sha256": "90dcb22a05ece52cf95c7ecd0d50985129e6bbdcf43ce13ecf31c44cc8b1f3c4",
+        "retrieved_at": "2026-11-17T23:16:13.889454+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-ID",
+      "state_code": "ID",
+      "name": "Terri Pickens",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/idaho",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Idaho_gubernatorial_election",
+        "election_revision": 1385682829,
+        "reviewed_commons_title": "File:Terri Pickens for Idaho 2026, 3.png",
+        "method": "Reviewed the exact source label and state against the 2026 Governor candidate list and Commons description of the same political candidate. Source party O is retained for Approval Voting/unaffiliated entries. No name-only or face matching.",
+        "image_description": "Terri Pickens, Democratic nominee for governor of Idaho, Idaho in 2026.",
+        "commons_timestamp": "2026-05-21T18:04:03Z"
+      },
+      "source_version": "2026-05-21T18:04:03Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Terri_Pickens_for_Idaho_2026%2C_3.png",
+        "credit": "Terri Pickens / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Terri_Pickens_for_Idaho_2026%2C_3.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Terri_Pickens_for_Idaho_2026%2C_3.png/330px-Terri_Pickens_for_Idaho_2026%2C_3.png",
+        "mime_type": "image/png",
+        "url": "/media/candidates/b0816292d70906c739833113579435097a83b60278425f14e2ddcef2f40b66e1.png",
+        "sha256": "b0816292d70906c739833113579435097a83b60278425f14e2ddcef2f40b66e1",
+        "retrieved_at": "2026-11-17T23:25:32.988143+00:00",
+        "focus": {
+          "x": 50,
+          "y": 23,
+          "zoom": 4
+        }
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Darren Bailey",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/illinois",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Illinois_gubernatorial_election",
+        "election_revision": 1385781060,
+        "nominee_label": "[[Darren Bailey]]",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Republican nominee for Illinois Governor Darren Bailey at a campaign event, 2022.",
+        "commons_timestamp": "2026-02-07T03:41:07Z"
+      },
+      "source_version": "2026-02-07T03:41:07Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Darren_Bailey_at_a_2022_Campaign_Event_(cropped2).jpg",
+        "credit": "Cobiblair / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Darren_Bailey_at_a_2022_Campaign_Event_%28cropped2%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Darren_Bailey_at_a_2022_Campaign_Event_%28cropped2%29.jpg/330px-Darren_Bailey_at_a_2022_Campaign_Event_%28cropped2%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/0259d9447ac9611de1b289e8a64ec042c69d151a093b174baf24f1a032f627a0.jpg",
+        "sha256": "0259d9447ac9611de1b289e8a64ec042c69d151a093b174baf24f1a032f627a0",
+        "retrieved_at": "2026-11-17T23:16:24.553262+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "JB Pritzker",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/illinois",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Illinois_gubernatorial_election",
+        "election_revision": 1385781060,
+        "nominee_label": "'''[[JB Pritzker]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "JB Pritzker 2026",
+        "commons_timestamp": "2026-09-23T03:13:39Z"
+      },
+      "source_version": "2026-09-23T03:13:39Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:JB_Pritzker_2026_(cropped_3x4).jpg",
+        "credit": "Oscar Garza / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/JB_Pritzker_2026_%28cropped_3x4%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/JB_Pritzker_2026_%28cropped_3x4%29.jpg/330px-JB_Pritzker_2026_%28cropped_3x4%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/744b4a2840f58ea9a18a4380e71606f1fc42a2a39dd215da5198128d6f6727c6.jpg",
+        "sha256": "744b4a2840f58ea9a18a4380e71606f1fc42a2a39dd215da5198128d6f6727c6",
+        "retrieved_at": "2026-11-17T23:16:14.455221+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-KS",
+      "state_code": "KS",
+      "name": "Cindy Holscher",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/kansas",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Kansas_gubernatorial_election",
+        "election_revision": 1386323652,
+        "nominee_label": "'''[[Cindy Holscher]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Cindy Holscher at Lawrence, KS campaign event",
+        "commons_timestamp": "2026-10-30T04:52:43Z"
+      },
+      "source_version": "2026-10-30T04:52:43Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Cindy_Holscher_1_(3x4_cropped).jpg",
+        "credit": "Catboy69 / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Cindy_Holscher_1_%283x4_cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Cindy_Holscher_1_%283x4_cropped%29.jpg/330px-Cindy_Holscher_1_%283x4_cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/fa5523b0de9f19aa4176a0897554ad59ac94e75af9b348de833a596c764812d3.jpg",
+        "sha256": "fa5523b0de9f19aa4176a0897554ad59ac94e75af9b348de833a596c764812d3",
+        "retrieved_at": "2026-11-17T23:16:25.790140+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-KS",
+      "state_code": "KS",
+      "name": "Ty Masterson",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/kansas",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Kansas_gubernatorial_election",
+        "election_revision": 1386323652,
+        "nominee_label": "[[Ty Masterson]]",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Masterson in 2025",
+        "commons_timestamp": "2026-11-04T10:21:57Z"
+      },
+      "source_version": "2026-11-04T10:21:57Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:TY_mASTERSON_(cropped_2).jpg",
+        "credit": "NicholasGian25 / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/TY_mASTERSON_%28cropped_2%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/TY_mASTERSON_%28cropped_2%29.jpg/330px-TY_mASTERSON_%28cropped_2%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/8859ab0f8a6e7ae08c63d24323ad6dbf4b45589b0d1a43065c54d9c17c3c080f.jpg",
+        "sha256": "8859ab0f8a6e7ae08c63d24323ad6dbf4b45589b0d1a43065c54d9c17c3c080f",
+        "retrieved_at": "2026-11-17T23:16:25.819142+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-MA",
+      "state_code": "MA",
+      "name": "Maura Healey",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/massachusetts",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Massachusetts_gubernatorial_election",
+        "election_revision": 1386062293,
+        "nominee_label": "'''[[Maura Healey]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Maura Healey , 73rd Governor of Massachusetts",
+        "commons_timestamp": "2023-01-06T04:24:03Z"
+      },
+      "source_version": "2023-01-06T04:24:03Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Maura_Healey%2C_official_portrait%2C_governor_(cropped).jpg",
+        "credit": "Governors office / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Maura_Healey%2C_official_portrait%2C_governor_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Maura_Healey%2C_official_portrait%2C_governor_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Maura_Healey%2C_official_portrait%2C_governor_%28cropped%29.jpg/330px-Maura_Healey%2C_official_portrait%2C_governor_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/02e6846dab14ee8bb948aa3b8269da8b5795a379fbce288717c8b66856d246d0.jpg",
+        "sha256": "02e6846dab14ee8bb948aa3b8269da8b5795a379fbce288717c8b66856d246d0",
+        "retrieved_at": "2026-11-17T23:16:27.709621+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-MD",
+      "state_code": "MD",
+      "name": "Dan Cox",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/maryland",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Maryland_gubernatorial_election",
+        "election_revision": 1386321335,
+        "nominee_label": "[[Dan Cox]]",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Governor Hogan Hosts a GOP Caucus Reception by Joe Andrucyk, Patrick Siebert at Government House, 101 State Circle, Annapolis MD 21401",
+        "commons_timestamp": "2023-10-26T13:40:58Z"
+      },
+      "source_version": "2023-10-26T13:40:58Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Dan_Cox_Mar2020_(49617550556).jpg",
+        "credit": "MDGovpics / Wikimedia Commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Dan_Cox_Mar2020_%2849617550556%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Dan_Cox_Mar2020_%2849617550556%29.jpg/330px-Dan_Cox_Mar2020_%2849617550556%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/8d5b311ea8188196828f9894460dd6d993b29cf4f1f9e58d1c4e3f77b4183930.jpg",
+        "sha256": "8d5b311ea8188196828f9894460dd6d993b29cf4f1f9e58d1c4e3f77b4183930",
+        "retrieved_at": "2026-11-17T23:16:27.086331+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-MD",
+      "state_code": "MD",
+      "name": "Wes Moore",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/maryland",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Maryland_gubernatorial_election",
+        "election_revision": 1386321335,
+        "nominee_label": "'''[[Wes Moore]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Governor Moore Meets with Governor Kuroiwa Yuji to Celebrate the 45th Anniversary of the Maryland-Kanagawa Sister State Relationship by Pat Siebert at 110 State Circle, Annapolis, MD 21401",
+        "commons_timestamp": "2026-09-10T18:29:16Z"
+      },
+      "source_version": "2026-09-10T18:29:16Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Governor_Kuroiwa_and_Japanese_Delegation_(cropped2).jpg",
+        "credit": "Maryland GovPics / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Governor_Kuroiwa_and_Japanese_Delegation_%28cropped2%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Governor_Kuroiwa_and_Japanese_Delegation_%28cropped2%29.jpg/330px-Governor_Kuroiwa_and_Japanese_Delegation_%28cropped2%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/1b4725d328d28fc1f9e99f34c40ab4a691b51c1eeb9758b2dea4e154a724252d.jpg",
+        "sha256": "1b4725d328d28fc1f9e99f34c40ab4a691b51c1eeb9758b2dea4e154a724252d",
+        "retrieved_at": "2026-11-17T23:16:27.068328+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-ME",
+      "state_code": "ME",
+      "name": "Bobby Charles",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/maine",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Maine_gubernatorial_election",
+        "election_revision": 1386174009,
+        "nominee_label": "[[Robert B. Charles|Bobby Charles]]",
+        "nominee_party": "Republican Party (United States) ",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Photography of Robert Charles, former Assistant Secretary of State INL",
+        "commons_timestamp": "2025-09-01T18:36:34Z"
+      },
+      "source_version": "2025-09-01T18:36:34Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Robert_Charles_(cropped).jpg",
+        "credit": "Hoveros / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Robert_Charles_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Robert_Charles_%28cropped%29.jpg/330px-Robert_Charles_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/9f0f7c0d70a03d37d6b72ac8643a204a70f17e1635b8b382bf101d775054e130.jpg",
+        "sha256": "9f0f7c0d70a03d37d6b72ac8643a204a70f17e1635b8b382bf101d775054e130",
+        "retrieved_at": "2026-11-17T23:16:26.436373+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-ME",
+      "state_code": "ME",
+      "name": "Hannah Pingree",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/maine",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Maine_gubernatorial_election",
+        "election_revision": 1386174009,
+        "nominee_label": "'''[[Hannah Pingree]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Hannah Pingree, Majority Leader of the Maine House of Representatives",
+        "commons_timestamp": "2026-06-19T05:54:17Z"
+      },
+      "source_version": "2026-06-19T05:54:17Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Headshot_of_Hannah_Pingree_in_February_2026_(cropped).jpg",
+        "credit": "Hannah Pingree for Governor / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Headshot_of_Hannah_Pingree_in_February_2026_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Headshot_of_Hannah_Pingree_in_February_2026_%28cropped%29.jpg/330px-Headshot_of_Hannah_Pingree_in_February_2026_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/dd6ec72eadad7cf69f288863dd9499dcff323da72fdcf361cb0de382d7ac91c3.jpg",
+        "sha256": "dd6ec72eadad7cf69f288863dd9499dcff323da72fdcf361cb0de382d7ac91c3",
+        "retrieved_at": "2026-11-17T23:16:26.425621+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "Jocelyn Benson",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/michigan",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election",
+        "election_revision": 1386081937,
+        "nominee_label": "'''[[Jocelyn Benson]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Michigan Secretary of State Jocelyn Benson",
+        "commons_timestamp": "2025-11-21T15:43:33Z"
+      },
+      "source_version": "2025-11-21T15:43:33Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:SOS_Jocelyn_Benson_web_(cropped).jpg",
+        "credit": "JFM Photo 73 / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/SOS_Jocelyn_Benson_web_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/SOS_Jocelyn_Benson_web_%28cropped%29.jpg/330px-SOS_Jocelyn_Benson_web_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/aecd420d910d3a8e0f70a940c8b5d436fe86159632d09f80fbad450cabad2129.jpg",
+        "sha256": "aecd420d910d3a8e0f70a940c8b5d436fe86159632d09f80fbad450cabad2129",
+        "retrieved_at": "2026-11-17T23:16:27.733619+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "John James",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/michigan",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election",
+        "election_revision": 1386081937,
+        "nominee_label": "[[John James (Michigan politician)|John James]]",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Rep. John James official photo, 118th Congress",
+        "commons_timestamp": "2025-08-15T05:17:56Z"
+      },
+      "source_version": "2025-08-15T05:17:56Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Rep._John_James_official_photo%2C_118th_Congress_3x4_(cropped).jpg",
+        "credit": "United States Congress / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Rep._John_James_official_photo%2C_118th_Congress_3x4_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Rep._John_James_official_photo%2C_118th_Congress_3x4_%28cropped%29.jpg/330px-Rep._John_James_official_photo%2C_118th_Congress_3x4_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/7faa57675ae886b79f702c2baba5112ee7b6f94786da112d187d029fa7805074.jpg",
+        "sha256": "7faa57675ae886b79f702c2baba5112ee7b6f94786da112d187d029fa7805074",
+        "retrieved_at": "2026-11-17T23:16:38.389533+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-MN",
+      "state_code": "MN",
+      "name": "Amy Klobuchar",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/minnesota",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Minnesota_gubernatorial_election",
+        "election_revision": 1386278468,
+        "nominee_label": "'''[[Amy Klobuchar]]'''",
+        "nominee_party": "Minnesota Democratic–Farmer–Labor Party",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "NASA astronaut U.S. Senator Amy Klobuchar (D-MN), during an event with the Artemis II crew at the Russell Senate Office Building, Tuesday, May 12, 2026, in Washington. NASA’s Artemis II mission took Wiseman, Glover, NASA astronaut Christina Koch, Artemis II mission specialist, and CSA (Canadian Space Agency) astronaut Jeremy Hansen, Artemis II mission specialist, on a nearly 10-day journey around the Moon and back to Earth in April 2026. Photo Credit: (NASA/Aubrey Gemignani)",
+        "commons_timestamp": "2026-08-16T10:16:59Z"
+      },
+      "source_version": "2026-08-16T10:16:59Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Artemis_II_Klobuchar_(3x4_cropped).jpg",
+        "credit": "NASA Headquarters / NASA/Aubrey Gemignani / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Artemis_II_Klobuchar_(3x4_cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Artemis_II_Klobuchar_%283x4_cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Artemis_II_Klobuchar_%283x4_cropped%29.jpg/330px-Artemis_II_Klobuchar_%283x4_cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/220ffc0acb89ac89f94cc48bd92231f6e03426ccf6e3b3bb8cbf023b3728327f.jpg",
+        "sha256": "220ffc0acb89ac89f94cc48bd92231f6e03426ccf6e3b3bb8cbf023b3728327f",
+        "retrieved_at": "2026-11-17T23:16:38.422110+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-MN",
+      "state_code": "MN",
+      "name": "Lisa Demuth",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/minnesota",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Minnesota_gubernatorial_election",
+        "election_revision": 1386278468,
+        "nominee_label": "[[Lisa Demuth]]",
+        "nominee_party": "Republican Party of Minnesota",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Photograph of Lisa Demuth from her gubernatorial campaign.",
+        "commons_timestamp": "2026-08-12T04:12:57Z"
+      },
+      "source_version": "2026-08-12T04:12:57Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Lisa_Demuth%2C_2026_(3x4).jpg",
+        "credit": "Lisa Demuth for Governor / Wikimedia Commons",
+        "license": "CC0",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Lisa_Demuth%2C_2026_(3x4).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Lisa_Demuth%2C_2026_%283x4%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Lisa_Demuth%2C_2026_%283x4%29.jpg/330px-Lisa_Demuth%2C_2026_%283x4%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/9d3075bb59382de09c58666b73f959b842f937b9656013bd499bf5087f4c159c.jpg",
+        "sha256": "9d3075bb59382de09c58666b73f959b842f937b9656013bd499bf5087f4c159c",
+        "retrieved_at": "2026-11-17T23:16:39.026065+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-NE",
+      "state_code": "NE",
+      "name": "Jim Pillen",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/nebraska",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Nebraska_gubernatorial_election",
+        "election_revision": 1386320948,
+        "nominee_label": "'''[[Jim Pillen]]'''",
+        "nominee_party": "[[Republican Party (United States)|Republican]]",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Governor Moore participates in the SelectUSA Governor's Plenary Panel by Polly Irungu at Gaylord National Resort and Convention Center, 201 Waterfront St, Oxon Hill, MD 20745",
+        "commons_timestamp": "2026-05-06T12:31:38Z"
+      },
+      "source_version": "2026-05-06T12:31:38Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Jim_Pillen_SelectUSA_(55251574792).jpg",
+        "credit": "Maryland GovPics / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Jim_Pillen_SelectUSA_%2855251574792%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Jim_Pillen_SelectUSA_%2855251574792%29.jpg/330px-Jim_Pillen_SelectUSA_%2855251574792%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/7f67058260d6b44404989027cbde7f90c934b2a6f544ef713dfe80d91a4be7ef.jpg",
+        "sha256": "7f67058260d6b44404989027cbde7f90c934b2a6f544ef713dfe80d91a4be7ef",
+        "retrieved_at": "2026-11-17T23:16:39.043067+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-NH",
+      "state_code": "NH",
+      "name": "Kelly Ayotte",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/new-hampshire",
+        "election_page": "https://en.wikipedia.org/wiki/2026_New_Hampshire_gubernatorial_election",
+        "election_revision": 1385988826,
+        "nominee_label": "'''[[Kelly Ayotte]]'''",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "From original photo: New Hampshire Governor Kelly Ayotte (right) and New Hampshire National Guard Adjutant General David Mikolaities (left) present James Chamberis with a certificate of commendation in recognition of his exceptional service during the New Hampshire National Guard's annual award ceremony.",
+        "commons_timestamp": "2026-09-26T04:56:28Z"
+      },
+      "source_version": "2026-09-26T04:56:28Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:NH_Governor_Kelly_Ayotte_(December_11%2C_2025).jpg",
+        "credit": "Staff Sgt. David Marquis / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:NH_Governor_Kelly_Ayotte_(December_11%2C_2025).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/NH_Governor_Kelly_Ayotte_%28December_11%2C_2025%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/NH_Governor_Kelly_Ayotte_%28December_11%2C_2025%29.jpg/330px-NH_Governor_Kelly_Ayotte_%28December_11%2C_2025%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/e58cb0633d2a180716256aacace3be83d91fe7e97380b6e60bf383253225d29a.jpg",
+        "sha256": "e58cb0633d2a180716256aacace3be83d91fe7e97380b6e60bf383253225d29a",
+        "retrieved_at": "2026-11-17T23:16:40.290526+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-NM",
+      "state_code": "NM",
+      "name": "Deb Haaland",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/new-mexico",
+        "election_page": "https://en.wikipedia.org/wiki/2026_New_Mexico_gubernatorial_election",
+        "election_revision": 1385783113,
+        "nominee_label": "'''[[Deb Haaland]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Deb Haaland, United States Secretary of the Interior under President Biden.",
+        "commons_timestamp": "2021-08-19T15:08:29Z"
+      },
+      "source_version": "2021-08-19T15:08:29Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Secretary_Deb_Haaland%2C_official_headshot.jpg",
+        "credit": "Department of the Interior / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Secretary_Deb_Haaland%2C_official_headshot.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Secretary_Deb_Haaland%2C_official_headshot.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Secretary_Deb_Haaland%2C_official_headshot.jpg/330px-Secretary_Deb_Haaland%2C_official_headshot.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/1114e2d452602265dd79259893eb54fa6a075597391c84bfbdcd64d97eb5ad87.jpg",
+        "sha256": "1114e2d452602265dd79259893eb54fa6a075597391c84bfbdcd64d97eb5ad87",
+        "retrieved_at": "2026-11-17T23:16:40.288522+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-NV",
+      "state_code": "NV",
+      "name": "Aaron Ford",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/nevada",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Nevada_gubernatorial_election",
+        "election_revision": 1386285905,
+        "nominee_label": "'''[[Aaron Ford]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "October 17-18, 2023, Nevada Attorney General Aaron Ford addresses the United Nations Human Rights Committee as part of a senior-level delegation from the U.S. including federal, state, and local leadership and law enforcement, including Ambassador to the UN Human Rights Council Michèle Taylor headed the U.S. delegation, which includes Special Assistant to the President for Democracy and Civil Participation Justin Vail, U.S. Department of State’s Principal Deputy Assistant Secretary in the Bureau of Democracy, Human Rights, and Labor Robert Gilchrist, the Attorney General for the State of Nevada, Aaron Ford, Mayor of Montgomery, Alabama, Steven Reed, as well as nine other senior U.S. government representatives from the Department of Justice, Department of Labor, Department of Housing and Urban Development, Department of Education, Department of Health and Human Services, Department of Homeland Security, and the Department of Defense.",
+        "commons_timestamp": "2025-12-11T05:22:20Z"
+      },
+      "source_version": "2025-12-11T05:22:20Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Nevada_Attorney_General_Aaron_Ford_addresses_the_United_Nations_Human_Rights_Committee%2C_October_17-18%2C_2023_1_(cropped).jpg",
+        "credit": "United States Mission to Geneva, United States Department of State / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Nevada_Attorney_General_Aaron_Ford_addresses_the_United_Nations_Human_Rights_Committee%2C_October_17-18%2C_2023_1_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Nevada_Attorney_General_Aaron_Ford_addresses_the_United_Nations_Human_Rights_Committee%2C_October_17-18%2C_2023_1_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Nevada_Attorney_General_Aaron_Ford_addresses_the_United_Nations_Human_Rights_Committee%2C_October_17-18%2C_2023_1_%28cropped%29.jpg/330px-Nevada_Attorney_General_Aaron_Ford_addresses_the_United_Nations_Human_Rights_Committee%2C_October_17-18%2C_2023_1_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/04cadef3ca2ecbb75ba578e2231b32866e644819699b98a9306baa080788368d.jpg",
+        "sha256": "04cadef3ca2ecbb75ba578e2231b32866e644819699b98a9306baa080788368d",
+        "retrieved_at": "2026-11-17T23:16:39.678138+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-NV",
+      "state_code": "NV",
+      "name": "Joe Lombardo",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/nevada",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Nevada_gubernatorial_election",
+        "election_revision": 1386285905,
+        "nominee_label": "[[Joe Lombardo]]",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Nevada Governor Joe Lombardo speaking with attendees at the Republican Jewish Coalition's 2026 Annual Leadership Summit at the Venetian Convention & Expo Center in Las Vegas, Nevada. Please attribute to Gage Skidmore if used elsewhere.",
+        "commons_timestamp": "2026-10-30T07:07:58Z"
+      },
+      "source_version": "2026-10-30T07:07:58Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Joe_Lombardo_(55512471876)_(cropped).jpg",
+        "credit": "Gage Skidmore / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Joe_Lombardo_%2855512471876%29_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Joe_Lombardo_%2855512471876%29_%28cropped%29.jpg/330px-Joe_Lombardo_%2855512471876%29_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/869d791d24d1d448363f54c6b3b0049584e4dcc455bdb5aa5c346218ff41e261.jpg",
+        "sha256": "869d791d24d1d448363f54c6b3b0049584e4dcc455bdb5aa5c346218ff41e261",
+        "retrieved_at": "2026-11-17T23:16:39.676625+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-NY",
+      "state_code": "NY",
+      "name": "Bruce Blakeman",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/new-york",
+        "election_page": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election",
+        "election_revision": 1386097789,
+        "nominee_label": "[[Bruce Blakeman]]",
+        "nominee_party": "[[Republican Party (United States)|Republican]]",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "President Donald J. Trump delivers remarks on the economy at Rockland Community College in Suffern, New York on Friday, May 22, 2026.(Official White House Photo by Joyce N. Boghosian)",
+        "commons_timestamp": "2026-10-07T23:08:38Z"
+      },
+      "source_version": "2026-10-07T23:08:38Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Donald_J._Trump_delivers_remarks_on_the_economy_at_Rockland_Community_College_in_Suffern%2C_New_York_on_Friday%2C_May_22%2C_2026_-_17_(cropped).jpg",
+        "credit": "The White House / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Donald_J._Trump_delivers_remarks_on_the_economy_at_Rockland_Community_College_in_Suffern%2C_New_York_on_Friday%2C_May_22%2C_2026_-_17_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Donald_J._Trump_delivers_remarks_on_the_economy_at_Rockland_Community_College_in_Suffern%2C_New_York_on_Friday%2C_May_22%2C_2026_-_17_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Donald_J._Trump_delivers_remarks_on_the_economy_at_Rockland_Community_College_in_Suffern%2C_New_York_on_Friday%2C_May_22%2C_2026_-_17_%28cropped%29.jpg/330px-Donald_J._Trump_delivers_remarks_on_the_economy_at_Rockland_Community_College_in_Suffern%2C_New_York_on_Friday%2C_May_22%2C_2026_-_17_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/e55e954c39f346fa6223e9897db6d68b34369c2538a508219770ca30880132dd.jpg",
+        "sha256": "e55e954c39f346fa6223e9897db6d68b34369c2538a508219770ca30880132dd",
+        "retrieved_at": "2026-11-17T23:16:40.942798+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-NY",
+      "state_code": "NY",
+      "name": "Kathy Hochul",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/new-york",
+        "election_page": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election",
+        "election_revision": 1386097789,
+        "nominee_label": "'''[[Kathy Hochul]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Governor Kathy Hochul and MTA Chair & CEO Janno Lieber make a subway safety announcement at the NYCT Rail Control Center (RCC) on Wednesday, Mar 6, 2024. (Marc A. Hermann / MTA)",
+        "commons_timestamp": "2026-06-24T01:35:14Z"
+      },
+      "source_version": "2026-06-24T01:35:14Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Governor_Hochul_Announces_Five-Point_Plan_to_Protect_New_Yorkers_on_the_Subway_(cropped_3).jpg",
+        "credit": "Metropolitan Transportation Authority / Wikimedia Commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Governor_Hochul_Announces_Five-Point_Plan_to_Protect_New_Yorkers_on_the_Subway_%28cropped_3%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Governor_Hochul_Announces_Five-Point_Plan_to_Protect_New_Yorkers_on_the_Subway_%28cropped_3%29.jpg/330px-Governor_Hochul_Announces_Five-Point_Plan_to_Protect_New_Yorkers_on_the_Subway_%28cropped_3%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/0a1417d1702701107f3a6bbccfd13d4f181350ac7dd878082ba05a8a78d715fd.jpg",
+        "sha256": "0a1417d1702701107f3a6bbccfd13d4f181350ac7dd878082ba05a8a78d715fd",
+        "retrieved_at": "2026-11-17T23:16:40.939799+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-OH",
+      "state_code": "OH",
+      "name": "Amy Acton",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/ohio",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Ohio_gubernatorial_election",
+        "election_revision": 1386098684,
+        "nominee_label": "'''[[Amy Acton]]'''",
+        "nominee_party": "Ohio Democratic Party",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Dr. Amy Acton in 2025",
+        "commons_timestamp": "2026-01-18T06:10:37Z"
+      },
+      "source_version": "2026-01-18T06:10:37Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Amy_Acton_05_(cropped).jpg",
+        "credit": "Myselfsour2724 / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Amy_Acton_05_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Amy_Acton_05_%28cropped%29.jpg/330px-Amy_Acton_05_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/6ce9d9c224b3c282cd86b5c293b9bbdbcbb9199b1bcabddfad896bce97ed04e0.jpg",
+        "sha256": "6ce9d9c224b3c282cd86b5c293b9bbdbcbb9199b1bcabddfad896bce97ed04e0",
+        "retrieved_at": "2026-11-17T23:16:51.694826+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-OH",
+      "state_code": "OH",
+      "name": "Vivek Ramaswamy",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/ohio",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Ohio_gubernatorial_election",
+        "election_revision": 1386098684,
+        "nominee_label": "[[Vivek Ramaswamy]]",
+        "nominee_party": "Ohio Republican Party",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Vivek Ramaswamy speaking with attendees at the Ohio State University tour stop of the \"This Is The Turning Point\" tour at Mershon Auditorium in Columbus, Ohio.",
+        "commons_timestamp": "2026-06-06T07:07:42Z"
+      },
+      "source_version": "2026-06-06T07:07:42Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Vivek_Ramaswamy_(55241367373)_(cropped).jpg",
+        "credit": "Gage Skidmore / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Vivek_Ramaswamy_%2855241367373%29_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Vivek_Ramaswamy_%2855241367373%29_%28cropped%29.jpg/330px-Vivek_Ramaswamy_%2855241367373%29_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/8ffdb1bd0ce0148a40256227f92ced33f57246278ee933b2df0d35ade4a440ed.jpg",
+        "sha256": "8ffdb1bd0ce0148a40256227f92ced33f57246278ee933b2df0d35ade4a440ed",
+        "retrieved_at": "2026-11-17T23:16:51.668827+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-OK",
+      "state_code": "OK",
+      "name": "Cyndi Munson",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/oklahoma",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Oklahoma_gubernatorial_election",
+        "election_revision": 1386276107,
+        "nominee_label": "[[Cyndi Munson]]",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Official Portrait, 2023",
+        "commons_timestamp": "2026-11-10T18:51:58Z"
+      },
+      "source_version": "2026-11-10T18:51:58Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Cyndi_Munson_(cropped).jpg",
+        "credit": "Unknown author Unknown author / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Cyndi_Munson_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Cyndi_Munson_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Cyndi_Munson_%28cropped%29.jpg/330px-Cyndi_Munson_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/1b8228636aee459632fd10669343e8790724a6ef3f95f73a91c78f9959d8e66a.jpg",
+        "sha256": "1b8228636aee459632fd10669343e8790724a6ef3f95f73a91c78f9959d8e66a",
+        "retrieved_at": "2026-11-17T23:16:52.321522+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-OK",
+      "state_code": "OK",
+      "name": "Mike Mazzei",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/oklahoma",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Oklahoma_gubernatorial_election",
+        "election_revision": 1386276107,
+        "nominee_label": "'''[[Mike Mazzei]]'''",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Headshot of Senator Mike Mazzei",
+        "commons_timestamp": "2025-03-19T19:31:19Z"
+      },
+      "source_version": "2025-03-19T19:31:19Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Mike_Mazzei_OK_Senate_Headshot.jpg",
+        "credit": "Oklahoma State Senate / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Mike_Mazzei_OK_Senate_Headshot.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Mike_Mazzei_OK_Senate_Headshot.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Mike_Mazzei_OK_Senate_Headshot.jpg/330px-Mike_Mazzei_OK_Senate_Headshot.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/eb6d92820454c4d618ce0d6ce9da07d64d38b6ca031a3d4f979abf00068782e3.jpg",
+        "sha256": "eb6d92820454c4d618ce0d6ce9da07d64d38b6ca031a3d4f979abf00068782e3",
+        "retrieved_at": "2026-11-17T23:16:52.585608+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-OR",
+      "state_code": "OR",
+      "name": "Christine Drazan",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/oregon",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Oregon_gubernatorial_election",
+        "election_revision": 1386133868,
+        "nominee_label": "[[Christine Drazan]]",
+        "nominee_party": "Oregon Republican Party",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Christine Drazan for Oregon State University.",
+        "commons_timestamp": "2025-09-13T22:34:54Z"
+      },
+      "source_version": "2025-09-13T22:34:54Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Christine_Drazan_in_August_2022_(cropped).jpg",
+        "credit": "Oregon State University / Wikimedia Commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Christine_Drazan_in_August_2022_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Christine_Drazan_in_August_2022_%28cropped%29.jpg/330px-Christine_Drazan_in_August_2022_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/4153f757f8c34b0cf57dfc237db1ad49e5fabce583944d81857ce6540c7a4ae5.jpg",
+        "sha256": "4153f757f8c34b0cf57dfc237db1ad49e5fabce583944d81857ce6540c7a4ae5",
+        "retrieved_at": "2026-11-17T23:16:53.200641+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-OR",
+      "state_code": "OR",
+      "name": "Tina Kotek",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/oregon",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Oregon_gubernatorial_election",
+        "election_revision": 1386133868,
+        "nominee_label": "'''[[Tina Kotek]]'''",
+        "nominee_party": "Democratic Party of Oregon",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "U.S. Department of the Interior, Columbia River Salmon Agreement Ceremonial Event, Washington DC on 23 February 2024",
+        "commons_timestamp": "2026-11-06T17:59:32Z"
+      },
+      "source_version": "2026-11-06T17:59:32Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:U.S._Department_of_the_Interior%2C_Columbia_River_Salmon_Agreement_Ceremonial_Event%2C_Washington_DC_on_23_February_2024_-_67_(cropped)2.jpg",
+        "credit": "U.S. Department of the Interior / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:U.S._Department_of_the_Interior%2C_Columbia_River_Salmon_Agreement_Ceremonial_Event%2C_Washington_DC_on_23_February_2024_-_67_(cropped)2.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/U.S._Department_of_the_Interior%2C_Columbia_River_Salmon_Agreement_Ceremonial_Event%2C_Washington_DC_on_23_February_2024_-_67_%28cropped%292.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/U.S._Department_of_the_Interior%2C_Columbia_River_Salmon_Agreement_Ceremonial_Event%2C_Washington_DC_on_23_February_2024_-_67_%28cropped%292.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/9b9511b37f49e5bf2694941c23173dbe52452e0b646d0f4a52eae8eca8e7d666.jpg",
+        "sha256": "9b9511b37f49e5bf2694941c23173dbe52452e0b646d0f4a52eae8eca8e7d666",
+        "retrieved_at": "2026-11-17T23:16:52.925613+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-PA",
+      "state_code": "PA",
+      "name": "Josh Shapiro",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/pennsylvania",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Pennsylvania_gubernatorial_election",
+        "election_revision": 1386063598,
+        "nominee_label": "'''[[Josh Shapiro]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Governor Moore participates in the Chesapeake Bay Executive Council Meeting by Joe Andrucyk at Baltimore Aquarium, 501 E Pratt St. Baltimore MD. 21202",
+        "commons_timestamp": "2026-02-06T01:11:37Z"
+      },
+      "source_version": "2026-02-06T01:11:37Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Josh_Shapiro_December_2025_B.jpg",
+        "credit": "Maryland GovPics / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Josh_Shapiro_December_2025_B.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Josh_Shapiro_December_2025_B.jpg/330px-Josh_Shapiro_December_2025_B.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/bb3e41b96829344875cc6d50db5c86f29dd2fb3e1ac3f23e113cea6640f5e092.jpg",
+        "sha256": "bb3e41b96829344875cc6d50db5c86f29dd2fb3e1ac3f23e113cea6640f5e092",
+        "retrieved_at": "2026-11-17T23:16:53.875744+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-PA",
+      "state_code": "PA",
+      "name": "Stacy Garrity",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/pennsylvania",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Pennsylvania_gubernatorial_election",
+        "election_revision": 1386063598,
+        "nominee_label": "[[Stacy Garrity]]",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Stacy Garrity with other attendees at the Manufacturer & Business Association luncheon.",
+        "commons_timestamp": "2026-08-23T08:40:50Z"
+      },
+      "source_version": "2026-08-23T08:40:50Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Stacy_Garrity%2C_2025_(3x4).jpg",
+        "credit": "David H. McCormick / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Stacy_Garrity%2C_2025_(3x4).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Stacy_Garrity%2C_2025_%283x4%29.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Stacy_Garrity%2C_2025_%283x4%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/67e39d44abb033683f162e9f643585204daf8b954caf2c17749c68a5a347b3f5.jpg",
+        "sha256": "67e39d44abb033683f162e9f643585204daf8b954caf2c17749c68a5a347b3f5",
+        "retrieved_at": "2026-11-17T23:16:53.806745+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-RI",
+      "state_code": "RI",
+      "name": "Helena Buonanno Foulkes",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/rhode-island",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Rhode_Island_gubernatorial_election",
+        "election_revision": 1386063785,
+        "nominee_label": "'''[[Helena Foulkes]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": "'''[[Helena Foulkes]]'''",
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Helena Foulkes, EVP CVS Caremark & President CVS/Pharmacy",
+        "commons_timestamp": "2026-09-10T01:03:14Z"
+      },
+      "source_version": "2026-09-10T01:03:14Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:HelenaFoulkes_CROP_(cropped).jpg",
+        "credit": "Digitas Photos / Wikimedia Commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/HelenaFoulkes_CROP_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/HelenaFoulkes_CROP_%28cropped%29.jpg/330px-HelenaFoulkes_CROP_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/8af5f17965b96aacb71fdbb74fc1153665a18fa491ca594c0d655dc5ff986bb2.jpg",
+        "sha256": "8af5f17965b96aacb71fdbb74fc1153665a18fa491ca594c0d655dc5ff986bb2",
+        "retrieved_at": "2026-11-17T23:16:54.391530+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-SC",
+      "state_code": "SC",
+      "name": "Alan Wilson",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/south-carolina",
+        "election_page": "https://en.wikipedia.org/wiki/2026_South_Carolina_gubernatorial_election",
+        "election_revision": 1386271902,
+        "nominee_label": "'''[[Alan Wilson (politician)|Alan Wilson]]'''",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Attorney General of South Carolina Alan Wilson in August 2025.",
+        "commons_timestamp": "2026-06-25T02:43:02Z"
+      },
+      "source_version": "2026-06-25T02:43:02Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Alan_Wilson_in_August_2025.jpg",
+        "credit": "U.S. House of Representatives / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Alan_Wilson_in_August_2025.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Alan_Wilson_in_August_2025.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Alan_Wilson_in_August_2025.jpg/330px-Alan_Wilson_in_August_2025.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/4f71c8a6d2c7df9a475d46c97752f1e01a2a02a977fe7025d2ba705fd4c736e6.jpg",
+        "sha256": "4f71c8a6d2c7df9a475d46c97752f1e01a2a02a977fe7025d2ba705fd4c736e6",
+        "retrieved_at": "2026-11-17T23:16:54.583647+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-SD",
+      "state_code": "SD",
+      "name": "Larry Rhoden",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/south-dakota",
+        "election_page": "https://en.wikipedia.org/wiki/2026_South_Dakota_gubernatorial_election",
+        "election_revision": 1386113749,
+        "nominee_label": "'''[[Larry Rhoden]]'''",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Larry Rhoden in 2025",
+        "commons_timestamp": "2025-06-13T01:50:05Z"
+      },
+      "source_version": "2025-06-13T01:50:05Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Larry_Rhoden_2025_(cropped).jpg",
+        "credit": "U.S. Embassy Jerusalem / Wikimedia Commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Larry_Rhoden_2025_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Larry_Rhoden_2025_%28cropped%29.jpg/330px-Larry_Rhoden_2025_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/718cec7bdf5f9a47363b8baaeff78c7111145fcb37f0aba6d28750571fcb2a3e.jpg",
+        "sha256": "718cec7bdf5f9a47363b8baaeff78c7111145fcb37f0aba6d28750571fcb2a3e",
+        "retrieved_at": "2026-11-17T23:16:54.977473+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "David Hatley",
+      "party": "I",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/tennessee",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Tennessee_gubernatorial_election",
+        "election_revision": 1386097478,
+        "nominee_label": "David Hatley",
+        "nominee_party": "Independent politician",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "David Hatley",
+        "commons_timestamp": "2026-11-10T19:15:37Z"
+      },
+      "source_version": "2026-11-10T19:15:37Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:David_Hatley_headshot.png",
+        "credit": "Unknown author Unknown author / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/David_Hatley_headshot.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/David_Hatley_headshot.png/330px-David_Hatley_headshot.png",
+        "mime_type": "image/png",
+        "url": "/media/candidates/f3c89b643bac5e3db0089b562571b95b60bf1bb09d70984ee257f870cfc57abf.png",
+        "sha256": "f3c89b643bac5e3db0089b562571b95b60bf1bb09d70984ee257f870cfc57abf",
+        "retrieved_at": "2026-11-17T23:17:06.037882+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "Jerri Green",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/tennessee",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Tennessee_gubernatorial_election",
+        "election_revision": 1386097478,
+        "nominee_label": "Jerri Green",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Candidate for Tennessee Governor Jerri Green",
+        "commons_timestamp": "2026-08-10T15:16:24Z"
+      },
+      "source_version": "2026-08-10T15:16:24Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Jerri_Green_(cropped).3_(cropped).jpg",
+        "credit": "Zach Kinslow / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Jerri_Green_%28cropped%29.3_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Jerri_Green_%28cropped%29.3_%28cropped%29.jpg/330px-Jerri_Green_%28cropped%29.3_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/4448c1d3199e6d6d67a5622917ac53d11acbd582eaf2e41af925103c2bee23ff.jpg",
+        "sha256": "4448c1d3199e6d6d67a5622917ac53d11acbd582eaf2e41af925103c2bee23ff",
+        "retrieved_at": "2026-11-17T23:17:05.638460+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "Marsha Blackburn",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/tennessee",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Tennessee_gubernatorial_election",
+        "election_revision": 1386097478,
+        "nominee_label": "'''[[Marsha Blackburn]]'''",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Sen. Marsha Blackburn (R-TN) official headshot - 116th Congress",
+        "commons_timestamp": "2019-02-18T00:51:06Z"
+      },
+      "source_version": "2019-02-18T00:51:06Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Sen._Marsha_Blackburn_(R-TN)_official_headshot_-_116th_Congress_(cropped).jpg",
+        "credit": "United States Senate Photographic Studio / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Sen._Marsha_Blackburn_(R-TN)_official_headshot_-_116th_Congress_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Sen._Marsha_Blackburn_%28R-TN%29_official_headshot_-_116th_Congress_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Sen._Marsha_Blackburn_%28R-TN%29_official_headshot_-_116th_Congress_%28cropped%29.jpg/330px-Sen._Marsha_Blackburn_%28R-TN%29_official_headshot_-_116th_Congress_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/198691f6e902613b91145261a3af75364f23a7f062246266b26cf83c21f2599a.jpg",
+        "sha256": "198691f6e902613b91145261a3af75364f23a7f062246266b26cf83c21f2599a",
+        "retrieved_at": "2026-11-17T23:16:55.178428+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-TX",
+      "state_code": "TX",
+      "name": "Gina Hinojosa",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/texas",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election",
+        "election_revision": 1386246775,
+        "nominee_label": "'''[[Gina Hinojosa]]'''",
+        "nominee_party": "Texas Democratic Party",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "State Representative Gina Hinojosa speaking at the AFL-CIO COPE convention. January 28, 2024.",
+        "commons_timestamp": "2026-11-05T10:34:03Z"
+      },
+      "source_version": "2026-11-05T10:34:03Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Gina_Hinojosa_at_the_AFL-CIO_COPE_convention_in_2024_(cropped).jpg",
+        "credit": "RRC1701 / Wikimedia Commons",
+        "license": "CC0",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Gina_Hinojosa_at_the_AFL-CIO_COPE_convention_in_2024_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Gina_Hinojosa_at_the_AFL-CIO_COPE_convention_in_2024_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Gina_Hinojosa_at_the_AFL-CIO_COPE_convention_in_2024_%28cropped%29.jpg/330px-Gina_Hinojosa_at_the_AFL-CIO_COPE_convention_in_2024_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/74272dd7285dbbb8725adfc4563f26dcc358e4e3ebc0b3a014b0d763d5c95a0e.jpg",
+        "sha256": "74272dd7285dbbb8725adfc4563f26dcc358e4e3ebc0b3a014b0d763d5c95a0e",
+        "retrieved_at": "2026-11-17T23:17:06.249615+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-TX",
+      "state_code": "TX",
+      "name": "Greg Abbott",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/texas",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election",
+        "election_revision": 1386246775,
+        "nominee_label": "[[Greg Abbott]]",
+        "nominee_party": "Republican Party of Texas",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "U.S. Department of Agriculture (USDA) Secretary Brooke Rollins host a standing press conference from the newly opened Knipling-Bushland U.S. Livestock Insects Research Laboratory, in Kerrville, Texas to provide updates on the New World Screwworm, on June 9, 2026, . Speakers included Texas Governor Greg Abbott (SEEN SPEAKING), Animal and Plant Health Inspection Service Associate Administrator RDML Michael Schmoyer, Ph.D., Texas Animal Health Commission Executive Director Bud Dinges, Texas Parks and Wildlife Director of the Wildlife Division Alan Cane, USDA Under Secretary for Research, Education, and Economics (REE) and Chief Scientist Dr Scott Hutchins, and USDA Senior Advisor for New World Screwworm Preparedness John Bellinger. Joining them is the Knipling-Bushland U.S. Livestock Insects Research Laboratory Director Dr. Kim Lohmeyer. Today U.S. Secretary of Agriculture Brooke L. Rollins announced President Donald J. Trump has appointed John Bellinger as the new Senior Advisor for New World Screwworm Preparedness. In this role, Bellinger will integrate into USDA’s team to help further drive its robust effort to explore all available technologies to combat the New World Screwworm. With the advent of New World Screwworm cases discovered in the U.S., the Agriculture Department and its partners are in full response to contain and eradicate this threat to livestock, wildlife, and pets in detected areas - efforts that include communication of USDA's NWS Response Playbook and education of such to the public. Rod Bain provides details of the Playbook and response on the ground level in this edition of \"Agriculture USA\". The United States Department of Agriculture’s (USDA) Agricultural Research Service (ARS) opened the Knipling-Bushland U.S. Livestock Insects Research Laboratory, a state-of-the-art laboratory facility today that will provide the U.S. cattle industry with innovative tools and advanced technologies to manage and eliminate the invasive fly and tick pests that threaten the U.S. cattle industry. The new 52,000‑square‑foot laboratory features cutting‑edge laboratory spaces, advanced cattle facilities, and a state‑of‑the‑art genomics core to drive research that delivers innovative control technologies for the U.S. livestock industry. Other on-site research opportunities will involve improved surveillance and trapping tools, novel insecticides and acaricides, enhanced pesticide delivery techniques for cattle and wildlife, sustainable treatments to prevent and mitigate outbreaks of invasive/quarantine arthropod species, improved approaches to combat pesticide resistance, and insect genomics to identify pest vulnerabilities. The facility also houses two ARS research units: the Livestock Arthropod Pest Research Unit and the Veterinary Pest Genetics Research Unit. Collectively, these units improve the health, sustainability, and profitability of U.S. livestock production and protect the U.S food supply from devastating arthropod pests, including biting flies, ticks, and the New World Screwworm. On-site research also plays a role in critical research to eradicate other ticks and blood feeding flies that can harm, infect, and kill cattle. For more information see www.screwworm.gov and www.usda.gov USDA media by Lance Cheung.",
+        "commons_timestamp": "2026-08-02T10:44:34Z"
+      },
+      "source_version": "2026-08-02T10:44:34Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Greg_Abbott_2026.jpg",
+        "credit": "USDAgov / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Greg_Abbott_2026.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Greg_Abbott_2026.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Greg_Abbott_2026.jpg/330px-Greg_Abbott_2026.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/1609023166f5c8e87db58728876470774c79dd4354afd8dc45b1be97b3bcb8f2.jpg",
+        "sha256": "1609023166f5c8e87db58728876470774c79dd4354afd8dc45b1be97b3bcb8f2",
+        "retrieved_at": "2026-11-17T23:17:06.778717+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Amanda Janoo",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/vermont",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Vermont_gubernatorial_election",
+        "election_revision": 1385997044,
+        "nominee_label": "Amanda Janoo",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Amanda Janoo at a candidate forum for Democratic gubernatorial candidates of Vermont in May 2026.",
+        "commons_timestamp": "2026-08-14T19:23:25Z"
+      },
+      "source_version": "2026-08-14T19:23:25Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Amanda_Janoo_at_candidate_forum_in_May_2026_(cropped).png",
+        "credit": "Town Meeting TV / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Amanda_Janoo_at_candidate_forum_in_May_2026_%28cropped%29.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Amanda_Janoo_at_candidate_forum_in_May_2026_%28cropped%29.png/330px-Amanda_Janoo_at_candidate_forum_in_May_2026_%28cropped%29.png",
+        "mime_type": "image/png",
+        "url": "/media/candidates/a0cd03744bd2585714203ae868a58cf83107e9c46a463c6608248ea013adc61d.png",
+        "sha256": "a0cd03744bd2585714203ae868a58cf83107e9c46a463c6608248ea013adc61d",
+        "retrieved_at": "2026-11-17T23:17:07.389583+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Phil Scott",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/vermont",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Vermont_gubernatorial_election",
+        "election_revision": 1385997044,
+        "nominee_label": "'''[[Phil Scott]]'''",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Vermont Governor Phil Scott, left, U.S. Air Force Maj. Gen. Steven Cray, adjutant general, Vermont National Guard and U.S. Army Col. Gregory Knight stand during a change of command ceremony on Camp Johnson, Colchester, Vt., March, 3, 2019. Following six years of command, U.S. Air Force Maj. Gen. Steven Cray relinquished command to U.S. Army Col. Gregory Knight, whom was elected to the position by the Vermont legislature on April 21st. (U.S. Air National Guard photo by Master Sgt. Sarah Mattison)",
+        "commons_timestamp": "2022-08-10T20:10:31Z"
+      },
+      "source_version": "2022-08-10T20:10:31Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Phil_Scott_2019_(cropped).jpg",
+        "credit": "Master Sgt. Sarah Mattison, U.S. Air National Guard / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Phil_Scott_2019_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Phil_Scott_2019_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Phil_Scott_2019_%28cropped%29.jpg/330px-Phil_Scott_2019_%28cropped%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/dd3819b7aaea20d24301e5689d9257d1f9a1a49e55d0c18c395defca7b4c67b0.jpg",
+        "sha256": "dd3819b7aaea20d24301e5689d9257d1f9a1a49e55d0c18c395defca7b4c67b0",
+        "retrieved_at": "2026-11-17T23:17:07.068242+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-WI",
+      "state_code": "WI",
+      "name": "David Crowley",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/wisconsin",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Wisconsin_gubernatorial_election",
+        "election_revision": 1386299118,
+        "nominee_label": "'''[[David Crowley]]'''",
+        "nominee_party": "Democratic Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Milwaukee County Executive David Crowley during Democratic Primary debate at Marquette University, Milwaukee, WI on July 28, 2026.",
+        "commons_timestamp": "2026-08-12T03:49:25Z"
+      },
+      "source_version": "2026-08-12T03:49:25Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:David_Crowley_2026_(3x4_crop).jpg",
+        "credit": "LaShawnda Jones / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/David_Crowley_2026_%283x4_crop%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/David_Crowley_2026_%283x4_crop%29.jpg/330px-David_Crowley_2026_%283x4_crop%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/8734fda4ccc7e2c338866ee636f7a2f30ad7fb528e9e97bafb78f8998dc1ae7d.jpg",
+        "sha256": "8734fda4ccc7e2c338866ee636f7a2f30ad7fb528e9e97bafb78f8998dc1ae7d",
+        "retrieved_at": "2026-11-17T23:17:07.705534+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_governor",
+      "year": 2026,
+      "race_id": "GOV-WI",
+      "state_code": "WI",
+      "name": "Tom Tiffany",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/governors/wisconsin",
+        "election_page": "https://en.wikipedia.org/wiki/2026_Wisconsin_gubernatorial_election",
+        "election_revision": 1386299118,
+        "nominee_label": "[[Tom Tiffany]]",
+        "nominee_party": "Republican Party (United States)",
+        "source_name_alias": null,
+        "method": "Reviewed exact source candidate, state and party against the same Governor election infobox; retain explicit ballot-name aliases. Portrait is specified for that nominee.",
+        "image_description": "Photo of Rep. Tom Tiffany (R-WI07)",
+        "commons_timestamp": "2026-08-12T03:37:42Z"
+      },
+      "source_version": "2026-08-12T03:37:42Z",
+      "portrait": {
+        "source": "https://commons.wikimedia.org/wiki/File:Tom_Tiffany_(3x4_crop).jpg",
+        "credit": "US House of Representatives / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Tom_Tiffany_(3x4_crop).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Tom_Tiffany_%283x4_crop%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Tom_Tiffany_%283x4_crop%29.jpg/330px-Tom_Tiffany_%283x4_crop%29.jpg",
+        "mime_type": "image/jpeg",
+        "url": "/media/candidates/647111458707161b8d801110edb3b1962b6c2c34eb4b5e53a20aa3f922a1ef01.jpg",
+        "sha256": "647111458707161b8d801110edb3b1962b6c2c34eb4b5e53a20aa3f922a1ef01",
+        "retrieved_at": "2026-11-17T23:17:08.031532+00:00"
+      }
+    }
+  ],
+  "unassigned": [
+    {
+      "race_id": "GOV-AK",
+      "state_code": "AK",
+      "name": "Treg Taylor",
+      "party": "R",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-AZ",
+      "state_code": "AZ",
+      "name": "Risa Lombardo",
+      "party": "G",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-AZ",
+      "state_code": "AZ",
+      "name": "Teri Ann Hourihan",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-AZ",
+      "state_code": "AZ",
+      "name": "Unofficial Write-in",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-AZ",
+      "state_code": "AZ",
+      "name": "Alice Novoa",
+      "party": "R",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-AZ",
+      "state_code": "AZ",
+      "name": "Gertritrude Gonzalez",
+      "party": "R",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-AZ",
+      "state_code": "AZ",
+      "name": "Unassigned Write-in",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-AR",
+      "state_code": "AR",
+      "name": "Colt Shelby",
+      "party": "L",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-CO",
+      "state_code": "CO",
+      "name": "Eric Mulder",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-CO",
+      "state_code": "CO",
+      "name": "Stephen T. Hamilton",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-CO",
+      "state_code": "CO",
+      "name": "Jeff Peckman",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-CT",
+      "state_code": "CT",
+      "name": "Zenobia Adgers",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-CT",
+      "state_code": "CT",
+      "name": "L. Lee Whitnum",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-CT",
+      "state_code": "CT",
+      "name": "Christian Noe",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-FL",
+      "state_code": "FL",
+      "name": "Scott Eckhard Jewett",
+      "party": "L",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-FL",
+      "state_code": "FL",
+      "name": "Frank J. Russo",
+      "party": "I",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-FL",
+      "state_code": "FL",
+      "name": "Charles Burkett",
+      "party": "I",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-FL",
+      "state_code": "FL",
+      "name": "Dean Ocean Abrams",
+      "party": "I",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-FL",
+      "state_code": "FL",
+      "name": "Jeffrey Peter \"Dr. Jeff\" Datto",
+      "party": "I",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-ID",
+      "state_code": "ID",
+      "name": "John R. Stegner",
+      "party": "I",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-ID",
+      "state_code": "ID",
+      "name": "Paul Sand",
+      "party": "L",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-ID",
+      "state_code": "ID",
+      "name": "Pro-Life",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-ID",
+      "state_code": "ID",
+      "name": "Uncertified write-ins",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-ID",
+      "state_code": "ID",
+      "name": "Jacob Burnett",
+      "party": "I",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Collin Corbett",
+      "party": "I",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Elizabeth Ann Sebesta",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Eyde Arndell",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Gary Pierce",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Griselda Romero",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Joseph L. Mosley",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Mike Vick",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Mike Vick<br",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Misty Metroz",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Patricia L. Tillman",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Patricia L. Tillman<br",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Rafael Varela",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-IL",
+      "state_code": "IL",
+      "name": "Richard Benedict Mayers",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-ME",
+      "state_code": "ME",
+      "name": "Rick Bennett",
+      "party": "I",
+      "reason": "Reviewed reusable Commons portrait could not be downloaded after bounded attempts (HTTP 429); retain fallback."
+    },
+    {
+      "race_id": "GOV-MD",
+      "state_code": "MD",
+      "name": "Andy Ellis",
+      "party": "G",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MD",
+      "state_code": "MD",
+      "name": "Cathy White",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MD",
+      "state_code": "MD",
+      "name": "Other Write-Ins",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MA",
+      "state_code": "MA",
+      "name": "Michael Roger Minogue",
+      "party": "R",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MA",
+      "state_code": "MA",
+      "name": "Andrea James",
+      "party": "I",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "Anthony Hudson",
+      "party": "L",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "Donna Brandenburg",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "Douglas Campbell",
+      "party": "G",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "Kimberly Ruby-Ann Thomas",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "Angelo Scott Brown",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "Cecelia Lea Adkins",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "Evan Sebastian Space",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "Henry Joseph Lester",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "Joseph Michael Hunt",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "Justin Paul Blackburn",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "Timothy J Badgley",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MI",
+      "state_code": "MI",
+      "name": "William James Stahl",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-MN",
+      "state_code": "MN",
+      "name": "Steven Young",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-NE",
+      "state_code": "NE",
+      "name": "Lynne Walz",
+      "party": "D",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-NE",
+      "state_code": "NE",
+      "name": "Brett Lindstrom",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-NE",
+      "state_code": "NE",
+      "name": "Rick Beard",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-NV",
+      "state_code": "NV",
+      "name": "Danielle Ford",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-NV",
+      "state_code": "NV",
+      "name": "None of These Candidates",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-NH",
+      "state_code": "NH",
+      "name": "Cinde Warmington",
+      "party": "D",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-NH",
+      "state_code": "NH",
+      "name": "Stephen Villee",
+      "party": "L",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-NM",
+      "state_code": "NM",
+      "name": "Gregg Hull",
+      "party": "R",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-OH",
+      "state_code": "OH",
+      "name": "Don Kissick",
+      "party": "L",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-OH",
+      "state_code": "OH",
+      "name": "Heather Hill",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-OH",
+      "state_code": "OH",
+      "name": "Timothy Grady",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-OH",
+      "state_code": "OH",
+      "name": "Renea Turner",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-OK",
+      "state_code": "OK",
+      "name": "Robert E Brooks Sr",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-OK",
+      "state_code": "OK",
+      "name": "Jerry Griffin",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-OK",
+      "state_code": "OK",
+      "name": "Orlando Lynn Bush",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-OR",
+      "state_code": "OR",
+      "name": "Brett Smith",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-PA",
+      "state_code": "PA",
+      "name": "Ken Krawchuk",
+      "party": "L",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-RI",
+      "state_code": "RI",
+      "name": "Kenneth Block",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-RI",
+      "state_code": "RI",
+      "name": "Aaron C. Guckian",
+      "party": "R",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-RI",
+      "state_code": "RI",
+      "name": "C. D. Reynolds",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-RI",
+      "state_code": "RI",
+      "name": "Jasjit S. Gotra",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-SC",
+      "state_code": "SC",
+      "name": "Jermaine Johnson",
+      "party": "D",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-SC",
+      "state_code": "SC",
+      "name": "Michael Addison",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-SC",
+      "state_code": "SC",
+      "name": "Walid Hakim",
+      "party": "G",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-SD",
+      "state_code": "SD",
+      "name": "Dan Ahlers",
+      "party": "D",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "Lauren Pinkston",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "Dean Brewer",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "Misam Abidi",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "Ray Brown",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "Wendell Jackson",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "Eddie Lee Murphy",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "Robert C. Vick",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "Charles Van Morgan",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "L. Webb Taylor",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "Dave Seeman",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "Victor L. Scoggin",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TN",
+      "state_code": "TN",
+      "name": "Karl Knox Smithson",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TX",
+      "state_code": "TX",
+      "name": "Pat Dixon",
+      "party": "L",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TX",
+      "state_code": "TX",
+      "name": "Jenn Mack",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TX",
+      "state_code": "TX",
+      "name": "Mike Miller",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TX",
+      "state_code": "TX",
+      "name": "Edward Earl Giles",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-TX",
+      "state_code": "TX",
+      "name": "Jinghpaw Majoishingra",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Brian Judd",
+      "party": "I",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "June Goodband",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Dean Roy",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Other Write-In",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Kevin Hoyt",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Blank",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Aly Richards",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Bryan Ponnwitz",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Donald Trump",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Jim Douglas",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Cotie Stanley",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Jeffrey Nichols",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "John Rogers",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Jonas Hastings",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Keith Billian",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Maxwell",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Alejandro E. Young H.",
+      "party": "O",
+      "reason": "No verified reusable headshot in reviewed election, biography or Commons sources; retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Andrew Gustufson",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Andrew Klein",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Barry Shelton",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Bernie Sanders",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Brian Collamore",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Brian Dubey",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Brian Dubie",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Callie Tilton",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Carlton Anderson",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Carlton Langston Anderson",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Charles Mraz",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Corey Bertrand",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Danielle Jankowski",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Dave Young",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Gabe Messier",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "George Deblon",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Glen Sausville",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Isac Cioffi",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "James Maybee Jr",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Jap",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Jay Shepard",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Jed Lipsky",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Jeremy Allard",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "John Blair",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "John Klar",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "John O'Brien",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "John Sunnunu",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Keese Lane",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Kevin Preist",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Laura Gallup",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Luke She",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Margo Nugent",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Michael Pratt",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Milizia, Jason",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Nathan Cook",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Neil Ryan",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Otis Nelson",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Peter Fix",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Randy Brock",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Rick Sanchez",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Robert Ladue",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Rodney Allen",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Roger Parker",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Ron Boucher",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Ronald Veino",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Ryan Roy",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Shawn Gottlin",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Thomas Garbitelli",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Thomas Xelly",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Tiger Opstrup",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Tim Hall",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Tom Otterman",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Tucker Carlson",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Victor Harwood",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-VT",
+      "state_code": "VT",
+      "name": "Warren Roaf",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-WI",
+      "state_code": "WI",
+      "name": "Jamie Jo Carothers",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-WI",
+      "state_code": "WI",
+      "name": "Brayden Donnelly",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-WI",
+      "state_code": "WI",
+      "name": "Chad Muellenberg",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-WI",
+      "state_code": "WI",
+      "name": "Christine Kirchmiller",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-WI",
+      "state_code": "WI",
+      "name": "David D. King",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-WI",
+      "state_code": "WI",
+      "name": "Ieshuh Griffin",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-WI",
+      "state_code": "WI",
+      "name": "Mark Grimek",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-WI",
+      "state_code": "WI",
+      "name": "Mary Morgan",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-WI",
+      "state_code": "WI",
+      "name": "Reese Woods",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-WY",
+      "state_code": "WY",
+      "name": "Eric Barlow",
+      "party": "R",
+      "reason": "Indexed Commons portrait found, but the image API marked the file missing and download was rate-limited; no verified local image available."
+    },
+    {
+      "race_id": "GOV-WY",
+      "state_code": "WY",
+      "name": "Rebecca Bextel",
+      "party": "O",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    },
+    {
+      "race_id": "GOV-WY",
+      "state_code": "WY",
+      "name": "Kenneth R. Casner",
+      "party": "D",
+      "reason": "Portrait research source access was rate-limited; no verified image assigned. Retain fallback."
+    }
+  ]
+}

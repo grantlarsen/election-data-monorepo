@@ -7,6 +7,18 @@ import { candidateProfile } from './fixtures';
 import { portrait, portraitRace } from './portraitFixtures';
 
 describe('reviewed candidate media', () => {
+  it('uses bounded reviewed framing without changing the cached source file', () => {
+    render(<CandidateAvatar name="Example Candidate" portrait={{ ...portrait, focus: { x: 50, y: 23, zoom: 4 } }} fallback="EC" />);
+    const image = screen.getByRole('img');
+    expect(image).toHaveAttribute('src', portrait.url);
+    expect(image).toHaveStyle({ transform: 'scale(4)', transformOrigin: '50% 23%', objectPosition: '50% 23%' });
+    expect(image).toHaveAttribute('title', expect.stringContaining(portrait.credit));
+  });
+
+  it('ignores unbounded framing metadata', () => {
+    render(<CandidateAvatar name="Example Candidate" portrait={{ ...portrait, focus: { x: -10, y: 50, zoom: 100 } }} fallback="EC" />);
+    expect(screen.getByRole('img').style.transform).toBe('');
+  });
   it('falls back after image failure and tries a corrected image without losing attribution', () => {
     const view = render(<CandidateAvatar name="Example Candidate" portrait={portrait} fallback="EC" />);
     const image = screen.getByRole('img', { name: 'Portrait of Example Candidate' });

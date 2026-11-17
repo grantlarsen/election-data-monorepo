@@ -1,0 +1,295 @@
+{
+  "year": 2026,
+  "as_of": "2026-11-03",
+  "reviewed_at": "2026-11-17",
+  "source_url": "https://www.nga.org/governors/elections/",
+  "source_sha256": "d6448d648121a00e2c7b1aa3a2043b1a3834fccd1dcf9c52b2d42ab674cf12cc",
+  "retrieved_at": "2026-11-17T22:38:58.166594+00:00",
+  "method": "Reviewed 2026 NGA incumbent roster against exact source candidate labels within each state and party. Unlisted candidates have unknown incumbency. Prior-election party comes from the NGA starred election winner for 2022, except New Hampshire and Vermont (2024). No person identity matching. A flip requires a unique called/certified 2026 source winner of a different party.",
+  "candidates": [
+    {
+      "state": "AR",
+      "name": "Sarah Huckabee Sanders",
+      "party": "R",
+      "roster_name": "Sarah Huckabee Sanders"
+    },
+    {
+      "state": "AZ",
+      "name": "Katie Hobbs",
+      "party": "D",
+      "roster_name": "Katie Hobbs"
+    },
+    {
+      "state": "CT",
+      "name": "Ned Lamont",
+      "party": "D",
+      "roster_name": "Ned Lamont"
+    },
+    {
+      "state": "HI",
+      "name": "Josh Green",
+      "party": "D",
+      "roster_name": "Josh Green"
+    },
+    {
+      "state": "ID",
+      "name": "Brad Little",
+      "party": "R",
+      "roster_name": "Brad Little"
+    },
+    {
+      "state": "IL",
+      "name": "JB Pritzker",
+      "party": "D",
+      "roster_name": "JB Pritzker"
+    },
+    {
+      "state": "MA",
+      "name": "Maura Healey",
+      "party": "D",
+      "roster_name": "Maura Healey"
+    },
+    {
+      "state": "MD",
+      "name": "Wes Moore",
+      "party": "D",
+      "roster_name": "Wes Moore"
+    },
+    {
+      "state": "NE",
+      "name": "Jim Pillen",
+      "party": "R",
+      "roster_name": "Jim Pillen"
+    },
+    {
+      "state": "NH",
+      "name": "Kelly Ayotte",
+      "party": "R",
+      "roster_name": "Kelly Ayotte"
+    },
+    {
+      "state": "NV",
+      "name": "Joe Lombardo",
+      "party": "R",
+      "roster_name": "Joe Lombardo"
+    },
+    {
+      "state": "NY",
+      "name": "Kathy Hochul",
+      "party": "D",
+      "roster_name": "Kathy Hochul"
+    },
+    {
+      "state": "OR",
+      "name": "Tina Kotek",
+      "party": "D",
+      "roster_name": "Tina Kotek"
+    },
+    {
+      "state": "PA",
+      "name": "Josh Shapiro",
+      "party": "D",
+      "roster_name": "Josh Shapiro"
+    },
+    {
+      "state": "SD",
+      "name": "Larry Rhoden",
+      "party": "R",
+      "roster_name": "Larry Rhoden"
+    },
+    {
+      "state": "TX",
+      "name": "Greg Abbott",
+      "party": "R",
+      "roster_name": "Greg Abbott"
+    },
+    {
+      "state": "VT",
+      "name": "Phil Scott",
+      "party": "R",
+      "roster_name": "Phil Scott"
+    }
+  ],
+  "previous_elections": {
+    "AK": {
+      "year": 2022,
+      "winner_name": "Mike Dunleavy",
+      "party": "R"
+    },
+    "AL": {
+      "year": 2022,
+      "winner_name": "Kay Ivey",
+      "party": "R"
+    },
+    "AR": {
+      "year": 2022,
+      "winner_name": "Sarah Huckabee Sanders",
+      "party": "R"
+    },
+    "AZ": {
+      "year": 2022,
+      "winner_name": "Katie Hobbs",
+      "party": "D"
+    },
+    "CA": {
+      "year": 2022,
+      "winner_name": "Gavin Newsom",
+      "party": "D"
+    },
+    "CO": {
+      "year": 2022,
+      "winner_name": "Jared Polis",
+      "party": "D"
+    },
+    "CT": {
+      "year": 2022,
+      "winner_name": "Ned Lamont",
+      "party": "D"
+    },
+    "FL": {
+      "year": 2022,
+      "winner_name": "Ron DeSantis",
+      "party": "R"
+    },
+    "GA": {
+      "year": 2022,
+      "winner_name": "Brian Kemp",
+      "party": "R"
+    },
+    "HI": {
+      "year": 2022,
+      "winner_name": "Joshua Green",
+      "party": "D"
+    },
+    "IA": {
+      "year": 2022,
+      "winner_name": "Kim Reynolds",
+      "party": "R"
+    },
+    "ID": {
+      "year": 2022,
+      "winner_name": "Brad Little",
+      "party": "R"
+    },
+    "IL": {
+      "year": 2022,
+      "winner_name": "JB Pritzker",
+      "party": "D"
+    },
+    "KS": {
+      "year": 2022,
+      "winner_name": "Laura Kelly",
+      "party": "D"
+    },
+    "MA": {
+      "year": 2022,
+      "winner_name": "Maura Healey",
+      "party": "D"
+    },
+    "MD": {
+      "year": 2022,
+      "winner_name": "Wes Moore",
+      "party": "D"
+    },
+    "ME": {
+      "year": 2022,
+      "winner_name": "Janet T. Mills",
+      "party": "D"
+    },
+    "MI": {
+      "year": 2022,
+      "winner_name": "Gretchen Whitmer",
+      "party": "D"
+    },
+    "MN": {
+      "year": 2022,
+      "winner_name": "Tim Walz",
+      "party": "D"
+    },
+    "NE": {
+      "year": 2022,
+      "winner_name": "Jim Pillen",
+      "party": "R"
+    },
+    "NH": {
+      "year": 2024,
+      "winner_name": "Kelly Ayotte",
+      "party": "R"
+    },
+    "NM": {
+      "year": 2022,
+      "winner_name": "Michelle Lujan Grisham",
+      "party": "D"
+    },
+    "NV": {
+      "year": 2022,
+      "winner_name": "Joe Lombardo",
+      "party": "R"
+    },
+    "NY": {
+      "year": 2022,
+      "winner_name": "Kathy Hochul",
+      "party": "D"
+    },
+    "OH": {
+      "year": 2022,
+      "winner_name": "Mike DeWine",
+      "party": "R"
+    },
+    "OK": {
+      "year": 2022,
+      "winner_name": "Kevin Stitt",
+      "party": "R"
+    },
+    "OR": {
+      "year": 2022,
+      "winner_name": "Tina Kotek",
+      "party": "D"
+    },
+    "PA": {
+      "year": 2022,
+      "winner_name": "Josh Shapiro",
+      "party": "D"
+    },
+    "RI": {
+      "year": 2022,
+      "winner_name": "Dan McKee",
+      "party": "D"
+    },
+    "SC": {
+      "year": 2022,
+      "winner_name": "Henry McMaster",
+      "party": "R"
+    },
+    "SD": {
+      "year": 2022,
+      "winner_name": "Kristi Noem",
+      "party": "R"
+    },
+    "TN": {
+      "year": 2022,
+      "winner_name": "Bill Lee",
+      "party": "R"
+    },
+    "TX": {
+      "year": 2022,
+      "winner_name": "Greg Abbott",
+      "party": "R"
+    },
+    "VT": {
+      "year": 2024,
+      "winner_name": "Phil Scott",
+      "party": "R"
+    },
+    "WI": {
+      "year": 2022,
+      "winner_name": "Tony Evers",
+      "party": "D"
+    },
+    "WY": {
+      "year": 2022,
+      "winner_name": "Mark Gordon",
+      "party": "R"
+    }
+  }
+}

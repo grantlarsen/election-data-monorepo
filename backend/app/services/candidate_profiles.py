@@ -13,6 +13,7 @@ from app.models.ingestion import SourceRelease
 from app.services.election_queries import _geography, _source, list_results
 from app.services.senate_entities import provisional_profile
 from app.services.house_entities import provisional_profile as house_provisional_profile
+from app.services.governor_entities import provisional_profile as governor_provisional_profile
 
 
 def finance_values(summary: CandidateFinanceSummary) -> dict:
@@ -100,7 +101,7 @@ def candidate_profile(session: Session, candidacy_id: UUID, *, reporting_level: 
             fec_ids=list(ids), evidence=link.evidence, source_record_key=link.source_record_key,
             source=_source(session, link.release_id) if link.release_id else None,
             source_id=link.source_id))
-    level = reporting_level or ("state" if contest.office_name == "U.S. Senate" else
+    level = reporting_level or ("state" if contest.office_name in {"U.S. Senate", "Governor"} else
         "congressional_district" if geography.level == "congressional_district" else "county")
     results = list_results(session, ResultFilters(contest_id=contest.id, reporting_level=level, limit=limit, offset=offset),
                            candidacy_id=candidate.id)
@@ -121,4 +122,5 @@ def candidate_profile(session: Session, candidacy_id: UUID, *, reporting_level: 
             jurisdiction=_geography(geography)), latest_election=latest_election,
         committees=committees, finance=finance, results=results,
         provisional_election=provisional_profile(session, candidate),
-        provisional_house_election=house_provisional_profile(session, candidate))
+        provisional_house_election=house_provisional_profile(session, candidate),
+        provisional_governor_election=governor_provisional_profile(session, candidate))

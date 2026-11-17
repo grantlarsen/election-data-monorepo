@@ -32,6 +32,7 @@ services:
       DB_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
       SENATE_RESULTS_AUTO_REFRESH: ${SENATE_RESULTS_AUTO_REFRESH:-1}
       HOUSE_RESULTS_AUTO_REFRESH: ${HOUSE_RESULTS_AUTO_REFRESH:-1}
+      GOVERNOR_RESULTS_AUTO_REFRESH: ${GOVERNOR_RESULTS_AUTO_REFRESH:-1}
     depends_on:
       db:
         condition: service_healthy
@@ -50,6 +51,7 @@ services:
     restart: unless-stopped
     environment:
       API_PROXY_TARGET: http://api:8000
+      VITE_USE_POLLING: "1"
     depends_on:
       api:
         condition: service_started
