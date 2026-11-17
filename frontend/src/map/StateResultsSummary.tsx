@@ -2,7 +2,7 @@ import { Notice } from "../components";
 import { MapSources } from "./MapSources";
 import type { ElectionMap } from "./types";
 import { margin, number, percent } from "./types";
-import { candidateColor, indeterminateColor } from "./electionColors";
+import { mapCandidateColor } from "./electionColors";
 import { useElectionMap } from "./useElectionMap";
 import { CandidateLink } from '../CandidateLink';
 
@@ -63,12 +63,7 @@ export function StateResultsSummary({ selection }: { selection: ElectionMap }) {
             aria-label="State candidate results"
           >
             {unit.summary.candidates.map((candidate, index) => {
-              const named = ["candidate", "source_candidate"].includes(
-                candidate.kind,
-              );
-              const color = named
-                ? candidateColor(candidate.label)
-                : indeterminateColor;
+              const color = mapCandidateColor(candidate);
               return (
                 <li key={`${candidate.label}:${index}`}>
                   <div className="state-summary-candidate-name">

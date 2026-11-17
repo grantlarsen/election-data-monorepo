@@ -16,7 +16,6 @@ import type {
   JurisdictionCollection,
   JurisdictionFeature,
 } from "../geography/unitedStates";
-import { candidateColor, resultColor } from "../map/electionColors";
 
 function rectangle(
   geoid: string,
@@ -300,15 +299,5 @@ describe("generic United States mapping", () => {
     expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
     fireEvent.mouseMove(california, { clientX: 245, clientY: 205 });
     expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
-  });
-
-  it("assigns stable colors to arbitrary candidate labels without inferring parties", () => {
-    expect(candidateColor("Example federal candidate")).toMatch(
-      /^#[0-9a-f]{6}$/,
-    );
-    expect(candidateColor("Example federal candidate")).toBe(
-      candidateColor("EXAMPLE FEDERAL CANDIDATE"),
-    );
-    expect(resultColor()).not.toBe(candidateColor("Example federal candidate"));
   });
 });

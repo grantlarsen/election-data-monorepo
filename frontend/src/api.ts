@@ -67,6 +67,45 @@ export interface Result {
   publication: Publication;
 }
 
+/** State authority buckets are separate from canonical candidate identities. */
+export interface StateResult {
+  contest_id: string;
+  election_id: string;
+  election_date: string;
+  jurisdiction: Geography;
+  candidate_bucket: string;
+  bucket_kind: 'source_candidate' | 'aggregate';
+  votes: number;
+  source_locator: string;
+  source_adjustment: number | null;
+  publication: Publication;
+}
+
+/** Read-only subset of /api/v1/presidential-coverage used by election pages. */
+export interface PresidentialCoverage {
+  year: number;
+  election_date: string;
+  county_coverage_verified: boolean;
+  county: {
+    availability: 'published' | 'missing_publication';
+    status: 'COMPLETE' | 'PARTIAL' | null;
+    source_release_id: string | null;
+    matches_active_source: boolean;
+    accepted_rows: number;
+    excluded_rows: number | null;
+    missing_states: string[];
+    exclusions: { state_code: string; code: string; rows: number }[];
+  };
+  state: { availability: 'published' | 'missing_publication' };
+  states: {
+    state_code: string;
+    county: { rows: number; votes: number; reporting_units: number } | null;
+    official_votes: number | null;
+    state_minus_published_county_votes: number | null;
+  }[];
+  limitations: string[];
+}
+
 export interface Page<T> {
   items: T[];
   total: number;
@@ -125,7 +164,7 @@ export class ApiError extends Error {
   constructor(public readonly status: number, message: string) { super(message); }
 }
 
-export async function fetchPage<T>(endpoint: 'contests' | 'results', query: string, signal: AbortSignal): Promise<Page<T>> {
+export async function fetchPage<T>(endpoint: 'contests' | 'results' | 'state-results', query: string, signal: AbortSignal): Promise<Page<T>> {
   const response = await fetch(`/api/v1/${endpoint}?${query}`, { signal, headers: { Accept: 'application/json' } });
   if (!response.ok) {
     throw new ApiError(response.status, response.status === 422
@@ -140,6 +179,39 @@ export async function fetchPage<T>(endpoint: 'contests' | 'results', query: stri
     throw new Error('Unexpected API response');
   }
   return page;
+}
+
+export async function fetchPresidentialCoverage(signal: AbortSignal): Promise<PresidentialCoverage[]> {
+  const response = await fetch('/api/v1/presidential-coverage', { signal, headers: { Accept: 'application/json' } });
+  if (!response.ok) throw new ApiError(response.status, 'Presidential coverage is temporarily unavailable. Please try again.');
+  const body = await response.json();
+  const count = (value: unknown) => Number.isSafeInteger(value) && Number(value) >= 0;
+  // PostgreSQL SUM(bigint) is Decimal; FastAPI encodes these inventory values as strings.
+  // Accept integer strings only, and validate safety before converting for presentation.
+  const numeric = (value: unknown) => typeof value === 'string' && /^-?\d+$/.test(value) ? Number(value) : value;
+  if (!Array.isArray(body?.elections) || body.elections.some((item: PresidentialCoverage) =>
+    !item || !Number.isInteger(item.year) || typeof item.election_date !== 'string' ||
+    !item.county || !item.state || !['published', 'missing_publication'].includes(item.county.availability) ||
+    !['published', 'missing_publication'].includes(item.state.availability) ||
+    ![null, 'COMPLETE', 'PARTIAL'].includes(item.county.status) ||
+    typeof item.county.matches_active_source !== 'boolean' || typeof item.county_coverage_verified !== 'boolean' ||
+    !count(item.county.accepted_rows) || !(item.county.excluded_rows === null || count(item.county.excluded_rows)) ||
+    !Array.isArray(item.county.missing_states) || item.county.missing_states.some(state => typeof state !== 'string') ||
+    !Array.isArray(item.county.exclusions) || item.county.exclusions.some(exclusion =>
+      !exclusion || typeof exclusion.code !== 'string' || typeof exclusion.state_code !== 'string' || !count(exclusion.rows)) ||
+    !Array.isArray(item.limitations) || item.limitations.some(note => typeof note !== 'string') ||
+    !Array.isArray(item.states) || item.states.some(state => !state || typeof state.state_code !== 'string' ||
+      !(state.official_votes === null || count(state.official_votes)) ||
+      !(state.state_minus_published_county_votes === null || Number.isSafeInteger(numeric(state.state_minus_published_county_votes))) ||
+      !(state.county === null || (state.county && count(numeric(state.county.votes)) && count(state.county.rows) && count(state.county.reporting_units))))) ||
+    new Set(body.elections.map((item: PresidentialCoverage) => item.year)).size !== body.elections.length) {
+    throw new Error('Unexpected presidential coverage response');
+  }
+  return body.elections.map((item: PresidentialCoverage) => ({ ...item, states: item.states.map(state => ({ ...state,
+    county: state.county ? { ...state.county, votes: Number(state.county.votes) } : null,
+    state_minus_published_county_votes: state.state_minus_published_county_votes === null
+      ? null : Number(state.state_minus_published_county_votes),
+  })) }));
 }
 
 /** Only public web links from source metadata become clickable. */

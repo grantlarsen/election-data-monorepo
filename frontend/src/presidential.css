@@ -1,0 +1,7 @@
+.presidential-years, .presidential-views { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 12px 0; }
+.presidential-years a { padding: 7px 12px; border: 1px solid var(--border); border-radius: 4px; background: white; }
+.presidential-years a[aria-current], .presidential-views a[aria-current] { font-weight: 700; color: var(--green); text-decoration-thickness: 3px; }
+.presidential-coverage { border: 1px solid var(--border); border-radius: 4px; padding: 16px; margin: 18px 0; background: white; }
+.presidential-coverage h2 { margin-top: 0; }
+.presidential-coverage p { font-size: .85rem; overflow-wrap: anywhere; }
+@media (max-width: 700px) { .primary-nav { flex-wrap: wrap; gap: 4px 14px; } }

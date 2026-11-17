@@ -21,10 +21,11 @@ const state = {
       {
         label: "Source leader",
         kind: "source_candidate",
+        party_labels: ['DEMOCRATIC'],
         votes: 600,
         share: 60,
       },
-      { label: "Runner-up", kind: "source_candidate", votes: 400, share: 40 },
+      { label: "Runner-up", kind: "source_candidate", party_labels: ['REPUBLICAN'], votes: 400, share: 40 },
     ],
   },
 } as MapUnit;
@@ -74,6 +75,8 @@ describe("published statewide overview", () => {
     expect(screen.getByText("20.00%")).toBeVisible();
     expect(screen.getByText("votes · 60.00%")).toBeVisible();
     expect(screen.getByText("Leading").closest('li')).toHaveTextContent("Source leader");
+    expect(screen.getByText('Source leader').closest('li')!.querySelector('i')).toHaveStyle({ background: '#3276ac' });
+    expect(screen.getByText('Runner-up').closest('li')!.querySelector('i')).toHaveStyle({ background: '#bd5548' });
     expect(screen.queryByText("Leading candidate statewide")).not.toBeInTheDocument();
     const query = new URLSearchParams(fetch.mock.calls[0][0].split("?")[1]);
     expect(query.get("reporting_level")).toBe("state");

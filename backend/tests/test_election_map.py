@@ -119,9 +119,10 @@ def test_all_pages_use_the_same_session(monkeypatch):
     def query(s, filters):
         assert s is session
         calls.append(filters.offset)
-        return dict(items=[filters.offset], has_more=filters.offset == 0)
+        return dict(items=[dict(offset=filters.offset)], has_more=filters.offset == 0)
     monkeypatch.setattr(maps.election_queries, "list_results", query)
-    assert maps._all_rows(session, MapFilters(state_code='AL'), 'county') == [0, 200]
+    assert maps._all_rows(session, MapFilters(state_code='AL'), 'county') == [
+        dict(offset=0, party_labels=[]), dict(offset=200, party_labels=[])]
     assert calls == [0, 200]
 
 
@@ -215,3 +216,26 @@ def test_other_vintages_and_grains_do_not_reuse_2008_counties(tmp_path, monkeypa
         reporting_levels=['congressional_district'],outputs={})))
     assert maps.load_boundaries(None,2024,'state') == (None,[])
     assert maps.load_boundaries('NY',2024,'county') == (None,[])
+
+
+@pytest.mark.parametrize('year,democrat,republican', [
+    (2000,'AL GORE','GEORGE W. BUSH'), (2004,'JOHN KERRY','GEORGE W. BUSH'),
+    (2008,'BARACK OBAMA','JOHN MCCAIN'), (2012,'BARACK OBAMA','MITT ROMNEY'),
+    (2016,'HILLARY CLINTON','DONALD TRUMP'), (2020,'JOE BIDEN','DONALD TRUMP'),
+    (2024,'KAMALA HARRIS','DONALD TRUMP')])
+def test_presidential_state_party_labels_are_scoped_to_the_source_election(monkeypatch, year, democrat, republican):
+    jurisdiction = dict(id=uuid4(), name='Alabama', level='state', state_code='AL')
+    publication, contest = dict(batch_id=uuid4()), uuid4()
+    rows = [dict(jurisdiction=jurisdiction, publication=publication, contest_id=contest,
+        candidate_bucket=label, votes=votes, bucket_kind='aggregate' if label=='OTHER' else 'source_candidate')
+        for label, votes in [(democrat,100),(republican,80),('OTHER',5),('UNKNOWN',0)]]
+    monkeypatch.setattr(maps, '_all_rows', lambda *args: rows)
+    monkeypatch.setattr(maps, 'load_boundaries', lambda *args: (None, []))
+    session = SimpleNamespace(scalars=lambda *args: ['01'])
+    response = maps.build_map(session, MapFilters(year=year))
+    candidates = response['units'][0]['summary']['candidates']
+    assert {c['label']:c['party_labels'] for c in candidates} == {
+        democrat:['DEMOCRATIC'], republican:['REPUBLICAN'], 'OTHER':[], 'UNKNOWN':[]}
+    assert response['units'][0]['summary']['total_votes'] == 185
+    primary = maps.build_map(session, MapFilters(year=year, stage='primary'))
+    assert all(not c['party_labels'] for c in primary['units'][0]['summary']['candidates'])

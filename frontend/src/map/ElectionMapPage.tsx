@@ -7,7 +7,7 @@ import { sourceUrl } from "../api";
 import { MapSources } from "./MapSources";
 import { number } from "./types";
 import {
-  candidateColor,
+  mapCandidateColor,
   missingColor,
   tieColor,
   indeterminateColor,
@@ -16,6 +16,7 @@ import {
 import type { MapUnit } from "./types";
 import { useElectionMap } from "./useElectionMap";
 import { StateResultsSummary } from "./StateResultsSummary";
+import { ElectoralCollegeCounter, PresidentialMapLabels, isPresidential } from './ElectoralCollege';
 import { CandidateLink } from "../CandidateLink";
 
 const GeographyMap = lazy(() =>
@@ -134,7 +135,8 @@ export function ElectionMapPage() {
       ? Object.entries(partyPalette).map(([label, color]) => ({ label, color }))
       : candidates.map((label) => {
           const ids = new Set(candidateResults.filter(candidate => candidate.label === label).map(candidate => candidate.candidacy_id));
-          return { label, color: candidateColor(label), candidacyId: ids.size === 1 ? [...ids][0] : null };
+          const party_labels = [...new Set(candidateResults.filter(candidate => candidate.label === label).flatMap(candidate => candidate.party_labels || []))];
+          return { label, color: mapCandidateColor({ kind: 'candidate', party_labels }), candidacyId: ids.size === 1 ? [...ids][0] : null };
         })),
     { label: "Tie", color: tieColor },
     { label: "Undetermined / zero total", color: indeterminateColor },
@@ -169,6 +171,8 @@ export function ElectionMapPage() {
         )}
       </nav>
       </header>
+      {!params.get('state_code') && params.get('reporting_level') === 'county' &&
+        <p className="field-help">Choose a state on the map to view its county returns.</p>}
       {error ? (
         <Notice title="Review your filters" error>
           <p>{error}</p>
@@ -200,6 +204,8 @@ export function ElectionMapPage() {
         </Notice>
       ) : (
         <>
+          {isPresidential(data.office, data.stage) && <ElectoralCollegeCounter year={data.year} />}
+          {data.boundary?.approximate && <Notice title="Historical display approximation"><p>{data.boundary.vintage_note}</p></Notice>}
           {data.availability === "boundaries_unavailable" && (
             <Notice title="Map boundaries are not available yet">
               <p>
@@ -217,14 +223,14 @@ export function ElectionMapPage() {
             </Notice>
           )}
           {data.features.features.length > 0 && (
-            <Suspense fallback={<p role="status">Loading interactive map…</p>}>
+            <PresidentialMapLabels data={data} onSelect={select}><Suspense fallback={<p role="status">Loading interactive map…</p>}>
               <GeographyMap
                 key={`${data.year}:${data.office}:${data.reporting_level}:${data.state_code || "nation"}`}
                 data={data}
                 onSelect={select}
                 selectedId={selected?.id}
               />
-            </Suspense>
+            </Suspense></PresidentialMapLabels>
           )}
           <ul className="map-legend" aria-label="Map legend">
             {legend.map(({ label, color, candidacyId }) => (

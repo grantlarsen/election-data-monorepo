@@ -25,8 +25,9 @@ Other offices and a county request without state scope return
 UUIDs return `no_matching_published_results`, without silently falling back.
 Selection retains the surrounding map/coverage context.
 
-Boundary lookup uses the selected year and grain. The current prepared package
-supports only 2008 states/counties. Missing district/year packages return
+Boundary lookup uses the selected year and grain. All seven presidential years
+now have state/county packages; 2004 explicitly discloses a display approximation.
+See the [boundary guide](../geography/presidential_boundaries.md). Missing packages return
 `boundaries_unavailable`; they never reuse county polygons or another vintage.
 The query path supports congressional-district results already represented by
 the existing result API, but does not ingest unpublished House returns or create
@@ -67,6 +68,23 @@ canonical county publication. County totals are never substituted for an absent
 state authority or added to it. State source buckets do not acquire invented
 candidacy or party identities.
 
+Map candidates expose `party_labels` for presentation. County/district labels
+combine existing canonical party links with normalized parties from only the
+observations behind the published result rows, loaded in one bulk lookup.
+Excluded observations cannot contribute a party label. Presidential state
+summaries use an exact election-year/source-bucket lookup for the two major
+nominees, based on the pinned FEC workbook catalog and the reviewed 2008 FEC
+publication. This is a display label for that source bucket, not a new person
+identity, party entity or affiliation record. OTHER and unknown buckets receive
+no inferred major party. State buckets describe the nominee's major party and
+do not enumerate all fusion ballot lines.
+
+All election visualizations share Democratic blue (`#3276ac`) and Republican
+red (`#bd5548`). Other/independent, unknown, multiple-major-party, anonymous,
+tied and missing states remain distinguishable. Labels and status text supplement
+colors. Votes, shares, margins, publication pointers and canonical records are
+unchanged; no migration or republication is needed for this presentation update.
+
 ```text
 reported votes = sum(published candidate and anonymous bucket votes in the unit)
 candidate share (%) = candidate votes / reported votes * 100
@@ -88,7 +106,7 @@ After the normal database/migration setup, from the repository root:
 ```powershell
 docker compose up -d --build
 docker compose exec -T api pip install -r requirements-geography.txt
-docker compose exec -T api python -m ingestion.boundaries
+docker compose exec -T api python -m ingestion.boundaries --all-presidential
 Invoke-RestMethod 'http://localhost:5173/api/v1/election-map?year=2008'
 Invoke-RestMethod 'http://localhost:5173/api/v1/election-map?year=2008&state_code=NY'
 ```
@@ -130,7 +148,7 @@ report `unchanged` and preserve its timestamp. Raw files remain under
 With no package, `boundaries_unavailable` retains results for tabular use. A
 damaged package returns 503. API requests never download or change data.
 The display adapter supports year/grain lookup and generic federal election
-selection; only the pinned 2008 state/county package is prepared. Full PostGIS
+selection; all seven presidential packages and the 2024 House package are prepared. Full PostGIS
 boundary persistence, multi-vintage cataloging, 119th district ingestion, tiles
 and a general geometry API remain separate DATA-007/API-002 work.
 

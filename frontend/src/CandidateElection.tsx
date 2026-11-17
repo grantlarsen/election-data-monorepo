@@ -58,7 +58,7 @@ export function CandidateElection({ profile }: { profile: CandidateProfile }) {
         <div className="table-scroll" tabIndex={0} role="region" aria-label="Most recent election results"><table>
           <caption className="profile-visually-hidden">Candidate votes and share of reported votes</caption><thead><tr><th scope="col">Candidate / source bucket</th><th scope="col" className="number">Votes</th><th scope="col" className="number">Share</th></tr></thead>
           <tbody>{results.map((candidate, index) => <tr className={candidate.candidacy_id === election.candidacy_id ? 'profile-current-candidate' : undefined} key={`${candidate.label}:${index}`}>
-            <th scope="row"><span className="profile-result-dot" style={{ background: mapCandidateColor(candidate, data?.reporting_level === 'congressional_district') }} aria-hidden="true" /><CandidateLink candidacyId={candidate.candidacy_id} contestId={election.id}>{candidateDisplayName(candidate.label)}</CandidateLink>{candidate.candidacy_id === election.candidacy_id && <span className="cell-note">This candidate</span>}</th>
+            <th scope="row"><span className="profile-result-dot" style={{ background: mapCandidateColor(candidate) }} aria-hidden="true" /><CandidateLink candidacyId={candidate.candidacy_id} contestId={election.id}>{candidateDisplayName(candidate.label)}</CandidateLink>{candidate.candidacy_id === election.candidacy_id && <span className="cell-note">This candidate</span>}</th>
             <td className="number">{candidate.votes.toLocaleString('en-US')}</td><td className="number">{candidate.share === null ? 'Unavailable' : `${candidate.share.toFixed(2)}%`}</td></tr>)}</tbody>
         </table></div>
       </> : fallback?.items.length ? <>

@@ -1,0 +1,202 @@
+{
+  "presidential": {
+    "2000": {
+      "boundary_vintage": "2000-01-01",
+      "vintage_note": "Census 2000 legal geography in the 2008 TIGER archive. Generalized display shapes, not election-day certification, measurements or reconstructed returns.",
+      "documentation_url": "https://www2.census.gov/geo/pdfs/maps-data/data/tiger/tgrshp2008/TGRSHP08.pdf",
+      "sources": [
+        {
+          "level": "state",
+          "file_id": 1,
+          "filename": "tl_2008_us_state00.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2008/tl_2008_us_state00.zip",
+          "sha256": "a746accc9ed6c72f65ef2f70fac1986471e28d85e6797461882b64b898fb2fd0",
+          "source_year": 2000,
+          "state_field": "STATEFP00",
+          "county_field": "COUNTYFP00",
+          "name_field": "NAME00"
+        },
+        {
+          "level": "county",
+          "file_id": 2,
+          "filename": "tl_2008_us_county00.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2008/tl_2008_us_county00.zip",
+          "sha256": "ad0c4801547023f0fb468f79d4fc4fcce2cfbc5a43568b9beadb201c5cd1acde",
+          "source_year": 2000,
+          "state_field": "STATEFP00",
+          "county_field": "COUNTYFP00",
+          "name_field": "NAME00"
+        }
+      ],
+      "expected_counties": 3141
+    },
+    "2004": {
+      "boundary_vintage": "Census 2000 states; Census 2008 counties outside Alaska; Census 2000 Alaska counties",
+      "approximate": true,
+      "vintage_note": "Approximate 2004 display: Census 2000 state outlines, 2008 county outlines outside Alaska, and 2000 Alaska county outlines to avoid post-2004 splits. This is not an exact 2004 boundary reconstruction. Original 2004 returns are joined only by their published historical identifiers; votes are not redistributed.",
+      "documentation_url": "https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.2000.html",
+      "sources": [
+        {
+          "level": "state",
+          "file_id": 1,
+          "filename": "tl_2008_us_state00.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2008/tl_2008_us_state00.zip",
+          "sha256": "a746accc9ed6c72f65ef2f70fac1986471e28d85e6797461882b64b898fb2fd0",
+          "source_year": 2000,
+          "state_field": "STATEFP00",
+          "county_field": "COUNTYFP00",
+          "name_field": "NAME00"
+        },
+        {
+          "level": "county",
+          "file_id": 2,
+          "filename": "tl_2008_us_county.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2008/tl_2008_us_county.zip",
+          "sha256": "956511da5ad39ca31ed3134c7beb0d26092ab647995a5db75920234a19eeba21",
+          "source_year": 2008,
+          "state_field": "STATEFP",
+          "county_field": "COUNTYFP",
+          "name_field": "NAME",
+          "exclude_states": [
+            "AK"
+          ]
+        },
+        {
+          "level": "county",
+          "file_id": 2,
+          "filename": "tl_2008_us_county00.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2008/tl_2008_us_county00.zip",
+          "sha256": "ad0c4801547023f0fb468f79d4fc4fcce2cfbc5a43568b9beadb201c5cd1acde",
+          "source_year": 2000,
+          "state_field": "STATEFP00",
+          "county_field": "COUNTYFP00",
+          "name_field": "NAME00",
+          "include_states": [
+            "AK"
+          ]
+        }
+      ],
+      "expected_counties": 3141
+    },
+    "2012": {
+      "boundary_vintage": "2012-01-01",
+      "vintage_note": "Census 2012 TIGER/Line state/county display geography. Generalized display shapes, not election-day certification, measurements or reconstructed returns.",
+      "documentation_url": "https://www.census.gov/geographies/mapping-files/2012/geo/tiger-line-file.html",
+      "sources": [
+        {
+          "level": "state",
+          "file_id": 1,
+          "filename": "tl_2012_us_state.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2012/STATE/tl_2012_us_state.zip",
+          "sha256": "2b8f7ab4a78cd5fa1ceae021c26e2290f170e95c9f0ae1b6025e0265bf422cea",
+          "source_year": 2012,
+          "state_field": "STATEFP",
+          "county_field": "COUNTYFP",
+          "name_field": "NAME"
+        },
+        {
+          "level": "county",
+          "file_id": 2,
+          "filename": "tl_2012_us_county.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2012/COUNTY/tl_2012_us_county.zip",
+          "sha256": "88e28472a347bd7395d7c670a6ecce01236311154ae3b5e880914266e3081235",
+          "source_year": 2012,
+          "state_field": "STATEFP",
+          "county_field": "COUNTYFP",
+          "name_field": "NAME"
+        }
+      ],
+      "expected_counties": 3143
+    },
+    "2016": {
+      "boundary_vintage": "2016-01-01",
+      "vintage_note": "Census 2016 cartographic 1:500,000 state/county display geography. Generalized display shapes, not election-day certification, measurements or reconstructed returns.",
+      "documentation_url": "https://www.census.gov/geographies/mapping-files/2016/geo/carto-boundary-file.html",
+      "sources": [
+        {
+          "level": "state",
+          "file_id": 1,
+          "filename": "cb_2016_us_state_500k.zip",
+          "url": "https://www2.census.gov/geo/tiger/GENZ2016/shp/cb_2016_us_state_500k.zip",
+          "sha256": "7a8d0e6ad646583b1541b818e9bb64176a129ecbbf62c68cdaa53a09f5abf37d",
+          "source_year": 2016,
+          "state_field": "STATEFP",
+          "county_field": "COUNTYFP",
+          "name_field": "NAME"
+        },
+        {
+          "level": "county",
+          "file_id": 2,
+          "filename": "cb_2016_us_county_500k.zip",
+          "url": "https://www2.census.gov/geo/tiger/GENZ2016/shp/cb_2016_us_county_500k.zip",
+          "sha256": "abc95214dc5364b59675e6c604175dc1b28bd42999501b33a0e31466135e5f57",
+          "source_year": 2016,
+          "state_field": "STATEFP",
+          "county_field": "COUNTYFP",
+          "name_field": "NAME"
+        }
+      ],
+      "expected_counties": 3142
+    },
+    "2020": {
+      "boundary_vintage": "2020-01-01",
+      "vintage_note": "Census 2020 cartographic 1:500,000 state/county display geography. Generalized display shapes, not election-day certification, measurements or reconstructed returns.",
+      "documentation_url": "https://www.census.gov/geographies/mapping-files/2020/geo/carto-boundary-file.html",
+      "sources": [
+        {
+          "level": "state",
+          "file_id": 1,
+          "filename": "cb_2020_us_state_500k.zip",
+          "url": "https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_state_500k.zip",
+          "sha256": "dcc877984a3e4d59c1ee8d068b6681517c545e0c1827b7e78a7c2c7cbb167da6",
+          "source_year": 2020,
+          "state_field": "STATEFP",
+          "county_field": "COUNTYFP",
+          "name_field": "NAME"
+        },
+        {
+          "level": "county",
+          "file_id": 2,
+          "filename": "cb_2020_us_county_500k.zip",
+          "url": "https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_county_500k.zip",
+          "sha256": "1a45c87a5a0c322514c9d5c9ebcba5eb9df313bd38962f6db56107ba0ccacc6f",
+          "source_year": 2020,
+          "state_field": "STATEFP",
+          "county_field": "COUNTYFP",
+          "name_field": "NAME"
+        }
+      ],
+      "expected_counties": 3143
+    },
+    "2024": {
+      "boundary_vintage": "2024-01-01",
+      "vintage_note": "Census 2024 cartographic 1:500,000 state/county display geography. Generalized display shapes, not election-day certification, measurements or reconstructed returns.",
+      "documentation_url": "https://www.census.gov/geographies/mapping-files/2024/geo/carto-boundary-file.html",
+      "sources": [
+        {
+          "level": "state",
+          "file_id": 1,
+          "filename": "cb_2024_us_state_500k.zip",
+          "url": "https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_state_500k.zip",
+          "sha256": "3e81cbb6cf5f60d9b01ef3e730afa14d61ce5f784252a0b33a696135e71447bc",
+          "source_year": 2024,
+          "state_field": "STATEFP",
+          "county_field": "COUNTYFP",
+          "name_field": "NAME"
+        },
+        {
+          "level": "county",
+          "file_id": 2,
+          "filename": "cb_2024_us_county_500k.zip",
+          "url": "https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_county_500k.zip",
+          "sha256": "da4051717caec55c75e3748c3608c2a3dbde8d1ff401bbaf4f952e3c3fb63ef1",
+          "source_year": 2024,
+          "state_field": "STATEFP",
+          "county_field": "COUNTYFP",
+          "name_field": "NAME"
+        }
+      ],
+      "expected_counties": 3144
+    }
+  }
+}
