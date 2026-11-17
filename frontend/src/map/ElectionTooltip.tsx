@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from "react";
-import type { ElectionMap, MapUnit } from "./types";
+import type { ElectionMap, MapCandidate, MapUnit } from "./types";
 import { number, percent, margin, leaderCandidate } from "./types";
 import { CandidateLink } from '../CandidateLink';
 import { mapCandidateColor, resultColor, indeterminateColor } from "./electionColors";
@@ -7,6 +7,9 @@ import { humanize } from "../filters";
 import { popoverCandidates } from './popoverCandidates';
 import { CandidateAvatar } from '../CandidateAvatar';
 import { cachedPortrait } from '../candidateMedia';
+
+/** Presentation rows can retain unavailable counts without creating zero-vote results. */
+export type TooltipCandidate = Omit<MapCandidate, 'votes'> & { votes: number | null };
 
 /** Reference-card styling over published data; no inferred parties or elected status. */
 export function ElectionTooltip({
@@ -16,10 +19,10 @@ export function ElectionTooltip({
   heading,
   contextLabel,
   sourceLabel,
-  candidateSearch,
   footerNote,
   headerLayout = 'stacked',
   showLeader = true,
+  candidateRows,
 }: {
   data: Pick<ElectionMap, 'reporting_level' | 'year' | 'office' | 'stage' | 'publications'>;
   unit?: Pick<MapUnit, 'summary' | 'publication_batch_id' | 'name' | 'state_code' | 'contest_id'>;
@@ -27,10 +30,10 @@ export function ElectionTooltip({
   heading?: ReactNode;
   contextLabel?: string;
   sourceLabel?: string;
-  candidateSearch?: URLSearchParams;
   footerNote?: ReactNode;
   headerLayout?: 'stacked' | 'split';
   showLeader?: boolean;
+  candidateRows?: TooltipCandidate[];
 }) {
   const summary = unit?.summary;
   const publication = data.publications.find(
@@ -65,7 +68,7 @@ export function ElectionTooltip({
       {showLeader && <div className="popover-leader">
         {summary?.leader ? (
           <>
-            <span aria-hidden="true">●</span> Leading here: <CandidateLink candidacyId={leaderCandidate(summary)?.candidacy_id} contestId={unit?.contest_id} search={candidateSearch}>{summary.leader}</CandidateLink>
+            <span aria-hidden="true">●</span> Leading here: <CandidateLink candidacyId={leaderCandidate(summary)?.candidacy_id}>{summary.leader}</CandidateLink>
           </>
         ) : summary?.status === "tie" ? (
           "Tied reported votes"
@@ -76,7 +79,7 @@ export function ElectionTooltip({
         )}
       </div>}
       <div className="popover-candidates">
-        {popoverCandidates(summary).map((candidate, index) => {
+        {(candidateRows ?? popoverCandidates(summary)).map((candidate, index) => {
           const named = ["candidate", "source_candidate"].includes(
             candidate.kind,
           );
@@ -101,8 +104,8 @@ export function ElectionTooltip({
               <CandidateAvatar className="popover-avatar" portrait={named ? cachedPortrait(candidate.portrait) : undefined}
                 name={candidate.label} fallback={initials} decorative />
               <div className="popover-candidate-body">
-                <div className="popover-name"><CandidateLink candidacyId={candidate.candidacy_id} contestId={unit?.contest_id} search={candidateSearch}>{candidate.label}</CandidateLink>
-                  {candidate.incumbent && <span className="incumbent-marker" title="Incumbent U.S. senator entering this election">Incumbent</span>}
+                <div className="popover-name"><CandidateLink candidacyId={candidate.candidacy_id}>{candidate.label}</CandidateLink>
+                  {candidate.incumbent && <span className="incumbent-marker" title={`Incumbent ${data.office} officeholder entering this election`}>Incumbent</span>}
                   {candidate.result_badge && <span className="incumbent-marker winner-marker" title={candidate.result_badge === 'Winner' ? 'Winner per source certification' : 'Projected by Call the Map; not certified'}>{candidate.result_badge}</span>}</div>
                 {named && <div className="popover-extra">{candidate.party_labels?.join(" / ") || "Party unavailable"}</div>}
                 {!named && (
@@ -117,7 +120,7 @@ export function ElectionTooltip({
                 )}
               </div>
               <div className="popover-numbers">
-                <div>{number(candidate.votes)}</div>
+                <div>{candidate.votes === null ? 'Unavailable' : number(candidate.votes)}</div>
                 <div className="popover-percent">
                   {percent(candidate.share)}
                 </div>

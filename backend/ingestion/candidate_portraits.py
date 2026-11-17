@@ -13,6 +13,9 @@ from urllib.request import Request, urlopen
 from uuid import uuid4
 
 CATALOG = Path(__file__).resolve().parent / "catalog/senate_portraits.json"
+HOUSE_CATALOG = CATALOG.with_name("house_portraits.json")
+CATALOGS = (CATALOG, HOUSE_CATALOG)
+ANONYMOUS_LABELS = {"other", "others", "write-in", "write-ins", "write in", "write ins", "write-in totals", "scattering"}
 MAX_IMAGE_BYTES = 8 * 1024 * 1024
 LOGGER = logging.getLogger(__name__)
 MIME_SUFFIXES = {"image/jpeg": "jpg", "image/png": "png", "image/webp": "webp"}
@@ -28,8 +31,11 @@ def read_catalog(path: Path = CATALOG) -> dict:
         media = row["portrait"]
         digest = media["sha256"]
         suffix = MIME_SUFFIXES.get(media["mime_type"])
+        valid_scope = (row["source"] == "call_the_map_senate" and row["race_id"] == f"SEN-{row['state_code']}") or (
+            row["source"] == "call_the_map_house" and row["state_code"] != "DC"
+            and re.fullmatch(re.escape(row["state_code"]) + r"-(?:AL|[0-9]{2})", row["race_id"]))
         if (key in keys or not isinstance(row["year"], int) or not row["name"].strip()
-                or row["race_id"] != f"SEN-{row['state_code']}"
+                or not valid_scope or row["name"].strip().casefold() in ANONYMOUS_LABELS
                 or not re.fullmatch(r"[A-Z]{2}", row["state_code"])
                 or not re.fullmatch(r"[a-f0-9]{64}", digest) or not suffix
                 or media["url"] != f"/media/candidates/{digest}.{suffix}"
@@ -49,6 +55,19 @@ def read_catalog(path: Path = CATALOG) -> dict:
             raise ValueError("Candidate portrait retrieval date must include a timezone")
         keys.add(key)
     return catalog
+
+
+def read_catalogs(paths: tuple[Path, ...] = CATALOGS) -> dict:
+    """Combine reviewed chamber catalogs without allowing conflicting assignments."""
+    candidates, keys = [], set()
+    for path in paths:
+        for row in read_catalog(path)["candidates"]:
+            key = (row["source"], row["year"], row["race_id"], row["name"], row["party"])
+            if key in keys:
+                raise ValueError("Duplicate candidate portrait assignment across catalogs")
+            keys.add(key)
+            candidates.append(row)
+    return {"schema_version": 1, "candidates": candidates}
 
 
 def validate_image(content: bytes, media: dict) -> None:
@@ -110,7 +129,7 @@ def cache_portraits(catalog: dict, destination: Path, *, verify_only: bool = Fal
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--catalog", type=Path, default=CATALOG)
+    parser.add_argument("--catalog", type=Path, help="Select one catalog; defaults to all reviewed chamber catalogs")
     parser.add_argument("--destination", type=Path,
                         default=Path(__file__).resolve().parents[2] / "frontend/public/media/candidates")
     parser.add_argument("--report-dir", type=Path,
@@ -120,8 +139,11 @@ def main() -> int:
     run_id = str(uuid4())
     report = {"run_id": run_id, "started_at": datetime.now(timezone.utc).isoformat(), "ruleset": "reviewed-candidate-portraits-v1"}
     try:
-        catalog = read_catalog(args.catalog)
-        report.update(catalog_sha256=sha256(args.catalog.read_bytes()).hexdigest(), assignments=len(catalog["candidates"]))
+        paths = (args.catalog,) if args.catalog else CATALOGS
+        catalog = read_catalogs(paths)
+        checksums = {path.name: sha256(path.read_bytes()).hexdigest() for path in paths}
+        report.update(catalogs=checksums, catalog_sha256=sha256(json.dumps(checksums, sort_keys=True).encode()).hexdigest(),
+                      assignments=len(catalog["candidates"]))
         report.update(cache_portraits(catalog, args.destination, verify_only=args.verify_only))
     except (OSError, ValueError, KeyError, TypeError) as exc:
         report.update(status="failed", reason=str(exc))

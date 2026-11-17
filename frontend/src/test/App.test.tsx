@@ -64,7 +64,7 @@ describe('research shell', () => {
     expect(screen.getByTestId('location').textContent).toBe('/contests?year=2008&state_code=NY');
   });
 
-  it('navigates contest to candidacy context and back while preserving filters', async () => {
+  it('navigates to a clean candidacy URL and restores the contest from profile data', async () => {
     const fetch = mockData();
     const user = userEvent.setup();
     open('/contests?year=2008&state_code=NY');
@@ -72,7 +72,7 @@ describe('research shell', () => {
     await screen.findByRole('heading', { name: 'Contest returns' });
     expect(fetch.mock.calls.at(-1)![0]).toContain(`contest_id=${contestId}`);
     await user.click(await screen.findByRole('link', { name: result.label }));
-    expect(screen.getByTestId('location')).toHaveTextContent(`/candidates/${candidacyId}?year=2008&state_code=NY&contest_id=${contestId}`);
+    expect(screen.getByTestId('location')).toHaveTextContent(`/candidates/${candidacyId}`);
     expect(await screen.findByRole('heading', { name: 'Identity & candidacy' })).toBeVisible();
     expect(screen.getByText(/has not been linked to a verified person/)).toBeVisible();
     await user.click(screen.getByRole('link', { name: 'View this contest’s published returns' }));

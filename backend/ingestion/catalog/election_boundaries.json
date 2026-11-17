@@ -198,5 +198,580 @@
       ],
       "expected_counties": 3144
     }
+  },
+  "house": {
+    "2026": {
+      "boundary_vintage": "120th Congress / 2026 election",
+      "documentation_url": "https://www.census.gov/geographies/mapping-files/2026/geo/tiger-line-file.html",
+      "vintage_note": "Census 2026 TIGER/Line 120th congressional districts, retrieved after the November 10 Missouri correction. Simplified display shapes; not measurements or reconstructed returns.",
+      "reviewed_at": "2026-11-17",
+      "source_notes": [
+        "https://www.census.gov/programs-surveys/geography/technical-documentation/user-note/tiger-geo-line.html",
+        "https://www.census.gov/programs-surveys/geography/technical-documentation/user-note/120cd.html"
+      ],
+      "sources": [
+        {
+          "level": "congressional_district",
+          "sha256": "cee427c42aef57c1cb4e8544d428d2573ab6c0a684b1a25e3f9057179dfdb394",
+          "source_year": 2026,
+          "file_id": 202602,
+          "filename": "tl_2026_02_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_02_cd120.zip",
+          "include_states": [
+            "AK"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "0c6742aa2cd407ad6b78b6931844ef7ce9774635c66042e7a0c148597c1c171b",
+          "source_year": 2026,
+          "file_id": 202601,
+          "filename": "tl_2026_01_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_01_cd120.zip",
+          "include_states": [
+            "AL"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "36de94bd19852dbff9b0c4b84ee1985ea992b106ccc1708c332da77a93c982cd",
+          "source_year": 2026,
+          "file_id": 202605,
+          "filename": "tl_2026_05_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_05_cd120.zip",
+          "include_states": [
+            "AR"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "f61791f53eef0bef40f2a097ab1bf887f83cf2f6b710733edac2ec744a45c25c",
+          "source_year": 2026,
+          "file_id": 202604,
+          "filename": "tl_2026_04_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_04_cd120.zip",
+          "include_states": [
+            "AZ"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "644e5a3f2468c882749ba51877917cea473f649be195cd3d0349f7b1c696ed1d",
+          "source_year": 2026,
+          "file_id": 202606,
+          "filename": "tl_2026_06_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_06_cd120.zip",
+          "include_states": [
+            "CA"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "1b21a2bb6c0346279e28c89eeb2c60df861c335c3d6484588fc03b2bb1e92fdd",
+          "source_year": 2026,
+          "file_id": 202608,
+          "filename": "tl_2026_08_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_08_cd120.zip",
+          "include_states": [
+            "CO"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "ff6c0d7cdbfc57590d3530e950aec68ab922778fbfaf0f69bbba0e1188816607",
+          "source_year": 2026,
+          "file_id": 202609,
+          "filename": "tl_2026_09_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_09_cd120.zip",
+          "include_states": [
+            "CT"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "20d595d23f27a1a786cb8257c3de26f0ac1cbd76b25b998653b849608d19273e",
+          "source_year": 2026,
+          "file_id": 202611,
+          "filename": "tl_2026_11_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_11_cd120.zip",
+          "include_states": [
+            "DC"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "c2590068cb575a5e1027b7bba9008daf1c19fcfdf5b8040fe4ae085ad6c06dd2",
+          "source_year": 2026,
+          "file_id": 202610,
+          "filename": "tl_2026_10_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_10_cd120.zip",
+          "include_states": [
+            "DE"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "d61eed23775e201110cde13d832822ee5e876b1f22fbbe29e1a55678c9882539",
+          "source_year": 2026,
+          "file_id": 202612,
+          "filename": "tl_2026_12_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_12_cd120.zip",
+          "include_states": [
+            "FL"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "cb6a9f4ec4506af4c2ab41da7ddb0695fc01acffb9e8d994cf3660c278c1c660",
+          "source_year": 2026,
+          "file_id": 202613,
+          "filename": "tl_2026_13_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_13_cd120.zip",
+          "include_states": [
+            "GA"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "0022a920573476ce24a62efcfff3ccbe820f472fc69239beeb195911833dbea1",
+          "source_year": 2026,
+          "file_id": 202615,
+          "filename": "tl_2026_15_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_15_cd120.zip",
+          "include_states": [
+            "HI"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "55c6c8fc4a49b5a84d3d6d264dbff031924538ad8d3a2b5722bad852addf5d35",
+          "source_year": 2026,
+          "file_id": 202619,
+          "filename": "tl_2026_19_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_19_cd120.zip",
+          "include_states": [
+            "IA"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "31207667c451c4e57ac235ea3832fd826f7f9089a3794ba3fb76a1c83abfe243",
+          "source_year": 2026,
+          "file_id": 202616,
+          "filename": "tl_2026_16_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_16_cd120.zip",
+          "include_states": [
+            "ID"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "bc639d82852ff84999d6d8f03f1a3dbf14f05a3ad1776b4cf88ec45783f2d037",
+          "source_year": 2026,
+          "file_id": 202617,
+          "filename": "tl_2026_17_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_17_cd120.zip",
+          "include_states": [
+            "IL"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "5404f45662141db5278568945f181b90bef74dfcfe84437221a8f319dc70fa4f",
+          "source_year": 2026,
+          "file_id": 202618,
+          "filename": "tl_2026_18_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_18_cd120.zip",
+          "include_states": [
+            "IN"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "d90b44ee91d78457f9e950477cab52b33773b4abfc8f1cc27aa6f3927c670bbe",
+          "source_year": 2026,
+          "file_id": 202620,
+          "filename": "tl_2026_20_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_20_cd120.zip",
+          "include_states": [
+            "KS"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "7c08197a87e3dd46a6a598226e49381451e265bab5cde079a713d180110f58c0",
+          "source_year": 2026,
+          "file_id": 202621,
+          "filename": "tl_2026_21_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_21_cd120.zip",
+          "include_states": [
+            "KY"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "33be639ca87fe36785777ebfac96e06d930d3f1bb1cb883c594d820b25af4911",
+          "source_year": 2026,
+          "file_id": 202622,
+          "filename": "tl_2026_22_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_22_cd120.zip",
+          "include_states": [
+            "LA"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "4aba13152154e7f126ae955a60e041b4b92efb23aabddfbc3a98db05d8155534",
+          "source_year": 2026,
+          "file_id": 202625,
+          "filename": "tl_2026_25_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_25_cd120.zip",
+          "include_states": [
+            "MA"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "fec98d244ea42960bc61db901d275c28102a2ff0492135fa3e99f0fb27c6cfea",
+          "source_year": 2026,
+          "file_id": 202624,
+          "filename": "tl_2026_24_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_24_cd120.zip",
+          "include_states": [
+            "MD"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "cf9e7be4419941b72df4dd47d87f3dc60e8fa38f474a0f479217c033b8d843ea",
+          "source_year": 2026,
+          "file_id": 202623,
+          "filename": "tl_2026_23_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_23_cd120.zip",
+          "include_states": [
+            "ME"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "95c6de0f3953e213cf6f4ae80bca1512ab7c30100983893d87cf70edb00ffdaa",
+          "source_year": 2026,
+          "file_id": 202626,
+          "filename": "tl_2026_26_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_26_cd120.zip",
+          "include_states": [
+            "MI"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "8e571b045ee7ebb33e851f6b4b9a44ca0d51a6deb3a456e9d17450f1f454614a",
+          "source_year": 2026,
+          "file_id": 202627,
+          "filename": "tl_2026_27_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_27_cd120.zip",
+          "include_states": [
+            "MN"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "ad6d2f736622e0f3a7bc578737c424a9ec696419a49bde21877acc065fa11d1d",
+          "source_year": 2026,
+          "file_id": 202629,
+          "filename": "tl_2026_29_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_29_cd120.zip",
+          "include_states": [
+            "MO"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "1da82064329f18839e13855236d07aa6096747ea2e81081eb284ce144b2e1a14",
+          "source_year": 2026,
+          "file_id": 202628,
+          "filename": "tl_2026_28_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_28_cd120.zip",
+          "include_states": [
+            "MS"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "0c0a377c5bbd8a127569e4dcc4fe4dd52fe4fd44deeb0326f2461b49bb99f7c9",
+          "source_year": 2026,
+          "file_id": 202630,
+          "filename": "tl_2026_30_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_30_cd120.zip",
+          "include_states": [
+            "MT"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "6bb140687cf8e12e595f032f18a2773026c46f9a3b65b78467580cfa2b33d1ad",
+          "source_year": 2026,
+          "file_id": 202637,
+          "filename": "tl_2026_37_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_37_cd120.zip",
+          "include_states": [
+            "NC"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "6474715ec8f22c562005e92d6adb041036396523e54e102cdb1e762ee81b34b7",
+          "source_year": 2026,
+          "file_id": 202638,
+          "filename": "tl_2026_38_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_38_cd120.zip",
+          "include_states": [
+            "ND"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "30d372d9604500e6131981417ae75dcea3c42366b07b2431f0533dcdfae79306",
+          "source_year": 2026,
+          "file_id": 202631,
+          "filename": "tl_2026_31_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_31_cd120.zip",
+          "include_states": [
+            "NE"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "261622f644270573591c9a41e493551802ed5dbca4eaf77766d87a18c7b5d66f",
+          "source_year": 2026,
+          "file_id": 202633,
+          "filename": "tl_2026_33_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_33_cd120.zip",
+          "include_states": [
+            "NH"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "e00cd037910fa16a408c82996e102744db47065d6d52bce79a968ded3bef07e2",
+          "source_year": 2026,
+          "file_id": 202634,
+          "filename": "tl_2026_34_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_34_cd120.zip",
+          "include_states": [
+            "NJ"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "0c430b0715a5b97521dbedd8b4e843914b484eedbe91a4f04b43e857057e5dbb",
+          "source_year": 2026,
+          "file_id": 202635,
+          "filename": "tl_2026_35_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_35_cd120.zip",
+          "include_states": [
+            "NM"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "1ce5cd0f0bade416c688c9cf4a3f0ef60817cb4da7f0ef9d065ef3acaf217997",
+          "source_year": 2026,
+          "file_id": 202632,
+          "filename": "tl_2026_32_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_32_cd120.zip",
+          "include_states": [
+            "NV"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "21e0e8133ad4f82901d94ec6d6becf2201f667e3fef456def1e1dd3f7be94225",
+          "source_year": 2026,
+          "file_id": 202636,
+          "filename": "tl_2026_36_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_36_cd120.zip",
+          "include_states": [
+            "NY"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "91f135ea400821327aec466c4704c992ec8459dfae6dce12f2169003a2645a79",
+          "source_year": 2026,
+          "file_id": 202639,
+          "filename": "tl_2026_39_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_39_cd120.zip",
+          "include_states": [
+            "OH"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "79542ca32cbf965439d7799fd5a6a1a350c31357963f39c0f31dd6fbe47db708",
+          "source_year": 2026,
+          "file_id": 202640,
+          "filename": "tl_2026_40_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_40_cd120.zip",
+          "include_states": [
+            "OK"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "40de44b80bee95db2bed60fd770182fa75e02a61aadc966707b7f2234d6a3cd5",
+          "source_year": 2026,
+          "file_id": 202641,
+          "filename": "tl_2026_41_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_41_cd120.zip",
+          "include_states": [
+            "OR"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "ccf9f286551642a2214cef8ffa15c4038adb67a713a8e85112b50ece52d9aa28",
+          "source_year": 2026,
+          "file_id": 202642,
+          "filename": "tl_2026_42_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_42_cd120.zip",
+          "include_states": [
+            "PA"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "b05b8f7657a6ac7cfe27cdbed45932d66b9479fc94e864a178b2f1249da0c41a",
+          "source_year": 2026,
+          "file_id": 202644,
+          "filename": "tl_2026_44_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_44_cd120.zip",
+          "include_states": [
+            "RI"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "29bbe933c4d7043dac7ac61d36fa7ed4c71c8b54d48e61ba3c201dc8ca1309f2",
+          "source_year": 2026,
+          "file_id": 202645,
+          "filename": "tl_2026_45_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_45_cd120.zip",
+          "include_states": [
+            "SC"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "c10adabee4094a7d71f097c9e343947e409928c09c06184c27ead0c6f9c993b3",
+          "source_year": 2026,
+          "file_id": 202646,
+          "filename": "tl_2026_46_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_46_cd120.zip",
+          "include_states": [
+            "SD"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "dab6788291ea57f5fa4ee2738f3b043726dc144f8f2dcdce7915b58e75d589dc",
+          "source_year": 2026,
+          "file_id": 202647,
+          "filename": "tl_2026_47_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_47_cd120.zip",
+          "include_states": [
+            "TN"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "0d700a7f7845bc4580bf666db81cee7203d34d3dde16ecc195c1c9e525dc2ffd",
+          "source_year": 2026,
+          "file_id": 202648,
+          "filename": "tl_2026_48_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_48_cd120.zip",
+          "include_states": [
+            "TX"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "a3a9aba9faa38f25e8ee641f081c9f7aec9099f6a26897e9bf2f1cc2ebfade10",
+          "source_year": 2026,
+          "file_id": 202649,
+          "filename": "tl_2026_49_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_49_cd120.zip",
+          "include_states": [
+            "UT"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "4e6e2a313ec08688f817a579e4335eda4655c7d8982bb6dafc81a6e7e902b8d1",
+          "source_year": 2026,
+          "file_id": 202651,
+          "filename": "tl_2026_51_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_51_cd120.zip",
+          "include_states": [
+            "VA"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "01544c9880760a9ddf242ec3d731386c61e2f183d598543ac74069a9c14c59ab",
+          "source_year": 2026,
+          "file_id": 202650,
+          "filename": "tl_2026_50_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_50_cd120.zip",
+          "include_states": [
+            "VT"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "7a5fc7791e83bac478a2bf3e5109201e7b0498f0c5f18dfd36db23e6b912c42a",
+          "source_year": 2026,
+          "file_id": 202653,
+          "filename": "tl_2026_53_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_53_cd120.zip",
+          "include_states": [
+            "WA"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "e62e3685bfac448d439d51b046c322b1f4301c3b68842993203fdd5956610dd3",
+          "source_year": 2026,
+          "file_id": 202655,
+          "filename": "tl_2026_55_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_55_cd120.zip",
+          "include_states": [
+            "WI"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "c0d10a3d6ff85770ce17ef66cfe83dc601ec9569f68d03439b300bd60a5678f2",
+          "source_year": 2026,
+          "file_id": 202654,
+          "filename": "tl_2026_54_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_54_cd120.zip",
+          "include_states": [
+            "WV"
+          ]
+        },
+        {
+          "level": "congressional_district",
+          "sha256": "ac5814578066866654eb809084dd36df2b6076b03890c103721e895b2c0b2bfe",
+          "source_year": 2026,
+          "file_id": 202656,
+          "filename": "tl_2026_56_cd120.zip",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2026/CD/tl_2026_56_cd120.zip",
+          "include_states": [
+            "WY"
+          ]
+        }
+      ]
+    }
   }
 }

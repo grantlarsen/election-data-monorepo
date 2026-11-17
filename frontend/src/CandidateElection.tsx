@@ -11,10 +11,20 @@ import type { MapUnit } from './map/types';
 import { candidateDisplayName } from './candidatePresentation';
 import { mapCandidateColor } from './map/electionColors';
 import { SenateRaceCard } from './SenatePage';
+import { HouseRaceCard } from './HousePage';
 
 const GeographyMap = lazy(() => import('./map/GeographyMap').then(module => ({ default: module.GeographyMap })));
 
-export function CandidateElection({ profile }: { profile: CandidateProfile }) {
+export function CandidateElection({ profile, onResultsPageChange }: { profile: CandidateProfile; onResultsPageChange?: (offset: number) => void }) {
+  if (profile.provisional_house_election) {
+    const election = profile.provisional_house_election;
+    return <section id="election-results" className="profile-card profile-election" aria-labelledby="returns-heading">
+      <h2 id="returns-heading">Most recent election</h2><p>2026-11-03 · General election · U.S. House · Provisional counts</p>
+      <p className="profile-section-note">Source-scoped candidacy. Person and campaign finance identities remain subject to review.</p>
+      {election.stale && <Notice title="Daily update delayed"><p>The last valid cached counts are shown.</p></Notice>}
+      <HouseRaceCard race={election.race} complete highlightedCandidacyId={profile.id} />
+    </section>;
+  }
   if (profile.provisional_election) {
     const election = profile.provisional_election;
     return <section id="election-results" className="profile-card profile-election" aria-labelledby="returns-heading">
@@ -26,10 +36,10 @@ export function CandidateElection({ profile }: { profile: CandidateProfile }) {
       <p className="profile-section-note">Cache checked: {election.checked_at}. Source CSV SHA-256: {election.sha256}</p>
     </section>;
   }
-  return <PublishedCandidateElection profile={profile} />;
+  return <PublishedCandidateElection profile={profile} onResultsPageChange={onResultsPageChange} />;
 }
 
-function PublishedCandidateElection({ profile }: { profile: CandidateProfile }) {
+function PublishedCandidateElection({ profile, onResultsPageChange }: { profile: CandidateProfile; onResultsPageChange?: (offset: number) => void }) {
   const election = profile.latest_election === undefined ? { ...profile.contest, candidacy_id: profile.id } : profile.latest_election;
   const query = new URLSearchParams();
   if (election) {
@@ -74,12 +84,12 @@ function PublishedCandidateElection({ profile }: { profile: CandidateProfile }) 
         <div className="table-scroll" tabIndex={0} role="region" aria-label="Most recent election results"><table>
           <caption className="profile-visually-hidden">Candidate votes and share of reported votes</caption><thead><tr><th scope="col">Candidate / source bucket</th><th scope="col" className="number">Votes</th><th scope="col" className="number">Share</th></tr></thead>
           <tbody>{results.map((candidate, index) => <tr className={candidate.candidacy_id === election.candidacy_id ? 'profile-current-candidate' : undefined} key={`${candidate.label}:${index}`}>
-            <th scope="row"><span className="profile-result-dot" style={{ background: mapCandidateColor(candidate) }} aria-hidden="true" /><CandidateLink candidacyId={candidate.candidacy_id} contestId={election.id}>{candidateDisplayName(candidate.label)}</CandidateLink>{candidate.candidacy_id === election.candidacy_id && <span className="cell-note">This candidate</span>}</th>
+            <th scope="row"><span className="profile-result-dot" style={{ background: mapCandidateColor(candidate) }} aria-hidden="true" /><CandidateLink candidacyId={candidate.candidacy_id}>{candidateDisplayName(candidate.label)}</CandidateLink>{candidate.candidacy_id === election.candidacy_id && <span className="cell-note">This candidate</span>}</th>
             <td className="number">{candidate.votes.toLocaleString('en-US')}</td><td className="number">{candidate.share === null ? 'Unavailable' : `${candidate.share.toFixed(2)}%`}</td></tr>)}</tbody>
         </table></div>
       </> : fallback?.items.length ? <>
         <div className="table-scroll"><table><caption className="profile-visually-hidden">Source-backed votes by reporting unit</caption><thead><tr><th scope="col">Reporting unit</th><th scope="col" className="number">Votes</th></tr></thead><tbody>{fallback.items.map((row, index) => <tr key={index}><th scope="row">{row.jurisdiction.name}</th><td className="number">{row.votes.toLocaleString('en-US')}</td></tr>)}</tbody></table></div>
-        {latestId === profile.id && <Pagination page={fallback} />}
+        {latestId === profile.id && <Pagination page={fallback} onPageChange={onResultsPageChange} />}
       </> : <p>{latestProfile?.id === latestId && latestProfile?.error ? 'Candidate returns could not be loaded.' : 'No published results are available for this election.'}</p>}
       <ElectionSourceDetails publications={resultPublications} />
       <Link className="profile-contest-link" to={`/contests/${election.id}?${query}&reporting_level=${data?.reporting_level === 'congressional_district' || election.office_name.toLowerCase() === 'u.s. house' || election.jurisdiction.level === 'congressional_district' ? 'congressional_district' : 'county'}`}>View this contest’s published returns</Link>

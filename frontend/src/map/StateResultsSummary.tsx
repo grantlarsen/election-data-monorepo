@@ -68,7 +68,7 @@ export function StateResultsSummary({ selection }: { selection: ElectionMap }) {
                 <li key={`${candidate.label}:${index}`}>
                   <div className="state-summary-candidate-name">
                     <i aria-hidden="true" style={{ background: color }} />
-                    <CandidateLink candidacyId={candidate.candidacy_id} contestId={unit.contest_id}>{candidate.label}</CandidateLink>
+                    <CandidateLink candidacyId={candidate.candidacy_id}>{candidate.label}</CandidateLink>
                     {candidate.label === unit.summary.leader && <span className="state-summary-leader">Leading</span>}
                   </div>
                   <div className="state-summary-candidate-total">

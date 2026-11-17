@@ -37,19 +37,19 @@ function Location() {
 }
 
 describe('candidate profile navigation', () => {
-  it('preserves shared filters, replaces contest context and excludes stale pagination on navigation', async () => {
+  it('uses only the candidacy identifier when navigating from filtered results', async () => {
     render(<MemoryRouter initialEntries={['/map?year=2008&state_code=NY&offset=25&map_unit=36&contest_id=old']}>
-      <CandidateLink candidacyId={candidacyId} contestId={contestId}>Alice</CandidateLink><Location />
+      <CandidateLink candidacyId={candidacyId}>Alice</CandidateLink><Location />
     </MemoryRouter>);
     await userEvent.click(screen.getByRole('link', { name: 'Alice' }));
-    expect(screen.getByTestId('location')).toHaveTextContent(`/candidates/${candidacyId}?year=2008&state_code=NY&contest_id=${contestId}`);
+    expect(screen.getByTestId('location').textContent).toBe(`/candidates/${candidacyId}`);
     expect(screen.getByTestId('location')).not.toHaveTextContent('offset');
     expect(screen.getByTestId('location')).not.toHaveTextContent('map_unit');
   });
 
-  it('creates valid contest links with no shared filters and works outside the router', () => {
-    render(<CandidateLink candidacyId={candidacyId} contestId={contestId}>Alice</CandidateLink>);
-    expect(screen.getByRole('link')).toHaveAttribute('href', `/candidates/${candidacyId}?contest_id=${contestId}`);
+  it('creates identifier-only links outside the router', () => {
+    render(<CandidateLink candidacyId={candidacyId}>Alice</CandidateLink>);
+    expect(screen.getByRole('link')).toHaveAttribute('href', `/candidates/${candidacyId}`);
   });
 
   it('keeps anonymous and unresolved source buckets as text', () => {
@@ -67,7 +67,7 @@ describe('candidate profile navigation', () => {
     </MemoryRouter>);
     const links = screen.getAllByRole('link', { name: 'Alice' });
     expect(links).toHaveLength(4);
-    links.forEach(link => expect(link).toHaveAttribute('href', `/candidates/${candidacyId}?year=2008&contest_id=${contestId}`));
+    links.forEach(link => expect(link).toHaveAttribute('href', `/candidates/${candidacyId}`));
     expect(screen.queryByRole('link', { name: 'OTHER' })).not.toBeInTheDocument();
     await userEvent.click(links[2]);
     expect(screen.getByTestId('location')).toHaveTextContent(`/candidates/${candidacyId}`);

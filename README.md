@@ -55,6 +55,13 @@ with directly loadable `/presidential/2000` through `/presidential/2024` pages.
 See the [presidential pages guide](docs/presidential-pages.md) for state totals,
 county drill-down, source coverage and year-specific map availability.
 
+The [2026 House results page](http://localhost:5173/house/2026/results) covers
+all 435 voting districts with daily cached provisional counts, call-based seat
+accounting, district selection and complete district tables. The House header
+links directly to it. A grid/map toggle shows pinned 2026 congressional districts
+with a small-state/DC tile inset. See the [House source and cache runbook](docs/data/house_current_results.md)
+for source attribution, missing-count semantics and refresh/replay commands.
+
 2024 MEDSL House district ingestion is available through the shared observation
 and canonical publication pipeline. See the [House data contract](docs/data/house_returns_2024.md)
 and [PowerShell runbook](docs/data/house_returns_2024_runbook.md) for pinned-source

@@ -1,0 +1,3251 @@
+{
+  "year": 2026,
+  "as_of": "2026-11-03",
+  "reviewed_at": "2026-11-17",
+  "source_url": "https://clerk.house.gov/xml/lists/MemberData.xml",
+  "source_sha256": "84458803178118dd612e41ff119daf2976e59d9f96780d8c794eba52d717711d",
+  "published_at": "November 3, 2026",
+  "method": "Reviewed exact labels and explicit name aliases against the official House Clerk roster, constrained to state and party. Incumbency describes a sitting U.S. House member entering this election, including members running in redrawn districts. Does not match canonical people or financial identities.",
+  "candidates": [
+    {
+      "race_id": "AL-03",
+      "state": "AL",
+      "name": "Mike Rogers",
+      "party": "R",
+      "roster_name": "Mike Rogers",
+      "bioguide": "R000575",
+      "incoming_district": "AL03"
+    },
+    {
+      "race_id": "AL-04",
+      "state": "AL",
+      "name": "Robert B. Aderholt",
+      "party": "R",
+      "roster_name": "Robert B. Aderholt",
+      "bioguide": "A000055",
+      "incoming_district": "AL04"
+    },
+    {
+      "race_id": "AL-05",
+      "state": "AL",
+      "name": "Dale W. Strong",
+      "party": "R",
+      "roster_name": "Dale W. Strong",
+      "bioguide": "S001220",
+      "incoming_district": "AL05"
+    },
+    {
+      "race_id": "AL-06",
+      "state": "AL",
+      "name": "Gary Palmer",
+      "party": "R",
+      "roster_name": "Gary J. Palmer",
+      "bioguide": "P000609",
+      "incoming_district": "AL06"
+    },
+    {
+      "race_id": "AL-07",
+      "state": "AL",
+      "name": "Terri Sewell",
+      "party": "D",
+      "roster_name": "Terri A. Sewell",
+      "bioguide": "S001185",
+      "incoming_district": "AL07"
+    },
+    {
+      "race_id": "AZ-03",
+      "state": "AZ",
+      "name": "Yassamin Ansari",
+      "party": "D",
+      "roster_name": "Yassamin Ansari",
+      "bioguide": "A000381",
+      "incoming_district": "AZ03"
+    },
+    {
+      "race_id": "AZ-04",
+      "state": "AZ",
+      "name": "Greg Stanton",
+      "party": "D",
+      "roster_name": "Greg Stanton",
+      "bioguide": "S001211",
+      "incoming_district": "AZ04"
+    },
+    {
+      "race_id": "AZ-06",
+      "state": "AZ",
+      "name": "Juan Ciscomani",
+      "party": "R",
+      "roster_name": "Juan Ciscomani",
+      "bioguide": "C001133",
+      "incoming_district": "AZ06"
+    },
+    {
+      "race_id": "AZ-07",
+      "state": "AZ",
+      "name": "Adelita Grijalva",
+      "party": "D",
+      "roster_name": "Adelita S. Grijalva",
+      "bioguide": "G000606",
+      "incoming_district": "AZ07"
+    },
+    {
+      "race_id": "AZ-09",
+      "state": "AZ",
+      "name": "Paul Gosar",
+      "party": "R",
+      "roster_name": "Paul A. Gosar",
+      "bioguide": "G000565",
+      "incoming_district": "AZ09"
+    },
+    {
+      "race_id": "AR-03",
+      "state": "AR",
+      "name": "Steve Womack",
+      "party": "R",
+      "roster_name": "Steve Womack",
+      "bioguide": "W000809",
+      "incoming_district": "AR03"
+    },
+    {
+      "race_id": "AR-04",
+      "state": "AR",
+      "name": "Bruce Westerman",
+      "party": "R",
+      "roster_name": "Bruce Westerman",
+      "bioguide": "W000821",
+      "incoming_district": "AR04"
+    },
+    {
+      "race_id": "CA-01",
+      "state": "CA",
+      "name": "James Gallagher",
+      "party": "R",
+      "roster_name": "James Gallagher",
+      "bioguide": "G000607",
+      "incoming_district": "CA01"
+    },
+    {
+      "race_id": "CA-02",
+      "state": "CA",
+      "name": "Jared Huffman",
+      "party": "D",
+      "roster_name": "Jared Huffman",
+      "bioguide": "H001068",
+      "incoming_district": "CA02"
+    },
+    {
+      "race_id": "CA-03",
+      "state": "CA",
+      "name": "Ami Bera",
+      "party": "D",
+      "roster_name": "Ami Bera",
+      "bioguide": "B001287",
+      "incoming_district": "CA06"
+    },
+    {
+      "race_id": "CA-04",
+      "state": "CA",
+      "name": "Mike Thompson",
+      "party": "D",
+      "roster_name": "Mike Thompson",
+      "bioguide": "T000460",
+      "incoming_district": "CA04"
+    },
+    {
+      "race_id": "CA-05",
+      "state": "CA",
+      "name": "Tom McClintock",
+      "party": "R",
+      "roster_name": "Tom McClintock",
+      "bioguide": "M001177",
+      "incoming_district": "CA05"
+    },
+    {
+      "race_id": "CA-07",
+      "state": "CA",
+      "name": "Doris Matsui",
+      "party": "D",
+      "roster_name": "Doris O. Matsui",
+      "bioguide": "M001163",
+      "incoming_district": "CA07"
+    },
+    {
+      "race_id": "CA-08",
+      "state": "CA",
+      "name": "John Garamendi",
+      "party": "D",
+      "roster_name": "John Garamendi",
+      "bioguide": "G000559",
+      "incoming_district": "CA08"
+    },
+    {
+      "race_id": "CA-09",
+      "state": "CA",
+      "name": "Josh Harder",
+      "party": "D",
+      "roster_name": "Josh Harder",
+      "bioguide": "H001090",
+      "incoming_district": "CA09"
+    },
+    {
+      "race_id": "CA-10",
+      "state": "CA",
+      "name": "Mark DeSaulnier",
+      "party": "D",
+      "roster_name": "Mark DeSaulnier",
+      "bioguide": "D000623",
+      "incoming_district": "CA10"
+    },
+    {
+      "race_id": "CA-12",
+      "state": "CA",
+      "name": "Lateefah Simon",
+      "party": "D",
+      "roster_name": "Lateefah Simon",
+      "bioguide": "S001231",
+      "incoming_district": "CA12"
+    },
+    {
+      "race_id": "CA-13",
+      "state": "CA",
+      "name": "Adam Gray",
+      "party": "D",
+      "roster_name": "Adam Gray",
+      "bioguide": "G000605",
+      "incoming_district": "CA13"
+    },
+    {
+      "race_id": "CA-14",
+      "state": "CA",
+      "name": "Aisha Wahab",
+      "party": "D",
+      "roster_name": "Aisha Wahab",
+      "bioguide": "W000832",
+      "incoming_district": "CA14"
+    },
+    {
+      "race_id": "CA-15",
+      "state": "CA",
+      "name": "Kevin Mullin",
+      "party": "D",
+      "roster_name": "Kevin Mullin",
+      "bioguide": "M001225",
+      "incoming_district": "CA15"
+    },
+    {
+      "race_id": "CA-16",
+      "state": "CA",
+      "name": "Sam Liccardo",
+      "party": "D",
+      "roster_name": "Sam T. Liccardo",
+      "bioguide": "L000607",
+      "incoming_district": "CA16"
+    },
+    {
+      "race_id": "CA-17",
+      "state": "CA",
+      "name": "Ro Khanna",
+      "party": "D",
+      "roster_name": "Ro Khanna",
+      "bioguide": "K000389",
+      "incoming_district": "CA17"
+    },
+    {
+      "race_id": "CA-18",
+      "state": "CA",
+      "name": "Zoe Lofgren",
+      "party": "D",
+      "roster_name": "Zoe Lofgren",
+      "bioguide": "L000397",
+      "incoming_district": "CA18"
+    },
+    {
+      "race_id": "CA-19",
+      "state": "CA",
+      "name": "Jimmy Panetta",
+      "party": "D",
+      "roster_name": "Jimmy Panetta",
+      "bioguide": "P000613",
+      "incoming_district": "CA19"
+    },
+    {
+      "race_id": "CA-20",
+      "state": "CA",
+      "name": "Vince Fong",
+      "party": "R",
+      "roster_name": "Vince Fong",
+      "bioguide": "F000480",
+      "incoming_district": "CA20"
+    },
+    {
+      "race_id": "CA-21",
+      "state": "CA",
+      "name": "Jim Costa",
+      "party": "D",
+      "roster_name": "Jim Costa",
+      "bioguide": "C001059",
+      "incoming_district": "CA21"
+    },
+    {
+      "race_id": "CA-22",
+      "state": "CA",
+      "name": "David Valadao",
+      "party": "R",
+      "roster_name": "David G. Valadao",
+      "bioguide": "V000129",
+      "incoming_district": "CA22"
+    },
+    {
+      "race_id": "CA-23",
+      "state": "CA",
+      "name": "Jay Obernolte",
+      "party": "R",
+      "roster_name": "Jay Obernolte",
+      "bioguide": "O000019",
+      "incoming_district": "CA23"
+    },
+    {
+      "race_id": "CA-24",
+      "state": "CA",
+      "name": "Salud Carbajal",
+      "party": "D",
+      "roster_name": "Salud O. Carbajal",
+      "bioguide": "C001112",
+      "incoming_district": "CA24"
+    },
+    {
+      "race_id": "CA-25",
+      "state": "CA",
+      "name": "Raul Ruiz",
+      "party": "D",
+      "roster_name": "Raul Ruiz",
+      "bioguide": "R000599",
+      "incoming_district": "CA25"
+    },
+    {
+      "race_id": "CA-27",
+      "state": "CA",
+      "name": "George Whitesides",
+      "party": "D",
+      "roster_name": "George Whitesides",
+      "bioguide": "W000830",
+      "incoming_district": "CA27"
+    },
+    {
+      "race_id": "CA-28",
+      "state": "CA",
+      "name": "Judy Chu",
+      "party": "D",
+      "roster_name": "Judy Chu",
+      "bioguide": "C001080",
+      "incoming_district": "CA28"
+    },
+    {
+      "race_id": "CA-29",
+      "state": "CA",
+      "name": "Luz Rivas",
+      "party": "D",
+      "roster_name": "Luz M. Rivas",
+      "bioguide": "R000620",
+      "incoming_district": "CA29"
+    },
+    {
+      "race_id": "CA-30",
+      "state": "CA",
+      "name": "Laura Friedman",
+      "party": "D",
+      "roster_name": "Laura Friedman",
+      "bioguide": "F000483",
+      "incoming_district": "CA30"
+    },
+    {
+      "race_id": "CA-32",
+      "state": "CA",
+      "name": "Brad Sherman",
+      "party": "D",
+      "roster_name": "Brad Sherman",
+      "bioguide": "S000344",
+      "incoming_district": "CA32"
+    },
+    {
+      "race_id": "CA-33",
+      "state": "CA",
+      "name": "Pete Aguilar",
+      "party": "D",
+      "roster_name": "Pete Aguilar",
+      "bioguide": "A000371",
+      "incoming_district": "CA33"
+    },
+    {
+      "race_id": "CA-34",
+      "state": "CA",
+      "name": "Jimmy Gomez",
+      "party": "D",
+      "roster_name": "Jimmy Gomez",
+      "bioguide": "G000585",
+      "incoming_district": "CA34"
+    },
+    {
+      "race_id": "CA-35",
+      "state": "CA",
+      "name": "Norma Torres",
+      "party": "D",
+      "roster_name": "Norma J. Torres",
+      "bioguide": "T000474",
+      "incoming_district": "CA35"
+    },
+    {
+      "race_id": "CA-36",
+      "state": "CA",
+      "name": "Ted Lieu",
+      "party": "D",
+      "roster_name": "Ted Lieu",
+      "bioguide": "L000582",
+      "incoming_district": "CA36"
+    },
+    {
+      "race_id": "CA-37",
+      "state": "CA",
+      "name": "Sydney Kamlager-Dove",
+      "party": "D",
+      "roster_name": "Sydney Kamlager-Dove",
+      "bioguide": "K000400",
+      "incoming_district": "CA37"
+    },
+    {
+      "race_id": "CA-39",
+      "state": "CA",
+      "name": "Mark Takano",
+      "party": "D",
+      "roster_name": "Mark Takano",
+      "bioguide": "T000472",
+      "incoming_district": "CA39"
+    },
+    {
+      "race_id": "CA-40",
+      "state": "CA",
+      "name": "Ken Calvert",
+      "party": "R",
+      "roster_name": "Ken Calvert",
+      "bioguide": "C000059",
+      "incoming_district": "CA41"
+    },
+    {
+      "race_id": "CA-40",
+      "state": "CA",
+      "name": "Young Kim",
+      "party": "R",
+      "roster_name": "Young Kim",
+      "bioguide": "K000397",
+      "incoming_district": "CA40"
+    },
+    {
+      "race_id": "CA-41",
+      "state": "CA",
+      "name": "Linda Sánchez",
+      "party": "D",
+      "roster_name": "Linda T. Sánchez",
+      "bioguide": "S001156",
+      "incoming_district": "CA38"
+    },
+    {
+      "race_id": "CA-42",
+      "state": "CA",
+      "name": "Robert Garcia",
+      "party": "D",
+      "roster_name": "Robert Garcia",
+      "bioguide": "G000598",
+      "incoming_district": "CA42"
+    },
+    {
+      "race_id": "CA-43",
+      "state": "CA",
+      "name": "Maxine Waters",
+      "party": "D",
+      "roster_name": "Maxine Waters",
+      "bioguide": "W000187",
+      "incoming_district": "CA43"
+    },
+    {
+      "race_id": "CA-44",
+      "state": "CA",
+      "name": "Nanette Barragán",
+      "party": "D",
+      "roster_name": "Nanette Diaz Barragán",
+      "bioguide": "B001300",
+      "incoming_district": "CA44"
+    },
+    {
+      "race_id": "CA-45",
+      "state": "CA",
+      "name": "Derek Tran",
+      "party": "D",
+      "roster_name": "Derek Tran",
+      "bioguide": "T000491",
+      "incoming_district": "CA45"
+    },
+    {
+      "race_id": "CA-47",
+      "state": "CA",
+      "name": "Dave Min",
+      "party": "D",
+      "roster_name": "Dave Min",
+      "bioguide": "M001241",
+      "incoming_district": "CA47"
+    },
+    {
+      "race_id": "CA-49",
+      "state": "CA",
+      "name": "Mike Levin",
+      "party": "D",
+      "roster_name": "Mike Levin",
+      "bioguide": "L000593",
+      "incoming_district": "CA49"
+    },
+    {
+      "race_id": "CA-50",
+      "state": "CA",
+      "name": "Scott Peters",
+      "party": "D",
+      "roster_name": "Scott H. Peters",
+      "bioguide": "P000608",
+      "incoming_district": "CA50"
+    },
+    {
+      "race_id": "CA-51",
+      "state": "CA",
+      "name": "Sara Jacobs",
+      "party": "D",
+      "roster_name": "Sara Jacobs",
+      "bioguide": "J000305",
+      "incoming_district": "CA51"
+    },
+    {
+      "race_id": "CA-52",
+      "state": "CA",
+      "name": "Juan Vargas",
+      "party": "D",
+      "roster_name": "Juan Vargas",
+      "bioguide": "V000130",
+      "incoming_district": "CA52"
+    },
+    {
+      "race_id": "CO-02",
+      "state": "CO",
+      "name": "Joe Neguse",
+      "party": "D",
+      "roster_name": "Joe Neguse",
+      "bioguide": "N000191",
+      "incoming_district": "CO02"
+    },
+    {
+      "race_id": "CO-03",
+      "state": "CO",
+      "name": "Jeff Hurd",
+      "party": "R",
+      "roster_name": "Jeff Hurd",
+      "bioguide": "H001100",
+      "incoming_district": "CO03"
+    },
+    {
+      "race_id": "CO-04",
+      "state": "CO",
+      "name": "Lauren Boebert",
+      "party": "R",
+      "roster_name": "Lauren Boebert",
+      "bioguide": "B000825",
+      "incoming_district": "CO04"
+    },
+    {
+      "race_id": "CO-05",
+      "state": "CO",
+      "name": "Jeff Crank",
+      "party": "R",
+      "roster_name": "Jeff Crank",
+      "bioguide": "C001137",
+      "incoming_district": "CO05"
+    },
+    {
+      "race_id": "CO-06",
+      "state": "CO",
+      "name": "Jason Crow",
+      "party": "D",
+      "roster_name": "Jason Crow",
+      "bioguide": "C001121",
+      "incoming_district": "CO06"
+    },
+    {
+      "race_id": "CO-07",
+      "state": "CO",
+      "name": "Brittany Pettersen",
+      "party": "D",
+      "roster_name": "Brittany Pettersen",
+      "bioguide": "P000620",
+      "incoming_district": "CO07"
+    },
+    {
+      "race_id": "CO-08",
+      "state": "CO",
+      "name": "Gabe Evans",
+      "party": "R",
+      "roster_name": "Gabe Evans",
+      "bioguide": "E000300",
+      "incoming_district": "CO08"
+    },
+    {
+      "race_id": "CT-02",
+      "state": "CT",
+      "name": "Joe Courtney",
+      "party": "D",
+      "roster_name": "Joe Courtney",
+      "bioguide": "C001069",
+      "incoming_district": "CT02"
+    },
+    {
+      "race_id": "CT-03",
+      "state": "CT",
+      "name": "Rosa L. DeLauro",
+      "party": "D",
+      "roster_name": "Rosa L. DeLauro",
+      "bioguide": "D000216",
+      "incoming_district": "CT03"
+    },
+    {
+      "race_id": "CT-05",
+      "state": "CT",
+      "name": "Jahana Hayes",
+      "party": "D",
+      "roster_name": "Jahana Hayes",
+      "bioguide": "H001081",
+      "incoming_district": "CT05"
+    },
+    {
+      "race_id": "DE-AL",
+      "state": "DE",
+      "name": "Sarah McBride",
+      "party": "D",
+      "roster_name": "Sarah McBride",
+      "bioguide": "M001238",
+      "incoming_district": "DE00"
+    },
+    {
+      "race_id": "FL-01",
+      "state": "FL",
+      "name": "Jimmy Patronis",
+      "party": "R",
+      "roster_name": "Jimmy Patronis",
+      "bioguide": "P000622",
+      "incoming_district": "FL01"
+    },
+    {
+      "race_id": "FL-03",
+      "state": "FL",
+      "name": "Kat Cammack",
+      "party": "R",
+      "roster_name": "Kat Cammack",
+      "bioguide": "C001039",
+      "incoming_district": "FL03"
+    },
+    {
+      "race_id": "FL-04",
+      "state": "FL",
+      "name": "Aaron Bean",
+      "party": "R",
+      "roster_name": "Aaron Bean",
+      "bioguide": "B001314",
+      "incoming_district": "FL04"
+    },
+    {
+      "race_id": "FL-05",
+      "state": "FL",
+      "name": "John Rutherford",
+      "party": "R",
+      "roster_name": "John H. Rutherford",
+      "bioguide": "R000609",
+      "incoming_district": "FL05"
+    },
+    {
+      "race_id": "FL-06",
+      "state": "FL",
+      "name": "Randy Fine",
+      "party": "R",
+      "roster_name": "Randy Fine",
+      "bioguide": "F000484",
+      "incoming_district": "FL06"
+    },
+    {
+      "race_id": "FL-08",
+      "state": "FL",
+      "name": "Mike Haridopolos",
+      "party": "R",
+      "roster_name": "Mike Haridopolos",
+      "bioguide": "H001099",
+      "incoming_district": "FL08"
+    },
+    {
+      "race_id": "FL-09",
+      "state": "FL",
+      "name": "Darren Soto",
+      "party": "D",
+      "roster_name": "Darren Soto",
+      "bioguide": "S001200",
+      "incoming_district": "FL09"
+    },
+    {
+      "race_id": "FL-10",
+      "state": "FL",
+      "name": "Maxwell Frost",
+      "party": "D",
+      "roster_name": "Maxwell Frost",
+      "bioguide": "F000476",
+      "incoming_district": "FL10"
+    },
+    {
+      "race_id": "FL-12",
+      "state": "FL",
+      "name": "Gus Bilirakis",
+      "party": "R",
+      "roster_name": "Gus M. Bilirakis",
+      "bioguide": "B001257",
+      "incoming_district": "FL12"
+    },
+    {
+      "race_id": "FL-13",
+      "state": "FL",
+      "name": "Anna Paulina Luna",
+      "party": "R",
+      "roster_name": "Anna Paulina Luna",
+      "bioguide": "L000596",
+      "incoming_district": "FL13"
+    },
+    {
+      "race_id": "FL-14",
+      "state": "FL",
+      "name": "Kathy Castor",
+      "party": "D",
+      "roster_name": "Kathy Castor",
+      "bioguide": "C001066",
+      "incoming_district": "FL14"
+    },
+    {
+      "race_id": "FL-15",
+      "state": "FL",
+      "name": "Laurel Lee",
+      "party": "R",
+      "roster_name": "Laurel M. Lee",
+      "bioguide": "L000597",
+      "incoming_district": "FL15"
+    },
+    {
+      "race_id": "FL-18",
+      "state": "FL",
+      "name": "Scott Franklin",
+      "party": "R",
+      "roster_name": "Scott Franklin",
+      "bioguide": "F000472",
+      "incoming_district": "FL18"
+    },
+    {
+      "race_id": "FL-20",
+      "state": "FL",
+      "name": "Debbie Wasserman Schultz",
+      "party": "D",
+      "roster_name": "Debbie Wasserman Schultz",
+      "bioguide": "W000797",
+      "incoming_district": "FL25"
+    },
+    {
+      "race_id": "FL-21",
+      "state": "FL",
+      "name": "Brian Mast",
+      "party": "R",
+      "roster_name": "Brian J. Mast",
+      "bioguide": "M001199",
+      "incoming_district": "FL21"
+    },
+    {
+      "race_id": "FL-23",
+      "state": "FL",
+      "name": "Lois Frankel",
+      "party": "D",
+      "roster_name": "Lois Frankel",
+      "bioguide": "F000462",
+      "incoming_district": "FL22"
+    },
+    {
+      "race_id": "FL-25",
+      "state": "FL",
+      "name": "Jared Moskowitz",
+      "party": "D",
+      "roster_name": "Jared Moskowitz",
+      "bioguide": "M001217",
+      "incoming_district": "FL23"
+    },
+    {
+      "race_id": "FL-26",
+      "state": "FL",
+      "name": "Mario Diaz-Balart",
+      "party": "R",
+      "roster_name": "Mario Diaz-Balart",
+      "bioguide": "D000600",
+      "incoming_district": "FL26"
+    },
+    {
+      "race_id": "FL-27",
+      "state": "FL",
+      "name": "Maria Elvira Salazar",
+      "party": "R",
+      "roster_name": "Maria Elvira Salazar",
+      "bioguide": "S000168",
+      "incoming_district": "FL27"
+    },
+    {
+      "race_id": "FL-28",
+      "state": "FL",
+      "name": "Carlos Giménez",
+      "party": "R",
+      "roster_name": "Carlos A. Gimenez",
+      "bioguide": "G000593",
+      "incoming_district": "FL28"
+    },
+    {
+      "race_id": "GA-02",
+      "state": "GA",
+      "name": "Sanford Bishop",
+      "party": "D",
+      "roster_name": "Sanford D. Bishop, Jr.",
+      "bioguide": "B000490",
+      "incoming_district": "GA02"
+    },
+    {
+      "race_id": "GA-03",
+      "state": "GA",
+      "name": "Brian Jack",
+      "party": "R",
+      "roster_name": "Brian Jack",
+      "bioguide": "J000311",
+      "incoming_district": "GA03"
+    },
+    {
+      "race_id": "GA-05",
+      "state": "GA",
+      "name": "Nikema Williams",
+      "party": "D",
+      "roster_name": "Nikema Williams",
+      "bioguide": "W000788",
+      "incoming_district": "GA05"
+    },
+    {
+      "race_id": "GA-06",
+      "state": "GA",
+      "name": "Lucy McBath",
+      "party": "D",
+      "roster_name": "Lucy McBath",
+      "bioguide": "M001208",
+      "incoming_district": "GA06"
+    },
+    {
+      "race_id": "GA-08",
+      "state": "GA",
+      "name": "Austin Scott",
+      "party": "R",
+      "roster_name": "Austin Scott",
+      "bioguide": "S001189",
+      "incoming_district": "GA08"
+    },
+    {
+      "race_id": "GA-09",
+      "state": "GA",
+      "name": "Andrew Clyde",
+      "party": "R",
+      "roster_name": "Andrew S. Clyde",
+      "bioguide": "C001116",
+      "incoming_district": "GA09"
+    },
+    {
+      "race_id": "GA-12",
+      "state": "GA",
+      "name": "Rick W. Allen",
+      "party": "R",
+      "roster_name": "Rick W. Allen",
+      "bioguide": "A000372",
+      "incoming_district": "GA12"
+    },
+    {
+      "race_id": "GA-14",
+      "state": "GA",
+      "name": "Clay Fuller",
+      "party": "R",
+      "roster_name": "Clay Fuller",
+      "bioguide": "F000485",
+      "incoming_district": "GA14"
+    },
+    {
+      "race_id": "HI-01",
+      "state": "HI",
+      "name": "Ed Case",
+      "party": "D",
+      "roster_name": "Ed Case",
+      "bioguide": "C001055",
+      "incoming_district": "HI01"
+    },
+    {
+      "race_id": "HI-02",
+      "state": "HI",
+      "name": "Jill N. Tokuda",
+      "party": "D",
+      "roster_name": "Jill N. Tokuda",
+      "bioguide": "T000487",
+      "incoming_district": "HI02"
+    },
+    {
+      "race_id": "ID-01",
+      "state": "ID",
+      "name": "Russ Fulcher",
+      "party": "R",
+      "roster_name": "Russ Fulcher",
+      "bioguide": "F000469",
+      "incoming_district": "ID01"
+    },
+    {
+      "race_id": "IL-01",
+      "state": "IL",
+      "name": "Jonathan Jackson",
+      "party": "D",
+      "roster_name": "Jonathan L. Jackson",
+      "bioguide": "J000309",
+      "incoming_district": "IL01"
+    },
+    {
+      "race_id": "IL-03",
+      "state": "IL",
+      "name": "Delia Ramirez",
+      "party": "D",
+      "roster_name": "Delia C. Ramirez",
+      "bioguide": "R000617",
+      "incoming_district": "IL03"
+    },
+    {
+      "race_id": "IL-05",
+      "state": "IL",
+      "name": "Mike Quigley",
+      "party": "D",
+      "roster_name": "Mike Quigley",
+      "bioguide": "Q000023",
+      "incoming_district": "IL05"
+    },
+    {
+      "race_id": "IL-06",
+      "state": "IL",
+      "name": "Sean Casten",
+      "party": "D",
+      "roster_name": "Sean Casten",
+      "bioguide": "C001117",
+      "incoming_district": "IL06"
+    },
+    {
+      "race_id": "IL-11",
+      "state": "IL",
+      "name": "Bill Foster",
+      "party": "D",
+      "roster_name": "Bill Foster",
+      "bioguide": "F000454",
+      "incoming_district": "IL11"
+    },
+    {
+      "race_id": "IL-12",
+      "state": "IL",
+      "name": "Mike Bost",
+      "party": "R",
+      "roster_name": "Mike Bost",
+      "bioguide": "B001295",
+      "incoming_district": "IL12"
+    },
+    {
+      "race_id": "IL-13",
+      "state": "IL",
+      "name": "Nikki Budzinski",
+      "party": "D",
+      "roster_name": "Nikki Budzinski",
+      "bioguide": "B001315",
+      "incoming_district": "IL13"
+    },
+    {
+      "race_id": "IL-14",
+      "state": "IL",
+      "name": "Lauren Underwood",
+      "party": "D",
+      "roster_name": "Lauren Underwood",
+      "bioguide": "U000040",
+      "incoming_district": "IL14"
+    },
+    {
+      "race_id": "IL-15",
+      "state": "IL",
+      "name": "Mary Miller",
+      "party": "R",
+      "roster_name": "Mary E. Miller",
+      "bioguide": "M001211",
+      "incoming_district": "IL15"
+    },
+    {
+      "race_id": "IL-16",
+      "state": "IL",
+      "name": "Darin LaHood",
+      "party": "R",
+      "roster_name": "Darin LaHood",
+      "bioguide": "L000585",
+      "incoming_district": "IL16"
+    },
+    {
+      "race_id": "IL-17",
+      "state": "IL",
+      "name": "Eric Sorensen",
+      "party": "D",
+      "roster_name": "Eric Sorensen",
+      "bioguide": "S001225",
+      "incoming_district": "IL17"
+    },
+    {
+      "race_id": "IN-01",
+      "state": "IN",
+      "name": "Frank J. Mrvan",
+      "party": "D",
+      "roster_name": "Frank J. Mrvan",
+      "bioguide": "M001214",
+      "incoming_district": "IN01"
+    },
+    {
+      "race_id": "IN-02",
+      "state": "IN",
+      "name": "Rudy Yakym",
+      "party": "R",
+      "roster_name": "Rudy Yakym III",
+      "bioguide": "Y000067",
+      "incoming_district": "IN02"
+    },
+    {
+      "race_id": "IN-03",
+      "state": "IN",
+      "name": "Marlin A. Stutzman",
+      "party": "R",
+      "roster_name": "Marlin A. Stutzman",
+      "bioguide": "S001188",
+      "incoming_district": "IN03"
+    },
+    {
+      "race_id": "IN-05",
+      "state": "IN",
+      "name": "Victoria Spartz",
+      "party": "R",
+      "roster_name": "Victoria Spartz",
+      "bioguide": "S000929",
+      "incoming_district": "IN05"
+    },
+    {
+      "race_id": "IN-06",
+      "state": "IN",
+      "name": "Jefferson Shreve",
+      "party": "R",
+      "roster_name": "Jefferson Shreve",
+      "bioguide": "S001229",
+      "incoming_district": "IN06"
+    },
+    {
+      "race_id": "IN-07",
+      "state": "IN",
+      "name": "André Carson",
+      "party": "D",
+      "roster_name": "André Carson",
+      "bioguide": "C001072",
+      "incoming_district": "IN07"
+    },
+    {
+      "race_id": "IN-08",
+      "state": "IN",
+      "name": "Mark Messmer",
+      "party": "R",
+      "roster_name": "Mark B. Messmer",
+      "bioguide": "M001233",
+      "incoming_district": "IN08"
+    },
+    {
+      "race_id": "IN-09",
+      "state": "IN",
+      "name": "Erin Houchin",
+      "party": "R",
+      "roster_name": "Erin Houchin",
+      "bioguide": "H001093",
+      "incoming_district": "IN09"
+    },
+    {
+      "race_id": "IA-01",
+      "state": "IA",
+      "name": "Mariannette Miller-Meeks",
+      "party": "R",
+      "roster_name": "Mariannette Miller-Meeks",
+      "bioguide": "M001215",
+      "incoming_district": "IA01"
+    },
+    {
+      "race_id": "KS-01",
+      "state": "KS",
+      "name": "Tracey Mann",
+      "party": "R",
+      "roster_name": "Tracey Mann",
+      "bioguide": "M000871",
+      "incoming_district": "KS01"
+    },
+    {
+      "race_id": "KS-02",
+      "state": "KS",
+      "name": "Derek Schmidt",
+      "party": "R",
+      "roster_name": "Derek Schmidt",
+      "bioguide": "S001228",
+      "incoming_district": "KS02"
+    },
+    {
+      "race_id": "KS-03",
+      "state": "KS",
+      "name": "Sharice Davids",
+      "party": "D",
+      "roster_name": "Sharice Davids",
+      "bioguide": "D000629",
+      "incoming_district": "KS03"
+    },
+    {
+      "race_id": "KS-04",
+      "state": "KS",
+      "name": "Ron Estes",
+      "party": "R",
+      "roster_name": "Ron Estes",
+      "bioguide": "E000298",
+      "incoming_district": "KS04"
+    },
+    {
+      "race_id": "KY-01",
+      "state": "KY",
+      "name": "James Comer",
+      "party": "R",
+      "roster_name": "James Comer",
+      "bioguide": "C001108",
+      "incoming_district": "KY01"
+    },
+    {
+      "race_id": "KY-02",
+      "state": "KY",
+      "name": "Brett Guthrie",
+      "party": "R",
+      "roster_name": "Brett Guthrie",
+      "bioguide": "G000558",
+      "incoming_district": "KY02"
+    },
+    {
+      "race_id": "KY-03",
+      "state": "KY",
+      "name": "Morgan McGarvey",
+      "party": "D",
+      "roster_name": "Morgan McGarvey",
+      "bioguide": "M001220",
+      "incoming_district": "KY03"
+    },
+    {
+      "race_id": "LA-01",
+      "state": "LA",
+      "name": "Steve Scalise",
+      "party": "R",
+      "roster_name": "Steve Scalise",
+      "bioguide": "S001176",
+      "incoming_district": "LA01"
+    },
+    {
+      "race_id": "LA-03",
+      "state": "LA",
+      "name": "Clay Higgins",
+      "party": "R",
+      "roster_name": "Clay Higgins",
+      "bioguide": "H001077",
+      "incoming_district": "LA03"
+    },
+    {
+      "race_id": "LA-04",
+      "state": "LA",
+      "name": "Mike Johnson",
+      "party": "R",
+      "roster_name": "Mike Johnson",
+      "bioguide": "J000299",
+      "incoming_district": "LA04"
+    },
+    {
+      "race_id": "ME-01",
+      "state": "ME",
+      "name": "Chellie Pingree",
+      "party": "D",
+      "roster_name": "Chellie Pingree",
+      "bioguide": "P000597",
+      "incoming_district": "ME01"
+    },
+    {
+      "race_id": "MD-01",
+      "state": "MD",
+      "name": "Andy Harris",
+      "party": "R",
+      "roster_name": "Andy Harris",
+      "bioguide": "H001052",
+      "incoming_district": "MD01"
+    },
+    {
+      "race_id": "MD-03",
+      "state": "MD",
+      "name": "Sarah Elfreth",
+      "party": "D",
+      "roster_name": "Sarah Elfreth",
+      "bioguide": "E000301",
+      "incoming_district": "MD03"
+    },
+    {
+      "race_id": "MD-06",
+      "state": "MD",
+      "name": "April McClain Delaney",
+      "party": "D",
+      "roster_name": "April McClain Delaney",
+      "bioguide": "M001232",
+      "incoming_district": "MD06"
+    },
+    {
+      "race_id": "MD-07",
+      "state": "MD",
+      "name": "Kweisi Mfume",
+      "party": "D",
+      "roster_name": "Kweisi Mfume",
+      "bioguide": "M000687",
+      "incoming_district": "MD07"
+    },
+    {
+      "race_id": "MD-08",
+      "state": "MD",
+      "name": "Jamie Raskin",
+      "party": "D",
+      "roster_name": "Jamie Raskin",
+      "bioguide": "R000606",
+      "incoming_district": "MD08"
+    },
+    {
+      "race_id": "MA-01",
+      "state": "MA",
+      "name": "Richard E. Neal",
+      "party": "D",
+      "roster_name": "Richard E. Neal",
+      "bioguide": "N000015",
+      "incoming_district": "MA01"
+    },
+    {
+      "race_id": "MA-02",
+      "state": "MA",
+      "name": "James P. McGovern",
+      "party": "D",
+      "roster_name": "James P. McGovern",
+      "bioguide": "M000312",
+      "incoming_district": "MA02"
+    },
+    {
+      "race_id": "MA-04",
+      "state": "MA",
+      "name": "Jake Auchincloss",
+      "party": "D",
+      "roster_name": "Jake Auchincloss",
+      "bioguide": "A000148",
+      "incoming_district": "MA04"
+    },
+    {
+      "race_id": "MA-05",
+      "state": "MA",
+      "name": "Katherine M. Clark",
+      "party": "D",
+      "roster_name": "Katherine M. Clark",
+      "bioguide": "C001101",
+      "incoming_district": "MA05"
+    },
+    {
+      "race_id": "MA-08",
+      "state": "MA",
+      "name": "Stephen F. Lynch",
+      "party": "D",
+      "roster_name": "Stephen F. Lynch",
+      "bioguide": "L000562",
+      "incoming_district": "MA08"
+    },
+    {
+      "race_id": "MI-01",
+      "state": "MI",
+      "name": "Jack Bergman",
+      "party": "R",
+      "roster_name": "Jack Bergman",
+      "bioguide": "B001301",
+      "incoming_district": "MI01"
+    },
+    {
+      "race_id": "MI-02",
+      "state": "MI",
+      "name": "John Moolenaar",
+      "party": "R",
+      "roster_name": "John R. Moolenaar",
+      "bioguide": "M001194",
+      "incoming_district": "MI02"
+    },
+    {
+      "race_id": "MI-03",
+      "state": "MI",
+      "name": "Hillary Scholten",
+      "party": "D",
+      "roster_name": "Hillary J. Scholten",
+      "bioguide": "S001221",
+      "incoming_district": "MI03"
+    },
+    {
+      "race_id": "MI-04",
+      "state": "MI",
+      "name": "Bill Huizenga",
+      "party": "R",
+      "roster_name": "Bill Huizenga",
+      "bioguide": "H001058",
+      "incoming_district": "MI04"
+    },
+    {
+      "race_id": "MI-05",
+      "state": "MI",
+      "name": "Tim Walberg",
+      "party": "R",
+      "roster_name": "Tim Walberg",
+      "bioguide": "W000798",
+      "incoming_district": "MI05"
+    },
+    {
+      "race_id": "MI-06",
+      "state": "MI",
+      "name": "Debbie Dingell",
+      "party": "D",
+      "roster_name": "Debbie Dingell",
+      "bioguide": "D000624",
+      "incoming_district": "MI06"
+    },
+    {
+      "race_id": "MI-07",
+      "state": "MI",
+      "name": "Tom Barrett",
+      "party": "R",
+      "roster_name": "Tom Barrett",
+      "bioguide": "B001321",
+      "incoming_district": "MI07"
+    },
+    {
+      "race_id": "MI-08",
+      "state": "MI",
+      "name": "Kristen McDonald Rivet",
+      "party": "D",
+      "roster_name": "Kristen McDonald Rivet",
+      "bioguide": "M001237",
+      "incoming_district": "MI08"
+    },
+    {
+      "race_id": "MI-09",
+      "state": "MI",
+      "name": "Lisa McClain",
+      "party": "R",
+      "roster_name": "Lisa C. McClain",
+      "bioguide": "M001136",
+      "incoming_district": "MI09"
+    },
+    {
+      "race_id": "MI-12",
+      "state": "MI",
+      "name": "Rashida Tlaib",
+      "party": "D",
+      "roster_name": "Rashida Tlaib",
+      "bioguide": "T000481",
+      "incoming_district": "MI12"
+    },
+    {
+      "race_id": "MN-01",
+      "state": "MN",
+      "name": "Brad Finstad",
+      "party": "R",
+      "roster_name": "Brad Finstad",
+      "bioguide": "F000475",
+      "incoming_district": "MN01"
+    },
+    {
+      "race_id": "MN-03",
+      "state": "MN",
+      "name": "Kelly Morrison",
+      "party": "D",
+      "roster_name": "Kelly Morrison",
+      "bioguide": "M001234",
+      "incoming_district": "MN03"
+    },
+    {
+      "race_id": "MN-04",
+      "state": "MN",
+      "name": "Betty McCollum",
+      "party": "D",
+      "roster_name": "Betty McCollum",
+      "bioguide": "M001143",
+      "incoming_district": "MN04"
+    },
+    {
+      "race_id": "MN-05",
+      "state": "MN",
+      "name": "Ilhan Omar",
+      "party": "D",
+      "roster_name": "Ilhan Omar",
+      "bioguide": "O000173",
+      "incoming_district": "MN05"
+    },
+    {
+      "race_id": "MN-06",
+      "state": "MN",
+      "name": "Tom Emmer",
+      "party": "R",
+      "roster_name": "Tom Emmer",
+      "bioguide": "E000294",
+      "incoming_district": "MN06"
+    },
+    {
+      "race_id": "MN-07",
+      "state": "MN",
+      "name": "Michelle Fischbach",
+      "party": "R",
+      "roster_name": "Michelle Fischbach",
+      "bioguide": "F000470",
+      "incoming_district": "MN07"
+    },
+    {
+      "race_id": "MN-08",
+      "state": "MN",
+      "name": "Pete Stauber",
+      "party": "R",
+      "roster_name": "Pete Stauber",
+      "bioguide": "S001212",
+      "incoming_district": "MN08"
+    },
+    {
+      "race_id": "MS-01",
+      "state": "MS",
+      "name": "Trent Kelly",
+      "party": "R",
+      "roster_name": "Trent Kelly",
+      "bioguide": "K000388",
+      "incoming_district": "MS01"
+    },
+    {
+      "race_id": "MS-02",
+      "state": "MS",
+      "name": "Bennie Thompson",
+      "party": "D",
+      "roster_name": "Bennie G. Thompson",
+      "bioguide": "T000193",
+      "incoming_district": "MS02"
+    },
+    {
+      "race_id": "MS-03",
+      "state": "MS",
+      "name": "Michael Guest",
+      "party": "R",
+      "roster_name": "Michael Guest",
+      "bioguide": "G000591",
+      "incoming_district": "MS03"
+    },
+    {
+      "race_id": "MS-04",
+      "state": "MS",
+      "name": "Mike Ezell",
+      "party": "R",
+      "roster_name": "Mike Ezell",
+      "bioguide": "E000235",
+      "incoming_district": "MS04"
+    },
+    {
+      "race_id": "MO-01",
+      "state": "MO",
+      "name": "Wesley Bell",
+      "party": "D",
+      "roster_name": "Wesley Bell",
+      "bioguide": "B001324",
+      "incoming_district": "MO01"
+    },
+    {
+      "race_id": "MO-02",
+      "state": "MO",
+      "name": "Ann Wagner",
+      "party": "R",
+      "roster_name": "Ann Wagner",
+      "bioguide": "W000812",
+      "incoming_district": "MO02"
+    },
+    {
+      "race_id": "MO-04",
+      "state": "MO",
+      "name": "Mark Alford",
+      "party": "R",
+      "roster_name": "Mark Alford",
+      "bioguide": "A000379",
+      "incoming_district": "MO04"
+    },
+    {
+      "race_id": "MO-05",
+      "state": "MO",
+      "name": "Emanuel Cleaver",
+      "party": "D",
+      "roster_name": "Emanuel Cleaver",
+      "bioguide": "C001061",
+      "incoming_district": "MO05"
+    },
+    {
+      "race_id": "MO-07",
+      "state": "MO",
+      "name": "Eric Burlison",
+      "party": "R",
+      "roster_name": "Eric Burlison",
+      "bioguide": "B001316",
+      "incoming_district": "MO07"
+    },
+    {
+      "race_id": "MO-08",
+      "state": "MO",
+      "name": "Jason Smith",
+      "party": "R",
+      "roster_name": "Jason Smith",
+      "bioguide": "S001195",
+      "incoming_district": "MO08"
+    },
+    {
+      "race_id": "MT-02",
+      "state": "MT",
+      "name": "Troy Downing",
+      "party": "R",
+      "roster_name": "Troy Downing",
+      "bioguide": "D000634",
+      "incoming_district": "MT02"
+    },
+    {
+      "race_id": "NE-01",
+      "state": "NE",
+      "name": "Mike Flood",
+      "party": "R",
+      "roster_name": "Mike Flood",
+      "bioguide": "F000474",
+      "incoming_district": "NE01"
+    },
+    {
+      "race_id": "NE-03",
+      "state": "NE",
+      "name": "Adrian Smith",
+      "party": "R",
+      "roster_name": "Adrian Smith",
+      "bioguide": "S001172",
+      "incoming_district": "NE03"
+    },
+    {
+      "race_id": "NV-01",
+      "state": "NV",
+      "name": "Dina Titus",
+      "party": "D",
+      "roster_name": "Dina Titus",
+      "bioguide": "T000468",
+      "incoming_district": "NV01"
+    },
+    {
+      "race_id": "NV-03",
+      "state": "NV",
+      "name": "Susie Lee",
+      "party": "D",
+      "roster_name": "Susie Lee",
+      "bioguide": "L000590",
+      "incoming_district": "NV03"
+    },
+    {
+      "race_id": "NV-04",
+      "state": "NV",
+      "name": "Steven Horsford",
+      "party": "D",
+      "roster_name": "Steven Horsford",
+      "bioguide": "H001066",
+      "incoming_district": "NV04"
+    },
+    {
+      "race_id": "NH-02",
+      "state": "NH",
+      "name": "Maggie Goodlander",
+      "party": "D",
+      "roster_name": "Maggie Goodlander",
+      "bioguide": "G000604",
+      "incoming_district": "NH02"
+    },
+    {
+      "race_id": "NJ-01",
+      "state": "NJ",
+      "name": "Donald Norcross",
+      "party": "D",
+      "roster_name": "Donald Norcross",
+      "bioguide": "N000188",
+      "incoming_district": "NJ01"
+    },
+    {
+      "race_id": "NJ-05",
+      "state": "NJ",
+      "name": "Josh Gottheimer",
+      "party": "D",
+      "roster_name": "Josh Gottheimer",
+      "bioguide": "G000583",
+      "incoming_district": "NJ05"
+    },
+    {
+      "race_id": "NJ-06",
+      "state": "NJ",
+      "name": "Frank Pallone",
+      "party": "D",
+      "roster_name": "Frank Pallone, Jr.",
+      "bioguide": "P000034",
+      "incoming_district": "NJ06"
+    },
+    {
+      "race_id": "NJ-07",
+      "state": "NJ",
+      "name": "Thomas Kean Jr.",
+      "party": "R",
+      "roster_name": "Thomas H. Kean, Jr.",
+      "bioguide": "K000398",
+      "incoming_district": "NJ07"
+    },
+    {
+      "race_id": "NJ-09",
+      "state": "NJ",
+      "name": "Nellie Pou",
+      "party": "D",
+      "roster_name": "Nellie Pou",
+      "bioguide": "P000621",
+      "incoming_district": "NJ09"
+    },
+    {
+      "race_id": "NJ-10",
+      "state": "NJ",
+      "name": "LaMonica McIver",
+      "party": "D",
+      "roster_name": "LaMonica McIver",
+      "bioguide": "M001229",
+      "incoming_district": "NJ10"
+    },
+    {
+      "race_id": "NJ-11",
+      "state": "NJ",
+      "name": "Analilia Mejia",
+      "party": "D",
+      "roster_name": "Analilia Mejia",
+      "bioguide": "M001246",
+      "incoming_district": "NJ11"
+    },
+    {
+      "race_id": "NM-01",
+      "state": "NM",
+      "name": "Melanie Stansbury",
+      "party": "D",
+      "roster_name": "Melanie A. Stansbury",
+      "bioguide": "S001218",
+      "incoming_district": "NM01"
+    },
+    {
+      "race_id": "NM-02",
+      "state": "NM",
+      "name": "Gabe Vasquez",
+      "party": "D",
+      "roster_name": "Gabe Vasquez",
+      "bioguide": "V000136",
+      "incoming_district": "NM02"
+    },
+    {
+      "race_id": "NM-03",
+      "state": "NM",
+      "name": "Teresa Leger Fernandez",
+      "party": "D",
+      "roster_name": "Teresa Leger Fernandez",
+      "bioguide": "L000273",
+      "incoming_district": "NM03"
+    },
+    {
+      "race_id": "NY-01",
+      "state": "NY",
+      "name": "Nick LaLota",
+      "party": "R",
+      "roster_name": "Nick LaLota",
+      "bioguide": "L000598",
+      "incoming_district": "NY01"
+    },
+    {
+      "race_id": "NY-02",
+      "state": "NY",
+      "name": "Andrew Garbarino",
+      "party": "R",
+      "roster_name": "Andrew R. Garbarino",
+      "bioguide": "G000597",
+      "incoming_district": "NY02"
+    },
+    {
+      "race_id": "NY-04",
+      "state": "NY",
+      "name": "Laura Gillen",
+      "party": "D",
+      "roster_name": "Laura Gillen",
+      "bioguide": "G000602",
+      "incoming_district": "NY04"
+    },
+    {
+      "race_id": "NY-05",
+      "state": "NY",
+      "name": "Gregory Meeks",
+      "party": "D",
+      "roster_name": "Gregory W. Meeks",
+      "bioguide": "M001137",
+      "incoming_district": "NY05"
+    },
+    {
+      "race_id": "NY-06",
+      "state": "NY",
+      "name": "Grace Meng",
+      "party": "D",
+      "roster_name": "Grace Meng",
+      "bioguide": "M001188",
+      "incoming_district": "NY06"
+    },
+    {
+      "race_id": "NY-08",
+      "state": "NY",
+      "name": "Hakeem Jeffries",
+      "party": "D",
+      "roster_name": "Hakeem S. Jeffries",
+      "bioguide": "J000294",
+      "incoming_district": "NY08"
+    },
+    {
+      "race_id": "NY-09",
+      "state": "NY",
+      "name": "Yvette Clarke",
+      "party": "D",
+      "roster_name": "Yvette D. Clarke",
+      "bioguide": "C001067",
+      "incoming_district": "NY09"
+    },
+    {
+      "race_id": "NY-11",
+      "state": "NY",
+      "name": "Nicole Malliotakis",
+      "party": "R",
+      "roster_name": "Nicole Malliotakis",
+      "bioguide": "M000317",
+      "incoming_district": "NY11"
+    },
+    {
+      "race_id": "NY-14",
+      "state": "NY",
+      "name": "Alexandria Ocasio-Cortez",
+      "party": "D",
+      "roster_name": "Alexandria Ocasio-Cortez",
+      "bioguide": "O000172",
+      "incoming_district": "NY14"
+    },
+    {
+      "race_id": "NY-15",
+      "state": "NY",
+      "name": "Ritchie Torres",
+      "party": "D",
+      "roster_name": "Ritchie Torres",
+      "bioguide": "T000486",
+      "incoming_district": "NY15"
+    },
+    {
+      "race_id": "NY-16",
+      "state": "NY",
+      "name": "George Latimer",
+      "party": "D",
+      "roster_name": "George Latimer",
+      "bioguide": "L000606",
+      "incoming_district": "NY16"
+    },
+    {
+      "race_id": "NY-19",
+      "state": "NY",
+      "name": "Josh Riley",
+      "party": "D",
+      "roster_name": "Josh Riley",
+      "bioguide": "R000622",
+      "incoming_district": "NY19"
+    },
+    {
+      "race_id": "NY-20",
+      "state": "NY",
+      "name": "Paul Tonko",
+      "party": "D",
+      "roster_name": "Paul Tonko",
+      "bioguide": "T000469",
+      "incoming_district": "NY20"
+    },
+    {
+      "race_id": "NY-22",
+      "state": "NY",
+      "name": "John Mannion",
+      "party": "D",
+      "roster_name": "John W. Mannion",
+      "bioguide": "M001231",
+      "incoming_district": "NY22"
+    },
+    {
+      "race_id": "NY-24",
+      "state": "NY",
+      "name": "Claudia Tenney",
+      "party": "R",
+      "roster_name": "Claudia Tenney",
+      "bioguide": "T000478",
+      "incoming_district": "NY24"
+    },
+    {
+      "race_id": "NY-25",
+      "state": "NY",
+      "name": "Joseph Morelle",
+      "party": "D",
+      "roster_name": "Joseph D. Morelle",
+      "bioguide": "M001206",
+      "incoming_district": "NY25"
+    },
+    {
+      "race_id": "NC-02",
+      "state": "NC",
+      "name": "Deborah K. Ross",
+      "party": "D",
+      "roster_name": "Deborah K. Ross",
+      "bioguide": "R000305",
+      "incoming_district": "NC02"
+    },
+    {
+      "race_id": "NC-04",
+      "state": "NC",
+      "name": "Valerie P. Foushee",
+      "party": "D",
+      "roster_name": "Valerie P. Foushee",
+      "bioguide": "F000477",
+      "incoming_district": "NC04"
+    },
+    {
+      "race_id": "NC-05",
+      "state": "NC",
+      "name": "Virginia Foxx",
+      "party": "R",
+      "roster_name": "Virginia Foxx",
+      "bioguide": "F000450",
+      "incoming_district": "NC05"
+    },
+    {
+      "race_id": "NC-06",
+      "state": "NC",
+      "name": "Addison McDowell",
+      "party": "R",
+      "roster_name": "Addison P. McDowell",
+      "bioguide": "M001240",
+      "incoming_district": "NC06"
+    },
+    {
+      "race_id": "NC-07",
+      "state": "NC",
+      "name": "David Rouzer",
+      "party": "R",
+      "roster_name": "David Rouzer",
+      "bioguide": "R000603",
+      "incoming_district": "NC07"
+    },
+    {
+      "race_id": "NC-08",
+      "state": "NC",
+      "name": "Mark Harris",
+      "party": "R",
+      "roster_name": "Mark Harris",
+      "bioguide": "H001102",
+      "incoming_district": "NC08"
+    },
+    {
+      "race_id": "NC-09",
+      "state": "NC",
+      "name": "Richard Hudson",
+      "party": "R",
+      "roster_name": "Richard Hudson",
+      "bioguide": "H001067",
+      "incoming_district": "NC09"
+    },
+    {
+      "race_id": "NC-10",
+      "state": "NC",
+      "name": "Pat Harrigan",
+      "party": "R",
+      "roster_name": "Pat Harrigan",
+      "bioguide": "H001101",
+      "incoming_district": "NC10"
+    },
+    {
+      "race_id": "NC-12",
+      "state": "NC",
+      "name": "Alma S. Adams",
+      "party": "D",
+      "roster_name": "Alma S. Adams",
+      "bioguide": "A000370",
+      "incoming_district": "NC12"
+    },
+    {
+      "race_id": "NC-13",
+      "state": "NC",
+      "name": "Brad Knott",
+      "party": "R",
+      "roster_name": "Brad Knott",
+      "bioguide": "K000405",
+      "incoming_district": "NC13"
+    },
+    {
+      "race_id": "NC-14",
+      "state": "NC",
+      "name": "Tim Moore",
+      "party": "R",
+      "roster_name": "Tim Moore",
+      "bioguide": "M001236",
+      "incoming_district": "NC14"
+    },
+    {
+      "race_id": "ND-AL",
+      "state": "ND",
+      "name": "Julie Fedorchak",
+      "party": "R",
+      "roster_name": "Julie Fedorchak",
+      "bioguide": "F000482",
+      "incoming_district": "ND00"
+    },
+    {
+      "race_id": "OH-01",
+      "state": "OH",
+      "name": "Greg Landsman",
+      "party": "D",
+      "roster_name": "Greg Landsman",
+      "bioguide": "L000601",
+      "incoming_district": "OH01"
+    },
+    {
+      "race_id": "OH-02",
+      "state": "OH",
+      "name": "David J. Taylor",
+      "party": "R",
+      "roster_name": "David J. Taylor",
+      "bioguide": "T000490",
+      "incoming_district": "OH02"
+    },
+    {
+      "race_id": "OH-03",
+      "state": "OH",
+      "name": "Joyce Beatty",
+      "party": "D",
+      "roster_name": "Joyce Beatty",
+      "bioguide": "B001281",
+      "incoming_district": "OH03"
+    },
+    {
+      "race_id": "OH-04",
+      "state": "OH",
+      "name": "Jim Jordan",
+      "party": "R",
+      "roster_name": "Jim Jordan",
+      "bioguide": "J000289",
+      "incoming_district": "OH04"
+    },
+    {
+      "race_id": "OH-06",
+      "state": "OH",
+      "name": "Michael A. Rulli",
+      "party": "R",
+      "roster_name": "Michael A. Rulli",
+      "bioguide": "R000619",
+      "incoming_district": "OH06"
+    },
+    {
+      "race_id": "OH-07",
+      "state": "OH",
+      "name": "Max Miller",
+      "party": "R",
+      "roster_name": "Max L. Miller",
+      "bioguide": "M001222",
+      "incoming_district": "OH07"
+    },
+    {
+      "race_id": "OH-08",
+      "state": "OH",
+      "name": "Warren Davidson",
+      "party": "R",
+      "roster_name": "Warren Davidson",
+      "bioguide": "D000626",
+      "incoming_district": "OH08"
+    },
+    {
+      "race_id": "OH-09",
+      "state": "OH",
+      "name": "Marcy Kaptur",
+      "party": "D",
+      "roster_name": "Marcy Kaptur",
+      "bioguide": "K000009",
+      "incoming_district": "OH09"
+    },
+    {
+      "race_id": "OH-11",
+      "state": "OH",
+      "name": "Shontel M. Brown",
+      "party": "D",
+      "roster_name": "Shontel M. Brown",
+      "bioguide": "B001313",
+      "incoming_district": "OH11"
+    },
+    {
+      "race_id": "OH-12",
+      "state": "OH",
+      "name": "Troy Balderson",
+      "party": "R",
+      "roster_name": "Troy Balderson",
+      "bioguide": "B001306",
+      "incoming_district": "OH12"
+    },
+    {
+      "race_id": "OH-13",
+      "state": "OH",
+      "name": "Emilia Sykes",
+      "party": "D",
+      "roster_name": "Emilia Strong Sykes",
+      "bioguide": "S001223",
+      "incoming_district": "OH13"
+    },
+    {
+      "race_id": "OH-14",
+      "state": "OH",
+      "name": "David P. Joyce",
+      "party": "R",
+      "roster_name": "David P. Joyce",
+      "bioguide": "J000295",
+      "incoming_district": "OH14"
+    },
+    {
+      "race_id": "OH-15",
+      "state": "OH",
+      "name": "Mike Carey",
+      "party": "R",
+      "roster_name": "Mike Carey",
+      "bioguide": "C001126",
+      "incoming_district": "OH15"
+    },
+    {
+      "race_id": "OK-02",
+      "state": "OK",
+      "name": "Josh Brecheen",
+      "party": "R",
+      "roster_name": "Josh Brecheen",
+      "bioguide": "B001317",
+      "incoming_district": "OK02"
+    },
+    {
+      "race_id": "OK-03",
+      "state": "OK",
+      "name": "Frank Lucas",
+      "party": "R",
+      "roster_name": "Frank D. Lucas",
+      "bioguide": "L000491",
+      "incoming_district": "OK03"
+    },
+    {
+      "race_id": "OK-04",
+      "state": "OK",
+      "name": "Tom Cole",
+      "party": "R",
+      "roster_name": "Tom Cole",
+      "bioguide": "C001053",
+      "incoming_district": "OK04"
+    },
+    {
+      "race_id": "OK-05",
+      "state": "OK",
+      "name": "Stephanie Bice",
+      "party": "R",
+      "roster_name": "Stephanie I. Bice",
+      "bioguide": "B000740",
+      "incoming_district": "OK05"
+    },
+    {
+      "race_id": "OR-01",
+      "state": "OR",
+      "name": "Suzanne Bonamici",
+      "party": "D",
+      "roster_name": "Suzanne Bonamici",
+      "bioguide": "B001278",
+      "incoming_district": "OR01"
+    },
+    {
+      "race_id": "OR-02",
+      "state": "OR",
+      "name": "Cliff Bentz",
+      "party": "R",
+      "roster_name": "Cliff Bentz",
+      "bioguide": "B000668",
+      "incoming_district": "OR02"
+    },
+    {
+      "race_id": "OR-04",
+      "state": "OR",
+      "name": "Val Hoyle",
+      "party": "D",
+      "roster_name": "Val T. Hoyle",
+      "bioguide": "H001094",
+      "incoming_district": "OR04"
+    },
+    {
+      "race_id": "OR-05",
+      "state": "OR",
+      "name": "Janelle S Bynum",
+      "party": "D",
+      "roster_name": "Janelle S. Bynum",
+      "bioguide": "B001326",
+      "incoming_district": "OR05"
+    },
+    {
+      "race_id": "OR-06",
+      "state": "OR",
+      "name": "Andrea Salinas",
+      "party": "D",
+      "roster_name": "Andrea Salinas",
+      "bioguide": "S001226",
+      "incoming_district": "OR06"
+    },
+    {
+      "race_id": "PA-01",
+      "state": "PA",
+      "name": "Brian Fitzpatrick",
+      "party": "R",
+      "roster_name": "Brian K. Fitzpatrick",
+      "bioguide": "F000466",
+      "incoming_district": "PA01"
+    },
+    {
+      "race_id": "PA-02",
+      "state": "PA",
+      "name": "Brendan Boyle",
+      "party": "D",
+      "roster_name": "Brendan F. Boyle",
+      "bioguide": "B001296",
+      "incoming_district": "PA02"
+    },
+    {
+      "race_id": "PA-04",
+      "state": "PA",
+      "name": "Madeleine Dean",
+      "party": "D",
+      "roster_name": "Madeleine Dean",
+      "bioguide": "D000631",
+      "incoming_district": "PA04"
+    },
+    {
+      "race_id": "PA-05",
+      "state": "PA",
+      "name": "Mary Gay Scanlon",
+      "party": "D",
+      "roster_name": "Mary Gay Scanlon",
+      "bioguide": "S001205",
+      "incoming_district": "PA05"
+    },
+    {
+      "race_id": "PA-06",
+      "state": "PA",
+      "name": "Chrissy Houlahan",
+      "party": "D",
+      "roster_name": "Chrissy Houlahan",
+      "bioguide": "H001085",
+      "incoming_district": "PA06"
+    },
+    {
+      "race_id": "PA-07",
+      "state": "PA",
+      "name": "Ryan Mackenzie",
+      "party": "R",
+      "roster_name": "Ryan Mackenzie",
+      "bioguide": "M001230",
+      "incoming_district": "PA07"
+    },
+    {
+      "race_id": "PA-10",
+      "state": "PA",
+      "name": "Scott Perry",
+      "party": "R",
+      "roster_name": "Scott Perry",
+      "bioguide": "P000605",
+      "incoming_district": "PA10"
+    },
+    {
+      "race_id": "PA-11",
+      "state": "PA",
+      "name": "Lloyd Smucker",
+      "party": "R",
+      "roster_name": "Lloyd Smucker",
+      "bioguide": "S001199",
+      "incoming_district": "PA11"
+    },
+    {
+      "race_id": "PA-12",
+      "state": "PA",
+      "name": "Summer Lee",
+      "party": "D",
+      "roster_name": "Summer L. Lee",
+      "bioguide": "L000602",
+      "incoming_district": "PA12"
+    },
+    {
+      "race_id": "PA-13",
+      "state": "PA",
+      "name": "John Joyce",
+      "party": "R",
+      "roster_name": "John Joyce",
+      "bioguide": "J000302",
+      "incoming_district": "PA13"
+    },
+    {
+      "race_id": "PA-14",
+      "state": "PA",
+      "name": "Guy Reschenthaler",
+      "party": "R",
+      "roster_name": "Guy Reschenthaler",
+      "bioguide": "R000610",
+      "incoming_district": "PA14"
+    },
+    {
+      "race_id": "PA-15",
+      "state": "PA",
+      "name": "Glenn Thompson",
+      "party": "R",
+      "roster_name": "Glenn Thompson",
+      "bioguide": "T000467",
+      "incoming_district": "PA15"
+    },
+    {
+      "race_id": "PA-16",
+      "state": "PA",
+      "name": "Mike Kelly",
+      "party": "R",
+      "roster_name": "Mike Kelly",
+      "bioguide": "K000376",
+      "incoming_district": "PA16"
+    },
+    {
+      "race_id": "RI-02",
+      "state": "RI",
+      "name": "Seth Magaziner",
+      "party": "D",
+      "roster_name": "Seth Magaziner",
+      "bioguide": "M001223",
+      "incoming_district": "RI02"
+    },
+    {
+      "race_id": "SC-02",
+      "state": "SC",
+      "name": "Joe Wilson",
+      "party": "R",
+      "roster_name": "Joe Wilson",
+      "bioguide": "W000795",
+      "incoming_district": "SC02"
+    },
+    {
+      "race_id": "SC-03",
+      "state": "SC",
+      "name": "Sheri Biggs",
+      "party": "R",
+      "roster_name": "Sheri Biggs",
+      "bioguide": "B001325",
+      "incoming_district": "SC03"
+    },
+    {
+      "race_id": "SC-04",
+      "state": "SC",
+      "name": "William Timmons",
+      "party": "R",
+      "roster_name": "William R. Timmons IV",
+      "bioguide": "T000480",
+      "incoming_district": "SC04"
+    },
+    {
+      "race_id": "SC-07",
+      "state": "SC",
+      "name": "Russell Fry",
+      "party": "R",
+      "roster_name": "Russell Fry",
+      "bioguide": "F000478",
+      "incoming_district": "SC07"
+    },
+    {
+      "race_id": "TN-01",
+      "state": "TN",
+      "name": "Diana Harshbarger",
+      "party": "R",
+      "roster_name": "Diana Harshbarger",
+      "bioguide": "H001086",
+      "incoming_district": "TN01"
+    },
+    {
+      "race_id": "TN-02",
+      "state": "TN",
+      "name": "Tim Burchett",
+      "party": "R",
+      "roster_name": "Tim Burchett",
+      "bioguide": "B001309",
+      "incoming_district": "TN02"
+    },
+    {
+      "race_id": "TN-04",
+      "state": "TN",
+      "name": "Scott DesJarlais",
+      "party": "R",
+      "roster_name": "Scott DesJarlais",
+      "bioguide": "D000616",
+      "incoming_district": "TN04"
+    },
+    {
+      "race_id": "TN-07",
+      "state": "TN",
+      "name": "Matt Van Epps",
+      "party": "R",
+      "roster_name": "Matt Van Epps",
+      "bioguide": "V000139",
+      "incoming_district": "TN07"
+    },
+    {
+      "race_id": "TN-08",
+      "state": "TN",
+      "name": "David Kustoff",
+      "party": "R",
+      "roster_name": "David Kustoff",
+      "bioguide": "K000392",
+      "incoming_district": "TN08"
+    },
+    {
+      "race_id": "TX-01",
+      "state": "TX",
+      "name": "Nathaniel Moran",
+      "party": "R",
+      "roster_name": "Nathaniel Moran",
+      "bioguide": "M001224",
+      "incoming_district": "TX01"
+    },
+    {
+      "race_id": "TX-03",
+      "state": "TX",
+      "name": "Keith Self",
+      "party": "R",
+      "roster_name": "Keith Self",
+      "bioguide": "S001224",
+      "incoming_district": "TX03"
+    },
+    {
+      "race_id": "TX-04",
+      "state": "TX",
+      "name": "Pat Fallon",
+      "party": "R",
+      "roster_name": "Pat Fallon",
+      "bioguide": "F000246",
+      "incoming_district": "TX04"
+    },
+    {
+      "race_id": "TX-05",
+      "state": "TX",
+      "name": "Lance Gooden",
+      "party": "R",
+      "roster_name": "Lance Gooden",
+      "bioguide": "G000589",
+      "incoming_district": "TX05"
+    },
+    {
+      "race_id": "TX-06",
+      "state": "TX",
+      "name": "Jake Ellzey",
+      "party": "R",
+      "roster_name": "Jake Ellzey",
+      "bioguide": "E000071",
+      "incoming_district": "TX06"
+    },
+    {
+      "race_id": "TX-11",
+      "state": "TX",
+      "name": "August Pfluger",
+      "party": "R",
+      "roster_name": "August Pfluger",
+      "bioguide": "P000048",
+      "incoming_district": "TX11"
+    },
+    {
+      "race_id": "TX-12",
+      "state": "TX",
+      "name": "Craig Goldman",
+      "party": "R",
+      "roster_name": "Craig A. Goldman",
+      "bioguide": "G000601",
+      "incoming_district": "TX12"
+    },
+    {
+      "race_id": "TX-13",
+      "state": "TX",
+      "name": "Ronny Jackson",
+      "party": "R",
+      "roster_name": "Ronny Jackson",
+      "bioguide": "J000304",
+      "incoming_district": "TX13"
+    },
+    {
+      "race_id": "TX-14",
+      "state": "TX",
+      "name": "Randy Weber",
+      "party": "R",
+      "roster_name": "Randy K. Weber, Sr.",
+      "bioguide": "W000814",
+      "incoming_district": "TX14"
+    },
+    {
+      "race_id": "TX-15",
+      "state": "TX",
+      "name": "Monica De La Cruz",
+      "party": "R",
+      "roster_name": "Monica De La Cruz",
+      "bioguide": "D000594",
+      "incoming_district": "TX15"
+    },
+    {
+      "race_id": "TX-16",
+      "state": "TX",
+      "name": "Veronica Escobar",
+      "party": "D",
+      "roster_name": "Veronica Escobar",
+      "bioguide": "E000299",
+      "incoming_district": "TX16"
+    },
+    {
+      "race_id": "TX-17",
+      "state": "TX",
+      "name": "Pete Sessions",
+      "party": "R",
+      "roster_name": "Pete Sessions",
+      "bioguide": "S000250",
+      "incoming_district": "TX17"
+    },
+    {
+      "race_id": "TX-20",
+      "state": "TX",
+      "name": "Joaquin Castro",
+      "party": "D",
+      "roster_name": "Joaquin Castro",
+      "bioguide": "C001091",
+      "incoming_district": "TX20"
+    },
+    {
+      "race_id": "TX-24",
+      "state": "TX",
+      "name": "Beth Van Duyne",
+      "party": "R",
+      "roster_name": "Beth Van Duyne",
+      "bioguide": "V000134",
+      "incoming_district": "TX24"
+    },
+    {
+      "race_id": "TX-25",
+      "state": "TX",
+      "name": "Roger Williams",
+      "party": "R",
+      "roster_name": "Roger Williams",
+      "bioguide": "W000816",
+      "incoming_district": "TX25"
+    },
+    {
+      "race_id": "TX-26",
+      "state": "TX",
+      "name": "Brandon Gill",
+      "party": "R",
+      "roster_name": "Brandon Gill",
+      "bioguide": "G000603",
+      "incoming_district": "TX26"
+    },
+    {
+      "race_id": "TX-27",
+      "state": "TX",
+      "name": "Michael Cloud",
+      "party": "R",
+      "roster_name": "Michael Cloud",
+      "bioguide": "C001115",
+      "incoming_district": "TX27"
+    },
+    {
+      "race_id": "TX-28",
+      "state": "TX",
+      "name": "Henry Cuellar",
+      "party": "D",
+      "roster_name": "Henry Cuellar",
+      "bioguide": "C001063",
+      "incoming_district": "TX28"
+    },
+    {
+      "race_id": "TX-29",
+      "state": "TX",
+      "name": "Sylvia Garcia",
+      "party": "D",
+      "roster_name": "Sylvia R. Garcia",
+      "bioguide": "G000587",
+      "incoming_district": "TX29"
+    },
+    {
+      "race_id": "TX-31",
+      "state": "TX",
+      "name": "John Carter",
+      "party": "R",
+      "roster_name": "John R. Carter",
+      "bioguide": "C001051",
+      "incoming_district": "TX31"
+    },
+    {
+      "race_id": "TX-34",
+      "state": "TX",
+      "name": "Vicente Gonzalez",
+      "party": "D",
+      "roster_name": "Vicente Gonzalez",
+      "bioguide": "G000581",
+      "incoming_district": "TX34"
+    },
+    {
+      "race_id": "TX-36",
+      "state": "TX",
+      "name": "Brian Babin",
+      "party": "R",
+      "roster_name": "Brian Babin",
+      "bioguide": "B001291",
+      "incoming_district": "TX36"
+    },
+    {
+      "race_id": "TX-37",
+      "state": "TX",
+      "name": "Greg Casar",
+      "party": "D",
+      "roster_name": "Greg Casar",
+      "bioguide": "C001131",
+      "incoming_district": "TX35"
+    },
+    {
+      "race_id": "UT-02",
+      "state": "UT",
+      "name": "Blake D. Moore",
+      "party": "R",
+      "roster_name": "Blake D. Moore",
+      "bioguide": "M001213",
+      "incoming_district": "UT01"
+    },
+    {
+      "race_id": "UT-03",
+      "state": "UT",
+      "name": "Celeste Maloy",
+      "party": "R",
+      "roster_name": "Celeste Maloy",
+      "bioguide": "M001228",
+      "incoming_district": "UT02"
+    },
+    {
+      "race_id": "UT-04",
+      "state": "UT",
+      "name": "Mike Kennedy",
+      "party": "R",
+      "roster_name": "Mike Kennedy",
+      "bioguide": "K000403",
+      "incoming_district": "UT03"
+    },
+    {
+      "race_id": "VT-AL",
+      "state": "VT",
+      "name": "Becca Balint",
+      "party": "D",
+      "roster_name": "Becca Balint",
+      "bioguide": "B001318",
+      "incoming_district": "VT00"
+    },
+    {
+      "race_id": "VA-03",
+      "state": "VA",
+      "name": "Robert C. \"Bobby\" Scott",
+      "party": "D",
+      "roster_name": "Robert C. \"Bobby\" Scott",
+      "bioguide": "S000185",
+      "incoming_district": "VA03"
+    },
+    {
+      "race_id": "VA-04",
+      "state": "VA",
+      "name": "Jennifer L. McClellan",
+      "party": "D",
+      "roster_name": "Jennifer L. McClellan",
+      "bioguide": "M001227",
+      "incoming_district": "VA04"
+    },
+    {
+      "race_id": "VA-05",
+      "state": "VA",
+      "name": "John J. McGuire III",
+      "party": "R",
+      "roster_name": "John J. McGuire III",
+      "bioguide": "M001239",
+      "incoming_district": "VA05"
+    },
+    {
+      "race_id": "VA-08",
+      "state": "VA",
+      "name": "Donald S. Beyer, Jr.",
+      "party": "D",
+      "roster_name": "Donald S. Beyer, Jr.",
+      "bioguide": "B001292",
+      "incoming_district": "VA08"
+    },
+    {
+      "race_id": "VA-09",
+      "state": "VA",
+      "name": "H. Morgan Griffith",
+      "party": "R",
+      "roster_name": "H. Morgan Griffith",
+      "bioguide": "G000568",
+      "incoming_district": "VA09"
+    },
+    {
+      "race_id": "VA-10",
+      "state": "VA",
+      "name": "Suhas Subramanyam",
+      "party": "D",
+      "roster_name": "Suhas Subramanyam",
+      "bioguide": "S001230",
+      "incoming_district": "VA10"
+    },
+    {
+      "race_id": "VA-11",
+      "state": "VA",
+      "name": "James R. Walkinshaw",
+      "party": "D",
+      "roster_name": "James R. Walkinshaw",
+      "bioguide": "W000831",
+      "incoming_district": "VA11"
+    },
+    {
+      "race_id": "WA-01",
+      "state": "WA",
+      "name": "Suzan DelBene",
+      "party": "D",
+      "roster_name": "Suzan K. DelBene",
+      "bioguide": "D000617",
+      "incoming_district": "WA01"
+    },
+    {
+      "race_id": "WA-02",
+      "state": "WA",
+      "name": "Rick Larsen",
+      "party": "D",
+      "roster_name": "Rick Larsen",
+      "bioguide": "L000560",
+      "incoming_district": "WA02"
+    },
+    {
+      "race_id": "WA-03",
+      "state": "WA",
+      "name": "Marie Gluesenkamp Perez",
+      "party": "D",
+      "roster_name": "Marie Gluesenkamp Perez",
+      "bioguide": "G000600",
+      "incoming_district": "WA03"
+    },
+    {
+      "race_id": "WA-05",
+      "state": "WA",
+      "name": "Michael Baumgartner",
+      "party": "R",
+      "roster_name": "Michael Baumgartner",
+      "bioguide": "B001322",
+      "incoming_district": "WA05"
+    },
+    {
+      "race_id": "WA-06",
+      "state": "WA",
+      "name": "Emily Randall",
+      "party": "D",
+      "roster_name": "Emily Randall",
+      "bioguide": "R000621",
+      "incoming_district": "WA06"
+    },
+    {
+      "race_id": "WA-07",
+      "state": "WA",
+      "name": "Pramila Jayapal",
+      "party": "D",
+      "roster_name": "Pramila Jayapal",
+      "bioguide": "J000298",
+      "incoming_district": "WA07"
+    },
+    {
+      "race_id": "WA-08",
+      "state": "WA",
+      "name": "Kim Schrier",
+      "party": "D",
+      "roster_name": "Kim Schrier",
+      "bioguide": "S001216",
+      "incoming_district": "WA08"
+    },
+    {
+      "race_id": "WA-09",
+      "state": "WA",
+      "name": "Adam Smith",
+      "party": "D",
+      "roster_name": "Adam Smith",
+      "bioguide": "S000510",
+      "incoming_district": "WA09"
+    },
+    {
+      "race_id": "WA-10",
+      "state": "WA",
+      "name": "Marilyn Strickland",
+      "party": "D",
+      "roster_name": "Marilyn Strickland",
+      "bioguide": "S001159",
+      "incoming_district": "WA10"
+    },
+    {
+      "race_id": "WV-01",
+      "state": "WV",
+      "name": "Carol Miller",
+      "party": "R",
+      "roster_name": "Carol D. Miller",
+      "bioguide": "M001205",
+      "incoming_district": "WV01"
+    },
+    {
+      "race_id": "WV-02",
+      "state": "WV",
+      "name": "Riley Moore",
+      "party": "R",
+      "roster_name": "Riley M. Moore",
+      "bioguide": "M001235",
+      "incoming_district": "WV02"
+    },
+    {
+      "race_id": "WI-01",
+      "state": "WI",
+      "name": "Bryan Steil",
+      "party": "R",
+      "roster_name": "Bryan Steil",
+      "bioguide": "S001213",
+      "incoming_district": "WI01"
+    },
+    {
+      "race_id": "WI-02",
+      "state": "WI",
+      "name": "Mark Pocan",
+      "party": "D",
+      "roster_name": "Mark Pocan",
+      "bioguide": "P000607",
+      "incoming_district": "WI02"
+    },
+    {
+      "race_id": "WI-03",
+      "state": "WI",
+      "name": "Derrick Van Orden",
+      "party": "R",
+      "roster_name": "Derrick Van Orden",
+      "bioguide": "V000135",
+      "incoming_district": "WI03"
+    },
+    {
+      "race_id": "WI-04",
+      "state": "WI",
+      "name": "Gwen Moore",
+      "party": "D",
+      "roster_name": "Gwen Moore",
+      "bioguide": "M001160",
+      "incoming_district": "WI04"
+    },
+    {
+      "race_id": "WI-05",
+      "state": "WI",
+      "name": "Scott Fitzgerald",
+      "party": "R",
+      "roster_name": "Scott Fitzgerald",
+      "bioguide": "F000471",
+      "incoming_district": "WI05"
+    },
+    {
+      "race_id": "WI-06",
+      "state": "WI",
+      "name": "Glenn Grothman",
+      "party": "R",
+      "roster_name": "Glenn Grothman",
+      "bioguide": "G000576",
+      "incoming_district": "WI06"
+    },
+    {
+      "race_id": "WI-08",
+      "state": "WI",
+      "name": "Tony Wied",
+      "party": "R",
+      "roster_name": "Tony Wied",
+      "bioguide": "W000829",
+      "incoming_district": "WI08"
+    },
+    {
+      "race_id": "AL-02",
+      "state": "AL",
+      "name": "Shomari C. Figures",
+      "party": "D",
+      "roster_name": "Shomari Figures",
+      "bioguide": "F000481",
+      "incoming_district": "AL02"
+    },
+    {
+      "race_id": "AK-AL",
+      "state": "AK",
+      "name": "Nick Begich III",
+      "party": "R",
+      "roster_name": "Nicholas J. Begich III",
+      "bioguide": "B001323",
+      "incoming_district": "AK00"
+    },
+    {
+      "race_id": "AZ-02",
+      "state": "AZ",
+      "name": "Eli Crane",
+      "party": "R",
+      "roster_name": "Elijah Crane",
+      "bioguide": "C001132",
+      "incoming_district": "AZ02"
+    },
+    {
+      "race_id": "AZ-08",
+      "state": "AZ",
+      "name": "Abraham \"Abe\" Hamadeh",
+      "party": "R",
+      "roster_name": "Abraham J. Hamadeh",
+      "bioguide": "H001098",
+      "incoming_district": "AZ08"
+    },
+    {
+      "race_id": "AR-01",
+      "state": "AR",
+      "name": "Rick Crawford",
+      "party": "R",
+      "roster_name": "Eric A. \"Rick\" Crawford",
+      "bioguide": "C001087",
+      "incoming_district": "AR01"
+    },
+    {
+      "race_id": "AR-02",
+      "state": "AR",
+      "name": "French Hill",
+      "party": "R",
+      "roster_name": "J. French Hill",
+      "bioguide": "H001072",
+      "incoming_district": "AR02"
+    },
+    {
+      "race_id": "CA-31",
+      "state": "CA",
+      "name": "Gil Cisneros",
+      "party": "D",
+      "roster_name": "Gilbert Ray Cisneros, Jr.",
+      "bioguide": "C001123",
+      "incoming_district": "CA31"
+    },
+    {
+      "race_id": "CA-46",
+      "state": "CA",
+      "name": "Lou Correa",
+      "party": "D",
+      "roster_name": "J. Luis Correa",
+      "bioguide": "C001110",
+      "incoming_district": "CA46"
+    },
+    {
+      "race_id": "CT-04",
+      "state": "CT",
+      "name": "Jim Himes",
+      "party": "D",
+      "roster_name": "James A. Himes",
+      "bioguide": "H001047",
+      "incoming_district": "CT04"
+    },
+    {
+      "race_id": "FL-17",
+      "state": "FL",
+      "name": "Greg Steube",
+      "party": "R",
+      "roster_name": "W. Gregory Steube",
+      "bioguide": "S001214",
+      "incoming_district": "FL17"
+    },
+    {
+      "race_id": "GA-04",
+      "state": "GA",
+      "name": "Henry \"Hank\" Johnson Jr.",
+      "party": "D",
+      "roster_name": "Henry C. \"Hank\" Johnson, Jr.",
+      "bioguide": "J000288",
+      "incoming_district": "GA04"
+    },
+    {
+      "race_id": "GA-07",
+      "state": "GA",
+      "name": "Rich McCormick",
+      "party": "R",
+      "roster_name": "Richard McCormick",
+      "bioguide": "M001218",
+      "incoming_district": "GA07"
+    },
+    {
+      "race_id": "ID-02",
+      "state": "ID",
+      "name": "Mike Simpson",
+      "party": "R",
+      "roster_name": "Michael K. Simpson",
+      "bioguide": "S001148",
+      "incoming_district": "ID02"
+    },
+    {
+      "race_id": "IL-10",
+      "state": "IL",
+      "name": "Brad Schneider",
+      "party": "D",
+      "roster_name": "Bradley Scott Schneider",
+      "bioguide": "S001190",
+      "incoming_district": "IL10"
+    },
+    {
+      "race_id": "IN-04",
+      "state": "IN",
+      "name": "Jim Baird",
+      "party": "R",
+      "roster_name": "James R. Baird",
+      "bioguide": "B001307",
+      "incoming_district": "IN04"
+    },
+    {
+      "race_id": "IA-03",
+      "state": "IA",
+      "name": "Zach Nunn",
+      "party": "R",
+      "roster_name": "Zachary Nunn",
+      "bioguide": "N000193",
+      "incoming_district": "IA03"
+    },
+    {
+      "race_id": "KY-05",
+      "state": "KY",
+      "name": "Hal Rogers",
+      "party": "R",
+      "roster_name": "Harold Rogers",
+      "bioguide": "R000395",
+      "incoming_district": "KY05"
+    },
+    {
+      "race_id": "LA-02",
+      "state": "LA",
+      "name": "Troy A. Carter, Sr.",
+      "party": "D",
+      "roster_name": "Troy A. Carter",
+      "bioguide": "C001125",
+      "incoming_district": "LA02"
+    },
+    {
+      "race_id": "MD-02",
+      "state": "MD",
+      "name": "John \"Johnny O\" Olszewski, Jr.",
+      "party": "D",
+      "roster_name": "Johnny Olszewski, Jr.",
+      "bioguide": "O000176",
+      "incoming_district": "MD02"
+    },
+    {
+      "race_id": "MD-04",
+      "state": "MD",
+      "name": "Glenn F. Ivey",
+      "party": "D",
+      "roster_name": "Glenn Ivey",
+      "bioguide": "I000058",
+      "incoming_district": "MD04"
+    },
+    {
+      "race_id": "MA-03",
+      "state": "MA",
+      "name": "Lori Loureiro Trahan",
+      "party": "D",
+      "roster_name": "Lori Trahan",
+      "bioguide": "T000482",
+      "incoming_district": "MA03"
+    },
+    {
+      "race_id": "MA-07",
+      "state": "MA",
+      "name": "Ayanna S. Pressley",
+      "party": "D",
+      "roster_name": "Ayanna Pressley",
+      "bioguide": "P000617",
+      "incoming_district": "MA07"
+    },
+    {
+      "race_id": "MA-09",
+      "state": "MA",
+      "name": "Bill Keating",
+      "party": "D",
+      "roster_name": "William R. Keating",
+      "bioguide": "K000375",
+      "incoming_district": "MA09"
+    },
+    {
+      "race_id": "MO-03",
+      "state": "MO",
+      "name": "Bob Onder",
+      "party": "R",
+      "roster_name": "Robert F. Onder, Jr.",
+      "bioguide": "O000177",
+      "incoming_district": "MO03"
+    },
+    {
+      "race_id": "NJ-02",
+      "state": "NJ",
+      "name": "Jeff Van Drew",
+      "party": "R",
+      "roster_name": "Jefferson Van Drew",
+      "bioguide": "V000133",
+      "incoming_district": "NJ02"
+    },
+    {
+      "race_id": "NJ-03",
+      "state": "NJ",
+      "name": "Herb Conaway",
+      "party": "D",
+      "roster_name": "Herbert C. Conaway, Jr.",
+      "bioguide": "C001136",
+      "incoming_district": "NJ03"
+    },
+    {
+      "race_id": "NJ-04",
+      "state": "NJ",
+      "name": "Chris Smith",
+      "party": "R",
+      "roster_name": "Christopher H. Smith",
+      "bioguide": "S000522",
+      "incoming_district": "NJ04"
+    },
+    {
+      "race_id": "NJ-08",
+      "state": "NJ",
+      "name": "Rob Menendez",
+      "party": "D",
+      "roster_name": "Robert Menendez",
+      "bioguide": "M001226",
+      "incoming_district": "NJ08"
+    },
+    {
+      "race_id": "NY-03",
+      "state": "NY",
+      "name": "Tom Suozzi",
+      "party": "D",
+      "roster_name": "Thomas R. Suozzi",
+      "bioguide": "S001201",
+      "incoming_district": "NY03"
+    },
+    {
+      "race_id": "NY-17",
+      "state": "NY",
+      "name": "Mike Lawler",
+      "party": "R",
+      "roster_name": "Michael Lawler",
+      "bioguide": "L000599",
+      "incoming_district": "NY17"
+    },
+    {
+      "race_id": "NY-18",
+      "state": "NY",
+      "name": "Pat Ryan",
+      "party": "D",
+      "roster_name": "Patrick Ryan",
+      "bioguide": "R000579",
+      "incoming_district": "NY18"
+    },
+    {
+      "race_id": "NY-23",
+      "state": "NY",
+      "name": "Nick Langworthy",
+      "party": "R",
+      "roster_name": "Nicholas A. Langworthy",
+      "bioguide": "L000600",
+      "incoming_district": "NY23"
+    },
+    {
+      "race_id": "NY-26",
+      "state": "NY",
+      "name": "Tim Kennedy",
+      "party": "D",
+      "roster_name": "Timothy M. Kennedy",
+      "bioguide": "K000402",
+      "incoming_district": "NY26"
+    },
+    {
+      "race_id": "NC-01",
+      "state": "NC",
+      "name": "Don Davis",
+      "party": "D",
+      "roster_name": "Donald G. Davis",
+      "bioguide": "D000230",
+      "incoming_district": "NC01"
+    },
+    {
+      "race_id": "NC-03",
+      "state": "NC",
+      "name": "Greg Murphy",
+      "party": "R",
+      "roster_name": "Gregory F. Murphy",
+      "bioguide": "M001210",
+      "incoming_district": "NC03"
+    },
+    {
+      "race_id": "OH-05",
+      "state": "OH",
+      "name": "Bob Latta",
+      "party": "R",
+      "roster_name": "Robert E. Latta",
+      "bioguide": "L000566",
+      "incoming_district": "OH05"
+    },
+    {
+      "race_id": "OH-10",
+      "state": "OH",
+      "name": "Mike Turner",
+      "party": "R",
+      "roster_name": "Michael R. Turner",
+      "bioguide": "T000463",
+      "incoming_district": "OH10"
+    },
+    {
+      "race_id": "OR-03",
+      "state": "OR",
+      "name": "Maxine E Dexter",
+      "party": "D",
+      "roster_name": "Maxine Dexter",
+      "bioguide": "D000635",
+      "incoming_district": "OR03"
+    },
+    {
+      "race_id": "PA-08",
+      "state": "PA",
+      "name": "Rob Bresnahan",
+      "party": "R",
+      "roster_name": "Robert P. Bresnahan, Jr.",
+      "bioguide": "B001327",
+      "incoming_district": "PA08"
+    },
+    {
+      "race_id": "PA-09",
+      "state": "PA",
+      "name": "Dan Meuser",
+      "party": "R",
+      "roster_name": "Daniel Meuser",
+      "bioguide": "M001204",
+      "incoming_district": "PA09"
+    },
+    {
+      "race_id": "PA-17",
+      "state": "PA",
+      "name": "Chris Deluzio",
+      "party": "D",
+      "roster_name": "Christopher R. Deluzio",
+      "bioguide": "D000530",
+      "incoming_district": "PA17"
+    },
+    {
+      "race_id": "RI-01",
+      "state": "RI",
+      "name": "Gabriel Amo",
+      "party": "D",
+      "roster_name": "Gabe Amo",
+      "bioguide": "A000380",
+      "incoming_district": "RI01"
+    },
+    {
+      "race_id": "SC-06",
+      "state": "SC",
+      "name": "James E Jim Clyburn",
+      "party": "D",
+      "roster_name": "James E. Clyburn",
+      "bioguide": "C000537",
+      "incoming_district": "SC06"
+    },
+    {
+      "race_id": "TN-03",
+      "state": "TN",
+      "name": "Chuck Fleischmann",
+      "party": "R",
+      "roster_name": "Charles J. \"Chuck\" Fleischmann",
+      "bioguide": "F000459",
+      "incoming_district": "TN03"
+    },
+    {
+      "race_id": "TX-07",
+      "state": "TX",
+      "name": "Lizzie Pannill Fletcher",
+      "party": "D",
+      "roster_name": "Lizzie Fletcher",
+      "bioguide": "F000468",
+      "incoming_district": "TX07"
+    },
+    {
+      "race_id": "TX-18",
+      "state": "TX",
+      "name": "Christian Dashaun Menefee",
+      "party": "D",
+      "roster_name": "Christian D. Menefee",
+      "bioguide": "M001245",
+      "incoming_district": "TX18"
+    },
+    {
+      "race_id": "VA-01",
+      "state": "VA",
+      "name": "Robert J. \"Rob\" Wittman",
+      "party": "R",
+      "roster_name": "Robert J. Wittman",
+      "bioguide": "W000804",
+      "incoming_district": "VA01"
+    },
+    {
+      "race_id": "VA-02",
+      "state": "VA",
+      "name": "Jen A. Kiggans",
+      "party": "R",
+      "roster_name": "Jennifer A. Kiggans",
+      "bioguide": "K000399",
+      "incoming_district": "VA02"
+    },
+    {
+      "race_id": "VA-06",
+      "state": "VA",
+      "name": "Ben L. Cline",
+      "party": "R",
+      "roster_name": "Ben Cline",
+      "bioguide": "C001118",
+      "incoming_district": "VA06"
+    },
+    {
+      "race_id": "VA-07",
+      "state": "VA",
+      "name": "Eugene S. Vindman",
+      "party": "D",
+      "roster_name": "Eugene Simon Vindman",
+      "bioguide": "V000138",
+      "incoming_district": "VA07"
+    }
+  ]
+}

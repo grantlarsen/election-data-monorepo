@@ -49,7 +49,7 @@ describe('Senate state map', () => {
     ] }} name="Florida" missing={false} />);
     expect(screen.queryByText('Small independent')).not.toBeInTheDocument();
     expect(screen.queryByText('Small Green')).not.toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'At cutoff' })).toHaveAttribute('href', expect.stringContaining('/candidates/at-cutoff?'));
+    expect(screen.getByRole('link', { name: 'At cutoff' })).toHaveAttribute('href', expect.stringContaining('/candidates/at-cutoff'));
     const other = screen.getByText('Other').closest('.popover-candidate') as HTMLElement;
     expect(within(other).getByText('50')).toBeVisible();
     expect(within(other).getByText('0.05%')).toBeVisible();

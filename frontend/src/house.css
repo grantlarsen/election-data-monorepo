@@ -1,0 +1,38 @@
+.house-page .senate-race-heading { grid-template-columns: minmax(0, 1fr) auto; }
+.house-page .senate-race-heading .badge { grid-row: 2; justify-self: start; }
+.house-page .senate-total { grid-column: 2; grid-row: 1 / span 2; }
+.house-page .senate-race-heading h2 { font-size: 1.15rem; }
+.house-seats { border-top: 1px solid var(--border); padding: 12px 0; }
+.house-seats > p { font-size: .83rem; color: var(--muted); }
+.house-seat-states { columns: 210px; column-gap: 24px; }
+.house-seat-state { break-inside: avoid; padding-bottom: 14px; }
+.house-seat-state h3 { font-size: .8rem; margin: 6px 0; }
+.house-seat-tiles { display: flex; flex-wrap: wrap; gap: 4px; }
+.house-seat-tiles button, .house-seat-tiles > span { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; min-height: 28px; padding: 0; border: 1px solid #829089; border-radius: 3px; font-size: .68rem; color: white; font-weight: 650; }
+.house-seat-states .house-seat-tiles button { height: 34px; min-height: 34px; }
+.house-seat-tiles button.control-uncalled { color: #203431; }
+.house-seat-tiles button[aria-pressed="true"] { outline: 3px solid #203431; outline-offset: 1px; }
+.house-seat-tiles button:focus-visible { outline: 3px solid #203431; outline-offset: 2px; }
+.house-seat-missing { background: #f6f7f5; color: #52645c !important; border: 1px dashed #829089 !important; }
+.house-all-rows { font-size: .78rem; }
+.house-page .senate-filters { align-items: end; }
+.house-page .source-panel dd { overflow-wrap: anywhere; }
+.house-view-toggle { display: flex; gap: 6px; margin: 18px 0 12px; }
+.house-view-toggle button { background: white; color: #203431; border: 1px solid var(--border); }
+.house-view-toggle button[aria-pressed="true"] { background: #214e43; color: white; }
+.house-map-layout { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 20px; align-items: start; }
+.house-geographic-map { min-width: 0; }
+.house-map-panel .us-map-svg { max-height: 620px; }
+.house-map-panel .us-map-svg path[role="img"] { cursor: default; }
+.house-small-states { padding: 8px 10px; border: 1px solid var(--border); border-radius: 5px; background: #f6f7f5; }
+.house-small-state { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 8px; align-items: start; margin-bottom: 8px; }
+.house-small-state h3 { margin: 8px 0 0; font-size: .75rem; }
+.house-small-states > p { font-size: .68rem; color: var(--muted); margin: 0; }
+@media (max-width: 700px) {
+  .house-map-layout { grid-template-columns: minmax(0, 1fr); }
+  .house-small-states { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .house-small-state { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .house-small-state h3 { margin-top: 0; }
+  .house-small-states > p { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) { .house-page .senate-total { max-width: 105px; } }

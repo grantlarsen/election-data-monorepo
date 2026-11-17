@@ -6,6 +6,7 @@ import { CandidateElection } from '../CandidateElection';
 import { useElectionMap } from '../map/useElectionMap';
 import type { ElectionMap } from '../map/types';
 import { candidateProfile, candidacyId, contestId, publication } from './fixtures';
+import { snapshot as houseSnapshot } from './houseFixtures';
 
 vi.mock('../map/useElectionMap', () => ({ useElectionMap: vi.fn() }));
 vi.mock('../map/GeographyMap', () => ({ GeographyMap: ({ data, highlightedIds, focusSelection }: { data: ElectionMap; highlightedIds?: ReadonlySet<string>; focusSelection?: boolean }) => <div aria-label="Embedded election map" data-highlighted={Array.from(highlightedIds || []).join(',')} data-focus-selection={String(focusSelection)}>{data.units.map(unit => unit.name).join(', ')}</div> }));
@@ -24,6 +25,16 @@ const map: ElectionMap = {
 };
 
 describe('most recent candidate election', () => {
+  it('shows provisional House counts, profile links and incumbent badges with no canonical map request', () => {
+    vi.mocked(useElectionMap).mockClear();
+    const race = houseSnapshot().races[0];
+    render(<MemoryRouter><CandidateElection profile={{ ...candidateProfile, id: race.candidates[0].candidacy_id!,
+      provisional_house_election: { race, checked_at: '2026-11-17T12:00:00Z', retrieved_at: '2026-11-17T12:00:00Z', stale: false, sha256: 'a'.repeat(64) } }} /></MemoryRouter>);
+    expect(screen.getByText('Incumbent')).toBeVisible();
+    expect(screen.getByRole('link', { name: 'Candidate D' }).closest('tr')).toHaveClass('profile-current-candidate');
+    expect(screen.getByRole('table')).toHaveTextContent('60.00%');
+    expect(useElectionMap).not.toHaveBeenCalled();
+  });
   it('shows current Senate returns and profile links without requesting a canonical historical map', () => {
     vi.mocked(useElectionMap).mockClear();
     render(<MemoryRouter><CandidateElection profile={{ ...candidateProfile, provisional_election: {
@@ -55,7 +66,7 @@ describe('most recent candidate election', () => {
     expect(screen.getByText('Bob')).toBeVisible();
     expect(screen.getByText('Alice').closest('th')!.querySelector('.profile-result-dot')).toHaveStyle({ background:'#3276ac' });
     expect(screen.getByText('Bob').closest('th')!.querySelector('.profile-result-dot')).toHaveStyle({ background:'#bd5548' });
-    expect(screen.getByRole('link', { name: 'Alice' })).toHaveAttribute('href', `/candidates/${candidacyId}?contest_id=${contestId}`);
+    expect(screen.getByRole('link', { name: 'Alice' })).toHaveAttribute('href', `/candidates/${candidacyId}`);
     expect(screen.queryByRole('link', { name: 'Bob' })).not.toBeInTheDocument();
     expect(screen.getByText('This candidate')).toBeVisible();
     await userEvent.setup().click(screen.getByText('Source and publication details'));

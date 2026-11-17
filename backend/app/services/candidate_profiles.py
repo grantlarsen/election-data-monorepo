@@ -12,6 +12,7 @@ from app.models.identity import CommitteeRelationship, ExternalIdentifier, Organ
 from app.models.ingestion import SourceRelease
 from app.services.election_queries import _geography, _source, list_results
 from app.services.senate_entities import provisional_profile
+from app.services.house_entities import provisional_profile as house_provisional_profile
 
 
 def finance_values(summary: CandidateFinanceSummary) -> dict:
@@ -119,4 +120,5 @@ def candidate_profile(session: Session, candidacy_id: UUID, *, reporting_level: 
             stage=election.election_type, election_cycle=cycle, office_name=contest.office_name,
             jurisdiction=_geography(geography)), latest_election=latest_election,
         committees=committees, finance=finance, results=results,
-        provisional_election=provisional_profile(session, candidate))
+        provisional_election=provisional_profile(session, candidate),
+        provisional_house_election=house_provisional_profile(session, candidate))

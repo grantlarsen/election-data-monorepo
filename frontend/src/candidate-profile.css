@@ -6,10 +6,7 @@ main.candidate-page { padding: 0 0 24px; background: #fff; }
 .candidate-profile p { line-height: 1.6; }
 .profile-inner { max-width: 1440px; margin-inline: auto; padding-inline: 36px; }
 .profile-hero { background: #f4f6f6; border-bottom: 1px solid #eef0f0; }
-.profile-back { padding: 18px 0 20px; font-size: .78rem; }
-.profile-back a { text-decoration: none; color: var(--profile-muted); }
-.profile-back span { font-size: 1.2rem; margin-right: 6px; }
-.profile-hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(400px, 1fr); align-items: center; gap: 30px; padding-bottom: 32px; }
+.profile-hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(400px, 1fr); align-items: center; gap: 30px; padding-block: 28px 32px; }
 .profile-person { display: flex; align-items: center; gap: 22px; min-width: 0; }
 .profile-avatar { width: 112px; height: 112px; border: 5px solid var(--profile-green); border-radius: 50%; flex-shrink: 0; overflow: hidden; display: grid; place-items: center; background: #e1eae6; color: var(--profile-green); font-size: 2rem; font-weight: 650; }
 .profile-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 24%; }
