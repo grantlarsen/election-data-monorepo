@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useParams, useSearchParams } from 'react-router';
+import { useLocation, useNavigate, useParams } from 'react-router';
 import { ApiError, fetchCandidate, sourceUrl } from './api';
 import type { CandidateProfile } from './api';
 import { FilterLink, Notice, SourceDetails } from './components';
 import { CandidateElection } from './CandidateElection';
 import { CandidateFinanceChart, DownloadFinance, financeRows } from './CandidateFinanceChart';
 import { candidateDisplayName, candidateInitials, candidatePortrait, dollars } from './candidatePresentation';
-import { humanize, isUuid, validateSearch } from './filters';
+import { humanize, isUuid } from './filters';
 import './candidate-profile.css';
 import { CandidateAvatar } from './CandidateAvatar';
 
@@ -23,12 +23,15 @@ function FinanceAvailability({ finance }: { finance: CandidateProfile['finance']
 
 export function CandidatePage() {
   const { candidacyId = '' } = useParams();
-  const [params] = useSearchParams();
-  const invalid = validateSearch(params) || (!isUuid(candidacyId) ? 'The candidacy identifier must be a valid UUID.' : null);
-  const query = new URLSearchParams();
-  if (params.get('reporting_level')) query.set('reporting_level', params.get('reporting_level')!);
-  if (params.get('offset')) query.set('offset', params.get('offset')!);
-  const queryString = query.toString();
+  const location = useLocation();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (location.search) navigate({ pathname: location.pathname, hash: location.hash }, { replace: true });
+  }, [location.pathname, location.search, location.hash, navigate]);
+  const invalid = !isUuid(candidacyId) ? 'The candidacy identifier must be a valid UUID.' : null;
+  const [pagination, setPagination] = useState({ candidacyId, offset: 0 });
+  const offset = pagination.candidacyId === candidacyId ? pagination.offset : 0;
+  const queryString = offset ? `offset=${offset}` : '';
   const [attempt, setAttempt] = useState(0);
   const key = `${candidacyId}?${queryString}&attempt=${attempt}`;
   const [state, setState] = useState<{ key: string; profile?: CandidateProfile; error?: string; missing?: boolean }>({ key: '' });
@@ -64,7 +67,6 @@ export function CandidatePage() {
   return <div className="candidate-profile">
     <header className="profile-hero">
       <div className="profile-inner">
-        <div className="profile-back"><FilterLink to="/candidates"><span aria-hidden="true">‹</span> Back to candidates</FilterLink></div>
         <div className="profile-hero-grid">
           <div className="profile-person">
             <CandidateAvatar className="profile-avatar" portrait={portrait} name={name}
@@ -100,7 +102,7 @@ export function CandidatePage() {
       </aside>
 
       <div className="profile-content">
-        <CandidateElection profile={profile} />
+        <CandidateElection profile={profile} onResultsPageChange={offset => setPagination({ candidacyId, offset })} />
 
         <section id="campaign-finance" className="profile-finance" aria-labelledby="finance-heading">
           <div className="profile-data-controls"><div><span className="profile-control-label">Election cycle</span><strong className="profile-cycle-value">{finance.cycle}</strong></div>

@@ -1,27 +1,51 @@
-import { render, screen, within } from '@testing-library/react';
+import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { MemoryRouter } from 'react-router';
+import { MemoryRouter, useLocation, useNavigate } from 'react-router';
 import { describe, expect, it, vi } from 'vitest';
 import { App } from '../App';
 import { dollars } from '../CandidatePage';
 import { portrait, portraitRace } from './portraitFixtures';
 import { candidateProfile, candidacyId, publication } from './fixtures';
+import { snapshot as houseSnapshot } from './houseFixtures';
 
+function Location() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  return <><output data-testid="profile-location">{location.pathname}{location.search}{location.hash}</output>
+    <button onClick={() => navigate(`/candidates/11111111-1111-4111-8111-111111111111`)}>Open another profile</button></>;
+}
 function open(path = `/candidates/${candidacyId}`) {
-  return render(<MemoryRouter initialEntries={[path]}><App /></MemoryRouter>);
+  return render(<MemoryRouter initialEntries={[path]}><App /><Location /></MemoryRouter>);
 }
 function response(body: unknown, status = 200) {
   return { ok: status === 200, status, json: async () => body } as Response;
 }
 
 describe('candidate profiles', () => {
-  it('accepts backend-supported statewide reporting links for Senate profiles', async () => {
+  it('shows reviewed House headshots and attribution without resolving a person or finances', async () => {
+    const race = houseSnapshot().races[0];
+    race.candidates[0] = { ...race.candidates[0], candidacy_id: candidacyId, portrait };
+    vi.stubGlobal('fetch', vi.fn(async () => response({ ...candidateProfile, label: 'House portrait candidate',
+      provisional_house_election: { race, checked_at: '2026-11-17T12:00:00Z', retrieved_at: '2026-11-17T12:00:00Z',
+        stale: false, sha256: 'f'.repeat(64) } })));
+    open();
+    expect(await screen.findByRole('img', { name: 'Portrait of House portrait candidate' })).toHaveAttribute('src', portrait.url);
+    expect(screen.getByRole('link', { name: portrait.credit })).toHaveAttribute('href', portrait.source);
+    expect(screen.getByRole('link', { name: 'CC BY 4.0' })).toHaveAttribute('href', portrait.license_url);
+    expect(screen.getByText(/This source label has not been linked to a verified person/)).toBeVisible();
+  });
+  it.each([
+    'year=2026&office=U.S.+Senate&stage=general&state_code=AK&reporting_level=state',
+    'year=invalid&state_code=ZZ&reporting_level=invalid&offset=-1',
+    'unknown=value&contest_id=old&offset=50',
+  ])('removes legacy query parameters without applying them to the profile: %s', async query => {
     const fetch = vi.fn().mockResolvedValue(response({ ...candidateProfile, latest_election: null }));
     vi.stubGlobal('fetch', fetch);
-    open(`/candidates/${candidacyId}?year=2026&office=U.S.+Senate&stage=general&state_code=AK&reporting_level=state`);
+    open(`/candidates/${candidacyId}?${query}#campaign-finance`);
     expect(await screen.findByRole('heading', { level: 1, name: candidateProfile.label! })).toBeVisible();
     expect(screen.queryByRole('heading', { name: 'Invalid selection' })).not.toBeInTheDocument();
-    expect(fetch).toHaveBeenCalledWith(`/api/v1/candidates/${candidacyId}?reporting_level=state`, expect.objectContaining({ signal: expect.any(AbortSignal) }));
+    expect(screen.getByTestId('profile-location').textContent).toBe(`/candidates/${candidacyId}#campaign-finance`);
+    expect(fetch).toHaveBeenCalledExactlyOnceWith(`/api/v1/candidates/${candidacyId}?`, expect.objectContaining({ signal: expect.any(AbortSignal) }));
   });
   it('loads a shareable profile without requiring explorer filters', async () => {
     const fetch = vi.fn(async () => response({ ...candidateProfile, identity_evidence: [{
@@ -31,6 +55,8 @@ describe('candidate profiles', () => {
     vi.stubGlobal('fetch', fetch);
     open();
     expect(await screen.findByRole('heading', { name: candidateProfile.label! })).toBeVisible();
+    expect(screen.queryByRole('link', { name: /Back to candidates/ })).not.toBeInTheDocument();
+    expect(screen.queryByText('Election research with historical geography and source context. Missing records never imply zero votes.')).not.toBeInTheDocument();
     expect(fetch).toHaveBeenCalledWith(`/api/v1/candidates/${candidacyId}?`, expect.objectContaining({ signal: expect.any(AbortSignal) }));
     expect(screen.getByRole('heading', { name: 'Identity & candidacy' })).toBeVisible();
     expect(screen.queryByRole('heading', { name: 'Summary' })).not.toBeInTheDocument();
@@ -125,15 +151,26 @@ describe('candidate profiles', () => {
     expect(screen.queryByRole('button', { name: 'Try again' })).not.toBeInTheDocument();
   });
 
-  it('requests bounded result pages using the reporting level', async () => {
-    const fetch = vi.fn().mockResolvedValueOnce(response({ ...candidateProfile,
-      results: { ...candidateProfile.results, total: 51, has_more: true, limit: 50 } }))
-      .mockResolvedValue(response(candidateProfile));
+  it('paginates locally and resets pagination when navigating to another candidate', async () => {
+    const fetch = vi.fn(async (url: string) => response({ ...candidateProfile,
+      id: url.split('/').at(-1)!.split('?')[0],
+      results: { ...candidateProfile.results, total: 51, limit: 50,
+        offset: url.includes('offset=50') ? 50 : 0, has_more: !url.includes('offset=50') } }));
     vi.stubGlobal('fetch', fetch);
     const user = userEvent.setup();
-    open(`/candidates/${candidacyId}?reporting_level=congressional_district`);
-    await user.click(await screen.findByRole('link', { name: 'Next page' }));
-    expect(fetch.mock.calls.some(call => call[0] === `/api/v1/candidates/${candidacyId}?reporting_level=congressional_district&offset=50`)).toBe(true);
+    open();
+    await user.click(await screen.findByRole('button', { name: 'Next page' }));
+    expect(await screen.findByRole('button', { name: 'Previous page' })).toBeVisible();
+    expect(fetch).toHaveBeenCalledWith(`/api/v1/candidates/${candidacyId}?offset=50`, expect.anything());
+    expect(screen.getByTestId('profile-location').textContent).toBe(`/candidates/${candidacyId}`);
+    await user.click(screen.getByRole('button', { name: 'Previous page' }));
+    expect(await screen.findByRole('button', { name: 'Next page' })).toBeVisible();
+    await user.click(screen.getByRole('button', { name: 'Next page' }));
+    await screen.findByRole('button', { name: 'Previous page' });
+    await user.click(screen.getByRole('button', { name: 'Open another profile' }));
+    await waitFor(() => expect(fetch).toHaveBeenCalledWith('/api/v1/candidates/11111111-1111-4111-8111-111111111111?', expect.anything()));
+    expect(await screen.findByRole('button', { name: 'Next page' })).toBeVisible();
+    expect(screen.getByTestId('profile-location').textContent).toBe('/candidates/11111111-1111-4111-8111-111111111111');
   });
 
   it('formats exact decimal cents and distinguishes missing from zero', () => {

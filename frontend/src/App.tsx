@@ -8,6 +8,7 @@ import { ResultsPage } from './ResultsPage';
 import { PresidentialPage, PresidentialDiscovery } from './PresidentialPage';
 import { SenatePage } from './SenatePage';
 import { SenateRacePage } from './SenateRacePage';
+import { HousePage, HouseRacePage } from './HousePage';
 import { Route, Routes, useLocation, useSearchParams } from 'react-router';
 import type { Contest } from './api';
 import { apiQuery, humanize, validateSearch } from './filters';
@@ -47,6 +48,8 @@ export function App() {
         <Route path="/presidential/:year" element={<PresidentialPage />} />
         <Route path="/senate/2026/results" element={<SenatePage />} />
         <Route path="/senate/2026/races/:stateCode" element={<SenateRacePage />} />
+        <Route path="/house/2026/results" element={<HousePage />} />
+        <Route path="/house/2026/races/:raceId" element={<HouseRacePage />} />
         <Route path="/map" element={<ElectionMapPage />} />
         <Route path="/contests" element={<ContestPage />} />
         <Route path="/contests/:contestId" element={<ResultsPage />} />
@@ -56,6 +59,6 @@ export function App() {
       </Routes>
 
     </main></div>
-    <footer className="site-footer">Election research with historical geography and source context. Missing records never imply zero votes.</footer>
+    {!location.pathname.startsWith('/candidates/') && <footer className="site-footer">Election research with historical geography and source context. Missing records never imply zero votes.</footer>}
   </>;
 }

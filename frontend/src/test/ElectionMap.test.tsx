@@ -266,7 +266,7 @@ describe("election map display", () => {
     );
     expect(within(screen.getByRole('table', { name: 'Candidate votes and share of reported votes' })).getByRole("link", { name: "BARACK OBAMA" })).toHaveAttribute(
       "href",
-      expect.stringContaining(`/candidates/${candidacyId}?`),
+      expect.stringContaining(`/candidates/${candidacyId}`),
     );
     expect(screen.queryByText("Reporting unit lineage")).not.toBeInTheDocument();
     expect(screen.queryByLabelText("Election map results table")).not.toBeInTheDocument();

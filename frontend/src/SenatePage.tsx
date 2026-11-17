@@ -5,7 +5,7 @@ import { Notice } from './components';
 import { indeterminateColor, partyPalette } from './map/electionColors';
 import { fetchSenateResults, senateDisplayCandidates } from './senate';
 import type { SenateCandidate, SenateRace, SenateResults } from './senate';
-import { senateCandidateSearch, senateRaceHref } from './senate';
+import { senateRaceHref } from './senate';
 import { CandidateLink } from './CandidateLink';
 import { SenateControl } from './SenateControl';
 import { CandidateAvatar } from './CandidateAvatar';
@@ -34,7 +34,7 @@ function CandidateRow({ candidate, race, highlighted }: { candidate: SenateCandi
   return <tr className={highlighted ? 'profile-current-candidate' : undefined}><th scope="row">
     <CandidateAvatar portrait={portrait} name={candidate.name} className={portrait ? 'senate-candidate-avatar' : ''} decorative
       fallback={<span className="senate-party-dot" style={{ background: candidate.kind === 'aggregate' ? indeterminateColor : color(candidate.party) }} />} />
-    <CandidateLink candidacyId={candidate.candidacy_id} contestId={race.contest_id} search={senateCandidateSearch(race)}>{candidate.name}</CandidateLink>
+    <CandidateLink candidacyId={candidate.candidacy_id}>{candidate.name}</CandidateLink>
     {candidate.incumbent && <span className="incumbent-marker" title={`Incumbent U.S. senator as of ${candidate.incumbent_evidence?.as_of || 'this election'}`}>Incumbent</span>}
     <small className="senate-mobile-party">{parties[candidate.party] || candidate.party || 'Party unavailable'}</small>
     {outcome && <small className="senate-outcome">{outcome}</small>}</th>

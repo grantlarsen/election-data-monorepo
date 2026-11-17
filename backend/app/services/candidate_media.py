@@ -2,12 +2,12 @@
 from copy import deepcopy
 from functools import lru_cache
 
-from ingestion.candidate_portraits import read_catalog
+from ingestion.candidate_portraits import read_catalogs
 
 
 @lru_cache(maxsize=1)
 def portrait_catalog() -> dict:
-    catalog = read_catalog()
+    catalog = read_catalogs()
     return {(row["source"], row["year"], row["race_id"], row["name"], row["party"]): row["portrait"]
             for row in catalog["candidates"]}
 

@@ -1,5 +1,13 @@
 # Election research frontend
 
+The House header opens `/house/2026/results`, with independent district pages at
+`/house/2026/races/:raceId`. These use daily cached 2026 counts and the Senate
+presentation patterns. See the [House source/cache runbook](data/house_current_results.md)
+for refreshes, provenance, missing counts, source calls and geography scope.
+The page has a URL-backed grid/map toggle (`?view=map`) using pinned Census 2026
+districts and a right-side small-state/DC inset. Boundary preparation is separate
+from the daily result refresh; the runbook provides the one-time command.
+
 ## Architecture and scope
 
 The React/TypeScript/Vite application preserves UI-001's navigation, filters,
@@ -85,7 +93,7 @@ routes while preserving API errors. External publication is outside this task.
 | `/contests` | Paginated modeled contests with source/publication labels |
 | `/contests/:contestId` | Published returns scoped by canonical contest UUID |
 | `/candidates` | Published result rows, with separately labeled anonymous buckets |
-| `/candidates/:candidacyId` | Candidacy selection shell; full profile remains unavailable |
+| `/candidates/:candidacyId` | Candidate profile with election results, reviewed portraits and sourced campaign finance |
 | Other paths | Accessible page-not-found state |
 
 Shared filters remain `year`, `office`, `stage`, `state_code`, `jurisdiction_id`
@@ -109,8 +117,8 @@ Additional office/result acquisition remains separate work.
 Reporting-unit selection uses canonical `jurisdiction_id` plus map-only
 `map_unit` (a two-digit state, four-digit district or five-digit county GEOID).
 The latter also selects boundaries with no published returns.
-Breadcrumbs restore state/nation context. Candidate links retain county/contest
-context; anonymous buckets never become profile links. Table sorting is local
+Breadcrumbs restore state/nation context. Candidate links use only candidacy
+identifiers; anonymous buckets never become profile links. Table sorting is local
 presentation state. Albers USA places the contiguous states, Alaska and Hawaii
 in one standard composite view; Alaska is scaled down. D3 handles projection
 clipping and antimeridian rendering. Outlying islands may be clipped, with all
@@ -228,9 +236,20 @@ The candidacy placeholder is replaced by a shareable `/candidates/:candidacyId`
 profile. It loads person/review status, contest, published result pages, sourced
 committee links and cycle-specific Total Raised / Total Spent. Unresolved identity,
 missing finance, ambiguous snapshots, zero amounts, loading, retry and 404 states
-are explicit. Navigation preserves explorer context while the profile's identity
-and finance cycle come from its candidacy. Source totals and derived FEC transfer
+are explicit. Profile URLs contain only `/candidates/{identifier}`. Legacy query
+parameters are removed with history replacement and never filter the profile;
+result pagination uses local state. Identity, election context, reporting level
+and finance cycle come from the candidacy. The top back link and the shared site
+footer are omitted on candidate profiles. Source totals and derived FEC transfer
 adjustments are labeled separately. Decimal currency strings preserve source cents.
+
+Candidate URL cleanup validation: all 276 frontend tests passed with
+`docker compose exec -T frontend npm test -- --maxWorkers=4`, and the production
+TypeScript/Vite build passed. Live desktop/mobile checks verified identifier-only
+links, the removed back link/footer, clean reloads, legacy query removal and
+browser history replacement. Section anchors remain usable; result pagination
+does not alter the profile URL. Evidence is under ignored
+`artifacts/house-current/candidate-clean-url-*`. No migration is required.
 
 See the [candidate identity/profile contract and runbook](data/candidate_identity_profiles.md)
 for schema changes, data dependencies, commands and verification. This supersedes
@@ -302,8 +321,8 @@ timestamps and whole-publication row counts are omitted from this presentation.
 
 Candidate references in result tables, jurisdiction leaders, map popovers, statewide
 summaries and unambiguous candidate legend entries link to the candidacy profile.
-Links preserve shared explorer filters and use the referenced result's contest
-context rather than stale pagination or map selection. Map popover links can be
+Links use only the explicit candidacy identifier, without explorer filters,
+contest query parameters or pagination. Map popover links can be
 reached by pressing Tab from a focused geography; Escape returns focus to it.
 Anonymous buckets and source-only names without a candidacy ID stay plain text.
 A legend spanning multiple candidacy IDs does not select an arbitrary profile;

@@ -2,7 +2,7 @@ import { Link, useInRouterContext } from 'react-router';
 import { ElectionTooltip } from './map/ElectionTooltip';
 import type { MapUnit } from './map/types';
 import type { SenateRace } from './senate';
-import { senateCandidateSearch, senateRaceHref } from './senate';
+import { senateRaceHref } from './senate';
 
 const parties: Record<string, string> = { D: 'DEMOCRATIC', R: 'REPUBLICAN', I: 'INDEPENDENT', L: 'LIBERTARIAN', G: 'GREEN', O: 'OTHER' };
 const statuses = { counting: 'Counting · no call', called: 'Media call · uncertified', final: 'Certified · per source' };
@@ -30,6 +30,5 @@ export function SenatePopover({ race, name, missing }: { race?: SenateRace; name
     reporting_level: 'state', publications: [] }} unit={unit} name={name} heading={heading} headerLayout="split" showLeader={false}
     contextLabel={race ? statuses[race.status] : missing ? 'Returns unavailable' : 'No Senate election in 2026'}
     sourceLabel={race ? `${race.source} via Call the Map` : missing ? 'Returns unavailable' : 'No Senate election in 2026'}
-    candidateSearch={race ? senateCandidateSearch(race) : undefined}
     footerNote={race && <>Counts can change during canvassing. <a href={href}>View this Senate race</a></>} />;
 }

@@ -13,7 +13,7 @@ export const navigation: { label: string; items: NavigationItem[] }[] = [
     { label:'Historic Data', to:'/senate/history', planned:true },
   ] },
   { label:'House', items:[
-    { label:'2026 Election Results', to:'/house/2026/results', planned:true },
+    { label:'2026 Election Results', to:'/house/2026/results' },
     { label:'Historic Data', to:'/house/history', planned:true },
   ] },
   { label:'Governor', items:[

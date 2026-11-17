@@ -1,5 +1,11 @@
 # Current Senate results and daily cache
 
+The House results page now shares the source validation and durable cache
+implementation through `ingestion/current_results.py` and
+`app/services/current_results.py`. Senate scope, cache directory, parser version,
+API shape and profile registration remain compatible. See the
+[House results runbook](house_current_results.md).
+
 The React page at `/senate/2026/results` replaces the Senate header's planned
 2026 link. Historical MEDSL Senate ingestion, seat identities, migrations and
 canonical publications already cover 2000–2024; they are reused unchanged for

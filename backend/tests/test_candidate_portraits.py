@@ -6,7 +6,7 @@ import json
 import pytest
 
 from app.services import candidate_media
-from ingestion.candidate_portraits import cache_portraits, read_catalog, validate_image
+from ingestion.candidate_portraits import cache_portraits, read_catalog, read_catalogs, validate_image
 
 
 @pytest.fixture
@@ -105,3 +105,22 @@ def test_registered_catalog_has_attribution_and_no_anonymous_assignments():
     assert data["candidates"]
     assert all(row["name"].lower() not in {"other", "write-in", "write-ins"} for row in data["candidates"])
     assert all(row["match_evidence"] and row["portrait"]["license"] for row in data["candidates"])
+
+
+def test_house_catalog_scope_and_cross_catalog_conflicts(catalog, tmp_path):
+    path, _, _ = catalog
+    data = read_catalog(path)
+    data['candidates'][0].update(source='call_the_map_house', race_id='FL-10')
+    house = tmp_path / 'house.json'
+    house.write_text(json.dumps(data))
+    combined = read_catalogs((path, house))
+    assert len(combined['candidates']) == 2
+    assert {row['source'] for row in combined['candidates']} == {'call_the_map_senate', 'call_the_map_house'}
+    with pytest.raises(ValueError, match='across catalogs'):
+        read_catalogs((house, house))
+    for change in ({'state_code': 'CA'}, {'source': 'unknown'}, {'name': 'Write-in'}, {'race_id': 'SEN-FL'}):
+        changed = deepcopy(data)
+        changed['candidates'][0].update(change)
+        house.write_text(json.dumps(changed))
+        with pytest.raises(ValueError):
+            read_catalog(house)

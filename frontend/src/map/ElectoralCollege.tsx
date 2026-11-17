@@ -10,7 +10,8 @@ interface Allocation {
   other_label: string; other: number;
   source: { url: string; sha256: string; retrieved_at: string };
 }
-export const smallStates = new Set(['VT', 'NH', 'MA', 'RI', 'CT', 'NJ', 'DE', 'MD', 'DC']);
+import { smallStates } from '../geography/smallStates';
+export { smallStates } from '../geography/smallStates';
 export const electoralAllocation = (year: number): Allocation | undefined =>
   (allocations as Record<string, Allocation>)[String(year)];
 const color = (party: string) => party === 'DEMOCRATIC' ? partyPalette.Democratic : partyPalette.Republican;

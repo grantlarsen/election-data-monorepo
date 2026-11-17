@@ -32,8 +32,6 @@ export function senateDisplayCandidates(race: SenateRace): SenateCandidate[] {
 export interface ProvisionalSenateElection { race: SenateRace; checked_at: string; stale: boolean; sha256: string; retrieved_at: string }
 
 export const senateRaceHref = (state: string) => `/senate/2026/races/${encodeURIComponent(state)}`;
-export const senateCandidateSearch = (race: SenateRace) => new URLSearchParams({ year: '2026', office: 'U.S. Senate',
-  stage: race.special ? 'special' : 'general', state_code: race.state_code, reporting_level: 'state' });
 export interface SenateResults {
   control?: SenateControl | null;
   year: number; election_date: string; races: SenateRace[]; expected_contests: number; missing_states: string[];

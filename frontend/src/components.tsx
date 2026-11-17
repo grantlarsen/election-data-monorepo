@@ -79,7 +79,7 @@ export function Provenance({ publications, collapsible = true }: { publications:
   </div>)}</div>;
 }
 
-export function Pagination({ page }: { page: Page<unknown> }) {
+export function Pagination({ page, onPageChange }: { page: Page<unknown>; onPageChange?: (offset: number) => void }) {
   const [params] = useSearchParams();
   function target(offset: number) {
     const next = new URLSearchParams(params);
@@ -87,9 +87,13 @@ export function Pagination({ page }: { page: Page<unknown> }) {
     return `?${next}`;
   }
   return <nav className="pagination" aria-label="Results pages">
-    {page.offset > 0 && <Link to={target(Math.max(0, page.offset - page.limit))}>Previous page</Link>}
+    {page.offset > 0 && (onPageChange
+      ? <button onClick={() => onPageChange(Math.max(0, page.offset - page.limit))}>Previous page</button>
+      : <Link to={target(Math.max(0, page.offset - page.limit))}>Previous page</Link>)}
     <span>{page.items.length ? `${page.offset + 1}–${page.offset + page.items.length}` : '0'} of {page.total.toLocaleString('en-US')} records</span>
-    {page.has_more && <Link to={target(page.offset + page.limit)}>Next page</Link>}
+    {page.has_more && (onPageChange
+      ? <button onClick={() => onPageChange(page.offset + page.limit)}>Next page</button>
+      : <Link to={target(page.offset + page.limit)}>Next page</Link>)}
   </nav>;
 }
 

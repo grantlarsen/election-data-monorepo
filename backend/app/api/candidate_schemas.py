@@ -7,6 +7,7 @@ from uuid import UUID
 from pydantic import BaseModel
 from app.api.election_schemas import Geography, ResultPage, Source
 from app.api.senate_schemas import ProvisionalSenateElection
+from app.api.house_schemas import ProvisionalHouseElection
 
 
 class PersonIdentity(BaseModel):
@@ -79,6 +80,7 @@ class CandidateFinance(BaseModel):
 
 
 class CandidateProfile(BaseModel):
+    provisional_house_election: ProvisionalHouseElection | None = None
     id: UUID
     label: str | None
     source_label: str | None

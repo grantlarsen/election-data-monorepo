@@ -48,6 +48,8 @@ def configuration(year: int, office: str) -> dict:
                 filename='cb_2024_us_cd119_500k.zip',
                 url='https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_cd119_500k.zip')])
     catalog = json.loads((Path(__file__).parent / 'catalog' / 'election_boundaries.json').read_text())
+    if office == 'house' and str(year) in catalog.get('house', {}):
+        return catalog['house'][str(year)]
     if office != 'president' or str(year) not in catalog['presidential']:
         raise ValueError('Unsupported display year and office')
     return catalog['presidential'][str(year)]
@@ -86,7 +88,7 @@ def prepare(connection: Connection, *, data_dir: Path, output: Path, year: int =
     repairs = defaultdict(int)
     excluded = defaultdict(int)
     fips_to_state = {value: key for key, value in STATE_FIPS.items()}
-    office = office or ('house' if year == 2024 else 'president')
+    office = office or ('house' if year in (2024, 2026) else 'president')
     config = configuration(year, office)
     selected_levels = list(dict.fromkeys(source['level'] for source in config['sources']))
     for spec in config['sources']:
@@ -155,6 +157,10 @@ def prepare(connection: Connection, *, data_dir: Path, output: Path, year: int =
         if sum(len(v) for v in groups.values()) != 436 or len(groups) != 51:
             raise ValueError("Expected 435 voting districts and DC across 51 jurisdictions")
         groups["congressional_district"] = [f for values in list(groups.values()) for f in values]
+        if year == 2026:
+            from ingestion.current_house import BOUNDARY_RACES
+            if {f['id'] for f in groups['congressional_district']} != set(BOUNDARY_RACES) | {'1198'}:
+                raise ValueError("District boundaries differ from the 2026 House source scope")
     outputs = {}
     for key, features in sorted(groups.items()):
         features.sort(key=lambda feature: feature["id"])
@@ -177,6 +183,9 @@ def prepare(connection: Connection, *, data_dir: Path, output: Path, year: int =
         documentation_url=config['documentation_url'], crs="EPSG:4326", source_crs="EPSG:4269",
         simplification_degrees=0.005, precision_degrees=0.00001,
         sources=sources, excluded_territory_features=dict(excluded), outputs=outputs)
+    for key in ('reviewed_at', 'source_notes'):
+        if key in config:
+            manifest[key] = config[key]
     path = output / f"{year}.json"
     if config.get('approximate'):
         manifest['approximate'] = True
@@ -196,9 +205,9 @@ def main() -> None:
     parser.add_argument("--data-dir", type=Path, default=Path("data/ingestion"))
     parser.add_argument("--output", type=Path, default=Path("data/boundaries"))
     selection = parser.add_mutually_exclusive_group()
-    selection.add_argument("--year", type=int, choices=PRESIDENTIAL_YEARS)
+    selection.add_argument("--year", type=int, choices=(*PRESIDENTIAL_YEARS, 2026))
     selection.add_argument('--all-presidential', action='store_true', help='Prepare all seven presidential state/county packages')
-    parser.add_argument('--office', choices=['president', 'house'], help='Defaults to House for --year 2024, otherwise President')
+    parser.add_argument('--office', choices=['president', 'house'], help='Defaults to House for --year 2024/2026, otherwise President')
     args = parser.parse_args()
     if args.all_presidential and args.office == 'house':
         parser.error('--all-presidential cannot be used with --office house')
