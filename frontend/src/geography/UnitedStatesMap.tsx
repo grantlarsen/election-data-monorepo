@@ -36,6 +36,7 @@ export function UnitedStatesMap<T>({
   attribution,
   water,
   featureLabel,
+  definitions,
 }: {
   features: JurisdictionCollection;
   data: ReadonlyMap<string, T>;
@@ -50,6 +51,7 @@ export function UnitedStatesMap<T>({
   attribution: ReactNode;
   water?: FeatureCollection<Polygon | MultiPolygon, { name: string }>;
   featureLabel?: (feature: JurisdictionFeature) => string[] | undefined;
+  definitions?: ReactNode;
 }) {
   const tooltipId = useId();
   const [activeId, setActiveId] = useState<string>();
@@ -348,6 +350,7 @@ export function UnitedStatesMap<T>({
           moveCenter(center.x + delta[0] * MAP_WIDTH / zoom * .1, center.y + delta[1] * MAP_HEIGHT / zoom * .1);
         }}
       >
+        {definitions && <defs>{definitions}</defs>}
         {shapes}
         {/* Physical water is drawn above legal jurisdiction fills and intercepts
             pointer events so lake surfaces cannot select the underlying state. */}

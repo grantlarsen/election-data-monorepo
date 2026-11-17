@@ -25,6 +25,23 @@ const map: ElectionMap = {
 };
 
 describe('most recent candidate election', () => {
+  it('shows Governor provisional returns with incumbent and profile links', () => {
+    vi.mocked(useElectionMap).mockClear();
+    render(<MemoryRouter><CandidateElection profile={{ ...candidateProfile, provisional_governor_election: {
+      checked_at: '2026-11-17T12:00:00Z', retrieved_at: '2026-11-17T12:00:00Z', stale: false, sha256: 'a'.repeat(64),
+      race: { id: 'GOV-NV', state_code: 'NV', state_name: 'Nevada', status: 'called', total_votes: 100,
+        candidates: [
+          { name: 'Joe Lombardo', party: 'R', votes: 40, share_pct: 40, outcome: '', incumbent: true, candidacy_id: candidacyId, source_row_number: 1 },
+          { name: 'Aaron Ford', party: 'D', votes: 60, share_pct: 60, outcome: 'won', candidacy_id: 'other-candidate', source_row_number: 2 },
+        ], count_updated_at: null, source_read_at: '2026-11-16T12:00:00Z', called_at: null,
+        source: 'civicAPI', source_url: 'https://civicapi.org/race/example', page_url: 'https://www.callthemap.com/results/governor/nv' },
+    } }} /></MemoryRouter>);
+    expect(screen.getByRole('table', { name: 'Nevada Governor candidate results' })).toHaveTextContent('40.00%');
+    expect(screen.getByText('Incumbent')).toBeVisible();
+    expect(screen.getByRole('link', { name: 'Joe Lombardo' })).toHaveAttribute('href', `/candidates/${candidacyId}`);
+    expect(screen.getByRole('link', { name: 'Joe Lombardo' }).closest('tr')).toHaveClass('profile-current-candidate');
+    expect(useElectionMap).not.toHaveBeenCalled();
+  });
   it('shows provisional House counts, profile links and incumbent badges with no canonical map request', () => {
     vi.mocked(useElectionMap).mockClear();
     const race = houseSnapshot().races[0];

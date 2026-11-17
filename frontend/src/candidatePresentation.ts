@@ -28,7 +28,8 @@ const portraits: Record<string, CandidatePortrait> = {
 
 export function candidatePortrait(profile: CandidateProfile) {
   const sourceCandidate = profile.provisional_election?.race.candidates.find(candidate => candidate.candidacy_id === profile.id)
-    ?? profile.provisional_house_election?.race.candidates.find(candidate => candidate.candidacy_id === profile.id);
+    ?? profile.provisional_house_election?.race.candidates.find(candidate => candidate.candidacy_id === profile.id)
+    ?? profile.provisional_governor_election?.race.candidates.find(candidate => candidate.candidacy_id === profile.id);
   const sourced = sourceCandidate?.kind === 'aggregate' ? undefined : cachedPortrait(sourceCandidate?.portrait);
   if (sourced) return sourced;
   if (!profile.person || profile.identity_status !== 'resolved') return undefined;

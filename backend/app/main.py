@@ -15,19 +15,22 @@ from app.api.senate import router as senate_router
 from app.services.senate_results import daily_refresh
 from app.api.house import router as house_router
 from app.services.house_results import daily_refresh as daily_house_refresh
+from app.api.governor import router as governor_router
+from app.services.governor_results import daily_refresh as daily_governor_refresh
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     task = asyncio.create_task(daily_refresh()) if os.getenv("SENATE_RESULTS_AUTO_REFRESH", "1") == "1" else None
     house_task = asyncio.create_task(daily_house_refresh()) if os.getenv("HOUSE_RESULTS_AUTO_REFRESH", "1") == "1" else None
+    governor_task = asyncio.create_task(daily_governor_refresh()) if os.getenv("GOVERNOR_RESULTS_AUTO_REFRESH", "1") == "1" else None
     try:
         yield
     finally:
-        for background_task in (task, house_task):
+        for background_task in (task, house_task, governor_task):
             if background_task:
                 background_task.cancel()
-        for background_task in (task, house_task):
+        for background_task in (task, house_task, governor_task):
             if background_task:
                 with suppress(asyncio.CancelledError):
                     await background_task
@@ -40,6 +43,7 @@ app.include_router(map_router)
 app.include_router(candidate_router)
 app.include_router(senate_router)
 app.include_router(house_router)
+app.include_router(governor_router)
 
 
 @app.get("/health")

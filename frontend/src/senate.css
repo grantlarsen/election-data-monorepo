@@ -30,6 +30,7 @@
 .senate-cache p { margin: 4px 0; }
 .senate-filters { display: flex; flex-wrap: wrap; gap: 20px; margin: 14px 0 22px; }
 .senate-filters label { flex: 0 1 280px; }
+.governor-filters { align-items: flex-end; }
 .senate-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
 .senate-race { background: white; border: 1px solid var(--border); border-radius: 5px; padding: 20px; min-width: 0; }
 .senate-race-heading { display: grid; grid-template-columns: auto auto minmax(0, 1fr); align-items: center; gap: 6px 12px; margin-bottom: 12px; }

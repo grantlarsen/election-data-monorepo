@@ -124,3 +124,40 @@ def test_house_catalog_scope_and_cross_catalog_conflicts(catalog, tmp_path):
         house.write_text(json.dumps(changed))
         with pytest.raises(ValueError):
             read_catalog(house)
+
+
+def test_governor_catalog_scope_and_cross_office_conflicts(catalog, tmp_path):
+    path, _, _ = catalog
+    data = read_catalog(path)
+    data['candidates'][0].update(source='call_the_map_governor', race_id='GOV-FL')
+    governor = tmp_path / 'governor.json'
+    governor.write_text(json.dumps(data))
+    assert len(read_catalogs((path, governor))['candidates']) == 2
+    with pytest.raises(ValueError, match='across catalogs'):
+        read_catalogs((governor, governor))
+    for change in ({'state_code': 'CA'}, {'source': 'unknown'}, {'name': 'Write-in'}, {'race_id': 'SEN-FL'}):
+        changed = deepcopy(data)
+        changed['candidates'][0].update(change)
+        governor.write_text(json.dumps(changed))
+        with pytest.raises(ValueError):
+            read_catalog(governor)
+
+
+@pytest.mark.parametrize('focus', [{'x': -1, 'y': 50, 'zoom': 2}, {'x': 50, 'y': 101, 'zoom': 2},
+    {'x': 50, 'y': 50, 'zoom': 6}, {'x': 50, 'y': 50, 'zoom': float('nan')}, {'x': 50}])
+def test_rejects_unsafe_portrait_focus(catalog, focus):
+    path, _, _ = catalog
+    data = read_catalog(path)
+    data['candidates'][0]['portrait']['focus'] = focus
+    path.write_text(json.dumps(data))
+    with pytest.raises(ValueError, match='focus'):
+        read_catalog(path)
+
+
+def test_optional_portrait_focus_preserves_existing_api_contract(catalog):
+    from app.api.media_schemas import CandidatePortrait
+    _, _, row = catalog
+    media = row['portrait']
+    assert CandidatePortrait(**media).model_dump() == media
+    focused = {**media, 'focus': {'x': 65, 'y': 44, 'zoom': 4}}
+    assert CandidatePortrait(**focused).model_dump() == focused

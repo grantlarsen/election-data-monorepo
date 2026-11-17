@@ -1,6 +1,7 @@
 import { sourceUrl } from './api';
 
 export interface CandidatePortrait {
+  focus?: { x: number; y: number; zoom: number } | null;
   url: string;
   credit: string;
   source: string;

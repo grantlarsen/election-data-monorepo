@@ -17,7 +17,7 @@ export const navigation: { label: string; items: NavigationItem[] }[] = [
     { label:'Historic Data', to:'/house/history', planned:true },
   ] },
   { label:'Governor', items:[
-    { label:'2026 Election Results', to:'/governor/2026/results', planned:true },
+    { label:'2026 Election Results', to:'/governor/2026/results' },
     { label:'2028 Electoral Map', to:'/governor/2028/map', planned:true },
     { label:'Historic Data', to:'/governor/history', planned:true },
   ] },

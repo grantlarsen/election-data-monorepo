@@ -22,6 +22,18 @@ function response(body: unknown, status = 200) {
 }
 
 describe('candidate profiles', () => {
+  it('uses the Governor source portrait and credits on its candidate profile', async () => {
+    const race = { ...houseSnapshot().races[0], id: 'GOV-FL', state_code: 'FL', state_name: 'Florida' };
+    race.candidates[0] = { ...race.candidates[0], candidacy_id: candidacyId, portrait };
+    vi.stubGlobal('fetch', vi.fn(async () => response({ ...candidateProfile, label: 'Governor portrait candidate',
+      provisional_governor_election: { race, checked_at: '2026-11-17T12:00:00Z', retrieved_at: '2026-11-17T12:00:00Z',
+        stale: false, sha256: 'f'.repeat(64) } })));
+    open();
+    expect(await screen.findByRole('img', { name: 'Portrait of Governor portrait candidate' })).toHaveAttribute('src', portrait.url);
+    expect(screen.getByRole('link', { name: portrait.credit })).toHaveAttribute('href', portrait.source);
+    expect(screen.getByRole('link', { name: 'CC BY 4.0' })).toHaveAttribute('href', portrait.license_url);
+    expect(screen.getByText(/This source label has not been linked to a verified person/)).toBeVisible();
+  });
   it('shows reviewed House headshots and attribution without resolving a person or finances', async () => {
     const race = houseSnapshot().races[0];
     race.candidates[0] = { ...race.candidates[0], candidacy_id: candidacyId, portrait };

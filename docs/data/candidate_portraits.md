@@ -1,5 +1,33 @@
 # Reviewed candidate portraits
 
+The 2026 Governor roster has 68 reviewed, locally cached portraits across 35
+state races, including 64 Democratic/Republican entries and four independent or
+other-party entries. Tables and popovers replace available party dots/initials
+with these thumbnails, and the linked source-scoped profiles use the same image
+and credit. The remaining 182 named source entries retain fallbacks. Anonymous
+categories never receive portraits. This is verified coverage, not a claim that
+no other candidate photographs exist.
+
+Governor research retained all 36 election pages, 77 election-scoped candidate
+matches and 185 additional Commons name lookups. Sixty-eight additional lookups
+succeeded; 117 were rate-limited. Unrelated people, signatures, unverified reuse
+terms and unverified write-in identities were excluded. Two reviewed leads could
+not be promoted: Rick Bennett's image could not be downloaded, and the indexed
+Eric Barlow file lacked retrievable image/license metadata in the Commons API.
+These gaps and per-candidate reasons are recorded in
+`backend/ingestion/catalog/governor_portraits.json`; original research responses
+are under `data/candidate-portraits/governor-research/`.
+
+The Governor catalog has 67 Commons assignments with file-specific credits and
+licenses, plus David Jolly's pinned congressional portrait, selected through
+the historical legislator record and Bioguide `J000296`. Media assignments are
+scoped to the Governor source/year/state/race/exact name/party. They do not infer
+canonical person identities or financial links. Governor files total 3,460,342
+bytes, approximately 3.3 MiB. Three wider photos have reviewed, bounded `focus`
+coordinates and zoom applied in CSS so faces remain visible; original downloaded
+bytes and their SHA-256 checksums are unchanged. The API omits unused focus
+metadata, preserving existing Senate/House portrait serialization.
+
 The 2026 House roster has 529 reviewed, locally cached portraits across 428
 districts and all 50 states: 355 congressional portraits and 174 Wikimedia
 Commons portraits. These cover 411 source-called winners. The remaining 833
@@ -27,8 +55,9 @@ under `frontend/public/media/candidates/`. House assets total approximately
 new image service or package is required. Some official portraits are historical;
 the image is not evidence of a current office or current appearance.
 
-`backend/ingestion/catalog/senate_portraits.json` and
-`backend/ingestion/catalog/house_portraits.json` are the reviewed media crosswalks.
+`backend/ingestion/catalog/senate_portraits.json`,
+`backend/ingestion/catalog/house_portraits.json` and
+`backend/ingestion/catalog/governor_portraits.json` are the reviewed media crosswalks.
 Assignments require the exact source, election year, race, source name and party.
 Political biographies, Bioguide IDs and file descriptions supply match evidence.
 No portrait is attached to an anonymous bucket or selected by name in the browser.
@@ -51,7 +80,8 @@ person, FEC ID, campaign committee, incumbency or financial data. It reuses the
 existing source-scoped Senate and House read models without a database migration.
 `candidate_media.py` loads the validated catalog once per API process and enriches
 each matching candidate with optional `portrait` metadata. Candidate profiles
-receive the same data in `provisional_election` or `provisional_house_election`.
+receive the same data in `provisional_election`, `provisional_house_election`
+or `provisional_governor_election`.
 Restart the API after changing the catalog.
 
 `CandidateAvatar` displays the image on the profile and replaces available table
@@ -78,6 +108,8 @@ python backend/ingestion/candidate_portraits.py
 
 # Optionally verify just the House catalog.
 python backend/ingestion/candidate_portraits.py --catalog backend/ingestion/catalog/house_portraits.json --verify-only
+# Or just the Governor catalog.
+python backend/ingestion/candidate_portraits.py --catalog backend/ingestion/catalog/governor_portraits.json --verify-only
 
 # Refresh the running catalog/module cache after edits.
 docker compose restart api frontend
@@ -86,7 +118,7 @@ docker compose exec -T frontend npm test -- --maxWorkers=4
 docker compose exec -T frontend npm run build
 ```
 
-Both commands process both chamber catalogs by default. The replay command
+Both commands process all three office catalogs by default. The replay command
 records each catalog checksum, plus inserted, updated, unchanged, excluded and rejected
 asset counts plus per-file status in a uniquely identified JSON run report under
 `data/candidate-portraits/reports/`. It is restartable and idempotent for pinned
@@ -95,6 +127,20 @@ Downloads use the source's supplied raster thumbnails, preserve the approved
 bytes and atomically replace a cache file only after size/signature/checksum
 validation. Failed bytes never replace an existing file. Reviewed assignments
 sharing the same asset reuse that cache file.
+
+Governor validation on November 17, 2026: all 298 frontend tests passed with
+the documented four-worker setting, and the strict TypeScript/production build
+passed. The focused Python 3.12 portrait, Governor source and related PostgreSQL
+profile suite passed 62 tests with one optional live replay skipped. One existing
+Senate tooltip test timed out in an unrestricted parallel run and passed with the
+worker limit; production map behavior passed the browser checks. Offline
+verification checked all 663 assets across the three office catalogs with zero
+rejections. A Governor-only repeat replay reported 68 unchanged assets and zero
+inserts/updates/rejections. All 68 live Governor image URLs matched their approved
+SHA-256, all 68 linked profiles retained the same portrait/credit, and every image
+decoded in browser review sheets. Desktop/mobile table, popover and profile
+checks passed without page errors or horizontal overflow. Evidence and screenshots
+are under ignored `artifacts/governor-current/portraits-*`.
 
 To add an image, review its candidate identity and reuse terms, archive the source
 metadata, record the scoped assignment and downloaded checksum, then verify the

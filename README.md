@@ -62,6 +62,12 @@ links directly to it. A grid/map toggle shows pinned 2026 congressional district
 with a small-state/DC tile inset. See the [House source and cache runbook](docs/data/house_current_results.md)
 for source attribution, missing-count semantics and refresh/replay commands.
 
+The [2026 Governor results page](http://localhost:5173/governor/2026/results)
+covers all 36 state gubernatorial elections with daily cached counts, a state
+map, result filters and complete state race tables. The Governor header links
+directly to it. See the [Governor source and cache runbook](docs/data/governor_current_results.md)
+for attribution, territorial coverage limits and refresh/replay commands.
+
 2024 MEDSL House district ingestion is available through the shared observation
 and canonical publication pipeline. See the [House data contract](docs/data/house_returns_2024.md)
 and [PowerShell runbook](docs/data/house_returns_2024_runbook.md) for pinned-source

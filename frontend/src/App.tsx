@@ -9,6 +9,7 @@ import { PresidentialPage, PresidentialDiscovery } from './PresidentialPage';
 import { SenatePage } from './SenatePage';
 import { SenateRacePage } from './SenateRacePage';
 import { HousePage, HouseRacePage } from './HousePage';
+import { GovernorPage } from './GovernorPage';
 import { Route, Routes, useLocation, useSearchParams } from 'react-router';
 import type { Contest } from './api';
 import { apiQuery, humanize, validateSearch } from './filters';
@@ -50,6 +51,8 @@ export function App() {
         <Route path="/senate/2026/races/:stateCode" element={<SenateRacePage />} />
         <Route path="/house/2026/results" element={<HousePage />} />
         <Route path="/house/2026/races/:raceId" element={<HouseRacePage />} />
+        <Route path="/governor/2026/results" element={<GovernorPage />} />
+        <Route path="/governor/2026/races/:stateCode" element={<GovernorPage />} />
         <Route path="/map" element={<ElectionMapPage />} />
         <Route path="/contests" element={<ContestPage />} />
         <Route path="/contests/:contestId" element={<ResultsPage />} />

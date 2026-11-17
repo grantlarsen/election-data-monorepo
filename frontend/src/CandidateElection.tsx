@@ -12,10 +12,20 @@ import { candidateDisplayName } from './candidatePresentation';
 import { mapCandidateColor } from './map/electionColors';
 import { SenateRaceCard } from './SenatePage';
 import { HouseRaceCard } from './HousePage';
+import { GovernorRaceCard } from './GovernorPage';
 
 const GeographyMap = lazy(() => import('./map/GeographyMap').then(module => ({ default: module.GeographyMap })));
 
 export function CandidateElection({ profile, onResultsPageChange }: { profile: CandidateProfile; onResultsPageChange?: (offset: number) => void }) {
+  if (profile.provisional_governor_election) {
+    const election = profile.provisional_governor_election;
+    return <section id="election-results" className="profile-card profile-election" aria-labelledby="returns-heading">
+      <h2 id="returns-heading">Most recent election</h2><p>2026-11-03 · General election · Governor · Provisional counts</p>
+      <p className="profile-section-note">Source-scoped candidacy. Person and campaign finance identities remain subject to review.</p>
+      {election.stale && <Notice title="Daily update delayed"><p>The last valid cached counts are shown.</p></Notice>}
+      <GovernorRaceCard race={election.race} highlightedCandidacyId={profile.id} />
+    </section>;
+  }
   if (profile.provisional_house_election) {
     const election = profile.provisional_house_election;
     return <section id="election-results" className="profile-card profile-election" aria-labelledby="returns-heading">
