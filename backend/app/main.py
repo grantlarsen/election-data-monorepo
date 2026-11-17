@@ -1,5 +1,9 @@
 """Electoral discovery and published results API."""
 
+import asyncio
+from contextlib import asynccontextmanager, suppress
+import os
+
 from fastapi import FastAPI, HTTPException
 from sqlalchemy import text
 
@@ -7,12 +11,28 @@ from app.database import engine
 from app.api.elections import router as election_router
 from app.api.maps import router as map_router
 from app.api.candidates import router as candidate_router
+from app.api.senate import router as senate_router
+from app.services.senate_results import daily_refresh
 
-app = FastAPI(title="Electoral Research API", version="0.1.0")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    task = asyncio.create_task(daily_refresh()) if os.getenv("SENATE_RESULTS_AUTO_REFRESH", "1") == "1" else None
+    try:
+        yield
+    finally:
+        if task:
+            task.cancel()
+            with suppress(asyncio.CancelledError):
+                await task
+
+
+app = FastAPI(title="Electoral Research API", version="0.1.0", lifespan=lifespan)
 
 app.include_router(election_router)
 app.include_router(map_router)
 app.include_router(candidate_router)
+app.include_router(senate_router)
 
 
 @app.get("/health")

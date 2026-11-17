@@ -10,10 +10,26 @@ import { useElectionMap } from './map/useElectionMap';
 import type { MapUnit } from './map/types';
 import { candidateDisplayName } from './candidatePresentation';
 import { mapCandidateColor } from './map/electionColors';
+import { SenateRaceCard } from './SenatePage';
 
 const GeographyMap = lazy(() => import('./map/GeographyMap').then(module => ({ default: module.GeographyMap })));
 
 export function CandidateElection({ profile }: { profile: CandidateProfile }) {
+  if (profile.provisional_election) {
+    const election = profile.provisional_election;
+    return <section id="election-results" className="profile-card profile-election" aria-labelledby="returns-heading">
+      <div className="profile-card-heading"><div><h2 id="returns-heading">Most recent election</h2>
+        <p>2026-11-03 · {election.race.special ? 'Special' : 'General'} election · U.S. Senate · Provisional counts</p></div></div>
+      <p className="profile-section-note">Current source-scoped returns. Person identity and campaign finance links have not been inferred from names.</p>
+      {election.stale && <Notice title="Daily update delayed"><p>The last valid cached counts are shown.</p></Notice>}
+      <SenateRaceCard race={election.race} highlightedCandidacyId={profile.id} />
+      <p className="profile-section-note">Cache checked: {election.checked_at}. Source CSV SHA-256: {election.sha256}</p>
+    </section>;
+  }
+  return <PublishedCandidateElection profile={profile} />;
+}
+
+function PublishedCandidateElection({ profile }: { profile: CandidateProfile }) {
   const election = profile.latest_election === undefined ? { ...profile.contest, candidacy_id: profile.id } : profile.latest_election;
   const query = new URLSearchParams();
   if (election) {

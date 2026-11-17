@@ -6,6 +6,8 @@ import { ElectionMapPage } from './map/ElectionMapPage';
 import { CandidatePage } from './CandidatePage';
 import { ResultsPage } from './ResultsPage';
 import { PresidentialPage, PresidentialDiscovery } from './PresidentialPage';
+import { SenatePage } from './SenatePage';
+import { SenateRacePage } from './SenateRacePage';
 import { Route, Routes, useLocation, useSearchParams } from 'react-router';
 import type { Contest } from './api';
 import { apiQuery, humanize, validateSearch } from './filters';
@@ -43,6 +45,8 @@ export function App() {
         {navigation.flatMap(group => group.items.filter(item=>item.planned).map(item=><Route key={item.to} path={item.to} element={<PlannedPage title={item.label} section={group.label} />} />))}
         <Route path="/presidential" element={<PresidentialDiscovery />} />
         <Route path="/presidential/:year" element={<PresidentialPage />} />
+        <Route path="/senate/2026/results" element={<SenatePage />} />
+        <Route path="/senate/2026/races/:stateCode" element={<SenateRacePage />} />
         <Route path="/map" element={<ElectionMapPage />} />
         <Route path="/contests" element={<ContestPage />} />
         <Route path="/contests/:contestId" element={<ResultsPage />} />

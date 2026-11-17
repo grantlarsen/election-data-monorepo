@@ -116,6 +116,7 @@ export interface Page<T> {
 }
 
 export interface CandidateProfile {
+  provisional_election?: import('./senate').ProvisionalSenateElection | null;
   id: string;
   label: string | null;
   source_label: string | null;

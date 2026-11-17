@@ -8,6 +8,7 @@ import { CandidateFinanceChart, DownloadFinance, financeRows } from './Candidate
 import { candidateDisplayName, candidateInitials, candidatePortrait, dollars } from './candidatePresentation';
 import { humanize, isUuid, validateSearch } from './filters';
 import './candidate-profile.css';
+import { CandidateAvatar } from './CandidateAvatar';
 
 export { dollars } from './candidatePresentation';
 
@@ -47,7 +48,6 @@ export function CandidatePage() {
   const profile = state.key === key ? state.profile : undefined;
   const error = state.key === key ? state.error : undefined;
   const name = candidateDisplayName(profile?.label || 'Candidate profile');
-  const [failedPortrait, setFailedPortrait] = useState<string>();
   useEffect(() => {
     if (profile) document.title = `${name} | Electoral Atlas`;
   }, [profile, name]);
@@ -67,9 +67,8 @@ export function CandidatePage() {
         <div className="profile-back"><FilterLink to="/candidates"><span aria-hidden="true">‹</span> Back to candidates</FilterLink></div>
         <div className="profile-hero-grid">
           <div className="profile-person">
-            <div className="profile-avatar">{portrait && failedPortrait !== portrait.url
-              ? <img src={portrait.url} alt={`Portrait of ${name}`} onError={() => setFailedPortrait(portrait.url)} />
-              : <span aria-hidden="true">{candidateInitials(name)}</span>}</div>
+            <CandidateAvatar className="profile-avatar" portrait={portrait} name={name}
+              fallback={<span aria-hidden="true">{candidateInitials(name)}</span>} />
             <div className="profile-person-text"><p className="profile-kicker">{contest.office_name} · Candidate profile</p>
               <h1 id="page-title" tabIndex={-1}>{name}</h1>
               <p className="profile-geography">{contest.jurisdiction.name}</p>
@@ -156,7 +155,8 @@ export function CandidatePage() {
             <p>FEC candidate: {item.fec_candidate_id || 'No proposed match'} · Source record: {item.record_id || 'Not matched'}</p>
             {item.decision_evidence && <p>{item.decision_evidence}</p>}<pre>{JSON.stringify(item.evidence, null, 2)}</pre>
             <SourceDetails source={item.source} /></div>)}</details>}
-          {portrait && <p className="profile-media-credit"><a href={sourceUrl(portrait.source)} target="_blank" rel="noreferrer">{portrait.credit}</a></p>}
+          {portrait && <p className="profile-media-credit"><a href={sourceUrl(portrait.source)} target="_blank" rel="noreferrer">{portrait.credit}</a>
+            {'license' in portrait && portrait.license && <> · <a href={sourceUrl(portrait.license_url || '')} target="_blank" rel="noreferrer">{portrait.license}</a></>}</p>}
         </section>
       </div>
     </div>

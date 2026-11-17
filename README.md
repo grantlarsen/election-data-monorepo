@@ -40,6 +40,11 @@ Election discovery and published results are available under `/api/v1`.
 See the [election API contract and verification guide](docs/api/elections.md)
 for filters, pagination, source coverage and the separate state/county grains.
 
+The [2026 Senate results page](http://localhost:5173/senate/2026/results) shows
+source-linked provisional counts for all 35 contests, with daily cached updates,
+media-call/certification labels and stale-cache warnings. See the
+[current Senate source and cache runbook](docs/data/senate_current_results.md).
+
 Presidential results for 2000–2024 have a seven-election coverage inventory at
 `/api/v1/presidential-coverage`. See the [presidential source and publication
 guide](docs/data/presidential_coverage.md) for pinned FEC state summaries,

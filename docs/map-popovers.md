@@ -19,9 +19,21 @@ bounded card, including narrow screens.
 `ElectionTooltip` presents current published API data. The leader is labeled
 "Leading here", not elected/certified. Partial publication labels remain visible.
 Missing totals differ from stored zeros; anonymous/write-in categories do not
-become named candidates. Source portraits/party labels are absent from the map
-contract, so the card uses initials and does not infer those attributes. Source
+become named candidates. Senate candidates can include optional reviewed, locally
+cached portraits; otherwise the card uses initials. Existing source party labels
+are used without inferring missing affiliations. Source
 details and navigation remain available on the page outside the tooltip.
+
+The shared Senate/presidential popover groups named third-party and independent
+candidates into **Other** when their votes are strictly below the smaller of
+1,000 votes and 0.1% of the reporting unit's total. It uses exact vote totals,
+not rounded source shares; candidates at the cutoff remain visible. Democratic,
+Republican, major-party fusion and unknown-party candidates stay separate.
+The combined share uses the unchanged reported total. Existing anonymous Other
+buckets merge into the row when grouping occurs; distinct write-in categories
+remain separate. Senate results-page state tables use this same grouping via
+`candidateAggregation.ts`; individual Senate race pages and candidate profiles
+retain every source row. Source data, leaders and margins remain unchanged.
 
 Validation: 66 frontend tests and strict production build passed. Coverage includes
 viewport corners/mobile, pointer anchoring, portal placement, Escape dismissal,

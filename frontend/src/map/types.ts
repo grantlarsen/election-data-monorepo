@@ -1,7 +1,11 @@
 import type { JurisdictionCollection } from "../geography/unitedStates";
 import type { Publication } from "../api";
+import type { CandidatePortrait } from '../candidateMedia';
 
 export interface MapCandidate {
+  portrait?: CandidatePortrait | null;
+  incumbent?: boolean | null;
+  result_badge?: 'Winner' | 'Projected winner';
   party_labels?: string[];
   label: string;
   kind: string;

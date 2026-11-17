@@ -1,0 +1,3 @@
+.candidate-avatar { display: inline-grid; place-items: center; overflow: hidden; flex-shrink: 0; vertical-align: middle; }
+.candidate-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+.senate-candidate-avatar { width: 28px; height: 28px; border-radius: 50%; margin-right: 7px; background: #edf1ed; }

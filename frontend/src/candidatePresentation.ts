@@ -1,5 +1,7 @@
 import type { CandidateProfile } from './api';
 import ocasioCortezPortrait from './assets/people/alexandria-ocasio-cortez.jpg';
+import { cachedPortrait } from './candidateMedia';
+import type { CandidatePortrait } from './candidateMedia';
 
 /** Display formatting only; canonical and source names remain unchanged. */
 export function candidateDisplayName(value: string): string {
@@ -16,7 +18,7 @@ export function candidateInitials(name: string): string {
 }
 
 /** Curated media from the supplied reference; IDs, never names, select a portrait. */
-const portraits: Record<string, { url: string; credit: string; source: string }> = {
+const portraits: Record<string, CandidatePortrait> = {
   H8NY15148: {
     url: ocasioCortezPortrait,
     credit: 'Portrait from the user-supplied OpenSecrets reference.',
@@ -25,6 +27,9 @@ const portraits: Record<string, { url: string; credit: string; source: string }>
 };
 
 export function candidatePortrait(profile: CandidateProfile) {
+  const sourceCandidate = profile.provisional_election?.race.candidates.find(candidate => candidate.candidacy_id === profile.id);
+  const sourced = sourceCandidate?.kind === 'aggregate' ? undefined : cachedPortrait(sourceCandidate?.portrait);
+  if (sourced) return sourced;
   if (!profile.person || profile.identity_status !== 'resolved') return undefined;
   const id = profile.finance.fec_candidate_id;
   return id ? portraits[id] : undefined;
