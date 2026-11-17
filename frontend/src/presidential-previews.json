@@ -1,0 +1,505 @@
+{
+  "2000-11-07:general": {
+    "src": "/election-previews/president-2000-general.png",
+    "label": "2000 presidential election \u2014 published state result preview",
+    "generated_at": "2026-11-17T03:12:14.309280+00:00",
+    "publications": [
+      {
+        "batch_id": "05acc624-e151-43e4-971d-55efa800857b",
+        "scope_key": "president:general:2000:state:TOTAL",
+        "status": "COMPLETE",
+        "published_at": "2026-11-16T21:44:17.080963Z",
+        "source": {
+          "release_id": "34268b03-e4a5-4f7f-841e-2239ade067d7",
+          "name": "fec_presidential_official",
+          "version": "2000-summary",
+          "sha256": "10f4d0941f2013f496056e53b48b54c2a5ab2ac629cfa6578330f4af53333b85",
+          "url": "https://www.fec.gov/documents/1614/2000ptables.xls",
+          "retrieved_at": "2026-11-16T21:30:25.182157Z"
+        },
+        "reporting_levels": [
+          "state"
+        ],
+        "reporting_modes": [
+          "TOTAL"
+        ],
+        "reference_release_id": null,
+        "correction_batch_id": null,
+        "correction_source": null,
+        "input_rows": null,
+        "accepted_rows": null,
+        "excluded_rows": null,
+        "coverage_scope": "publication",
+        "county_coverage_verified": false
+      }
+    ],
+    "boundary": {
+      "boundary_vintage": "2000-01-01",
+      "crs": "EPSG:4326",
+      "documentation_url": "https://www2.census.gov/geo/pdfs/maps-data/data/tiger/tgrshp2008/TGRSHP08.pdf",
+      "excluded_territory_features": {
+        "county": 91,
+        "state": 5
+      },
+      "precision_degrees": 1e-05,
+      "reporting_levels": [
+        "state",
+        "county"
+      ],
+      "simplification_degrees": 0.005,
+      "source_crs": "EPSG:4269",
+      "sources": [
+        {
+          "level": "state",
+          "retrieved_at": "2026-11-16T22:51:25.659213+00:00",
+          "sha256": "a746accc9ed6c72f65ef2f70fac1986471e28d85e6797461882b64b898fb2fd0",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2008/tl_2008_us_state00.zip"
+        },
+        {
+          "level": "county",
+          "retrieved_at": "2026-11-16T22:51:32.227745+00:00",
+          "sha256": "ad0c4801547023f0fb468f79d4fc4fcce2cfbc5a43568b9beadb201c5cd1acde",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2008/tl_2008_us_county00.zip"
+        }
+      ],
+      "version": "tiger2000-display-v1",
+      "vintage_note": "Census 2000 legal geography in the 2008 TIGER archive. Generalized display shapes, not election-day certification, measurements or reconstructed returns.",
+      "year": 2000,
+      "display_sha256": "2029f4fa5f1da85cc4dce7f1a82a4b1f24a83bcc348f8eac67300913d076c76f",
+      "repaired_features": 0
+    }
+  },
+  "2004-11-02:general": {
+    "src": "/election-previews/president-2004-general.png",
+    "label": "2004 presidential election \u2014 published state result preview",
+    "generated_at": "2026-11-17T03:12:15.481814+00:00",
+    "publications": [
+      {
+        "batch_id": "53798d0d-1ebf-4def-8089-6bcdf46c84b5",
+        "scope_key": "president:general:2004:state:TOTAL",
+        "status": "COMPLETE",
+        "published_at": "2026-11-16T21:44:17.080963Z",
+        "source": {
+          "release_id": "c3cf5349-80f3-429e-980b-08c8335f8391",
+          "name": "fec_presidential_official",
+          "version": "2004-summary",
+          "sha256": "302fdbc371f7f9c81c9bc8ec68caf0a5724e78b2e7c4c3a2b6ca90f3cc83fdfa",
+          "url": "https://www.fec.gov/documents/1628/2004pres.xls",
+          "retrieved_at": "2026-11-16T21:28:52.410993Z"
+        },
+        "reporting_levels": [
+          "state"
+        ],
+        "reporting_modes": [
+          "TOTAL"
+        ],
+        "reference_release_id": null,
+        "correction_batch_id": null,
+        "correction_source": null,
+        "input_rows": null,
+        "accepted_rows": null,
+        "excluded_rows": null,
+        "coverage_scope": "publication",
+        "county_coverage_verified": false
+      }
+    ],
+    "boundary": {
+      "approximate": true,
+      "boundary_vintage": "Census 2000 states; Census 2008 counties outside Alaska; Census 2000 Alaska counties",
+      "crs": "EPSG:4326",
+      "documentation_url": "https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.2000.html",
+      "excluded_territory_features": {
+        "county": 182,
+        "state": 5
+      },
+      "precision_degrees": 1e-05,
+      "reporting_levels": [
+        "state",
+        "county"
+      ],
+      "simplification_degrees": 0.005,
+      "source_crs": "EPSG:4269",
+      "sources": [
+        {
+          "level": "state",
+          "retrieved_at": "2026-11-16T22:51:25.659213+00:00",
+          "sha256": "a746accc9ed6c72f65ef2f70fac1986471e28d85e6797461882b64b898fb2fd0",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2008/tl_2008_us_state00.zip"
+        },
+        {
+          "exclude_states": [
+            "AK"
+          ],
+          "level": "county",
+          "retrieved_at": "2026-11-16T04:57:25.028678+00:00",
+          "sha256": "956511da5ad39ca31ed3134c7beb0d26092ab647995a5db75920234a19eeba21",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2008/tl_2008_us_county.zip"
+        },
+        {
+          "include_states": [
+            "AK"
+          ],
+          "level": "county",
+          "retrieved_at": "2026-11-16T22:51:32.227745+00:00",
+          "sha256": "ad0c4801547023f0fb468f79d4fc4fcce2cfbc5a43568b9beadb201c5cd1acde",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2008/tl_2008_us_county00.zip"
+        }
+      ],
+      "version": "tiger2004-display-v1",
+      "vintage_note": "Approximate 2004 display: Census 2000 state outlines, 2008 county outlines outside Alaska, and 2000 Alaska county outlines to avoid post-2004 splits. This is not an exact 2004 boundary reconstruction. Original 2004 returns are joined only by their published historical identifiers; votes are not redistributed.",
+      "year": 2004,
+      "display_sha256": "2029f4fa5f1da85cc4dce7f1a82a4b1f24a83bcc348f8eac67300913d076c76f",
+      "repaired_features": 0
+    }
+  },
+  "2008-11-04:general": {
+    "src": "/election-previews/president-2008-general.png",
+    "label": "2008 presidential election \u2014 published state result preview",
+    "generated_at": "2026-11-17T03:12:17.286251+00:00",
+    "publications": [
+      {
+        "batch_id": "5fc06d5d-d58e-4ca4-93f5-62ed675b51f8",
+        "scope_key": "president:general:2008:state:TOTAL",
+        "status": "COMPLETE",
+        "published_at": "2026-11-15T05:08:02.364137Z",
+        "source": {
+          "release_id": "8778d3b2-1942-4452-b6a6-c4c5f0e4ee4a",
+          "name": "fec_presidential_official",
+          "version": "2008-summary",
+          "sha256": "2557034646f1bdb949ce79a51ba9b2d7d5422b176cae89fd615c7dacf8392f92",
+          "url": "https://www.fec.gov/documents/1660/2008pres.pdf",
+          "retrieved_at": "2026-11-15T04:05:09.626554Z"
+        },
+        "reporting_levels": [
+          "state"
+        ],
+        "reporting_modes": [
+          "TOTAL"
+        ],
+        "reference_release_id": null,
+        "correction_batch_id": null,
+        "correction_source": null,
+        "input_rows": null,
+        "accepted_rows": null,
+        "excluded_rows": null,
+        "coverage_scope": "publication",
+        "county_coverage_verified": false
+      }
+    ],
+    "boundary": {
+      "boundary_vintage": "2008-01-01",
+      "crs": "EPSG:4326",
+      "documentation_url": "https://www2.census.gov/geo/pdfs/maps-data/data/tiger/tgrshp2008/TGRSHP08.pdf",
+      "excluded_territory_features": {
+        "county": 91,
+        "state": 5
+      },
+      "precision_degrees": 1e-05,
+      "reporting_levels": [
+        "state",
+        "county"
+      ],
+      "simplification_degrees": 0.005,
+      "source_crs": "EPSG:4269",
+      "sources": [
+        {
+          "level": "state",
+          "retrieved_at": "2026-11-16T04:57:17.349286+00:00",
+          "sha256": "7e384585322cf39de8bfac2723c5cbba709da65050cee51ebe16460bcb007a8e",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2008/tl_2008_us_state.zip"
+        },
+        {
+          "level": "county",
+          "retrieved_at": "2026-11-16T04:57:25.028678+00:00",
+          "sha256": "956511da5ad39ca31ed3134c7beb0d26092ab647995a5db75920234a19eeba21",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2008/tl_2008_us_county.zip"
+        }
+      ],
+      "version": "tiger2008-display-v1",
+      "vintage_note": "Census 2008 current geography; generally January 1, 2008. Not a certification of election-day boundaries.",
+      "year": 2008,
+      "display_sha256": "751d591c315983b809e1a4a64ea7a89a8684e1db2a1dd47e1c4e6268d40ce85c",
+      "repaired_features": 0
+    }
+  },
+  "2012-11-06:general": {
+    "src": "/election-previews/president-2012-general.png",
+    "label": "2012 presidential election \u2014 published state result preview",
+    "generated_at": "2026-11-17T03:12:18.369036+00:00",
+    "publications": [
+      {
+        "batch_id": "77235a38-5cbb-40e9-b880-4669f589f5d6",
+        "scope_key": "president:general:2012:state:TOTAL",
+        "status": "COMPLETE",
+        "published_at": "2026-11-16T21:44:17.080963Z",
+        "source": {
+          "release_id": "0d67f06b-00bd-4634-95ab-99a303270292",
+          "name": "fec_presidential_official",
+          "version": "2012-summary",
+          "sha256": "8b3cb324ef9d14b69bd643681f753c3c3d5aa1c4b72eadbf03e010046ecf8067",
+          "url": "https://www.fec.gov/documents/1684/2012pres.xls",
+          "retrieved_at": "2026-11-16T21:28:52.874926Z"
+        },
+        "reporting_levels": [
+          "state"
+        ],
+        "reporting_modes": [
+          "TOTAL"
+        ],
+        "reference_release_id": null,
+        "correction_batch_id": null,
+        "correction_source": null,
+        "input_rows": null,
+        "accepted_rows": null,
+        "excluded_rows": null,
+        "coverage_scope": "publication",
+        "county_coverage_verified": false
+      }
+    ],
+    "boundary": {
+      "boundary_vintage": "2012-01-01",
+      "crs": "EPSG:4326",
+      "documentation_url": "https://www.census.gov/geographies/mapping-files/2012/geo/tiger-line-file.html",
+      "excluded_territory_features": {
+        "county": 91,
+        "state": 5
+      },
+      "precision_degrees": 1e-05,
+      "reporting_levels": [
+        "state",
+        "county"
+      ],
+      "simplification_degrees": 0.005,
+      "source_crs": "EPSG:4269",
+      "sources": [
+        {
+          "level": "state",
+          "retrieved_at": "2026-11-16T22:51:25.401380+00:00",
+          "sha256": "2b8f7ab4a78cd5fa1ceae021c26e2290f170e95c9f0ae1b6025e0265bf422cea",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2012/STATE/tl_2012_us_state.zip"
+        },
+        {
+          "level": "county",
+          "retrieved_at": "2026-11-16T22:51:33.805499+00:00",
+          "sha256": "88e28472a347bd7395d7c670a6ecce01236311154ae3b5e880914266e3081235",
+          "url": "https://www2.census.gov/geo/tiger/TIGER2012/COUNTY/tl_2012_us_county.zip"
+        }
+      ],
+      "version": "tiger2012-display-v1",
+      "vintage_note": "Census 2012 TIGER/Line state/county display geography. Generalized display shapes, not election-day certification, measurements or reconstructed returns.",
+      "year": 2012,
+      "display_sha256": "8ceddbfe93bc3c6e998024bbc68bf45173969af062160f099aca0dee14ae6490",
+      "repaired_features": 0
+    }
+  },
+  "2016-11-08:general": {
+    "src": "/election-previews/president-2016-general.png",
+    "label": "2016 presidential election \u2014 published state result preview",
+    "generated_at": "2026-11-17T03:12:20.240895+00:00",
+    "publications": [
+      {
+        "batch_id": "b096f6ec-55ef-42fe-9704-c253493aef5b",
+        "scope_key": "president:general:2016:state:TOTAL",
+        "status": "COMPLETE",
+        "published_at": "2026-11-16T21:44:17.080963Z",
+        "source": {
+          "release_id": "1f156914-65ff-454c-9a96-580338da5ffd",
+          "name": "fec_presidential_official",
+          "version": "2016-summary",
+          "sha256": "b4a1d1383602bc388cfbdf1fbea2476476d32e0b44b44236d3a3910fa9782eb6",
+          "url": "https://www.fec.gov/documents/1890/federalelections2016.xlsx",
+          "retrieved_at": "2026-11-16T21:28:53.363414Z"
+        },
+        "reporting_levels": [
+          "state"
+        ],
+        "reporting_modes": [
+          "TOTAL"
+        ],
+        "reference_release_id": null,
+        "correction_batch_id": null,
+        "correction_source": null,
+        "input_rows": null,
+        "accepted_rows": null,
+        "excluded_rows": null,
+        "coverage_scope": "publication",
+        "county_coverage_verified": false
+      }
+    ],
+    "boundary": {
+      "boundary_vintage": "2016-01-01",
+      "crs": "EPSG:4326",
+      "documentation_url": "https://www.census.gov/geographies/mapping-files/2016/geo/carto-boundary-file.html",
+      "excluded_territory_features": {
+        "county": 91,
+        "state": 5
+      },
+      "precision_degrees": 1e-05,
+      "reporting_levels": [
+        "state",
+        "county"
+      ],
+      "simplification_degrees": 0.005,
+      "source_crs": "EPSG:4269",
+      "sources": [
+        {
+          "level": "state",
+          "retrieved_at": "2026-11-16T22:51:26.793135+00:00",
+          "sha256": "7a8d0e6ad646583b1541b818e9bb64176a129ecbbf62c68cdaa53a09f5abf37d",
+          "url": "https://www2.census.gov/geo/tiger/GENZ2016/shp/cb_2016_us_state_500k.zip"
+        },
+        {
+          "level": "county",
+          "retrieved_at": "2026-11-16T22:51:28.035131+00:00",
+          "sha256": "abc95214dc5364b59675e6c604175dc1b28bd42999501b33a0e31466135e5f57",
+          "url": "https://www2.census.gov/geo/tiger/GENZ2016/shp/cb_2016_us_county_500k.zip"
+        }
+      ],
+      "version": "tiger2016-display-v1",
+      "vintage_note": "Census 2016 cartographic 1:500,000 state/county display geography. Generalized display shapes, not election-day certification, measurements or reconstructed returns.",
+      "year": 2016,
+      "display_sha256": "19137531519b298250f371fab527e3001bc6aa2e8175200ee0241935187e8ff8",
+      "repaired_features": 0
+    }
+  },
+  "2020-11-03:general": {
+    "src": "/election-previews/president-2020-general.png",
+    "label": "2020 presidential election \u2014 published state result preview",
+    "generated_at": "2026-11-17T03:12:21.981174+00:00",
+    "publications": [
+      {
+        "batch_id": "8efef534-a06b-43e5-acf5-4d109cc3ee39",
+        "scope_key": "president:general:2020:state:TOTAL",
+        "status": "COMPLETE",
+        "published_at": "2026-11-16T21:44:17.080963Z",
+        "source": {
+          "release_id": "f47eb797-c1fc-4d86-9028-4d1ff7e26ecf",
+          "name": "fec_presidential_official",
+          "version": "2020-summary",
+          "sha256": "5073b6d2c76c86c941508dfb1a11cc497e8529b0068c5132aceb0f385c19352e",
+          "url": "https://www.fec.gov/documents/4228/federalelections2020.xlsx",
+          "retrieved_at": "2026-11-16T21:28:54.141673Z"
+        },
+        "reporting_levels": [
+          "state"
+        ],
+        "reporting_modes": [
+          "TOTAL"
+        ],
+        "reference_release_id": null,
+        "correction_batch_id": null,
+        "correction_source": null,
+        "input_rows": null,
+        "accepted_rows": null,
+        "excluded_rows": null,
+        "coverage_scope": "publication",
+        "county_coverage_verified": false
+      }
+    ],
+    "boundary": {
+      "boundary_vintage": "2020-01-01",
+      "crs": "EPSG:4326",
+      "documentation_url": "https://www.census.gov/geographies/mapping-files/2020/geo/carto-boundary-file.html",
+      "excluded_territory_features": {
+        "county": 91,
+        "state": 5
+      },
+      "precision_degrees": 1e-05,
+      "reporting_levels": [
+        "state",
+        "county"
+      ],
+      "simplification_degrees": 0.005,
+      "source_crs": "EPSG:4269",
+      "sources": [
+        {
+          "level": "state",
+          "retrieved_at": "2026-11-16T22:51:28.655454+00:00",
+          "sha256": "dcc877984a3e4d59c1ee8d068b6681517c545e0c1827b7e78a7c2c7cbb167da6",
+          "url": "https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_state_500k.zip"
+        },
+        {
+          "level": "county",
+          "retrieved_at": "2026-11-16T22:51:30.432226+00:00",
+          "sha256": "1a45c87a5a0c322514c9d5c9ebcba5eb9df313bd38962f6db56107ba0ccacc6f",
+          "url": "https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_county_500k.zip"
+        }
+      ],
+      "version": "tiger2020-display-v1",
+      "vintage_note": "Census 2020 cartographic 1:500,000 state/county display geography. Generalized display shapes, not election-day certification, measurements or reconstructed returns.",
+      "year": 2020,
+      "display_sha256": "302775fb1cd612aedd0207b6b0ee58b28c8e91fb360401a1de25f667b79789f4",
+      "repaired_features": 0
+    }
+  },
+  "2024-11-05:general": {
+    "src": "/election-previews/president-2024-general.png",
+    "label": "2024 presidential election \u2014 published state result preview",
+    "generated_at": "2026-11-17T03:12:23.814718+00:00",
+    "publications": [
+      {
+        "batch_id": "0f6a781f-7761-4181-935f-2a7a20e000dc",
+        "scope_key": "president:general:2024:state:TOTAL",
+        "status": "COMPLETE",
+        "published_at": "2026-11-16T21:44:17.080963Z",
+        "source": {
+          "release_id": "679f3a18-886b-4efa-b4da-10b7bcb8f7eb",
+          "name": "fec_presidential_official",
+          "version": "2024-summary",
+          "sha256": "68acdee2924d771b92a05cd950dec850b462c633c05563207ac7e206116e7366",
+          "url": "https://www.fec.gov/documents/5645/2024presgeresults.xlsx",
+          "retrieved_at": "2026-11-16T21:28:57.059585Z"
+        },
+        "reporting_levels": [
+          "state"
+        ],
+        "reporting_modes": [
+          "TOTAL"
+        ],
+        "reference_release_id": null,
+        "correction_batch_id": null,
+        "correction_source": null,
+        "input_rows": null,
+        "accepted_rows": null,
+        "excluded_rows": null,
+        "coverage_scope": "publication",
+        "county_coverage_verified": false
+      }
+    ],
+    "boundary": {
+      "reporting_levels": [
+        "state",
+        "county"
+      ],
+      "version": "tiger2024-display-v1",
+      "year": 2024,
+      "boundary_vintage": "2024-01-01",
+      "crs": "EPSG:4326",
+      "documentation_url": "https://www.census.gov/geographies/mapping-files/2024/geo/carto-boundary-file.html",
+      "excluded_territory_features": {
+        "county": 91,
+        "state": 5
+      },
+      "precision_degrees": 1e-05,
+      "simplification_degrees": 0.005,
+      "source_crs": "EPSG:4269",
+      "sources": [
+        {
+          "level": "state",
+          "retrieved_at": "2026-11-16T22:51:31.203514+00:00",
+          "sha256": "3e81cbb6cf5f60d9b01ef3e730afa14d61ce5f784252a0b33a696135e71447bc",
+          "url": "https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_state_500k.zip"
+        },
+        {
+          "level": "county",
+          "retrieved_at": "2026-11-16T22:51:32.808930+00:00",
+          "sha256": "da4051717caec55c75e3748c3608c2a3dbde8d1ff401bbaf4f952e3c3fb63ef1",
+          "url": "https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_county_500k.zip"
+        }
+      ],
+      "vintage_note": "Census 2024 cartographic 1:500,000 state/county display geography. Generalized display shapes, not election-day certification, measurements or reconstructed returns.",
+      "display_sha256": "51be3231f58b10bc3816e5202533e38bd1a5c9ae81e5e90c79d2acc3274cb571",
+      "repaired_features": 0
+    }
+  }
+}

@@ -40,12 +40,11 @@ source buckets, without inferred person or party identities. State links open
 that state's county returns. The county view reuses `/api/v1/results` with
 `reporting_level=county` and `reporting_mode=TOTAL`.
 
-The shared filter panel offers the seven years and state/county grain on these
-pages. Year or grain changes clear incompatible exact-unit and page context;
-year links preserve the state and reporting level. Clear filters stays on the
-selected year. Navigation to the general results browser removes the state-only
-reporting grain. Requests abort on selection changes, and late responses cannot
-replace another election's data.
+Election pages use local year links, State totals/County returns links, state
+result links and map drill-down. There is no global filter panel or applied-filter
+strip. Year links preserve the local state and reporting view while clearing
+exact-unit and page-offset context. Header navigation opens a fresh section with
+no inherited year, office, state or reporting-level selection.
 
 `/api/v1/presidential-coverage` supplies election dates, publication availability,
 county status/verification, exclusions, missing states, active-source mismatch

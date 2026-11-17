@@ -67,7 +67,7 @@ describe('presidential election discovery and URLs', () => {
     const fetch = mockData();
     const user = userEvent.setup();
     open('/presidential');
-    expect(within(screen.getByRole('navigation', { name: 'Primary navigation' })).getByRole('link', { name: 'Presidential' })).toHaveAttribute('aria-current', 'page');
+    expect(within(screen.getByRole('navigation', { name: 'Primary navigation' })).getByRole('button', { name: 'President' })).toHaveAttribute('aria-expanded', 'false');
     for (const year of presidentialYears) expect(screen.getByRole('link', { name: String(year) })).toHaveAttribute('href', expect.stringContaining(`/presidential/${year}?`));
     expect(fetch).not.toHaveBeenCalled();
     await user.click(screen.getByRole('link', { name: '2020' }));
@@ -128,34 +128,29 @@ describe('presidential election discovery and URLs', () => {
     expect(screen.queryByText('County nominee 2008')).not.toBeInTheDocument();
   });
 
-  it('uses contextual shared filters and clears back to the same presidential year', async () => {
-    mockData();
-    const user = userEvent.setup();
-    open(`/presidential/2008?state_code=NY&jurisdiction_id=${jurisdictionId}&offset=25`);
+  it('navigates reporting views within an election without a global filter panel', async () => {
+    mockData(); const user=userEvent.setup();
+    open('/presidential/2008?state_code=NY');
     await screen.findByText('Source nominee 2008');
-    await user.click(screen.getByRole('button', { name: 'Show filters' }));
-    expect(screen.queryByLabelText('Office')).not.toBeInTheDocument();
-    await user.selectOptions(screen.getByLabelText('Election year'), '2016');
-    await user.selectOptions(screen.getByLabelText('Reporting level'), 'county');
-    await user.click(screen.getByRole('button', { name: 'Apply filters' }));
-    await screen.findByText('County nominee 2016');
-    expect(screen.getByTestId('location')).toHaveTextContent('/presidential/2016?');
-    expect(screen.getByTestId('location')).not.toHaveTextContent('jurisdiction_id=');
-    expect(screen.getByTestId('location')).not.toHaveTextContent('offset=');
-    await user.click(screen.getByRole('button', { name: 'Show filters' }));
-    await user.click(screen.getByRole('link', { name: 'Clear filters' }));
-    await screen.findByText('Source nominee 2016');
-    expect(screen.getByTestId('location')).not.toHaveTextContent('state_code=');
+    expect(screen.queryByRole('button', { name:'Show filters' })).not.toBeInTheDocument();
+    await user.click(screen.getByRole('link', { name:'County returns' }));
+    await screen.findByText('County nominee 2008');
+    expect(screen.getByTestId('location')).toHaveTextContent('state_code=NY');
+    await user.click(screen.getByRole('link', { name:'State totals' }));
+    await screen.findByText('Source nominee 2008');
   });
 
-  it('leaves state authority pages for the existing county browser with valid filters', async () => {
+  it('starts a fresh candidate section from a presidential page', async () => {
     const fetch = mockData();
     const user = userEvent.setup();
     open('/presidential/2024?state_code=NY');
     await screen.findByText('Source nominee 2024');
+    await user.click(screen.getByRole('button', { name: 'Search' }));
     await user.click(screen.getByRole('link', { name: 'Candidates' }));
-    await screen.findByText('County nominee 2024');
+    await screen.findByText('County nominee 0');
     expect(fetch.mock.calls.at(-1)![0]).toContain('reporting_level=county');
+    expect(fetch.mock.calls.at(-1)![0]).not.toContain('state_code=NY');
+    expect(screen.getByTestId('location').textContent).toBe('/candidates');
   });
 
   it.each(['/presidential/1996', '/presidential/2023', '/presidential/nope'])('explains unsupported years without requests: %s', path => {
