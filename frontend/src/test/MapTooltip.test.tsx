@@ -1,11 +1,36 @@
-import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
-import { tooltipPosition } from "../geography/MapTooltip";
+import { act, render, screen } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
+import { MapTooltip, tooltipPosition } from "../geography/MapTooltip";
 import { ElectionTooltip } from "../map/ElectionTooltip";
 import type { ElectionMap, MapUnit } from "../map/types";
 import { publication } from "./fixtures";
 
 describe("map popover positioning", () => {
+  it('reuses measured dimensions during pointer movement and measures resized content', () => {
+    let resized = () => {};
+    const observe = vi.fn(), disconnect = vi.fn(), created = vi.fn();
+    vi.stubGlobal('ResizeObserver', class {
+      constructor(callback:()=>void) { resized=callback; created(); }
+      observe=observe; disconnect=disconnect;
+    });
+    let width=360;
+    const measure=vi.spyOn(HTMLElement.prototype,'getBoundingClientRect').mockImplementation(() =>
+      ({ left:0,top:0,width,height:200,right:width,bottom:200,x:0,y:0,toJSON:()=>({}) }));
+    const props={ id:'position-test', children:<p>Candidate</p>, onEnter:vi.fn(), onLeave:vi.fn() };
+    const view=render(<MapTooltip {...props} anchor={{ x:100,y:100 }} />);
+    const tooltip=screen.getByRole('tooltip');
+    expect(tooltip).toHaveStyle({ left:'116px', top:'116px' });
+    for (let i=0;i<20;i++) view.rerender(<MapTooltip {...props} anchor={{ x:900,y:100+i }} />);
+    expect(measure).toHaveBeenCalledOnce();
+    expect(created).toHaveBeenCalledOnce();
+    expect(tooltip).toHaveAttribute('data-side','left');
+    width=400;
+    act(() => resized());
+    expect(measure).toHaveBeenCalledTimes(2);
+    expect(tooltip).toHaveStyle({ left:'484px' });
+    view.unmount();
+    expect(disconnect).toHaveBeenCalledOnce();
+  });
   it.each([
     [100, 100],
     [990, 100],

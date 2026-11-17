@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useLayoutEffect, useRef } from "react";
 import type { ReactNode } from "react";
 import { createPortal } from "react-dom";
 
@@ -42,18 +42,24 @@ export function MapTooltip({
   onLeave: () => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [position, setPosition] = useState({ x: 8, y: 8, side: "right" });
+  const currentAnchor = useRef(anchor);
+  const size = useRef({ width: 0, height: 0 });
+  const place = useCallback(() => {
+    const element = ref.current;
+    if (!element) return;
+    const position = tooltipPosition(currentAnchor.current, size.current, {
+      width: window.innerWidth, height: window.innerHeight,
+    });
+    element.style.left = `${position.x}px`;
+    element.style.top = `${position.y}px`;
+    element.dataset.side = position.side;
+  }, []);
   useLayoutEffect(() => {
     const element = ref.current;
     if (!element) return;
     const measure = () => {
-      const rect = element.getBoundingClientRect();
-      setPosition(
-        tooltipPosition(anchor, rect, {
-          width: window.innerWidth,
-          height: window.innerHeight,
-        }),
-      );
+      size.current = element.getBoundingClientRect();
+      place();
     };
     measure();
     const observer =
@@ -61,16 +67,22 @@ export function MapTooltip({
         ? undefined
         : new ResizeObserver(measure);
     observer?.observe(element);
-    return () => observer?.disconnect();
-  }, [anchor]);
+    window.addEventListener('resize', measure);
+    return () => {
+      observer?.disconnect();
+      window.removeEventListener('resize', measure);
+    };
+  }, [place, children]);
+  useLayoutEffect(() => {
+    currentAnchor.current = anchor;
+    place();
+  }, [anchor, place]);
   return createPortal(
     <div
       ref={ref}
       id={id}
       role="tooltip"
       className="map-tooltip"
-      data-side={position.side}
-      style={{ left: position.x, top: position.y }}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       onFocusCapture={onEnter}

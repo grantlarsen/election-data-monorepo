@@ -1,7 +1,6 @@
 /* Candidate profile layout. Other explorer routes retain their existing styles. */
 main.candidate-page { padding: 0 0 24px; background: #fff; }
 .candidate-page > .page-heading, .candidate-page > .notice { margin-inline: 24px; }
-.candidate-page > .selection-strip { margin: 20px 28px 0; }
 .candidate-profile { --profile-ink: #152b3d; --profile-muted: #5e6f80; --profile-green: #0d4941; --profile-line: #e5e8e9; color: var(--profile-ink); overflow-wrap: anywhere; font-size: .9rem; }
 .candidate-profile a { color: var(--profile-green); }
 .candidate-profile p { line-height: 1.6; }

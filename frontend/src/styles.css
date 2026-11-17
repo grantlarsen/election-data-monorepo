@@ -16,13 +16,6 @@ button, .primary-nav a, summary { cursor: pointer; }
 .primary-nav a { padding: 8px 2px; color: var(--muted); border-bottom: 3px solid transparent; text-decoration: none; font-weight: 600; }
 .primary-nav a.active { border-color: var(--green); color: var(--green); }
 .workspace { display: grid; grid-template-columns: minmax(0, 1fr); max-width: 1600px; margin: 0 auto; min-height: 75vh; }
-.workspace.filters-open { grid-template-columns: 255px minmax(0, 1fr); }
-.filter-toggle { background: white; color: var(--green); padding: 7px 14px; }
-.filter-toggle:hover { background: #e9eee6; }
-.filter-panel { padding: 16px; border-right: 1px solid var(--border); background: #eef1e9; }
-.filter-panel label { margin-top: 10px; }
-.panel-heading { border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 10px; }
-.panel-heading h2 { font-size: 1rem; margin: 0 0 3px; }
 .eyebrow { color: var(--muted); font-size: .73rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 650; }
 label { display: block; font-size: .83rem; font-weight: 600; margin-top: 17px; }
 input, select { display: block; width: 100%; min-height: 42px; margin-top: 6px; border: 1px solid #aabaae; border-radius: 4px; padding: 8px 10px; background: white; color: #203431; }
@@ -35,8 +28,6 @@ form > button { width: 100%; margin-top: 22px; }
 details { font-size: .8rem; margin-top: 14px; }
 summary { color: #234e43; padding: 6px 0; }
 main { min-width: 0; padding: 16px 24px 24px; }
-.selection-strip { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); }
-.selection-strip span { font-size: .74rem; border: 1px solid var(--border); background: white; border-radius: 3px; padding: 4px 9px; overflow-wrap: anywhere; }
 .page-heading { padding: 25px 0 20px; }
 .page-heading .eyebrow { margin: 0 0 10px; }
 h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(2rem, 3.3vw, 3rem); letter-spacing: -.035em; line-height: 1.15; margin: 0 0 15px; }
@@ -166,8 +157,8 @@ tbody th { font-weight: 600; }
 .candidate-line { display: block; white-space: nowrap; font-size: .72rem; margin-bottom: 7px; }
 .candidate-line > span { display: block; color: var(--muted); font-variant-numeric: tabular-nums; }
 .county-detail { background: white; padding: 14px; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; font-size: .85rem; }
-@media (max-width: 1000px) { .workspace.filters-open { grid-template-columns: 230px minmax(0, 1fr); } .guide-grid { grid-template-columns: 1fr; } }
-@media (max-width: 700px) { .site-header { padding: 8px 12px; } .header-actions { justify-content: space-between; width: 100%; gap: 8px; } .primary-nav { gap: 16px; font-size: .9rem; } .filter-toggle { padding: 7px 10px; font-size: .8rem; } .workspace { display: block; } .filter-panel { border-right: 0; border-bottom: 1px solid var(--border); padding: 12px; } .filter-panel form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; } .filter-panel .field-help, .filter-panel details { grid-column: 1 / -1; } form > button { margin-top: 12px; } .reset-link { align-self: end; } main { padding: 12px; } .map-placeholder { padding: 16px; } .map-mark { display: none; } .selection-strip { gap: 5px; } .map-breadcrumb { margin-left: 0; } .state-summary { grid-template-columns: 1fr; padding: 10px; gap: 8px; } }
+@media (max-width: 1000px) {  .guide-grid { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .site-header { padding: 8px 12px; } .header-actions { justify-content: space-between; width: 100%; gap: 8px; } .primary-nav { gap: 16px; font-size: .9rem; }  .workspace { display: block; }    form > button { margin-top: 12px; } .reset-link { align-self: end; } main { padding: 12px; } .map-placeholder { padding: 16px; } .map-mark { display: none; }  .map-breadcrumb { margin-left: 0; } .state-summary { grid-template-columns: 1fr; padding: 10px; gap: 8px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
 @media (max-width: 700px) { .us-map-heading { position: static; display: flex; justify-content: flex-end; padding: 4px 6px; } }
 .map-presets { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0; font-size: .8rem; }

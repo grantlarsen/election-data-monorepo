@@ -1,6 +1,7 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { describe, expect, it, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+import { mockAnimationFrames } from './animationFrames';
 import { geoArea, geoContains } from "d3-geo";
 import greatLakes from "../geography/data/great-lakes.json";
 import type { FeatureCollection, Polygon, MultiPolygon } from "geojson";
@@ -67,6 +68,113 @@ function rows() {
 }
 
 describe("generic United States mapping", () => {
+  let frames: ReturnType<typeof mockAnimationFrames>;
+  beforeEach(() => { frames = mockAnimationFrames(); });
+  function wheel(target: Element, options: object) {
+    const result = fireEvent.wheel(target, options);
+    frames.flush();
+    return result;
+  }
+  it('reuses labels, shapes and tooltip content while coalescing pointer motion', () => {
+    const featureLabel = vi.fn(feature => [feature.properties.state_code]);
+    const fill = vi.fn(() => '#abc');
+    const describe = vi.fn(row => row?.value || '');
+    const tooltip = vi.fn(row => <span>{row?.value}</span>);
+    render(<UnitedStatesMap features={features} data={matchJurisdictions(features, rows())}
+      title="Cached map" fill={fill} describe={describe} tooltip={tooltip}
+      onSelect={vi.fn()} featureLabel={featureLabel} attribution="Source" />);
+    expect(featureLabel).toHaveBeenCalledTimes(3);
+    const path = screen.getByRole('button', { name: 'CA' });
+    const bounds = vi.spyOn(path, 'getBoundingClientRect');
+    fireEvent.mouseEnter(path, { clientX: 220, clientY: 180 });
+    expect(bounds).not.toHaveBeenCalled();
+    [featureLabel, fill, describe, tooltip].forEach(fn => fn.mockClear());
+    for (let i=0;i<20;i++) fireEvent.mouseMove(path, { clientX:240+i, clientY:200+i });
+    expect(frames.pending.size).toBe(1);
+    expect(screen.getByRole('tooltip')).toHaveStyle({ left:'236px', top:'196px' });
+    frames.flush();
+    expect(screen.getByRole('tooltip')).toHaveStyle({ left:'275px', top:'235px' });
+    [featureLabel, fill, describe, tooltip].forEach(fn => expect(fn).not.toHaveBeenCalled());
+    fireEvent.click(screen.getByRole('button', { name:'Zoom in' }));
+    expect(featureLabel).not.toHaveBeenCalled();
+    fill.mockClear(); describe.mockClear();
+    fireEvent.keyDown(screen.getByRole('group', { name:'Cached map' }), { key:'ArrowRight' });
+    expect(fill).not.toHaveBeenCalled();
+    expect(describe).not.toHaveBeenCalled();
+  });
+
+  it('accumulates wheel bursts and applies discrete controls to the latest queued camera', () => {
+    render(<UnitedStatesMap features={features} data={matchJurisdictions(features, rows())}
+      title="Queued camera" fill={() => '#abc'} describe={row => row?.value || ''} tooltip={() => ''}
+      onSelect={vi.fn()} attribution="Source" />);
+    const map = screen.getByRole('group', { name:'Queued camera' });
+    vi.spyOn(map, 'getBoundingClientRect').mockReturnValue({ left:0,top:0,width:960,height:600,right:960,bottom:600,x:0,y:0,toJSON:()=>({}) });
+    for (let i=0;i<3;i++) fireEvent.wheel(map, { deltaY:-60, clientX:720, clientY:420 });
+    expect(map).toHaveAttribute('viewBox','0 0 960 600');
+    expect(frames.pending.size).toBe(1);
+    frames.flush();
+    const view = map.getAttribute('viewBox')!.split(' ').map(Number);
+    expect(view[2]).toBeCloseTo(960 / Math.exp(.36));
+    expect(view[0] + .75*view[2]).toBeCloseTo(720);
+    fireEvent.wheel(map, { deltaY:-60, clientX:480,clientY:300 });
+    fireEvent.click(screen.getByRole('button', { name:'Zoom in' }));
+    expect(frames.pending.size).toBe(0);
+    expect(map.getAttribute('viewBox')!.split(' ').map(Number)[2]).toBeCloseTo(960 / (Math.exp(.48)*1.5));
+    fireEvent.wheel(map, { deltaY:-60,clientX:480,clientY:300 });
+    fireEvent.click(screen.getByRole('button', { name:'Reset zoom' }));
+    frames.flush();
+    expect(map).toHaveAttribute('viewBox','0 0 960 600');
+  });
+
+  it('cancels queued motion when boundaries change or the map unmounts', () => {
+    const props = { features, data:matchJurisdictions(features, rows()), title:'Changing map',
+      fill:()=> '#abc', describe:()=> '', tooltip:()=> '', onSelect:vi.fn(), attribution:'Source' };
+    const view = render(<UnitedStatesMap {...props} />);
+    const map = screen.getByRole('group', { name:'Changing map' });
+    vi.spyOn(map, 'getBoundingClientRect').mockReturnValue({ left:0,top:0,width:960,height:600,right:960,bottom:600,x:0,y:0,toJSON:()=>({}) });
+    fireEvent.wheel(map, { deltaY:-120,clientX:400,clientY:300 });
+    expect(frames.pending.size).toBe(1);
+    view.rerender(<UnitedStatesMap {...props} features={{ ...features }} />);
+    expect(frames.pending.size).toBe(0);
+    frames.flush();
+    expect(map).toHaveAttribute('viewBox','0 0 960 600');
+    fireEvent.wheel(map, { deltaY:-120,clientX:400,clientY:300 });
+    view.unmount();
+    expect(frames.pending.size).toBe(0);
+  });
+
+  it('keeps the final drag position and suppresses its click without suppressing the next selection', () => {
+    vi.stubGlobal('PointerEvent', class extends MouseEvent {
+      pointerId: number; isPrimary: boolean;
+      constructor(type:string, options:PointerEventInit = {}) {
+        super(type, options); this.pointerId=options.pointerId || 0; this.isPrimary=options.isPrimary !== false;
+      }
+    });
+    const select = vi.fn();
+    render(<UnitedStatesMap features={features} data={matchJurisdictions(features, rows())}
+      title="Drag map" fill={() => '#abc'} describe={row => row?.value || ''} tooltip={() => ''}
+      onSelect={select} attribution="Source" />);
+    const map = screen.getByRole('group', { name:'Drag map' });
+    vi.spyOn(map, 'getBoundingClientRect').mockReturnValue({ left:0,top:0,width:960,height:600,right:960,bottom:600,x:0,y:0,toJSON:()=>({}) });
+    Object.assign(map, { setPointerCapture:vi.fn(), hasPointerCapture:()=>true, releasePointerCapture:vi.fn() });
+    fireEvent.click(screen.getByRole('button', { name:'Zoom in' }));
+    const before=map.getAttribute('viewBox')!.split(' ').map(Number);
+    fireEvent.pointerDown(map, { pointerId:7,clientX:480,clientY:300,button:0 });
+    for (let i=1;i<=30;i++) fireEvent.pointerMove(map, { pointerId:7,clientX:480+i,clientY:300 });
+    expect(frames.pending.size).toBe(1);
+    fireEvent.pointerUp(map, { pointerId:7 });
+    frames.flush();
+    const after=map.getAttribute('viewBox')!.split(' ').map(Number);
+    expect(after[0]).toBeCloseTo(before[0]-20);
+    expect(map).not.toHaveClass('is-panning');
+    const path=screen.getByRole('button', { name:'CA' });
+    fireEvent.click(path);
+    expect(select).not.toHaveBeenCalled();
+    fireEvent.pointerDown(map, { pointerId:8,clientX:450,clientY:300,button:0 });
+    fireEvent.pointerUp(map, { pointerId:8 });
+    fireEvent.click(path);
+    expect(select).toHaveBeenCalledOnce();
+  });
   it('allows keyboard access to tooltip candidate links and returns focus to the map with Escape', async () => {
     render(<UnitedStatesMap features={features} data={matchJurisdictions(features, rows())}
       title="Linked map" fill={() => '#abc'} describe={row => row?.value || ''}
@@ -87,21 +195,21 @@ describe("generic United States mapping", () => {
       onSelect={vi.fn()} focusSelection={false} attribution="Source" />);
     const map = screen.getByRole('group', { name: 'Wheel map' });
     vi.spyOn(map, 'getBoundingClientRect').mockReturnValue({ left: 0, top: 0, width: 960, height: 600, right: 960, bottom: 600, x: 0, y: 0, toJSON: () => ({}) });
-    expect(fireEvent.wheel(map, { deltaY: -120, clientX: 720, clientY: 420, cancelable: true })).toBe(false);
+    expect(wheel(map, { deltaY: -120, clientX: 720, clientY: 420, cancelable: true })).toBe(false);
     const view = map.getAttribute('viewBox')!.split(' ').map(Number);
     expect(view[2]).toBeLessThan(960);
     expect(view[0] + .75 * view[2]).toBeCloseTo(720);
     expect(view[1] + .7 * view[3]).toBeCloseTo(420);
     fireEvent.click(screen.getByRole('button', { name: 'Reset zoom' }));
-    fireEvent.wheel(map, { deltaY: -7.5, deltaMode: 1, clientX: 720, clientY: 420 });
+    wheel(map, { deltaY: -7.5, deltaMode: 1, clientX: 720, clientY: 420 });
     expect(map.getAttribute('viewBox')!.split(' ').map(Number)[2]).toBeCloseTo(view[2]);
     const before = map.getAttribute('viewBox');
-    expect(fireEvent.wheel(map, { deltaY: -120, ctrlKey: true, cancelable: true })).toBe(true);
+    expect(wheel(map, { deltaY: -120, ctrlKey: true, cancelable: true })).toBe(true);
     expect(map).toHaveAttribute('viewBox', before!);
-    for (let i = 0; i < 20; i++) fireEvent.wheel(map, { deltaY: -240, clientX: 480, clientY: 300 });
+    for (let i = 0; i < 20; i++) wheel(map, { deltaY: -240, clientX: 480, clientY: 300 });
     expect(map.getAttribute('viewBox')!.split(' ').map(Number)[2]).toBe(240);
-    expect(fireEvent.wheel(map, { deltaY: -240, cancelable: true })).toBe(false);
-    for (let i = 0; i < 20; i++) fireEvent.wheel(map, { deltaY: 240, clientX: 480, clientY: 300 });
+    expect(wheel(map, { deltaY: -240, cancelable: true })).toBe(false);
+    for (let i = 0; i < 20; i++) wheel(map, { deltaY: 240, clientX: 480, clientY: 300 });
     expect(map).toHaveAttribute('viewBox', '0 0 960 600');
   });
   it('pans a zoomed map with arrow keys, preserves its center on zoom-in, and resets the viewport', () => {
@@ -294,6 +402,7 @@ describe("generic United States mapping", () => {
     expect(tooltip.parentElement).toBe(document.body);
     expect(tooltip).toHaveStyle({ left: "236px", top: "196px" });
     fireEvent.mouseMove(california, { clientX: 240, clientY: 200 });
+    frames.flush();
     expect(tooltip).toHaveStyle({ left: "256px", top: "216px" });
     fireEvent.keyDown(window, { key: "Escape" });
     expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
