@@ -80,6 +80,8 @@ routes while preserving API errors. External publication is outside this task.
 | `/map` | Federal election map; presidential states drill into counties, reporting units open details |
 | `/presidential` | Discover the seven presidential general elections from 2000 through 2024 |
 | `/presidential/:year` | Year-specific state totals, county drill-down, sources, coverage and map link |
+| `/senate/2026/results` | Interactive state map, daily cached provisional Senate counts, state/status filters, source timestamps and call/certification labels |
+| `/senate/2026/races/:stateCode` | State race page with all candidates, profile links, incumbent evidence and provisional source context |
 | `/contests` | Paginated modeled contests with source/publication labels |
 | `/contests/:contestId` | Published returns scoped by canonical contest UUID |
 | `/candidates` | Published result rows, with separately labeled anonymous buckets |
@@ -245,8 +247,12 @@ categories and leadership PAC totals are not shown as working controls.
 
 The portrait from the user-supplied saved reference is bundled locally in
 `frontend/src/assets/people/`, with its source credit in `candidatePresentation.ts`.
-Only a resolved identity with its matching FEC identifier selects that image;
-other profiles use initials, with a fallback if image loading fails. Name casing
+Only a resolved identity with its matching FEC identifier selects that reference image.
+For the 2026 Senate source, [reviewed cached portraits](data/candidate_portraits.md)
+are selected by explicit source-candidacy UUID without resolving a canonical
+person or financial identity. The shared `CandidateAvatar` also supplies state-table
+and popover thumbnails. Profiles without reviewed media retain initials, and
+failed thumbnails retain initials or party dots. Name casing
 is a display transformation; source names and canonical IDs remain unchanged.
 Financial chart geometry uses the existing reported/adjusted metrics, including
 negative or zero values. Exact decimal strings are preserved in the table and

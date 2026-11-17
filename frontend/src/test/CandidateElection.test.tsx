@@ -24,6 +24,24 @@ const map: ElectionMap = {
 };
 
 describe('most recent candidate election', () => {
+  it('shows current Senate returns and profile links without requesting a canonical historical map', () => {
+    vi.mocked(useElectionMap).mockClear();
+    render(<MemoryRouter><CandidateElection profile={{ ...candidateProfile, provisional_election: {
+      checked_at: '2026-11-17T12:00:00Z', retrieved_at: '2026-11-17T12:00:00Z', stale: false, sha256: 'a'.repeat(64),
+      race: { id: 'SEN-AK', state_code: 'AK', state_name: 'Alaska', seat_class: 2, special: false,
+        status: 'called', total_votes: 100_000, candidates: [
+          { name: 'Incumbent candidate', party: 'R', votes: 99_999, share_pct: 99.999, outcome: 'won', incumbent: true, candidacy_id: 'source-two' },
+          { name: 'Current candidate', party: 'I', votes: 1, share_pct: 0.001, outcome: '', candidacy_id: candidacyId },
+        ], count_updated_at: null, source_read_at: '2026-11-16T12:00:00Z', called_at: null,
+        source: 'civicAPI', source_url: 'https://civicapi.org/race/example', page_url: 'https://www.callthemap.com/results/senate/ak' },
+    } }} /></MemoryRouter>);
+    expect(screen.getByRole('table', { name: 'Alaska Senate candidate results' })).toHaveTextContent('0.00%');
+    expect(screen.getByText('Incumbent')).toBeVisible();
+    expect(screen.getByRole('link', { name: 'Alaska' })).toHaveAttribute('href', '/senate/2026/races/AK');
+    expect(screen.getByRole('link', { name: 'Current candidate' }).getAttribute('href')).toContain(`/candidates/${candidacyId}`);
+    expect(screen.getByRole('link', { name: 'Current candidate' }).closest('tr')).toHaveClass('profile-current-candidate');
+    expect(useElectionMap).not.toHaveBeenCalled();
+  });
   it('retains geographic context while highlighting only the latest contest and keeping its results scoped', async () => {
     vi.mocked(useElectionMap).mockReturnValue({ data: map, retry: vi.fn() });
     render(<MemoryRouter><CandidateElection profile={{ ...candidateProfile,

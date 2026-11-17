@@ -8,7 +8,7 @@ export const navigation: { label: string; items: NavigationItem[] }[] = [
     { label:'Historic Data', to:'/presidential/history' },
   ] },
   { label:'Senate', items:[
-    { label:'2026 Election Results', to:'/senate/2026/results', planned:true },
+    { label:'2026 Election Results', to:'/senate/2026/results' },
     { label:'2028 Electoral Map', to:'/senate/2028/map', planned:true },
     { label:'Historic Data', to:'/senate/history', planned:true },
   ] },

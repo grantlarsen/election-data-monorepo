@@ -1,0 +1,38 @@
+{
+  "year": 2026,
+  "as_of": "2026-11-03",
+  "reviewed_at": "2026-11-17",
+  "roster_sha256": {
+    "2": "cd9645df04c32922c9c78bfd0798b09d1595aa895f9cc2d865f6ebaee6c4e48a",
+    "3": "141f5e82cdfeefd9e790f0675ec92dceeef4ea9ae1c890c2d55a877a298fb230"
+  },
+  "method": "Reviewed source labels within the same state and seat class against the official Senate Class II and III rosters. This annotates source candidacies only; it does not resolve canonical people or FEC identities. Unlisted labels remain unknown, not confirmed challengers.",
+  "sources": {
+    "2": "https://www.senate.gov/senators/Class_II.htm",
+    "3": "https://www.senate.gov/senators/Class_III.htm"
+  },
+  "candidates": [
+    {"state": "AK", "name": "Dan Sullivan", "party": "R", "class": 2, "roster_name": "Sullivan, Dan"},
+    {"state": "AR", "name": "Tom Cotton", "party": "R", "class": 2, "roster_name": "Cotton, Tom"},
+    {"state": "CO", "name": "John Hickenlooper", "party": "D", "class": 2, "roster_name": "Hickenlooper, John W."},
+    {"state": "DE", "name": "Chris Coons", "party": "D", "class": 2, "roster_name": "Coons, Christopher A.", "alias_evidence": "https://www.coons.senate.gov/meet-chris/"},
+    {"state": "FL", "name": "Ashley Moody", "party": "R", "class": 3, "roster_name": "Moody, Ashley"},
+    {"state": "GA", "name": "Jon Ossoff", "party": "D", "class": 2, "roster_name": "Ossoff, Jon"},
+    {"state": "ID", "name": "Jim Risch", "party": "R", "class": 2, "roster_name": "Risch, James E.", "alias_evidence": "https://www.risch.senate.gov/public/index.cfm/biography"},
+    {"state": "KS", "name": "Roger Marshall", "party": "R", "class": 2, "roster_name": "Marshall, Roger"},
+    {"state": "MA", "name": "Edward J. Markey", "party": "D", "class": 2, "roster_name": "Markey, Edward J."},
+    {"state": "ME", "name": "Susan Collins", "party": "R", "class": 2, "roster_name": "Collins, Susan M."},
+    {"state": "MS", "name": "Cindy Hyde-Smith", "party": "R", "class": 2, "roster_name": "Hyde-Smith, Cindy"},
+    {"state": "NE", "name": "Pete Ricketts", "party": "R", "class": 2, "roster_name": "Ricketts, Pete"},
+    {"state": "NJ", "name": "Cory Booker", "party": "D", "class": 2, "roster_name": "Booker, Cory A."},
+    {"state": "NM", "name": "Ben Ray Luján", "party": "D", "class": 2, "roster_name": "Luján, Ben Ray"},
+    {"state": "OH", "name": "Jon Husted", "party": "R", "class": 3, "roster_name": "Husted, Jon"},
+    {"state": "OR", "name": "Jeff Merkley", "party": "D", "class": 2, "roster_name": "Merkley, Jeff"},
+    {"state": "RI", "name": "John F. Reed", "party": "D", "class": 2, "roster_name": "Reed, Jack", "alias_evidence": "https://www.fec.gov/data/candidate/S6RI00163/"},
+    {"state": "SC", "name": "Darline Graham", "party": "R", "class": 2, "roster_name": "Graham, Darline"},
+    {"state": "SD", "name": "Mike Rounds", "party": "R", "class": 2, "roster_name": "Rounds, Mike"},
+    {"state": "TN", "name": "Bill Hagerty", "party": "R", "class": 2, "roster_name": "Hagerty, Bill"},
+    {"state": "VA", "name": "Mark R. Warner", "party": "D", "class": 2, "roster_name": "Warner, Mark R."},
+    {"state": "WV", "name": "Shelley Moore Capito", "party": "R", "class": 2, "roster_name": "Capito, Shelley Moore"}
+  ]
+}

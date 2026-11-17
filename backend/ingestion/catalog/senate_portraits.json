@@ -1,0 +1,3287 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-17",
+  "source_snapshot_sha256": "57b5b6389675882c101774741fda6803df1687453ad41d4e16d95947850628fc",
+  "method": "Exact source/year/race/name/party media assignments reviewed using political biographies, congressional identifiers and Commons file descriptions. No facial recognition, inferred FEC identity, or automatic matching of write-in labels.",
+  "sources": {
+    "congress_legislators": "a263880e99a78b8cfaf0a2487e05558be389de3d",
+    "congress_images": "aec3e4a88af843b282c0576f420b930f6a9a46ad"
+  },
+  "candidates": [
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-AL",
+      "state_code": "AL",
+      "name": "Barry Moore",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/alabama",
+        "biography_url": "https://en.wikipedia.org/wiki/Barry_Moore_(American_politician)",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "M001212",
+        "wikidata_id": "Q63198048"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/131b23775a100fb32a5bd1c6d682fd3fe53aebdbd24bf4ffe6db4bed6c8f07fd.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/M001212.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/M001212.jpg",
+        "sha256": "131b23775a100fb32a5bd1c6d682fd3fe53aebdbd24bf4ffe6db4bed6c8f07fd",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:23.746008+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-AK",
+      "state_code": "AK",
+      "name": "Mary Peltola",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/alaska",
+        "biography_url": "https://en.wikipedia.org/wiki/Mary_Peltola",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "P000619",
+        "wikidata_id": "Q13562231"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/3aff520b28fa1e1e8856e882c253fefdbdd2af92ead33cd3a30e6e59ca73857b.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/P000619.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/P000619.jpg",
+        "sha256": "3aff520b28fa1e1e8856e882c253fefdbdd2af92ead33cd3a30e6e59ca73857b",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:23.768009+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-AK",
+      "state_code": "AK",
+      "name": "Dan Sullivan",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/alaska",
+        "biography_url": "https://en.wikipedia.org/wiki/Dan_Sullivan_(U.S._senator)",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "S001198",
+        "wikidata_id": "Q5218668"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/0bec633117963b31275cad1e6e778bfc5101a4243dd98eaf1c16b6a6540490f0.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/S001198.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/S001198.jpg",
+        "sha256": "0bec633117963b31275cad1e6e778bfc5101a4243dd98eaf1c16b6a6540490f0",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:23.743008+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-AR",
+      "state_code": "AR",
+      "name": "Tom Cotton",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/arkansas",
+        "biography_url": "https://en.wikipedia.org/wiki/Tom_Cotton",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "C001095",
+        "wikidata_id": "Q3090307"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/7370e4c0c92405709cb9aec8b06b92e4d8cd058a947a609fb4d20c03c78f0efd.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/C001095.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/C001095.jpg",
+        "sha256": "7370e4c0c92405709cb9aec8b06b92e4d8cd058a947a609fb4d20c03c78f0efd",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:23.896017+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-AR",
+      "state_code": "AR",
+      "name": "Hallie Shoffner",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/arkansas",
+        "biography_url": "https://en.wikipedia.org/wiki/Hallie_Shoffner",
+        "description": "An image of Hallie Shoffner, candidate for office in Arkansas.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-10-24T12:19:44Z",
+      "portrait": {
+        "url": "/media/candidates/85bb724a9215d9be9c5f519ddcadc3d7b8955eb1667b4eeb8c1e347abd036f42.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Hallie_Shoffner_headshot_003.jpg",
+        "credit": "Hallie Shoffner / Wikimedia Commons",
+        "license": "CC0",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Hallie_Shoffner_headshot_003.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Hallie_Shoffner_headshot_003.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Hallie_Shoffner_headshot_003.jpg/330px-Hallie_Shoffner_headshot_003.jpg",
+        "sha256": "85bb724a9215d9be9c5f519ddcadc3d7b8955eb1667b4eeb8c1e347abd036f42",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.594899+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-CO",
+      "state_code": "CO",
+      "name": "John Hickenlooper",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/colorado",
+        "biography_url": "https://en.wikipedia.org/wiki/John_Hickenlooper",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "H000273",
+        "wikidata_id": "Q430518"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/af0c3965eca17758e2fda5060927ba5251af249cc67836c3c53fc5bf6dd2d725.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/H000273.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/H000273.jpg",
+        "sha256": "af0c3965eca17758e2fda5060927ba5251af249cc67836c3c53fc5bf6dd2d725",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:23.932630+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-CO",
+      "state_code": "CO",
+      "name": "Mark Baisley",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/colorado",
+        "biography_url": "https://en.wikipedia.org/wiki/Mark_Baisley",
+        "description": "Senator Van Winkle discusses House Bill 24-1084.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-07-02T18:23:18Z",
+      "portrait": {
+        "url": "/media/candidates/01da09c1b67033974132a12b8ffcdca15ecb364a5ba68d54e7a261dd3e16155b.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mark_Baisley_in_2024_(cropped).jpg",
+        "credit": "Colorado Senate GOP / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Mark_Baisley_in_2024_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Mark_Baisley_in_2024_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Mark_Baisley_in_2024_%28cropped%29.jpg/330px-Mark_Baisley_in_2024_%28cropped%29.jpg",
+        "sha256": "01da09c1b67033974132a12b8ffcdca15ecb364a5ba68d54e7a261dd3e16155b",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.006631+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-DE",
+      "state_code": "DE",
+      "name": "Chris Coons",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/delaware",
+        "biography_url": "https://en.wikipedia.org/wiki/Chris_Coons",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "C001088",
+        "wikidata_id": "Q923242"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/3bcbea2133770a7d6368509f02950e49b3af6332f99beccd8d727b5b89297320.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/C001088.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/C001088.jpg",
+        "sha256": "3bcbea2133770a7d6368509f02950e49b3af6332f99beccd8d727b5b89297320",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.099630+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-FL",
+      "state_code": "FL",
+      "name": "Ashley Moody",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/florida",
+        "biography_url": "https://en.wikipedia.org/wiki/Ashley_Moody",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "M001244",
+        "wikidata_id": "Q58333626"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/c17060dcfc329da17b8f6bb7b2dbcfa7c496869bb5c1d3a8d3cd39f81e542268.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/M001244.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/M001244.jpg",
+        "sha256": "c17060dcfc329da17b8f6bb7b2dbcfa7c496869bb5c1d3a8d3cd39f81e542268",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.163010+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-FL",
+      "state_code": "FL",
+      "name": "Angie Nixon",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/florida",
+        "biography_url": "https://en.wikipedia.org/wiki/Angie_Nixon",
+        "description": "Official portrait of Florida state representative Angie Nixon.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-08-19T20:51:17Z",
+      "portrait": {
+        "url": "/media/candidates/280fcd1172ec37bcee8639343ccaa97bd967ae99a6a743d90de4b973f81db1a8.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Angie_Nixon_official_portrait.jpg",
+        "credit": "Florida House of Representatives / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Angie_Nixon_official_portrait.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Angie_Nixon_official_portrait.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Angie_Nixon_official_portrait.jpg/330px-Angie_Nixon_official_portrait.jpg",
+        "sha256": "280fcd1172ec37bcee8639343ccaa97bd967ae99a6a743d90de4b973f81db1a8",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.297006+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-GA",
+      "state_code": "GA",
+      "name": "Jon Ossoff",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/georgia",
+        "biography_url": "https://en.wikipedia.org/wiki/Jon_Ossoff",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "O000174",
+        "wikidata_id": "Q28839536"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/2092bd2fc86f06c750def6001ebe9d7c70b4135cb98ccd72377250781880fba9.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/O000174.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/O000174.jpg",
+        "sha256": "2092bd2fc86f06c750def6001ebe9d7c70b4135cb98ccd72377250781880fba9",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.351740+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-GA",
+      "state_code": "GA",
+      "name": "Mike Collins",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/georgia",
+        "biography_url": "https://en.wikipedia.org/wiki/Mike_Collins_(politician)",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "C001129",
+        "wikidata_id": "Q115806750"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/8c42786278a8ac389a784102fe31c91f7d88f514762d839a3f78591837fe683e.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/C001129.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/C001129.jpg",
+        "sha256": "8c42786278a8ac389a784102fe31c91f7d88f514762d839a3f78591837fe683e",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.483732+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-ID",
+      "state_code": "ID",
+      "name": "Jim Risch",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/idaho",
+        "biography_url": "https://en.wikipedia.org/wiki/Jim_Risch",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "R000584",
+        "wikidata_id": "Q721871"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/38dc807f5e155c0f690534fb05193f3f806392a861eb070aa0c8dee3abc274e7.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/R000584.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/R000584.jpg",
+        "sha256": "38dc807f5e155c0f690534fb05193f3f806392a861eb070aa0c8dee3abc274e7",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.482693+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-ID",
+      "state_code": "ID",
+      "name": "Todd Achilles",
+      "party": "I",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/idaho",
+        "biography_url": "https://en.wikipedia.org/wiki/Todd_Achilles",
+        "description": "Independent political candidate Todd Achilles on LibertyDad's podcast, cropped",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-07-31T15:47:51Z",
+      "portrait": {
+        "url": "/media/candidates/81729af82e9a94e6647ee04b737e7aa18e5dce8b0c67cdc62be5a2db47e4b14f.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Todd_Achilles_on_LibertyDad%27s_stream.png",
+        "credit": "DL a.k.a. LibertyDad / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Todd_Achilles_on_LibertyDad%27s_stream.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Todd_Achilles_on_LibertyDad%27s_stream.png/330px-Todd_Achilles_on_LibertyDad%27s_stream.png",
+        "sha256": "81729af82e9a94e6647ee04b737e7aa18e5dce8b0c67cdc62be5a2db47e4b14f",
+        "mime_type": "image/png",
+        "retrieved_at": "2026-11-17T08:12:24.635907+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-ID",
+      "state_code": "ID",
+      "name": "Natalie M Fleming",
+      "party": "I",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/idaho",
+        "biography_url": "https://en.wikipedia.org/wiki/Natalie_M_Fleming",
+        "description": "Natalie Fleming an Independent candidate for United States Senate representing Idaho.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2020-07-08T18:41:13Z",
+      "portrait": {
+        "url": "/media/candidates/24e062f0d8144c5c1dc08143781a3ecb066acf771cd2a55c2e2cba77e7144786.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Natalie_Fleming.jpg",
+        "credit": "Natibrat / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Natalie_Fleming.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Natalie_Fleming.jpg/330px-Natalie_Fleming.jpg",
+        "sha256": "24e062f0d8144c5c1dc08143781a3ecb066acf771cd2a55c2e2cba77e7144786",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.667574+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-IL",
+      "state_code": "IL",
+      "name": "Juliana Stratton",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/illinois",
+        "biography_url": "https://en.wikipedia.org/wiki/Juliana_Stratton",
+        "description": "Maj. Gen. Rodney Boyd, Assistant Adjutant General - Army, Illinois National Guard; Illinois Lt. Gov. Juliana Stratton; and Brig. Gen. Daniel R. McDonough, Assistant Adjutant General - Air, Illinois National Guard, pose for a photograph at the conclusion of the Military Economic Development Committee quarterly meeting at Camp Lincoln Nov. 7. Military and community leaders came together to discuss support for military families facing a range of issues from childcare to quality of life. (U.S. Army photo by Officer Candidate Trenton Fouche, Joint Force Headquarters - Illinois National Guard)",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2023-11-08T20:10:21Z",
+      "portrait": {
+        "url": "/media/candidates/cd940344ee51d6d2fd840a1e88183b5b399a5913052c44cd11a1ab72e9618574.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Juliana_Stratton_2023_(cropped).jpg",
+        "credit": "Sgt. Trenton Fouche / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Juliana_Stratton_2023_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Juliana_Stratton_2023_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Juliana_Stratton_2023_%28cropped%29.jpg/330px-Juliana_Stratton_2023_%28cropped%29.jpg",
+        "sha256": "cd940344ee51d6d2fd840a1e88183b5b399a5913052c44cd11a1ab72e9618574",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.680540+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-IA",
+      "state_code": "IA",
+      "name": "Josh Turek",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/iowa",
+        "biography_url": "https://en.wikipedia.org/wiki/Josh_Turek",
+        "description": "Joshua Turek, member of the Iowa House of Representatives",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-07-06T07:56:02Z",
+      "portrait": {
+        "url": "/media/candidates/c1ff9813282487d1fc40aff315f3d11ff1b18dbba906e6363824070cdde5f06b.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Joshua_Turek_(cropped_2).jpg",
+        "credit": "Iowa General Assembly / Wikimedia Commons",
+        "license": "Copyrighted free use",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Joshua_Turek_(cropped_2).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Joshua_Turek_%28cropped_2%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Joshua_Turek_%28cropped_2%29.jpg/330px-Joshua_Turek_%28cropped_2%29.jpg",
+        "sha256": "c1ff9813282487d1fc40aff315f3d11ff1b18dbba906e6363824070cdde5f06b",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.725320+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-IA",
+      "state_code": "IA",
+      "name": "Ashley Hinson",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/iowa",
+        "biography_url": "https://en.wikipedia.org/wiki/Ashley_Hinson",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "H001091",
+        "wikidata_id": "Q60713905"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/d5fa346010fe55d11406a696034b760302208abe1cbef4b89d29951cefe53dde.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/H001091.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/H001091.jpg",
+        "sha256": "d5fa346010fe55d11406a696034b760302208abe1cbef4b89d29951cefe53dde",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.798150+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-KS",
+      "state_code": "KS",
+      "name": "Adam Hamilton",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/kansas",
+        "biography_url": "https://en.wikipedia.org/wiki/Adam_Hamilton_(pastor)",
+        "description": "Adam Hamilton speaks at a rally in Newton, Kansas, during his 2026 campaign for the U.S. Senate.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "display_note": "Closer portrait crop published by the source; cached bytes are unmodified."
+      },
+      "source_version": "2026-11-04T10:55:55Z",
+      "portrait": {
+        "url": "/media/candidates/89fe9dafbb38bed916dd1040036b486169ddb364447909fbb12bc38e1a8112b8.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Adam_Hamilton_campaign_rally%2C_Newton%2C_Kansas%2C_30_Oct_2026_(3x4_cropped).jpg",
+        "credit": "Leoniceno / Wikimedia Commons",
+        "license": "CC0",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Adam_Hamilton_campaign_rally%2C_Newton%2C_Kansas%2C_30_Oct_2026_(3x4_cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Adam_Hamilton_campaign_rally%2C_Newton%2C_Kansas%2C_30_Oct_2026_%283x4_cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Adam_Hamilton_campaign_rally%2C_Newton%2C_Kansas%2C_30_Oct_2026_%283x4_cropped%29.jpg/330px-Adam_Hamilton_campaign_rally%2C_Newton%2C_Kansas%2C_30_Oct_2026_%283x4_cropped%29.jpg",
+        "sha256": "89fe9dafbb38bed916dd1040036b486169ddb364447909fbb12bc38e1a8112b8",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:26:43.030443+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-KS",
+      "state_code": "KS",
+      "name": "Roger Marshall",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/kansas",
+        "biography_url": "https://en.wikipedia.org/wiki/Roger_Marshall",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "M001198",
+        "wikidata_id": "Q27923290"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/4e01cbf652940f8973c2bac8218ef0514a1b03d3a94bff4aef2c4ce5e2c55d8b.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/M001198.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/M001198.jpg",
+        "sha256": "4e01cbf652940f8973c2bac8218ef0514a1b03d3a94bff4aef2c4ce5e2c55d8b",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.878128+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-KY",
+      "state_code": "KY",
+      "name": "Andy Barr",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/kentucky",
+        "biography_url": "https://en.wikipedia.org/wiki/Andy_Barr",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "B001282",
+        "wikidata_id": "Q3828645"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/0ed8355844f12426ef629c8d8c56b299a5990a386cab20cfc85e57ec18dd80e2.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/B001282.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/B001282.jpg",
+        "sha256": "0ed8355844f12426ef629c8d8c56b299a5990a386cab20cfc85e57ec18dd80e2",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.889408+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-KY",
+      "state_code": "KY",
+      "name": "Charles Booker",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/kentucky",
+        "biography_url": "https://en.wikipedia.org/wiki/Charles_Booker_(American_politician)",
+        "description": "Charles Booker in front of Solar Panels in Kentucky",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2022-05-18T01:22:01Z",
+      "portrait": {
+        "url": "/media/candidates/c8ca6b79bc03377445d10e49f40792dfeba01b892782cb5b75fd474f7206fced.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Charles_solar_panels_(cropped).jpg",
+        "credit": "Breadwin / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Charles_solar_panels_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Charles_solar_panels_%28cropped%29.jpg/330px-Charles_solar_panels_%28cropped%29.jpg",
+        "sha256": "c8ca6b79bc03377445d10e49f40792dfeba01b892782cb5b75fd474f7206fced",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.908923+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-LA",
+      "state_code": "LA",
+      "name": "Julia Letlow",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/louisiana",
+        "biography_url": "https://en.wikipedia.org/wiki/Julia_Letlow",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "L000595",
+        "wikidata_id": "Q106089241"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/ae350166fe5b0ff7fbdd2ddc8d59271fbde62ae8acabb43555de85af9c82b0f0.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/L000595.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/L000595.jpg",
+        "sha256": "ae350166fe5b0ff7fbdd2ddc8d59271fbde62ae8acabb43555de85af9c82b0f0",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.002643+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-LA",
+      "state_code": "LA",
+      "name": "Jamie Davis",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/louisiana",
+        "biography_url": "https://en.wikipedia.org/wiki/Jamie_Davis_(politician)",
+        "description": "Portrait of Jamie Davis during his Senate candidacy",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-11-12T03:38:20Z",
+      "portrait": {
+        "url": "/media/candidates/eb10dc8ccb092347fd826d4f029c550c1cef30c58bec070317cfdc56d052169a.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Jamie_Davis.jpg",
+        "credit": "Elginsoo / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Jamie_Davis.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Jamie_Davis.jpg/330px-Jamie_Davis.jpg",
+        "sha256": "eb10dc8ccb092347fd826d4f029c550c1cef30c58bec070317cfdc56d052169a",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.044642+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-ME",
+      "state_code": "ME",
+      "name": "Troy Jackson",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/maine",
+        "biography_url": "https://en.wikipedia.org/wiki/Troy_Jackson",
+        "description": "Former Maine Senate President Troy Jackson in the Senate Chamber",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-07-22T08:59:58Z",
+      "portrait": {
+        "url": "/media/candidates/33ad21099b635d2811f4ba116bef65c0c85800bb0cca40f4826ad860dd3b77a0.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Troy_Jackson_in_the_Senate_Chamber_(cropped).jpg",
+        "credit": "ArenLeBrun / Wikimedia Commons",
+        "license": "CC0",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Troy_Jackson_in_the_Senate_Chamber_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Troy_Jackson_in_the_Senate_Chamber_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Troy_Jackson_in_the_Senate_Chamber_%28cropped%29.jpg/330px-Troy_Jackson_in_the_Senate_Chamber_%28cropped%29.jpg",
+        "sha256": "33ad21099b635d2811f4ba116bef65c0c85800bb0cca40f4826ad860dd3b77a0",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:24.998644+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-ME",
+      "state_code": "ME",
+      "name": "Susan Collins",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/maine",
+        "biography_url": "https://en.wikipedia.org/wiki/Susan_Collins",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "C001035",
+        "wikidata_id": "Q22279"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/7ed4fbd03bccc333e1dc7cb9f0f8847ed1dc88465940b67f1a5375614e505908.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/C001035.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/C001035.jpg",
+        "sha256": "7ed4fbd03bccc333e1dc7cb9f0f8847ed1dc88465940b67f1a5375614e505908",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.131654+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-MA",
+      "state_code": "MA",
+      "name": "Edward J. Markey",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/massachusetts",
+        "biography_url": "https://en.wikipedia.org/wiki/Ed_Markey",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "M000133",
+        "wikidata_id": "Q1282411"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/a7d051c85bd5e7d0b51632f413a11fd31cdd328bdc94d11d3d6d12b685d9d0b7.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/M000133.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/M000133.jpg",
+        "sha256": "a7d051c85bd5e7d0b51632f413a11fd31cdd328bdc94d11d3d6d12b685d9d0b7",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.116654+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-MA",
+      "state_code": "MA",
+      "name": "John Deaton",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/massachusetts",
+        "biography_url": "https://en.wikipedia.org/wiki/John_Deaton",
+        "description": "\"Union Brew House, Weymouth 06/06/2024\" – via description",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2024-09-30T17:22:42Z",
+      "portrait": {
+        "url": "/media/candidates/b63b68d9d1d7ae69f06f567f3eea43779672de2b6ab7a6c468920d644ec82e73.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:John_Deaton%2C_2024_(cropped).jpg",
+        "credit": "Jeff Dranetz / Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/John_Deaton%2C_2024_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/John_Deaton%2C_2024_%28cropped%29.jpg/330px-John_Deaton%2C_2024_%28cropped%29.jpg",
+        "sha256": "b63b68d9d1d7ae69f06f567f3eea43779672de2b6ab7a6c468920d644ec82e73",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.148547+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-MA",
+      "state_code": "MA",
+      "name": "Shiva Ayyadurai",
+      "party": "I",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/massachusetts",
+        "biography_url": "https://en.wikipedia.org/wiki/Shiva_Ayyadurai",
+        "description": "Shiva Ayyadurai Portrait",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "display_note": "Closer portrait crop published by the source; cached bytes are unmodified."
+      },
+      "source_version": "2025-06-03T11:52:30Z",
+      "portrait": {
+        "url": "/media/candidates/842a2405e3f3da4275ddb37b294e81b206528d69ce143ac3837cbc18fb3191ad.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Shiva_Ayyadurai_Portrait_(3x4_cropped).jpg",
+        "credit": "Sureshku2019 / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Shiva_Ayyadurai_Portrait_%283x4_cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Shiva_Ayyadurai_Portrait_%283x4_cropped%29.jpg/330px-Shiva_Ayyadurai_Portrait_%283x4_cropped%29.jpg",
+        "sha256": "842a2405e3f3da4275ddb37b294e81b206528d69ce143ac3837cbc18fb3191ad",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:26:43.115481+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-MI",
+      "state_code": "MI",
+      "name": "Abdul El-Sayed",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/michigan",
+        "biography_url": "https://en.wikipedia.org/wiki/Abdul_El-Sayed",
+        "description": "US Senate candidate for michigan Abdul El-Sayed meets voters at Michigan Technological University. October 22, 2025",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-06-29T09:01:28Z",
+      "portrait": {
+        "url": "/media/candidates/575e911c71ef936bb71862e261e4fb5e2b919a09a8db20831a1598a8304630af.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5_(cropped).jpg",
+        "credit": "Conlan Houston / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5_%28cropped%29.jpg/330px-Abdul_El-Sayed_meet-and-greet_by_Conlan_Houston_5_%28cropped%29.jpg",
+        "sha256": "575e911c71ef936bb71862e261e4fb5e2b919a09a8db20831a1598a8304630af",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.217658+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-MI",
+      "state_code": "MI",
+      "name": "Mike Rogers",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/michigan",
+        "biography_url": "https://en.wikipedia.org/wiki/Mike_Rogers_(Michigan_politician)",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "R000572",
+        "wikidata_id": "Q970515"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/0745949580820230548932dd94948a4a9d336a05987fd53dffb0c2cd2c606c4b.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/R000572.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/R000572.jpg",
+        "sha256": "0745949580820230548932dd94948a4a9d336a05987fd53dffb0c2cd2c606c4b",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.295658+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-MN",
+      "state_code": "MN",
+      "name": "Peggy Flanagan",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/minnesota",
+        "biography_url": "https://en.wikipedia.org/wiki/Peggy_Flanagan",
+        "description": "Premier Wabanakwut \"Wab\" Kinew of Manitoba meets with Minnesota Lt. Governor Peggy Flanagan in St. Paul, September 16, 2024.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2024-09-23T18:03:18Z",
+      "portrait": {
+        "url": "/media/candidates/4abef4002ab8ec4e1104ac29c270bfc88a96cea2f446211450eea0a78d3a7685.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Peggy_Flanagan_and_Premier_Kinew_(cropped).jpg",
+        "credit": "Office of Governor Tim Walz & Lt. Governor Peggy Flanagan / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Peggy_Flanagan_and_Premier_Kinew_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Peggy_Flanagan_and_Premier_Kinew_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Peggy_Flanagan_and_Premier_Kinew_%28cropped%29.jpg/330px-Peggy_Flanagan_and_Premier_Kinew_%28cropped%29.jpg",
+        "sha256": "4abef4002ab8ec4e1104ac29c270bfc88a96cea2f446211450eea0a78d3a7685",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.309659+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-MN",
+      "state_code": "MN",
+      "name": "Michele Tafoya",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/minnesota",
+        "biography_url": "https://en.wikipedia.org/wiki/Michele_Tafoya",
+        "description": "Michele Tafoya speaking with attendees at the 2023 Young Women's Leadership Summit hosted by Turning Point USA at the Gaylord Texan Resort & Convention Center in Grapevine, Texas.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2025-07-01T02:02:13Z",
+      "portrait": {
+        "url": "/media/candidates/00c7731560f44877a735b3177cd523247a00a715ad44b979fc2d62474314098e.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:MicheleTafoya2023.jpg",
+        "credit": "Gage Skidmore from Surprise, AZ, United States of America / Wikimedia Commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/MicheleTafoya2023.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/MicheleTafoya2023.jpg/330px-MicheleTafoya2023.jpg",
+        "sha256": "00c7731560f44877a735b3177cd523247a00a715ad44b979fc2d62474314098e",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.433233+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-MS",
+      "state_code": "MS",
+      "name": "Scott Colom",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/mississippi",
+        "biography_url": "https://en.wikipedia.org/wiki/Scott_Colom",
+        "description": "Scott Colom is the 2026 Democratic nominee for U.S. Senate in Mississippi",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-11-02T13:51:24Z",
+      "portrait": {
+        "url": "/media/candidates/7f77b6e2fbab8388589d702fe1dcb8d7650a9fd2df0e63b5687a6a023b3e7fa1.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Scott_Colom_2_(cropped).png",
+        "credit": "The Contrarian / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Scott_Colom_2_%28cropped%29.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Scott_Colom_2_%28cropped%29.png/330px-Scott_Colom_2_%28cropped%29.png",
+        "sha256": "7f77b6e2fbab8388589d702fe1dcb8d7650a9fd2df0e63b5687a6a023b3e7fa1",
+        "mime_type": "image/png",
+        "retrieved_at": "2026-11-17T08:12:25.419229+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-MS",
+      "state_code": "MS",
+      "name": "Cindy Hyde-Smith",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/mississippi",
+        "biography_url": "https://en.wikipedia.org/wiki/Cindy_Hyde-Smith",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "H001079",
+        "wikidata_id": "Q5120540"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/b92ee719e1413c20f276894eb1fca6ddfe0db4a7d24be4296874f752fbd5d422.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/H001079.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/H001079.jpg",
+        "sha256": "b92ee719e1413c20f276894eb1fca6ddfe0db4a7d24be4296874f752fbd5d422",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.432229+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-MT",
+      "state_code": "MT",
+      "name": "Kurt Alme",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/montana",
+        "biography_url": "https://en.wikipedia.org/wiki/Kurt_Alme",
+        "description": "United States Attorney for the District of Montana Kurt G. Alme (2017)",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2018-07-12T00:38:24Z",
+      "portrait": {
+        "url": "/media/candidates/6372b3b38f659f1cd21a0bf0df3d7e709da74fe747b71be3262698ab002b6dfb.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Kurt_G._Alme_official_photo.jpg",
+        "credit": "United States Department of Justice / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Kurt_G._Alme_official_photo.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Kurt_G._Alme_official_photo.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Kurt_G._Alme_official_photo.jpg/330px-Kurt_G._Alme_official_photo.jpg",
+        "sha256": "6372b3b38f659f1cd21a0bf0df3d7e709da74fe747b71be3262698ab002b6dfb",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.574282+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-MT",
+      "state_code": "MT",
+      "name": "Seth Bodnar",
+      "party": "I",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/montana",
+        "biography_url": "https://en.wikipedia.org/wiki/Seth_Bodnar",
+        "description": "This is a photo of President Seth Bodnar, seated on the steps of Main Hall, which was captured by University of Montana photographer Todd Goodrich during the spring semester of 2019.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-01-27T22:08:47Z",
+      "portrait": {
+        "url": "/media/candidates/324981dc89b1bcb3b9caff348e5adfadc4fa972fdbc20f85ccecca9d02243ecb.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Seth_Bodnar_-_President_at_University_of_Montana_(cropped).jpg",
+        "credit": "Todd Goodrich / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Seth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Seth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg/330px-Seth_Bodnar_-_President_at_University_of_Montana_%28cropped%29.jpg",
+        "sha256": "324981dc89b1bcb3b9caff348e5adfadc4fa972fdbc20f85ccecca9d02243ecb",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.556286+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-MT",
+      "state_code": "MT",
+      "name": "Alani Bankhead",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/montana",
+        "biography_url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Montana",
+        "description": "Alani Bankhead, from a video where she spoke about work combatting internet crimes against children in 2021.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-08-14T20:28:45Z",
+      "portrait": {
+        "url": "/media/candidates/ba7611368443f884c64457c4ab5c4262e4caddee124058584171f6acae3a34c9.png",
+        "source": "https://commons.wikimedia.org/wiki/File:Alani_Bankhead_USAF_2021.png",
+        "credit": "Technical Sergeant Nicholas Brown / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Alani_Bankhead_USAF_2021.png#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Alani_Bankhead_USAF_2021.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Alani_Bankhead_USAF_2021.png/330px-Alani_Bankhead_USAF_2021.png",
+        "sha256": "ba7611368443f884c64457c4ab5c4262e4caddee124058584171f6acae3a34c9",
+        "mime_type": "image/png",
+        "retrieved_at": "2026-11-17T08:12:25.640300+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-NE",
+      "state_code": "NE",
+      "name": "Pete Ricketts",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/nebraska",
+        "biography_url": "https://en.wikipedia.org/wiki/Pete_Ricketts",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "R000618",
+        "wikidata_id": "Q6106781"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/d33d1fcce26e45556a8a91f63f1d8b4215169dde66a4d7a433a80656b02d0481.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/R000618.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/R000618.jpg",
+        "sha256": "d33d1fcce26e45556a8a91f63f1d8b4215169dde66a4d7a433a80656b02d0481",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.674960+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-NE",
+      "state_code": "NE",
+      "name": "Dan Osborn",
+      "party": "I",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/nebraska",
+        "biography_url": "https://en.wikipedia.org/wiki/Dan_Osborn",
+        "description": "Dan Osborn – Independent for U.S. Senate",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2024-08-27T10:07:59Z",
+      "portrait": {
+        "url": "/media/candidates/ad5eb3620f5b20497380cbfaf1658286cc7c5ff4e8079a9ddb0b8e691342f092.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Osborn_Headshot_2_(cropped).jpg",
+        "credit": "Ramseywill / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Osborn_Headshot_2_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Osborn_Headshot_2_%28cropped%29.jpg/330px-Osborn_Headshot_2_%28cropped%29.jpg",
+        "sha256": "ad5eb3620f5b20497380cbfaf1658286cc7c5ff4e8079a9ddb0b8e691342f092",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.675960+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-NH",
+      "state_code": "NH",
+      "name": "Chris Pappas",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/new-hampshire",
+        "biography_url": "https://en.wikipedia.org/wiki/Chris_Pappas_(American_politician)",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "P000614",
+        "wikidata_id": "Q5107684"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/fb065e414fd0834c6dd89fab56b6a0a4d89ef653c0a1a1c7555379043b0e1928.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/P000614.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/P000614.jpg",
+        "sha256": "fb065e414fd0834c6dd89fab56b6a0a4d89ef653c0a1a1c7555379043b0e1928",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.758668+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-NH",
+      "state_code": "NH",
+      "name": "John E. Sununu",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/new-hampshire",
+        "biography_url": "https://en.wikipedia.org/wiki/John_E._Sununu",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "S001078",
+        "wikidata_id": "Q1699908"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/5004dc8d246f45103a4acf999f1d9eb28e4de68aafdc348adeb7739aa4753271.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/S001078.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/S001078.jpg",
+        "sha256": "5004dc8d246f45103a4acf999f1d9eb28e4de68aafdc348adeb7739aa4753271",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.828667+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Cory Booker",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/new-jersey",
+        "biography_url": "https://en.wikipedia.org/wiki/Cory_Booker",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "B001288",
+        "wikidata_id": "Q1135767"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/9a500874ecffca828d1e484334edd0204ae1100cada82c9304f969fc8d8e3cbb.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/B001288.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/B001288.jpg",
+        "sha256": "9a500874ecffca828d1e484334edd0204ae1100cada82c9304f969fc8d8e3cbb",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.809669+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-NM",
+      "state_code": "NM",
+      "name": "Ben Ray Luján",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/new-mexico",
+        "biography_url": "https://en.wikipedia.org/wiki/Ben_Ray_Luj%C3%A1n",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "L000570",
+        "wikidata_id": "Q324256"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/c6143c13afa39a1b113fece7849125e62a798a7144321ca04103cf6df70b5d97.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/L000570.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/L000570.jpg",
+        "sha256": "c6143c13afa39a1b113fece7849125e62a798a7144321ca04103cf6df70b5d97",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.913233+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-NC",
+      "state_code": "NC",
+      "name": "Roy Cooper",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/north-carolina",
+        "biography_url": "https://en.wikipedia.org/wiki/Roy_Cooper",
+        "description": "Roy Cooper, former Governor of North Carolina and candidate for U.S. Senate, speaking with supporters at a campaign rally in April 2026 in Durham, North Carolina.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-09-24T23:31:52Z",
+      "portrait": {
+        "url": "/media/candidates/d1e95d835dadaa86459b829fd775edbbeed2615a1bf4d05f390f1551b309997f.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Roy_Cooper_at_Roy_Cooper_Rally_April_2026-2_(cropped).jpg",
+        "credit": "NetwonsBucket / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Roy_Cooper_at_Roy_Cooper_Rally_April_2026-2_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Roy_Cooper_at_Roy_Cooper_Rally_April_2026-2_%28cropped%29.jpg/330px-Roy_Cooper_at_Roy_Cooper_Rally_April_2026-2_%28cropped%29.jpg",
+        "sha256": "d1e95d835dadaa86459b829fd775edbbeed2615a1bf4d05f390f1551b309997f",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.898235+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-NC",
+      "state_code": "NC",
+      "name": "Michael Whatley",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/north-carolina",
+        "biography_url": "https://en.wikipedia.org/wiki/Michael_Whatley",
+        "description": "Republican National Committee Chairman Michael Whatley speaking with attendees at the 2025 Student Action Summit at the Tampa Convention Center in Tampa, Florida.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2025-07-25T06:52:50Z",
+      "portrait": {
+        "url": "/media/candidates/06e7b0abccb23b8b33f9dd77095d313dac6a0da87375c035f2d72ae80b264d4f.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Michael_Whatley_(54670563614)_(cropped).jpg",
+        "credit": "Gage Skidmore / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Michael_Whatley_%2854670563614%29_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Michael_Whatley_%2854670563614%29_%28cropped%29.jpg/330px-Michael_Whatley_%2854670563614%29_%28cropped%29.jpg",
+        "sha256": "06e7b0abccb23b8b33f9dd77095d313dac6a0da87375c035f2d72ae80b264d4f",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:25.974964+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-OH",
+      "state_code": "OH",
+      "name": "Sherrod Brown",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/ohio",
+        "biography_url": "https://en.wikipedia.org/wiki/Sherrod_Brown",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "B000944",
+        "wikidata_id": "Q381880"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/a3b45efe662fcfd9f1779656b981b8c51b2ee8a0d93d413ba3f6d488c4cbe1d3.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/B000944.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/B000944.jpg",
+        "sha256": "a3b45efe662fcfd9f1779656b981b8c51b2ee8a0d93d413ba3f6d488c4cbe1d3",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.028961+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-OH",
+      "state_code": "OH",
+      "name": "Jon Husted",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/ohio",
+        "biography_url": "https://en.wikipedia.org/wiki/Jon_Husted",
+        "description": "Senator Jon Husted's official portrait in 2025.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2025-03-31T22:39:02Z",
+      "portrait": {
+        "url": "/media/candidates/368acad342b0ee60ad9cfeea32e5bad7c800766e64b0fd16edf0fac8757a6327.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg",
+        "credit": "United States Senate / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg/330px-Sen._Jon_Husted_official_portrait%2C_119th_Congress.jpg",
+        "sha256": "368acad342b0ee60ad9cfeea32e5bad7c800766e64b0fd16edf0fac8757a6327",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.025963+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-OK",
+      "state_code": "OK",
+      "name": "Kevin Hern",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/oklahoma",
+        "biography_url": "https://en.wikipedia.org/wiki/Kevin_Hern",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "H001082",
+        "wikidata_id": "Q58333614"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/dc8a64c8e764f8cb320df9ff879edcb9b2011e1a63eed4be6cf9c525726d4a0c.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/H001082.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/H001082.jpg",
+        "sha256": "dc8a64c8e764f8cb320df9ff879edcb9b2011e1a63eed4be6cf9c525726d4a0c",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.108960+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-OR",
+      "state_code": "OR",
+      "name": "Jeff Merkley",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/oregon",
+        "biography_url": "https://en.wikipedia.org/wiki/Jeff_Merkley",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "M001176",
+        "wikidata_id": "Q1368405"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/b2facf62a7ec1bd1380c69012016fb1197310647dba23d5bc445687c412827a3.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/M001176.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/M001176.jpg",
+        "sha256": "b2facf62a7ec1bd1380c69012016fb1197310647dba23d5bc445687c412827a3",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.139720+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-OR",
+      "state_code": "OR",
+      "name": "David Brock Smith",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/oregon",
+        "biography_url": "https://en.wikipedia.org/wiki/David_Brock_Smith",
+        "description": "On May 4, on behalf of the people of Oregon, Secretary of State Dennis Richardson and State Archivist Mary Beth Herkert accepted a redwood sapling from State Representative David Brock Smith (R-Port Orford) and the non-profit group Archangel Ancient Tree Archive. The tree was planted on the grounds of the State Archives at 800 Summer Street in Salem. www.oregon.gov/newsroom/Pages/NewsDetail.aspx?newsid=2036",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2017-06-13T01:26:53Z",
+      "portrait": {
+        "url": "/media/candidates/e91f7f4e746e01ffbada997fb7577d0c58173e7fce0e5f2c48d4fd4dac97f625.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:David_Brock_Smith.jpg",
+        "credit": "Oregon Secretary of State from Portland, United States / Wikimedia Commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/David_Brock_Smith.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/David_Brock_Smith.jpg",
+        "sha256": "e91f7f4e746e01ffbada997fb7577d0c58173e7fce0e5f2c48d4fd4dac97f625",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.225778+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-RI",
+      "state_code": "RI",
+      "name": "John F. Reed",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/rhode-island",
+        "biography_url": "https://en.wikipedia.org/wiki/Jack_Reed_(Rhode_Island_politician)",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "R000122",
+        "wikidata_id": "Q528979"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/9e973903950548385909cf129b1ad0625e91635ccf838a186e04d09312cfa12a.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/R000122.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/R000122.jpg",
+        "sha256": "9e973903950548385909cf129b1ad0625e91635ccf838a186e04d09312cfa12a",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.223777+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-SC",
+      "state_code": "SC",
+      "name": "Annie Andrews",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/south-carolina",
+        "biography_url": "https://en.wikipedia.org/wiki/Annie_Andrews",
+        "description": "U.S. Representative Jim Clyburn meets with U.S. Senator-elect Annie Andrews.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-11-13T21:34:28Z",
+      "portrait": {
+        "url": "/media/candidates/d2b23efd196173ab219a1c36743705001532580e7eb0afdadc5c75b6b18a1cb2.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Jim_Clyburn_and_Annie_Andrews_in_November_2026_(cropped_2).jpg",
+        "credit": "U.S. House of Representatives / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Jim_Clyburn_and_Annie_Andrews_in_November_2026_(cropped_2).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Jim_Clyburn_and_Annie_Andrews_in_November_2026_%28cropped_2%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Jim_Clyburn_and_Annie_Andrews_in_November_2026_%28cropped_2%29.jpg/330px-Jim_Clyburn_and_Annie_Andrews_in_November_2026_%28cropped_2%29.jpg",
+        "sha256": "d2b23efd196173ab219a1c36743705001532580e7eb0afdadc5c75b6b18a1cb2",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.227778+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-SC",
+      "state_code": "SC",
+      "name": "Darline Graham",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/south-carolina",
+        "biography_url": "https://en.wikipedia.org/wiki/Darline_Graham",
+        "description": "Official portrait of Darline Lettie Graham Nordone, member of the United States Senate from South Carolina",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-09-01T03:02:54Z",
+      "portrait": {
+        "url": "/media/candidates/3184112a635c49c42fa96ed0aa2976887947482ba2b6b325a2f2c9499fdc6bb6.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Darline_Graham%2C_member_of_the_United_States_Senate_from_South_Carolina_(2026).jpg",
+        "credit": "Rosa Pineda, United States Senate / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Darline_Graham%2C_member_of_the_United_States_Senate_from_South_Carolina_(2026).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Official_portrait_of_Darline_Graham%2C_member_of_the_United_States_Senate_from_South_Carolina_%282026%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Official_portrait_of_Darline_Graham%2C_member_of_the_United_States_Senate_from_South_Carolina_%282026%29.jpg/330px-Official_portrait_of_Darline_Graham%2C_member_of_the_United_States_Senate_from_South_Carolina_%282026%29.jpg",
+        "sha256": "3184112a635c49c42fa96ed0aa2976887947482ba2b6b325a2f2c9499fdc6bb6",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.316484+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-SD",
+      "state_code": "SD",
+      "name": "Mike Rounds",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/south-dakota",
+        "biography_url": "https://en.wikipedia.org/wiki/Mike_Rounds",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "R000605",
+        "wikidata_id": "Q722503"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/8d4be4a4730e3c9622055d2b9181f421eaaacd0c0461b861dfbbabe17499235c.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/R000605.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/R000605.jpg",
+        "sha256": "8d4be4a4730e3c9622055d2b9181f421eaaacd0c0461b861dfbbabe17499235c",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.341487+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-SD",
+      "state_code": "SD",
+      "name": "Brian L Bengs",
+      "party": "I",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/south-dakota",
+        "biography_url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_South_Dakota",
+        "description": "Official Air Force portrait of Brian Bengs",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-06-04T16:43:46Z",
+      "portrait": {
+        "url": "/media/candidates/1277ea039666202a8c59b30dc4010c15fef19b3faaae339cecdbc330818651e9.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Brian_Bengs_Air_Force_(cropped).jpg",
+        "credit": "Unknown author / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Brian_Bengs_Air_Force_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Brian_Bengs_Air_Force_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Brian_Bengs_Air_Force_%28cropped%29.jpg/330px-Brian_Bengs_Air_Force_%28cropped%29.jpg",
+        "sha256": "1277ea039666202a8c59b30dc4010c15fef19b3faaae339cecdbc330818651e9",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.378486+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-TN",
+      "state_code": "TN",
+      "name": "Bill Hagerty",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/tennessee",
+        "biography_url": "https://en.wikipedia.org/wiki/Bill_Hagerty",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "H000601",
+        "wikidata_id": "Q27734214"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/b783dac8ea57a85e1d0307eede53edd1278b9c02c0fe6e4a688392f4d2e14bbd.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/H000601.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/H000601.jpg",
+        "sha256": "b783dac8ea57a85e1d0307eede53edd1278b9c02c0fe6e4a688392f4d2e14bbd",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.430522+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-TN",
+      "state_code": "TN",
+      "name": "Marquita Bradshaw",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/tennessee",
+        "biography_url": "https://en.wikipedia.org/wiki/Marquita_Bradshaw",
+        "description": "Democratic senatorial candidate from Tennessee, Marquita Bradshaw, speaking during the COVID-19 Pandemic at the Hamblen County Democratic Party HQ in Morristown, Tennessee. Taken in September 2020.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "display_note": "Closer portrait crop published by the source; cached bytes are unmodified."
+      },
+      "source_version": "2020-09-16T13:11:34Z",
+      "portrait": {
+        "url": "/media/candidates/aee08a2a847c512681d0f6c016972170f2c1dd7c42435a471bce8a7d5491df06.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Marquita_Bradshaw_at_Morristown_(cropped).jpg",
+        "credit": "Walker Kinsler / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Marquita_Bradshaw_at_Morristown_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Marquita_Bradshaw_at_Morristown_%28cropped%29.jpg/330px-Marquita_Bradshaw_at_Morristown_%28cropped%29.jpg",
+        "sha256": "aee08a2a847c512681d0f6c016972170f2c1dd7c42435a471bce8a7d5491df06",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:26:43.235135+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-TX",
+      "state_code": "TX",
+      "name": "James Talarico",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/texas",
+        "biography_url": "https://en.wikipedia.org/wiki/James_Talarico",
+        "description": "James Talarico speaking at a press conference at the Texas Capitol on January 13, 2025.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-02-18T09:29:57Z",
+      "portrait": {
+        "url": "/media/candidates/761404341da401bbd842d49ba8b22228422b2460a037bb9c36383ae6dcaa20c9.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:James_Talarico_Press_Conference_(cropped).jpg",
+        "credit": "Antonioaesparza / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/James_Talarico_Press_Conference_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/James_Talarico_Press_Conference_%28cropped%29.jpg/330px-James_Talarico_Press_Conference_%28cropped%29.jpg",
+        "sha256": "761404341da401bbd842d49ba8b22228422b2460a037bb9c36383ae6dcaa20c9",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.475523+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-TX",
+      "state_code": "TX",
+      "name": "Ken Paxton",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/texas",
+        "biography_url": "https://en.wikipedia.org/wiki/Ken_Paxton",
+        "description": "Texas Attorney General Ken Paxton speaking with attendees at the 2025 AmericaFest at the Phoenix Convention Center in Phoenix, Arizona.",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2026-03-10T14:51:16Z",
+      "portrait": {
+        "url": "/media/candidates/ee7865e3dfb0c1faec8ae499465d7fe58ffe33518748fe85b138f7e081ef16e1.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:K_Paxton.jpg",
+        "credit": "Gage Skidmore / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/K_Paxton.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/K_Paxton.jpg/330px-K_Paxton.jpg",
+        "sha256": "ee7865e3dfb0c1faec8ae499465d7fe58ffe33518748fe85b138f7e081ef16e1",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.825467+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-TX",
+      "state_code": "TX",
+      "name": "Jade Simmons",
+      "party": "O",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/texas",
+        "biography_url": "https://en.wikipedia.org/wiki/Jade_Simmons",
+        "description": "Jade Simmons at campaign event",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2020-10-11T16:23:39Z",
+      "portrait": {
+        "url": "/media/candidates/e2cc47c9890352d19201a270a0669a9f3562e62b4d13a525955e77b1be99908d.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Jade_Simmons_on_campaign_trail_(cropped).jpg",
+        "credit": "OR2020JS / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Jade_Simmons_on_campaign_trail_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Jade_Simmons_on_campaign_trail_%28cropped%29.jpg/330px-Jade_Simmons_on_campaign_trail_%28cropped%29.jpg",
+        "sha256": "e2cc47c9890352d19201a270a0669a9f3562e62b4d13a525955e77b1be99908d",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.583275+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-VA",
+      "state_code": "VA",
+      "name": "Mark R. Warner",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/virginia",
+        "biography_url": "https://en.wikipedia.org/wiki/Mark_Warner",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "W000805",
+        "wikidata_id": "Q453893"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/08ef2d14bc2db3e0675c6100c9cf1d6c75dfc9f0b511c175960e4c28de96adeb.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/W000805.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/W000805.jpg",
+        "sha256": "08ef2d14bc2db3e0675c6100c9cf1d6c75dfc9f0b511c175960e4c28de96adeb",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.670939+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-VA",
+      "state_code": "VA",
+      "name": "Bert Mizusawa",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/virginia",
+        "biography_url": "https://en.wikipedia.org/wiki/Bert_Mizusawa",
+        "description": "Bert Mizusawa , U.S. Army General",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2021-07-25T14:03:14Z",
+      "portrait": {
+        "url": "/media/candidates/2dba914bc6de36f5a5fc58ff434cec233d328753ad9441f6d6c90c533d62563c.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Mizusawa.jpg",
+        "credit": "U.S. Army / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Mizusawa.jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Mizusawa.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Mizusawa.jpg/330px-Mizusawa.jpg",
+        "sha256": "2dba914bc6de36f5a5fc58ff434cec233d328753ad9441f6d6c90c533d62563c",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.790467+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-WV",
+      "state_code": "WV",
+      "name": "Shelley Moore Capito",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/west-virginia",
+        "biography_url": "https://en.wikipedia.org/wiki/Shelley_Moore_Capito",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "C001047",
+        "wikidata_id": "Q459618"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/76272bec8405f268b29388733d736cd45b789efc7a7a01339ec87f332059e7ad.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/C001047.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/C001047.jpg",
+        "sha256": "76272bec8405f268b29388733d736cd45b789efc7a7a01339ec87f332059e7ad",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.775466+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-WY",
+      "state_code": "WY",
+      "name": "Harriet Hageman",
+      "party": "R",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/wyoming",
+        "biography_url": "https://en.wikipedia.org/wiki/Harriet_Hageman",
+        "description": "",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment.",
+        "bioguide_id": "H001096",
+        "wikidata_id": "Q110815967"
+      },
+      "source_version": "aec3e4a88af843b282c0576f420b930f6a9a46ad",
+      "portrait": {
+        "url": "/media/candidates/8088c14c688d70b5deb26f2c39f805d030e7f52ddd96fb0f2998467d31ea16f2.jpg",
+        "source": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md",
+        "credit": "U.S. Congress / Government Publishing Office, via unitedstates/images",
+        "license": "Public domain (U.S. federal government)",
+        "license_url": "https://github.com/unitedstates/images/blob/aec3e4a88af843b282c0576f420b930f6a9a46ad/README.md#public-domain",
+        "original_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/original/H001096.jpg",
+        "download_url": "https://raw.githubusercontent.com/unitedstates/images/aec3e4a88af843b282c0576f420b930f6a9a46ad/congress/225x275/H001096.jpg",
+        "sha256": "8088c14c688d70b5deb26f2c39f805d030e7f52ddd96fb0f2998467d31ea16f2",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.918111+00:00"
+      }
+    },
+    {
+      "source": "call_the_map_senate",
+      "year": 2026,
+      "race_id": "SEN-WY",
+      "state_code": "WY",
+      "name": "James Byrd",
+      "party": "D",
+      "match_evidence": {
+        "source_candidate_url": "https://www.callthemap.com/results/senate/wyoming",
+        "biography_url": "https://en.wikipedia.org/wiki/James_Byrd_(politician)",
+        "description": "James W. Byrd at Campbell County League of Women Voters' General Election Candidates' Forum in Gillette, Wyoming",
+        "method": "Reviewed this source candidacy, state and party against the linked political biography or identified official portrait. Media annotation only; no canonical person/FEC identity assignment."
+      },
+      "source_version": "2023-05-25T05:06:34Z",
+      "portrait": {
+        "url": "/media/candidates/e98f3b8cf15cd63422476847487e08389df91d911fe81df11022ed988ef33833.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:James_W._Byrd_at_Campbell_County_League_of_Women_Voters%27_General_Election_Candidates%27_Forum_in_Gillette%2C_Wyoming_(cropped).jpg",
+        "credit": "Mr. Satterly / Wikimedia Commons",
+        "license": "WTFPL",
+        "license_url": "https://commons.wikimedia.org/wiki/File:James_W._Byrd_at_Campbell_County_League_of_Women_Voters%27_General_Election_Candidates%27_Forum_in_Gillette%2C_Wyoming_(cropped).jpg#Licensing",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/James_W._Byrd_at_Campbell_County_League_of_Women_Voters%27_General_Election_Candidates%27_Forum_in_Gillette%2C_Wyoming_%28cropped%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/James_W._Byrd_at_Campbell_County_League_of_Women_Voters%27_General_Election_Candidates%27_Forum_in_Gillette%2C_Wyoming_%28cropped%29.jpg/330px-James_W._Byrd_at_Campbell_County_League_of_Women_Voters%27_General_Election_Candidates%27_Forum_in_Gillette%2C_Wyoming_%28cropped%29.jpg",
+        "sha256": "e98f3b8cf15cd63422476847487e08389df91d911fe81df11022ed988ef33833",
+        "mime_type": "image/jpeg",
+        "retrieved_at": "2026-11-17T08:12:26.920773+00:00"
+      }
+    }
+  ],
+  "unassigned": [
+    {
+      "year": 2026,
+      "race_id": "SEN-AL",
+      "state_code": "AL",
+      "name": "Everett Wess",
+      "party": "D",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-AK",
+      "state_code": "AK",
+      "name": "Gerald L. Heikes",
+      "party": "R",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-AK",
+      "state_code": "AK",
+      "name": "Daniel J. Sullivan Jr.",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-AR",
+      "state_code": "AR",
+      "name": "Jeff Wadlin",
+      "party": "L",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-CO",
+      "state_code": "CO",
+      "name": "Bob Chew",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-CO",
+      "state_code": "CO",
+      "name": "Blake Huber",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-CO",
+      "state_code": "CO",
+      "name": "Adam Withrow",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-CO",
+      "state_code": "CO",
+      "name": "Christopher Baum",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-DE",
+      "state_code": "DE",
+      "name": "Michael \"dr. Mike\" Katz",
+      "party": "R",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-FL",
+      "state_code": "FL",
+      "name": "Neil J. Gillespie",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-ID",
+      "state_code": "ID",
+      "name": "Matt Loesby",
+      "party": "L",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-IL",
+      "state_code": "IL",
+      "name": "Don Tracy",
+      "party": "R",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-IL",
+      "state_code": "IL",
+      "name": "Whitfield Harrington Jr.",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-IA",
+      "state_code": "IA",
+      "name": "Thomas Laehn",
+      "party": "L",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-KS",
+      "state_code": "KS",
+      "name": "David C Graham",
+      "party": "L",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-KY",
+      "state_code": "KY",
+      "name": "Christopher Campbell",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MA",
+      "state_code": "MA",
+      "name": "Joe Tache",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MI",
+      "state_code": "MI",
+      "name": "Lydia Christensen",
+      "party": "L",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MI",
+      "state_code": "MI",
+      "name": "Tim Long",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MI",
+      "state_code": "MI",
+      "name": "Douglas P. Marsh",
+      "party": "G",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MI",
+      "state_code": "MI",
+      "name": "Walter P. Kristy",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MI",
+      "state_code": "MI",
+      "name": "George Earnest Huffman",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MI",
+      "state_code": "MI",
+      "name": "Craig Henley Johnson II",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MI",
+      "state_code": "MI",
+      "name": "Craig HenleyJohnson",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MI",
+      "state_code": "MI",
+      "name": "Daniel Varney Tamba Pawa",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MI",
+      "state_code": "MI",
+      "name": "Robert Trevor-Blair Davis",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MN",
+      "state_code": "MN",
+      "name": "Marisa Simonetti",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MN",
+      "state_code": "MN",
+      "name": "Rebecca Whiting",
+      "party": "L",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MS",
+      "state_code": "MS",
+      "name": "Ty Pinkins",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-MT",
+      "state_code": "MT",
+      "name": "Kyle Austin",
+      "party": "L",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NE",
+      "state_code": "NE",
+      "name": "Robin Richards",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NE",
+      "state_code": "NE",
+      "name": "Mike Marvin",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NE",
+      "state_code": "NE",
+      "name": "Chuck Conboy",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NH",
+      "state_code": "NH",
+      "name": "Edmond Laplante",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Justin Murphy",
+      "party": "R",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Veronica Fernandez",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Joanne Kuniansky",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Edwardo Castillo",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Dan A. Dewey",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Eduardo Castillo",
+      "party": "I",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Jesus Christ",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Adam Sheridan",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Andrew Brake",
+      "party": "I",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Chris Fields",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Free Palestine",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Hasan Piker",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Hind Rajab",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Lily Benavides",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "None of the Above",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Thomas Massie",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Ab E SD",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Abdul El-Sayed",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Abdul Malik Al Houthi",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Adam Hamway",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Adam Moses",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Adolf H",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Ai Dan",
+      "party": "I",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Analia Mejia",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Andy Kim",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Aneka Miller",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Ayishat Akanbi",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Bruno Pereira",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Bryce Harper",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Carole Melman",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Chingchien Wu",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Clifford P. Case",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Daryl Murray",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "David Smith",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Death to Isreal",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Dominic Serrentino",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Eduardo Castille",
+      "party": "I",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Edward Smith",
+      "party": "I",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Elmo",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Emily Wallace",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Evan Pustizzi",
+      "party": "I",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Frank Pallone",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Fred Porter",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Gary Stout",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Geoff Rickly",
+      "party": "I",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "God",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Heier",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Hugh Jass",
+      "party": "I",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Ian Grimes",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Impeach Trump",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Jeff Van Drew",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Jeremy Wilford",
+      "party": "I",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "John Garza",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "John James Baker",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Johnathan Porter Aka Blue",
+      "party": "I",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Joseph D. Quinn II",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Katie Bansil",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Khamani Wade",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Laura Fitzgerald",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Leah O'Leary",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Loretta Kelly",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Lucca Lima",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Mario Walker",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Melissa Knezick",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Michael Clay",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Mickey Mouse",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Mitchell Brown",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Mom",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Mr. Potato Head",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Murphy",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Murtaza",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Nancy Berkley",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "No One",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Noah Kahan",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Nova Piatt",
+      "party": "I",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Nurul Mukul",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Patricia Niculescu",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Paulie Gualtieri",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Ric Flair",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Richard I. Carpenter",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Richard tabor",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Robert Bockius",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Robert Spicer",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Rush Holt",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Scott Frost",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Seamus O'toole",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Sean Combs",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Someone From Out of State",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Steve Rinella",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Steven Knezick",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Steven P Naphy",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Steven Trembly",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Tellirico",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Terry Sadie and Fatty",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Tessa Tabor",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "They All Suck",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Tineen Howard",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Tom Hammar",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Tom Knezick",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Tom Mitchell",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Toto Brown",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Troy Green",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Uncommitted",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Undecided",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Vic Kaplan",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "William Curtin",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "William Hunt",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "William L Odom Jr.",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Yeat",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Zohran Mamdani",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "optimus prime",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NJ",
+      "state_code": "NJ",
+      "name": "Shawn Riggins",
+      "party": "I",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NM",
+      "state_code": "NM",
+      "name": "Larry Marker",
+      "party": "R",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NC",
+      "state_code": "NC",
+      "name": "Shannon W. Bray",
+      "party": "L",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-NC",
+      "state_code": "NC",
+      "name": "Michael Dublin",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-OH",
+      "state_code": "OH",
+      "name": "William B. Redpath",
+      "party": "L",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-OH",
+      "state_code": "OH",
+      "name": "Greg Levy",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-OH",
+      "state_code": "OH",
+      "name": "Stephen Faris",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-OH",
+      "state_code": "OH",
+      "name": "Anthony Holliman",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-OH",
+      "state_code": "OH",
+      "name": "Timothy Telymonde",
+      "party": "O",
+      "reason": "Unverified low-vote/write-in source label; no name-only image assignment"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-OK",
+      "state_code": "OK",
+      "name": "N'Kiyla Jasmine Thomas",
+      "party": "D",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-OK",
+      "state_code": "OK",
+      "name": "Curtis Stinnett",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-OK",
+      "state_code": "OK",
+      "name": "Ron Meinhardt",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-OK",
+      "state_code": "OK",
+      "name": "Sevier White",
+      "party": "L",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-OR",
+      "state_code": "OR",
+      "name": "Chris Henry",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-OR",
+      "state_code": "OR",
+      "name": "Gary Lyndon Dye",
+      "party": "L",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-RI",
+      "state_code": "RI",
+      "name": "Raymond T. McKay",
+      "party": "R",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-RI",
+      "state_code": "RI",
+      "name": "Michael Bahry",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-SC",
+      "state_code": "SC",
+      "name": "Kasie Whitener",
+      "party": "L",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-SC",
+      "state_code": "SC",
+      "name": "Mark Hackett",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-TN",
+      "state_code": "TN",
+      "name": "Robert Jones",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-TN",
+      "state_code": "TN",
+      "name": "Tharon Chandler",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-TN",
+      "state_code": "TN",
+      "name": "Andrew Gerena",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-TN",
+      "state_code": "TN",
+      "name": "Catherine Barcel \"Barcy\" Whitson",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-TN",
+      "state_code": "TN",
+      "name": "Jeremy Dean Hearn",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-TN",
+      "state_code": "TN",
+      "name": "David Sutman, Jr.",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-TN",
+      "state_code": "TN",
+      "name": "Yoshi D. Matthews",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-TN",
+      "state_code": "TN",
+      "name": "James William Macon III",
+      "party": "I",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-TX",
+      "state_code": "TX",
+      "name": "Ted Brown",
+      "party": "L",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-TX",
+      "state_code": "TX",
+      "name": "Avery Ayers",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-TX",
+      "state_code": "TX",
+      "name": "Bradford \"brad\" Hall",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-TX",
+      "state_code": "TX",
+      "name": "Zul Mohamed",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-WV",
+      "state_code": "WV",
+      "name": "Rachel Fetty Anderson",
+      "party": "D",
+      "reason": "No reviewed reusable portrait located"
+    },
+    {
+      "year": 2026,
+      "race_id": "SEN-WV",
+      "state_code": "WV",
+      "name": "S. Marshall Wilson",
+      "party": "O",
+      "reason": "No reviewed reusable portrait located"
+    }
+  ]
+}

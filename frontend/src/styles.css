@@ -120,6 +120,10 @@ tbody th { font-weight: 600; }
 .popover-eyebrow { color: #667a90; font-size: 9px; text-transform: uppercase; letter-spacing: .09em; font-weight: 750; }
 .popover-head h3 { font-size: 20px; line-height: 1.2; letter-spacing: -.035em; margin: 5px 0 3px; color: #172139; }
 .popover-head p { color: #8290a1; font-size: 10px; margin: 0; }
+.popover-head-split { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 4px 12px; }
+.popover-head-split h3 { grid-column: 1; grid-row: 1; margin: 0; }
+.popover-head-split .popover-eyebrow { grid-column: 2; grid-row: 1; text-align: right; }
+.popover-head-split p { grid-column: 1 / -1; }
 .popover-leader { margin: 11px 13px 5px; padding: 8px 9px; border-radius: 7px; background: color-mix(in srgb, var(--leader-color) 9%, white); border-left: 3px solid var(--leader-color); color: var(--leader-color); font-size: 10px; font-weight: 750; }
 .popover-leader > span { margin-right: 4px; }
 .popover-candidates { padding: 5px 10px 10px; }
@@ -128,6 +132,9 @@ tbody th { font-weight: 600; }
 .popover-candidate.is-leading { background: color-mix(in srgb, var(--candidate-color) 7%, white); border-left: 3px solid var(--candidate-color); padding-left: 3px; }
 .popover-avatar { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; color: var(--candidate-color); background: color-mix(in srgb, var(--candidate-color) 10%, white); font-size: 10px; font-weight: 750; }
 .popover-name { font-size: 11px; font-weight: 750; overflow-wrap: anywhere; }
+.incumbent-marker { display: inline-block; margin-left: 6px; padding: 1px 5px; border: 1px solid #c5d3c9; border-radius: 3px; color: #40594a; background: #edf3ee; font-size: .65rem; font-weight: 500; vertical-align: middle; }
+.winner-marker { color: var(--candidate-color); background: color-mix(in srgb, var(--candidate-color) 8%, white); border-color: color-mix(in srgb, var(--candidate-color) 35%, white); }
+.popover-source-note { padding: 0 15px 12px; font-size: 10px; color: #667a90; }
 .popover-extra { font-size: 9px; color: #8290a1; margin-top: 2px; }
 .popover-share { height: 4px; background: #e7ebf0; border-radius: 4px; overflow: hidden; margin-top: 7px; }
 .popover-share > span { display: block; height: 100%; background: var(--candidate-color); border-radius: 4px; }

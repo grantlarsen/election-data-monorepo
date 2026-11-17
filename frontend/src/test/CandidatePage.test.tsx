@@ -4,6 +4,7 @@ import { MemoryRouter } from 'react-router';
 import { describe, expect, it, vi } from 'vitest';
 import { App } from '../App';
 import { dollars } from '../CandidatePage';
+import { portrait, portraitRace } from './portraitFixtures';
 import { candidateProfile, candidacyId, publication } from './fixtures';
 
 function open(path = `/candidates/${candidacyId}`) {
@@ -14,6 +15,14 @@ function response(body: unknown, status = 200) {
 }
 
 describe('candidate profiles', () => {
+  it('accepts backend-supported statewide reporting links for Senate profiles', async () => {
+    const fetch = vi.fn().mockResolvedValue(response({ ...candidateProfile, latest_election: null }));
+    vi.stubGlobal('fetch', fetch);
+    open(`/candidates/${candidacyId}?year=2026&office=U.S.+Senate&stage=general&state_code=AK&reporting_level=state`);
+    expect(await screen.findByRole('heading', { level: 1, name: candidateProfile.label! })).toBeVisible();
+    expect(screen.queryByRole('heading', { name: 'Invalid selection' })).not.toBeInTheDocument();
+    expect(fetch).toHaveBeenCalledWith(`/api/v1/candidates/${candidacyId}?reporting_level=state`, expect.objectContaining({ signal: expect.any(AbortSignal) }));
+  });
   it('loads a shareable profile without requiring explorer filters', async () => {
     const fetch = vi.fn(async () => response({ ...candidateProfile, identity_evidence: [{
       status: 'pending', confidence: '0.800', evidence: {}, decision_evidence: null, decided_at: null,
@@ -85,6 +94,18 @@ describe('candidate profiles', () => {
     open();
     expect(await screen.findByRole('heading', { name: 'Alexandria Ocasio-Cortez' })).toBeVisible();
     expect(screen.getByRole('img', { name: 'Portrait of Alexandria Ocasio-Cortez' })).toBeVisible();
+  });
+
+  it('shows reviewed Senate media and credits on unresolved source-scoped profiles', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => response({ ...candidateProfile,
+      label: 'Portrait candidate', provisional_election: { race: portraitRace, checked_at: '2026-11-17T12:00:00Z',
+        retrieved_at: '2026-11-17T12:00:00Z', stale: false, sha256: 'f'.repeat(64) },
+    })));
+    open();
+    expect(await screen.findByRole('img', { name: 'Portrait of Portrait candidate' })).toHaveAttribute('src', portrait.url);
+    expect(screen.getByRole('link', { name: portrait.credit })).toHaveAttribute('href', portrait.source);
+    expect(screen.getByRole('link', { name: 'CC BY 4.0' })).toHaveAttribute('href', portrait.license_url);
+    expect(screen.getByText(/This source label has not been linked to a verified person/)).toBeVisible();
   });
 
   it('distinguishes not found from temporary failure and retries', async () => {

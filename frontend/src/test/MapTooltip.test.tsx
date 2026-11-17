@@ -1,8 +1,8 @@
-import { act, render, screen } from "@testing-library/react";
+import { act, render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { MapTooltip, tooltipPosition } from "../geography/MapTooltip";
 import { ElectionTooltip } from "../map/ElectionTooltip";
-import type { ElectionMap, MapUnit } from "../map/types";
+import type { ElectionMap, MapCandidate, MapUnit } from "../map/types";
 import { publication } from "./fixtures";
 
 describe("map popover positioning", () => {
@@ -106,6 +106,34 @@ const unit = {
 } as MapUnit;
 
 describe("reference-style election tooltip", () => {
+  it('renders small third-party votes as one unlinked Other row while retaining source totals and margins', () => {
+    const candidate = (label: string, votes: number, party_labels: string[]): MapCandidate => ({
+      label, votes, party_labels, kind: 'candidate', share: votes / 1000, candidacy_id: label,
+      geographic_reference_id: null, observation_ids: [], correction_ids: [],
+    });
+    render(<ElectionTooltip data={data} unit={{ ...unit, summary: { ...unit.summary,
+      total_votes: 100_000, margin_votes: 20_800, margin_pp: 20.8,
+      candidates: [candidate('Source candidate', 60_000, ['DEMOCRATIC']),
+        candidate('Runner up', 39_200, ['REPUBLICAN']), candidate('Independent', 50, ['INDEPENDENT']),
+        candidate('Green', 49, ['GREEN']), candidate('Libertarian', 600, ['LIBERTARIAN']),
+        candidate('Unknown party', 1, []),
+        { ...candidate('Write-ins', 80, []), kind: 'aggregate', candidacy_id: null },
+        { ...candidate('OTHER', 20, []), kind: 'aggregate', candidacy_id: null }],
+    } }} name="Fallback" />);
+    expect(screen.queryByText('Independent')).not.toBeInTheDocument();
+    expect(screen.queryByText('Green')).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Libertarian' })).toBeVisible();
+    expect(screen.getByRole('link', { name: 'Unknown party' })).toBeVisible();
+    expect(screen.getByText('Write-ins')).toBeVisible();
+    const other = screen.getByText('Other').closest('.popover-candidate') as HTMLElement;
+    expect(within(other).getByText('119')).toBeVisible();
+    expect(within(other).getByText('0.12%')).toBeVisible();
+    expect(within(other).queryByRole('link')).not.toBeInTheDocument();
+    expect(parseFloat((other.querySelector('.popover-share span') as HTMLElement).style.width)).toBeCloseTo(0.119, 12);
+    expect(screen.getByText('100,000 reported votes')).toBeVisible();
+    expect(screen.getByText('20.80%')).toBeVisible();
+    expect(screen.getByText(/Leading here:/)).toHaveTextContent('Leading here: Source candidate');
+  });
   it("shows real candidate totals, shares, partial coverage and anonymous categories without inventing portraits or parties", () => {
     render(<ElectionTooltip data={data} unit={unit} name="Fallback" />);
     expect(

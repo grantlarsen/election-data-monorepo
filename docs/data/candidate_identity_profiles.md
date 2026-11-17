@@ -20,6 +20,13 @@ the original ZIP is retained with its SHA-256. DataFrame work uses Polars.
 with ruleset, context, confidence score, source record, reviewer evidence and time.
 The review queue is an operator CLI, not a public write endpoint.
 
+Current 2026 Senate results also register source-scoped candidacies for profile
+navigation. They do not match people or FEC IDs by name. Their profiles expose
+cached provisional election counts while preserving unresolved identity and
+finance states; anonymous vote buckets receive no profile. See the
+[current Senate runbook](senate_current_results.md) for registration provenance,
+incumbency evidence and daily refresh/replay behavior.
+
 Matching policies:
 
 - An existing FEC candidate identifier explicitly attached to a candidacy takes

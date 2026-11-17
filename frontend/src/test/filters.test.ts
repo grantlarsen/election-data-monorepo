@@ -23,13 +23,14 @@ describe('shared filter contract', () => {
   });
 
   it.each(['year=0', 'year=9999', 'year=2008.5', 'stage=invalid', 'state_code=ZZ',
-    'jurisdiction_id=bad', 'contest_id=bad', 'reporting_level=state', 'offset=-1',
+    'jurisdiction_id=bad', 'contest_id=bad', 'reporting_level=nation', 'offset=-1',
     'offset=9007199254740992', 'year=2008&year=2024'])('rejects unsupported deep-link filters: %s', query => {
     expect(validateSearch(new URLSearchParams(query))).toBeTruthy();
   });
 
   it('allows lowercase state codes, empty selections and distinct supported reporting levels', () => {
     expect(validateSearch(new URLSearchParams('state_code=ny&year=&reporting_level=precinct'))).toBeNull();
+    expect(validateSearch(new URLSearchParams('year=2026&office=U.S.+Senate&reporting_level=state'))).toBeNull();
   });
 });
 
