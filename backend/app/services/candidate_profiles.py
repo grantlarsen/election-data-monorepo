@@ -98,7 +98,8 @@ def candidate_profile(session: Session, candidacy_id: UUID, *, reporting_level: 
             fec_ids=list(ids), evidence=link.evidence, source_record_key=link.source_record_key,
             source=_source(session, link.release_id) if link.release_id else None,
             source_id=link.source_id))
-    level = reporting_level or ("congressional_district" if geography.level == "congressional_district" else "county")
+    level = reporting_level or ("state" if contest.office_name == "U.S. Senate" else
+        "congressional_district" if geography.level == "congressional_district" else "county")
     results = list_results(session, ResultFilters(contest_id=contest.id, reporting_level=level, limit=limit, offset=offset),
                            candidacy_id=candidate.id)
     return dict(id=candidate.id, label=person.full_name if person else candidate.source_label,

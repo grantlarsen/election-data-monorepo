@@ -20,6 +20,7 @@ from app.models.election import (
 from app.models.geography import GeographicReference, GeographicResolution
 from app.models.ingestion import SourceRelease
 from app.models.state_results import StateResultBatch, StateResultPublication, StateVoteReturn
+from app.models.senate_returns import SenateSeat
 from app.services.canonical_results import MaterializationError, candidate_totals, state_totals
 
 
@@ -88,6 +89,9 @@ def _contest_query(filters: ElectionFilters, *, result_geography: bool = False) 
              .outerjoin(Office, Contest.office_id == Office.id).where(*_event_conditions(filters)))
     if filters.office_id is not None:
         query = query.where(Contest.office_id == filters.office_id)
+    if filters.seat_class is not None:
+        query = query.where(Contest.office_id.in_(select(SenateSeat.office_id).where(
+            SenateSeat.seat_class == filters.seat_class)))
     if filters.office is not None:
         query = query.where(or_(func.lower(Contest.office_name) == filters.office.lower(),
                                 func.lower(Office.name) == filters.office.lower()))
@@ -137,8 +141,11 @@ def list_contests(session: Session, filters: ElectionFilters) -> dict:
     rows = session.execute(query.order_by(Election.election_date.desc(), Contest.id)
                            .limit(filters.limit).offset(filters.offset)).all()
     publications = _publications_for_contests(session, [c.id for c, _, _ in rows])
+    seats = {s.office_id:s.seat_class for s in session.scalars(select(SenateSeat).where(
+        SenateSeat.office_id.in_([c.office_id for c, _, _ in rows if c.office_id])))}
     return _page([dict(id=c.id, election_id=e.id, election_date=e.election_date, stage=e.election_type,
                        office_id=c.office_id, office_name=c.office_name, office_term_id=c.office_term_id,
+                       seat_class=seats.get(c.office_id),
                        nomination_party_id=c.nomination_party_id, preceding_contest_id=c.preceding_contest_id,
                        jurisdiction=_geography(j), publications=publications[c.id]) for c, e, j in rows], total, filters)
 
@@ -146,7 +153,7 @@ def list_contests(session: Session, filters: ElectionFilters) -> dict:
 def list_elections(session: Session, filters: ElectionFilters) -> dict:
     query = select(Election, Jurisdiction).join(Jurisdiction).where(*_event_conditions(filters))
     matching = _contest_query(filters).with_only_columns(Contest.election_id)
-    if any(v is not None for v in (filters.office, filters.office_id, filters.party_id, filters.contest_id)):
+    if any(v is not None for v in (filters.office, filters.office_id, filters.party_id, filters.contest_id, filters.seat_class)):
         query = query.where(Election.id.in_(matching))
     else:
         if filters.state_code is not None:
@@ -240,11 +247,13 @@ def list_results(session: Session, filters: ResultFilters, *, candidacy_id: UUID
                 count, basis = aggregated["votes"], aggregated["basis"]
             contest = session.get(Contest, contest_id)
             election = session.get(Election, contest.election_id)
+            seat = session.get(SenateSeat, contest.office_id) if contest.office_id else None
             if reference.kind != filters.reporting_level or not reference.vintage_start <= election.election_date.year <= reference.vintage_end:
                 raise MaterializationError("Result reference has an incompatible grain or vintage")
             items.append(dict(contest_id=contest_id, election_id=election.id,
                 election_date=election.election_date, stage=election.election_type,
                 office_id=contest.office_id, office_name=contest.office_name,
+                seat_class=seat.seat_class if seat else None,
                 jurisdiction=_geography(session.get(Jurisdiction, jurisdiction_id)),
                 reporting_level=filters.reporting_level, reporting_mode=filters.reporting_mode,
                 candidacy_id=row.candidacy_id, person_id=candidate.person_id if candidate else None,

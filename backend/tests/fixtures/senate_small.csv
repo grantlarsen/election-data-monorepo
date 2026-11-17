@@ -1,0 +1,15 @@
+year,state,state_po,state_fips,state_cen,state_ic,office,district,stage,special,candidate,party_detailed,writein,mode,candidatevotes,totalvotes,unofficial,version,party_simplified
+2008,NEW JERSEY,NJ,34,0,0,US SENATE,statewide,gen,False,ALICE,DEMOCRAT,False,total,80.0,185.0,False,20260511,DEMOCRAT
+2008,NEW JERSEY,NJ,34,0,0,US SENATE,statewide,gen,False,ALICE,WORKING FAMILIES,False,total,20.0,185.0,False,20260511,OTHER
+2008,NEW JERSEY,NJ,34,0,0,US SENATE,statewide,gen,False,BOB,REPUBLICAN,False,total,80.0,185.0,False,20260511,REPUBLICAN
+2008,NEW JERSEY,NJ,34,0,0,US SENATE,statewide,gen,False,,NA,True,total,3.0,185.0,False,20260511,OTHER
+2008,NEW JERSEY,NJ,34,0,0,US SENATE,statewide,gen,False,BLANK,NA,False,total,2.0,185.0,False,20260511,OTHER
+2008,GEORGIA,GA,13,0,0,US SENATE,statewide,pre,False,JOE,DEMOCRAT,False,total,50.0,110.0,False,20260511,DEMOCRAT
+2008,GEORGIA,GA,13,0,0,US SENATE,statewide,pre,False,SAM,REPUBLICAN,False,total,60.0,110.0,False,20260511,REPUBLICAN
+2008,GEORGIA,GA,13,0,0,US SENATE,statewide,gen,False,JOE,DEMOCRAT,False,total,40.0,100.0,False,20260511,DEMOCRAT
+2008,GEORGIA,GA,13,0,0,US SENATE,statewide,gen,False,SAM,REPUBLICAN,False,total,60.0,100.0,False,20260511,REPUBLICAN
+2008,MISSISSIPPI,MS,28,0,0,US SENATE,statewide,gen,False,REGULAR,REPUBLICAN,False,total,100.0,100.0,False,20260511,REPUBLICAN
+2008,MISSISSIPPI,MS,28,0,0,US SENATE,statewide,gen,True,SPECIAL,REPUBLICAN,False,total,90.0,90.0,False,20260511,REPUBLICAN
+2021,GEORGIA,GA,13,0,0,US SENATE,statewide,runoff,False,JOE,DEMOCRAT,False,total,50.0,50.0,False,20260511,DEMOCRAT
+2021,GEORGIA,GA,13,0,0,US SENATE,statewide,runoff,True,SAM,DEMOCRAT,False,total,60.0,60.0,False,20260511,DEMOCRAT
+1998,NEW JERSEY,NJ,34,0,0,US SENATE,statewide,gen,False,OLD,DEMOCRAT,False,total,100.0,100.0,False,20260511,DEMOCRAT

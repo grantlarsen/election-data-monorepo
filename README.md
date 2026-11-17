@@ -347,6 +347,9 @@ For another election-results source, reuse `ingestion.loader.load()` if the norm
 
 ## Common errors / troubleshooting
 
+For historical Senate contests, seat classes, partial source coverage, query
+examples and repeatable imports, see [Senate returns 2000–2024](docs/data/senate_returns.md).
+
 | Symptom | Check / corrective action |
 |---|---|
 | `ModuleNotFoundError: polars` | Merge requirements and rebuild the image, not just restart the old container |

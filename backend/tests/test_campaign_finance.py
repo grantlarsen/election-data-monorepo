@@ -368,7 +368,7 @@ def test_fresh_database_migration_chain_reaches_current_head(identity_engine):
     # exercises historical migration code instead of metadata.create_all.
     config = Config(str(Path(__file__).parents[1] / "alembic.ini"))
     script = ScriptDirectory.from_config(config)
-    assert script.get_current_head() == "presidential_state_coverage"
+    assert script.get_current_head() == "senate_return_evidence"
     schema = "finance_migrate_" + uuid4().hex
     with identity_engine.begin() as connection:
         connection.execute(text(f'CREATE SCHEMA "{schema}"'))

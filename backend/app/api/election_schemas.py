@@ -18,6 +18,7 @@ class ElectionFilters(BaseModel):
     year: int | None = Field(None, ge=1, le=9998, description="Calendar year of election_date, not election cycle")
     office: str | None = Field(None, min_length=1, max_length=200, description="Exact office name, case insensitive")
     office_id: UUID | None = None
+    seat_class: int | None = Field(None, ge=1, le=3, description="U.S. Senate seat class")
     stage: Stage | None = None
     party_id: UUID | None = Field(None, description="Candidate affiliation or ballot-line party; retains the whole candidate total")
     state_code: str | None = None
@@ -45,7 +46,7 @@ class ElectionFilters(BaseModel):
 
 
 class ResultFilters(ElectionFilters):
-    reporting_level: Literal["county", "congressional_district", "legislative_district", "precinct", "place"] = "county"
+    reporting_level: Literal["state", "county", "congressional_district", "legislative_district", "precinct", "place"] = "county"
     reporting_mode: str = Field("TOTAL", min_length=1, max_length=100)
 
 
@@ -101,6 +102,7 @@ class ContestItem(BaseModel):
     office_id: UUID | None
     office_name: str
     office_term_id: UUID | None
+    seat_class: int | None = None
     nomination_party_id: UUID | None
     preceding_contest_id: UUID | None
     jurisdiction: Geography
@@ -114,6 +116,7 @@ class ResultItem(BaseModel):
     stage: Stage
     office_id: UUID | None
     office_name: str
+    seat_class: int | None = None
     jurisdiction: Geography
     reporting_level: str
     reporting_mode: str
